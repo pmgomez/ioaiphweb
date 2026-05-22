@@ -134,8 +134,11 @@ function Home() {
           </div>
         </div>
       </section>
+      {/* PARTNERS */}
+      <PartnersSection />
 
       {/* CTA */}
+
       <section id="apply" className="relative mx-auto max-w-7xl px-6 py-28">
         <div className="relative overflow-hidden rounded-sm border border-primary/30 bg-gradient-to-br from-surface to-background p-12 md:p-16">
           <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
