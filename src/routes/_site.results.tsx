@@ -36,7 +36,8 @@ function Results() {
   return (
     <>
       <section className="relative border-b border-border/60">
-        <div className="grid-bg grid-bg-fade absolute inset-0 opacity-40" />
+        <NeuralNetworkBg className="absolute inset-0 h-full w-full [mask-image:radial-gradient(ellipse_at_center,black_0%,transparent_75%)]" />
+        <div className="absolute left-1/2 top-0 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-primary/15 blur-[140px]" />
         <div className="relative mx-auto max-w-7xl px-6 pb-12 pt-20">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
