@@ -1,4 +1,6 @@
 import { Link } from "@tanstack/react-router";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -9,16 +11,17 @@ const nav = [
 ] as const;
 
 export function SiteHeader() {
+  const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <Link to="/" className="flex items-center gap-3">
-          <div className="grid h-9 w-9 place-items-center rounded-sm bg-primary text-primary-foreground font-mono text-sm font-bold">
+    <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 sm:pt-6">
+      <div className="pointer-events-auto mx-auto flex max-w-6xl items-center justify-between gap-4 rounded-full border border-border/60 bg-background/70 px-3 py-2 pl-4 shadow-2xl backdrop-blur-xl sm:px-4">
+        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+          <div className="grid h-8 w-8 place-items-center rounded-full bg-primary text-primary-foreground font-mono text-xs font-bold">
             AI
           </div>
           <div className="leading-tight">
             <div className="font-display text-sm font-semibold tracking-tight">IOAI Philippines</div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Team PH · Astana 2025</div>
+            <div className="hidden font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:block">Team PH · Astana 2025</div>
           </div>
         </Link>
         <nav className="hidden items-center gap-1 md:flex">
@@ -29,19 +32,57 @@ export function SiteHeader() {
               activeOptions={{ exact: n.to === "/" }}
               activeProps={{ className: "text-primary" }}
               inactiveProps={{ className: "text-muted-foreground" }}
-              className="rounded-sm px-3 py-2 font-mono text-xs uppercase tracking-wider transition-colors hover:text-foreground"
+              className="rounded-full px-3 py-1.5 font-mono text-xs uppercase tracking-wider transition-colors hover:text-foreground"
             >
               {n.label}
             </Link>
           ))}
         </nav>
-        <a
-          href="#apply"
-          className="hidden rounded-sm border border-primary/40 bg-primary/10 px-4 py-2 font-mono text-xs uppercase tracking-wider text-primary transition-all hover:bg-primary hover:text-primary-foreground md:inline-flex"
-        >
-          Apply →
-        </a>
+        <div className="flex items-center gap-2">
+          <a
+            href="#apply"
+            className="hidden rounded-full border border-primary/40 bg-primary/10 px-4 py-2 font-mono text-xs uppercase tracking-wider text-primary transition-all hover:bg-primary hover:text-primary-foreground md:inline-flex"
+          >
+            Apply →
+          </a>
+          <button
+            type="button"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+            className="grid h-9 w-9 place-items-center rounded-full border border-border/60 text-foreground transition-colors hover:border-primary/40 md:hidden"
+          >
+            {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+          </button>
+        </div>
       </div>
+
+      {open && (
+        <div className="pointer-events-auto mx-auto mt-2 max-w-6xl rounded-2xl border border-border/60 bg-background/90 p-3 shadow-2xl backdrop-blur-xl md:hidden">
+          <nav className="flex flex-col">
+            {nav.map((n) => (
+              <Link
+                key={n.to}
+                to={n.to}
+                activeOptions={{ exact: n.to === "/" }}
+                activeProps={{ className: "text-primary" }}
+                inactiveProps={{ className: "text-muted-foreground" }}
+                onClick={() => setOpen(false)}
+                className="rounded-md px-3 py-3 font-mono text-xs uppercase tracking-wider transition-colors hover:text-foreground"
+              >
+                {n.label}
+              </Link>
+            ))}
+            <a
+              href="#apply"
+              onClick={() => setOpen(false)}
+              className="mt-1 inline-flex justify-center rounded-md border border-primary/40 bg-primary/10 px-4 py-3 font-mono text-xs uppercase tracking-wider text-primary"
+            >
+              Apply →
+            </a>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
