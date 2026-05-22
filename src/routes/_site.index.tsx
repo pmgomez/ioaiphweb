@@ -134,8 +134,11 @@ function Home() {
           </div>
         </div>
       </section>
+      {/* PARTNERS */}
+      <PartnersSection />
 
       {/* CTA */}
+
       <section id="apply" className="relative mx-auto max-w-7xl px-6 py-28">
         <div className="relative overflow-hidden rounded-sm border border-primary/30 bg-gradient-to-br from-surface to-background p-12 md:p-16">
           <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
@@ -155,3 +158,134 @@ function Home() {
     </>
   );
 }
+
+type Partner = { name: string; src: string; href?: string };
+
+const goldPartners: Partner[] = [
+  { name: "Joy-Nostalg Group", src: "https://ioaiph.org/partners/joynostalg.png", href: "https://joy-nostalg.com/" },
+];
+
+const bronzePartners: Partner[] = [
+  { name: "Times Paint Corporation", src: "https://ioaiph.org/partners/timespaintlogo.png" },
+];
+
+const communityLead: Partner[] = [
+  { name: "Analytics and AI Association of the Philippines", src: "https://ioaiph.org/partners/aaplogo.png", href: "https://www.aap.ph/" },
+];
+
+const communityPartners: Partner[] = [
+  { name: "TACTICS", src: "https://ioaiph.org/partners/tactics.png", href: "https://www.facebook.com/adnutactics" },
+  { name: "XCITeS", src: "https://ioaiph.org/partners/XCITeS.png", href: "https://www.facebook.com/XU.XCITES" },
+  { name: "SITEAO", src: "https://ioaiph.org/partners/siteao.png", href: "https://www.facebook.com/adzusiteao" },
+  { name: "Mapua SHS Science Club", src: "https://ioaiph.org/partners/mapuashssciclublogo.png", href: "https://facebook.com/mapuashscienceclub" },
+  { name: "Tomorrow", src: "http://ioaiph.org/partners/tomorrowlogo.png", href: "https://www.facebook.com/profile.php?id=61563288622007" },
+  { name: "Dashlabs.ai", src: "https://ioaiph.org/partners/DashlabsWordmarkLogoBlue-Trademarked.png", href: "https://dashlabs.ai/" },
+];
+
+function LogoTile({ p, size = "md" }: { p: Partner; size?: "sm" | "md" | "lg" | "xl" }) {
+  const heights = { sm: "h-8", md: "h-12", lg: "h-16", xl: "h-24" };
+  const Tag: any = p.href ? "a" : "div";
+  const props = p.href ? { href: p.href, target: "_blank", rel: "noopener noreferrer" } : {};
+  return (
+    <Tag
+      {...props}
+      title={p.name}
+      className="group relative flex shrink-0 items-center justify-center px-8 py-6 transition-all"
+    >
+      <img
+        src={p.src}
+        alt={p.name}
+        loading="lazy"
+        className={`${heights[size]} w-auto object-contain brightness-0 invert opacity-60 transition-all duration-500 group-hover:brightness-100 group-hover:invert-0 group-hover:opacity-100 group-hover:scale-110`}
+      />
+    </Tag>
+  );
+}
+
+function TierLabel({ children, accent }: { children: React.ReactNode; accent: string }) {
+  return (
+    <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+      <span className={`h-1.5 w-1.5 rounded-full ${accent}`} />
+      {children}
+      <span className="h-px flex-1 bg-border" />
+    </div>
+  );
+}
+
+function PartnersSection() {
+  const marqueeLoop = [...communityPartners, ...communityPartners];
+  return (
+    <section className="relative border-y border-border/60 bg-surface/20">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+      <div className="mx-auto max-w-7xl px-6 py-28">
+        <div className="flex items-end justify-between gap-6">
+          <div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// coalition.manifest</div>
+            <h2 className="mt-3 max-w-2xl font-display text-4xl font-semibold tracking-tight md:text-5xl">
+              Backed by a national coalition.
+            </h2>
+          </div>
+          <Link to="/partnerships" className="hidden shrink-0 rounded-sm border border-border bg-surface px-4 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground transition-all hover:border-primary/40 hover:text-primary md:inline-block">
+            Become a partner →
+          </Link>
+        </div>
+
+        {/* GOLD */}
+        <div className="mt-16">
+          <TierLabel accent="bg-gold shadow-[0_0_12px_2px] shadow-gold/60">Gold Partners</TierLabel>
+          <div className="mt-6 grid gap-px overflow-hidden rounded-sm border border-gold/30 bg-border">
+            {goldPartners.map((p) => (
+              <div key={p.name} className="relative bg-gradient-to-br from-surface to-background">
+                <div className="absolute inset-0 bg-gold/5" />
+                <div className="relative flex items-center justify-center py-16">
+                  <LogoTile p={p} size="xl" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* BRONZE */}
+        <div className="mt-12">
+          <TierLabel accent="bg-bronze shadow-[0_0_10px_1px] shadow-bronze/60">Bronze Partners</TierLabel>
+          <div className="mt-6 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2">
+            {bronzePartners.map((p) => (
+              <div key={p.name} className="flex items-center justify-center bg-surface py-10">
+                <LogoTile p={p} size="lg" />
+              </div>
+            ))}
+            {bronzePartners.length % 2 === 1 && (
+              <div className="hidden bg-surface/40 md:block" />
+            )}
+          </div>
+        </div>
+
+        {/* COMMUNITY */}
+        <div className="mt-12">
+          <TierLabel accent="bg-primary shadow-[0_0_10px_1px] shadow-primary/60">Community Partners</TierLabel>
+
+          <div className="mt-6 grid gap-px overflow-hidden rounded-sm border border-border bg-border">
+            {communityLead.map((p) => (
+              <div key={p.name} className="flex items-center justify-center bg-surface py-8">
+                <LogoTile p={p} size="md" />
+              </div>
+            ))}
+          </div>
+
+          {/* Infinite marquee */}
+          <div
+            className="group/marquee relative mt-px overflow-hidden rounded-sm border border-border bg-surface"
+            style={{ maskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)" }}
+          >
+            <div className="flex w-max animate-[marquee_40s_linear_infinite] group-hover/marquee:[animation-play-state:paused]">
+              {marqueeLoop.map((p, i) => (
+                <LogoTile key={`${p.name}-${i}`} p={p} size="lg" />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
