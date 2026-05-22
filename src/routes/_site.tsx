@@ -9,7 +9,7 @@ function SiteLayout() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
-      <main>
+      <main className="pt-24">
         <Outlet />
       </main>
       <SiteFooter />
