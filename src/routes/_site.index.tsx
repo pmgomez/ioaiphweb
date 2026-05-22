@@ -1,4 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { NeuralNetworkBg } from "@/components/neural-network-bg";
+
 
 export const Route = createFileRoute("/_site/")({
   head: () => ({
@@ -33,8 +35,9 @@ function Home() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-border/60">
-        <div className="grid-bg grid-bg-fade absolute inset-0 opacity-60" />
+        <NeuralNetworkBg className="absolute inset-0 h-full w-full [mask-image:radial-gradient(ellipse_at_center,black_0%,transparent_75%)]" />
         <div className="absolute left-1/2 top-0 h-[480px] w-[820px] -translate-x-1/2 rounded-full bg-primary/15 blur-[140px]" />
+        <div className="absolute right-0 top-1/3 h-[360px] w-[520px] rounded-full bg-signal/10 blur-[120px]" />
         <div className="relative mx-auto max-w-7xl px-6 pb-32 pt-24">
           <div className="inline-flex items-center gap-2 rounded-sm border border-primary/30 bg-primary/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
