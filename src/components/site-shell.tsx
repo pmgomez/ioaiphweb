@@ -21,7 +21,7 @@ export function SiteHeader() {
           </div>
           <div className="leading-tight">
             <div className="font-display text-sm font-semibold tracking-tight">IOAI Philippines</div>
-            <div className="hidden font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:block">Team PH · Astana 2025</div>
+            <div className="hidden font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:block">Team PH · Astana 2026</div>
           </div>
         </Link>
         <nav className="hidden items-center gap-1 md:flex">
