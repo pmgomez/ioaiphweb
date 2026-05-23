@@ -14,14 +14,14 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
     <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 sm:pt-6">
-      <div className="pointer-events-auto mx-auto flex max-w-6xl items-center justify-between gap-4 rounded-full border border-border/60 bg-background/70 px-3 py-2 pl-4 shadow-2xl backdrop-blur-xl sm:px-4">
+      <div className="pointer-events-auto flex w-full items-center justify-between gap-4 rounded-full border border-border/60 bg-background/70 px-3 py-2 pl-4 shadow-2xl backdrop-blur-xl sm:px-4">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <div className="grid h-8 w-8 place-items-center rounded-full bg-primary text-primary-foreground font-mono text-xs font-bold">
             AI
           </div>
           <div className="leading-tight">
             <div className="font-display text-sm font-semibold tracking-tight">IOAI Philippines</div>
-            <div className="hidden font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:block">Team PH · Astana 2025</div>
+            <div className="hidden font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:block">Team PH · Astana 2026</div>
           </div>
         </Link>
         <nav className="hidden items-center gap-1 md:flex">
@@ -58,7 +58,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="pointer-events-auto mx-auto mt-2 max-w-6xl rounded-2xl border border-border/60 bg-background/90 p-3 shadow-2xl backdrop-blur-xl md:hidden">
+        <div className="pointer-events-auto mt-2 w-full rounded-2xl border border-border/60 bg-background/90 p-3 shadow-2xl backdrop-blur-xl md:hidden">
           <nav className="flex flex-col">
             {nav.map((n) => (
               <Link

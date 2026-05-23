@@ -41,14 +41,14 @@ function Results() {
         <div className="relative mx-auto max-w-7xl px-6 pb-12 pt-20">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
-              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// results.dashboard · ioai_2025</div>
+              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// results.dashboard · ioai_2026</div>
               <h1 className="mt-3 font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
-                Astana 2025 · live results
+                Astana 2026 · live results
               </h1>
             </div>
             <div className="flex items-center gap-3 rounded-sm border border-primary/40 bg-primary/5 px-3 py-2 font-mono text-xs text-primary">
               <span className="h-2 w-2 animate-pulse rounded-full bg-primary" />
-              Last sync · 2025.08.09 · 18:42 UTC+6
+              Last sync · 2026.08.09 · 18:42 UTC+6
             </div>
           </div>
         </div>
@@ -154,8 +154,8 @@ function Results() {
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             {[
               { y: "2024 · Bulgaria", r: "23rd", m: "1 Silver · 1 Bronze" },
-              { y: "2025 · Kazakhstan", r: "12th", m: "2 Gold · 2 Silver", live: true },
-              { y: "2026 · TBD", r: "—", m: "Cycle opens Nov 2025", future: true },
+              { y: "2026 · Kazakhstan", r: "12th", m: "2 Gold · 2 Silver", live: true },
+              { y: "2027 · TBD", r: "—", m: "Cycle opens Nov 2026", future: true },
             ].map((h) => (
               <div key={h.y} className={`rounded-sm border p-5 ${h.live ? "border-primary/40 bg-primary/5" : h.future ? "border-dashed border-border" : "border-border"}`}>
                 <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">{h.y}</div>

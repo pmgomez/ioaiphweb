@@ -8,19 +8,19 @@ export const Route = createFileRoute("/_site/")({
       { title: "IOAI Philippines — Team PH at the International Olympiad in AI" },
       { name: "description", content: "The official national program selecting and training the Philippine team for the International Olympiad in Artificial Intelligence." },
       { property: "og:title", content: "IOAI Philippines" },
-      { property: "og:description", content: "Road to Astana 2025. Filipino students competing at the world stage of AI." },
+      { property: "og:description", content: "Road to Astana 2026. Filipino students competing at the world stage of AI." },
     ],
   }),
   component: Home,
 });
 
 const timeline = [
-  { date: "MAR 2025", phase: "01 / Open Call", title: "National Registration", desc: "Open call to all senior high and early-undergraduate students across the Philippines. Free to apply.", status: "complete" },
-  { date: "APR 2025", phase: "02 / Qualifier", title: "Online Qualifying Round", desc: "Four-hour assessment on linear algebra, probability, classical ML and applied NLP/CV.", status: "complete" },
-  { date: "MAY 2025", phase: "03 / Bootcamp", title: "National Training Camp", desc: "Intensive two-week residency with mentors from UP Diliman, Ateneo, DLSU and industry researchers.", status: "complete" },
-  { date: "JUN 2025", phase: "04 / Selection", title: "Final Team Selection", desc: "Top four contestants chosen as Team Philippines. Two reserves named.", status: "active" },
-  { date: "JUL 2025", phase: "05 / Pre-Departure", title: "Final Sprint in Manila", desc: "Custom curriculum on agents, RL and competition strategy with international coaches.", status: "upcoming" },
-  { date: "AUG 2025", phase: "06 / Astana", title: "IOAI 2025 · Astana, Kazakhstan", desc: "Eight days of competition at the world stage. 60+ national teams compete in scientific and practical rounds.", status: "upcoming" },
+  { date: "MAR 2026", phase: "01 / Open Call", title: "National Registration", desc: "Open call to all senior high and early-undergraduate students across the Philippines. Free to apply.", status: "complete" },
+  { date: "APR 2026", phase: "02 / Qualifier", title: "Online Qualifying Round", desc: "Four-hour assessment on linear algebra, probability, classical ML and applied NLP/CV.", status: "complete" },
+  { date: "MAY 2026", phase: "03 / Bootcamp", title: "National Training Camp", desc: "Intensive two-week residency with mentors from UP Diliman, Ateneo, DLSU and industry researchers.", status: "complete" },
+  { date: "JUN 2026", phase: "04 / Selection", title: "Final Team Selection", desc: "Top four contestants chosen as Team Philippines. Two reserves named.", status: "active" },
+  { date: "JUL 2026", phase: "05 / Pre-Departure", title: "Final Sprint in Manila", desc: "Custom curriculum on agents, RL and competition strategy with international coaches.", status: "upcoming" },
+  { date: "AUG 2026", phase: "06 / Astana", title: "IOAI 2026 · Astana, Kazakhstan", desc: "Eight days of competition at the world stage. 60+ national teams compete in scientific and practical rounds.", status: "upcoming" },
 ];
 
 const stats = [
@@ -41,7 +41,7 @@ function Home() {
         <div className="relative mx-auto max-w-7xl px-6 pb-32 pt-24">
           <div className="inline-flex items-center gap-2 rounded-sm border border-primary/30 bg-primary/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
-            IOAI 2025 · Astana, Kazakhstan · Aug 02–09
+            IOAI 2026 · Astana, Kazakhstan · Aug 02–09
           </div>
           <h1 className="mt-6 max-w-4xl font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
             <span className="text-gradient">Filipino intelligence</span><br />on the world stage of AI.
@@ -75,11 +75,11 @@ function Home() {
           <div>
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// road_to_astana.log</div>
             <h2 className="mt-3 max-w-2xl font-display text-4xl font-semibold tracking-tight md:text-5xl">
-              The 2025 cycle, in six phases.
+              The 2026 cycle, in six phases.
             </h2>
           </div>
           <div className="hidden font-mono text-xs text-muted-foreground md:block">
-            Last updated · 2025.06.14
+            Last updated · 2026.06.14
           </div>
         </div>
 
@@ -143,9 +143,9 @@ function Home() {
         <div className="relative overflow-hidden rounded-sm border border-primary/30 bg-gradient-to-br from-surface to-background p-12 md:p-16">
           <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
           <div className="relative">
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// 2026_cycle.init</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// 2027_cycle.init</div>
             <h2 className="mt-3 max-w-2xl font-display text-4xl font-semibold tracking-tight md:text-5xl">
-              Applications for the 2026 cycle open this November.
+              Applications for the 2027 cycle open this November.
             </h2>
             <p className="mt-4 max-w-xl text-muted-foreground">Be the first to know when the qualifier opens. Join the IOAI Philippines mailing list.</p>
             <form className="mt-8 flex max-w-md flex-col gap-2 sm:flex-row">

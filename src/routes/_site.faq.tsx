@@ -17,7 +17,7 @@ const groups = [
     cat: "Eligibility",
     items: [
       { q: "Who can apply?", a: "Any Filipino citizen or permanent resident enrolled in senior high school or first-year college as of the qualifier date. There is no minimum GPA requirement — selection is based purely on the technical assessment." },
-      { q: "Is there an age limit?", a: "Yes. Following IOAI international rules, contestants must be 20 years old or younger on the first day of competition (Aug 2, 2025 for the current cycle)." },
+      { q: "Is there an age limit?", a: "Yes. Following IOAI international rules, contestants must be 20 years old or younger on the first day of competition (Aug 2, 2026 for the current cycle)." },
       { q: "I'm homeschooled / from a small school. Can I still compete?", a: "Absolutely. We have no school accreditation requirement. Past finalists have come from public schools, private academies, ALS programs, and homeschool co-ops." },
     ],
   },
