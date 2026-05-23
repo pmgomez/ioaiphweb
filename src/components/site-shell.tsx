@@ -58,7 +58,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="pointer-events-auto mx-auto mt-2 max-w-6xl rounded-2xl border border-border/60 bg-background/90 p-3 shadow-2xl backdrop-blur-xl md:hidden">
+        <div className="pointer-events-auto mt-2 w-full rounded-2xl border border-border/60 bg-background/90 p-3 shadow-2xl backdrop-blur-xl md:hidden">
           <nav className="flex flex-col">
             {nav.map((n) => (
               <Link
