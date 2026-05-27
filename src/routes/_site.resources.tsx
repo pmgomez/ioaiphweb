@@ -22,11 +22,25 @@ export const Route = createFileRoute("/_site/resources")({
 
 const sections = [
   {
-    tag: "01 / Open Source",
-    title: "IOAI Philippines on GitHub",
-    desc: "Our official repository — training materials, problem sets, and tooling maintained by the IOAI Philippines team.",
+    tag: "01 / IOAI Philippines",
+    title: "Official Channels & Announcements",
+    desc: "Our GitHub, social channels, and official advisories from DepEd and the Philippine coordinator.",
     links: [
       { label: "IOAI Philippines GitHub Repo", href: "https://github.com/ioaiph" },
+      { label: "IOAI Philippines Facebook Page", href: "https://www.facebook.com/ioaiph" },
+      {
+        label: "DepEd Advisory No. 024, s. 2026",
+        href: "https://www.deped.gov.ph/2026/01/22/january-22-2026-advisory-no-024-s-2026-international-olympiad-in-artificial-intelligence-philippines-national-contest-2026/",
+      },
+      {
+        label: "National Olympiad Open Call",
+        href: "https://www.ateneo.edu/opportunities/2026/01/open-call-pinoy-hs-students-compete-world-ai-olympiad",
+      },
+      {
+        label: "Official Accreditation Announcement",
+        href: "https://www.ateneo.edu/news/2025/09/27/ateneo-build-accredited-philippine-coordinator-international-olympiad-artificial",
+      },
+      { label: "Global IOAI Website", href: "https://ioai-official.org/" },
     ],
   },
   {
