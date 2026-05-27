@@ -83,6 +83,7 @@ const competitions = [
     name: "IOAI",
     full: "International Olympiad in Artificial Intelligence",
     scope: "Global · final stage",
+    host: "Hosted by Kazakhstan",
     window: "Results pending",
   },
   {
@@ -90,13 +91,15 @@ const competitions = [
     name: "APOAI",
     full: "Asia-Pacific Olympiad in Artificial Intelligence",
     scope: "Asia-Pacific regional",
+    host: "Hosted by China",
     window: "Results pending",
   },
   {
     code: "C-03",
     name: "NEOAI",
-    full: "North-East Asia Olympiad in Artificial Intelligence",
-    scope: "North-East Asia sub-regional",
+    full: "Northern Eurasia Olympiad in Artificial Intelligence",
+    scope: "Northern Eurasia sub-regional",
+    host: "Hosted by Russia",
     window: "Results pending",
   },
 ];
@@ -258,7 +261,7 @@ function CompetitionBanner({
       <div className="md:px-6">
         <div className="font-display text-lg md:text-xl">{c.full}</div>
         <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-          {c.scope}
+          {c.scope} · {c.host}
         </div>
       </div>
       <div className="flex items-center gap-2 self-start rounded-sm border border-border px-3 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground md:self-center">
