@@ -20,45 +20,6 @@ export const Route = createFileRoute("/_site/resources")({
   component: ResourcesPage,
 });
 
-const ioaiPhSections = [
-  {
-    tag: "01 / Code",
-    title: "IOAI PH GitHub Repo",
-    desc: "Open-source training materials, problem sets, and reference implementations maintained by IOAI Philippines.",
-    links: [
-      { label: "IOAI Philippines GitHub Repo", href: "https://github.com/ioaiph" },
-    ],
-  },
-  {
-    tag: "02 / Community",
-    title: "Official Channels",
-    desc: "Connect with mentors, trainees, and alumni across our official social channels.",
-    links: [
-      { label: "IOAI Philippines Facebook Page", href: "https://www.facebook.com/ioaiph" },
-      { label: "IOAI Philippines Discord Server", href: "https://discord.gg/pBktCwHNkJ" },
-    ],
-  },
-  {
-    tag: "03 / Documents",
-    title: "Official Documents",
-    desc: "Government advisories and accreditation records for the Philippine national contest.",
-    links: [
-      {
-        label: "DepEd Advisory No. 024, s. 2026",
-        href: "https://www.deped.gov.ph/2026/01/22/january-22-2026-advisory-no-024-s-2026-international-olympiad-in-artificial-intelligence-philippines-national-contest-2026/",
-      },
-      {
-        label: "National Olympiad Open Call",
-        href: "https://www.ateneo.edu/opportunities/2026/01/open-call-pinoy-hs-students-compete-world-ai-olympiad",
-      },
-      {
-        label: "Official Accreditation Announcement",
-        href: "https://www.ateneo.edu/news/2025/09/27/ateneo-build-accredited-philippine-coordinator-international-olympiad-artificial",
-      },
-    ],
-  },
-];
-
 const sections = [
   {
     tag: "01 / Foundations",
@@ -112,8 +73,10 @@ const sections = [
     desc: "Official syllabus, past tasks, and competition-style practice.",
     links: [
       { label: "IOAI — Official Website", href: "https://ioai-official.org/" },
-      { label: "IOAI Tasks & Solutions GitHub Repo", href: "https://github.com/IOAI-official" },
+      { label: "IOAI GitHub Repo", href: "https://github.com/IOAI-official/" },
       { label: "Kaggle — Learn", href: "https://www.kaggle.com/learn" },
+      { label: "Asia Pacific Olympiad in AI", href: "https://apoai.org/" },
+      { label: "Northern Eurasia Olympiad in AI", href: "https://cu.ru/olympiad/events/neoai" },
     ],
   },
   {
@@ -124,41 +87,11 @@ const sections = [
       { label: "Google Colab", href: "https://colab.research.google.com/" },
       { label: "Kaggle Notebooks", href: "https://www.kaggle.com/code" },
       { label: "Hugging Face — Datasets", href: "https://huggingface.co/datasets" },
+      { label: "Bohrium", href: "https://www.bohrium.com/" },
+      { label: "Yandex Contest", href: "https://contest.yandex.com/" },
     ],
   },
 ];
-
-function SectionGrid({ items }: { items: typeof sections }) {
-  return (
-    <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
-      {items.map((s) => (
-        <article key={s.title} className="flex flex-col bg-surface p-8">
-          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">{s.tag}</div>
-          <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight">{s.title}</h3>
-          <p className="mt-3 text-sm text-muted-foreground">{s.desc}</p>
-          <ul className="mt-6 space-y-2 border-t border-border/60 pt-4">
-            {s.links.map((l) => (
-              <li key={l.href}>
-                <a
-                  href={l.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-start justify-between gap-3 text-sm text-foreground transition-colors hover:text-primary"
-                >
-                  <span>{l.label}</span>
-                  <span className="font-mono text-xs text-muted-foreground transition-colors group-hover:text-primary">
-                    ↗
-                  </span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </article>
-      ))}
-    </div>
-  );
-}
-
 
 function ResourcesPage() {
   return (
@@ -172,28 +105,32 @@ function ResourcesPage() {
         Philippines cycle. Free, public, and aligned with the official IOAI syllabus.
       </p>
 
-      <div className="mt-20">
-        <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// ioai.ph</div>
-        <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight md:text-4xl">
-          IOAI Philippines Resources
-        </h2>
-        <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
-          Our code, channels, and official documents.
-        </p>
-        <SectionGrid items={ioaiPhSections} />
+      <div className="mt-16 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
+        {sections.map((s) => (
+          <article key={s.title} className="flex flex-col bg-surface p-8">
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">{s.tag}</div>
+            <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight">{s.title}</h2>
+            <p className="mt-3 text-sm text-muted-foreground">{s.desc}</p>
+            <ul className="mt-6 space-y-2 border-t border-border/60 pt-4">
+              {s.links.map((l) => (
+                <li key={l.href}>
+                  <a
+                    href={l.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-start justify-between gap-3 text-sm text-foreground transition-colors hover:text-primary"
+                  >
+                    <span>{l.label}</span>
+                    <span className="font-mono text-xs text-muted-foreground transition-colors group-hover:text-primary">
+                      ↗
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
       </div>
-
-      <div className="mt-20">
-        <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// study.tracks</div>
-        <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight md:text-4xl">
-          Study Resources
-        </h2>
-        <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
-          Curated material aligned with the official IOAI syllabus.
-        </p>
-        <SectionGrid items={sections} />
-      </div>
-
 
       <div className="mt-16 rounded-sm border border-primary/30 bg-gradient-to-br from-surface to-background p-10">
         <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// contribute</div>
