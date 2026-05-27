@@ -22,7 +22,15 @@ export const Route = createFileRoute("/_site/resources")({
 
 const sections = [
   {
-    tag: "01 / Foundations",
+    tag: "01 / Open Source",
+    title: "IOAI Philippines on GitHub",
+    desc: "Our official repository — training materials, problem sets, and tooling maintained by the IOAI Philippines team.",
+    links: [
+      { label: "IOAI Philippines GitHub Repo", href: "https://github.com/ioaiph" },
+    ],
+  },
+  {
+    tag: "02 / Foundations",
     title: "Math & Probability",
     desc: "Linear algebra, calculus, probability, and statistics — the bedrock of every IOAI round.",
     links: [
