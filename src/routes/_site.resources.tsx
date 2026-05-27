@@ -74,7 +74,6 @@ const sections = [
     links: [
       { label: "IOAI — Official Website", href: "https://ioai-official.org/" },
       { label: "IOAI Tasks & Solutions GitHub Repo", href: "https://github.com/IOAI-official" },
-      { label: "IOAI Philippines GitHub Repo", href: "https://github.com/ioaiph" },
       { label: "Kaggle — Learn", href: "https://www.kaggle.com/learn" },
     ],
   },
