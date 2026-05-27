@@ -48,7 +48,7 @@ function About() {
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// about.program</div>
           <h1 className="mt-3 max-w-3xl font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
             We exist to put young Filipino talent on the world stage of AI — and let them
-            <span className="text-primary"> create what's possible for the country and humanity.</span>
+            <span className="text-primary"> create what's possible for the country and for humanity.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
             IOAI Philippines is the Philippines' official route to the International Olympiad in Artificial Intelligence
