@@ -9,6 +9,12 @@ import lesterPhoto from "@/assets/lester.png";
 import lorenzoPhoto from "@/assets/lorenzo.png";
 import adrianPhoto from "@/assets/adrian.png";
 import jamesPhoto from "@/assets/james.png";
+import tjPhoto from "@/assets/tjdimacali.png";
+import leonardPhoto from "@/assets/leonardang.jpg";
+import paoloPhoto from "@/assets/paolorollan.png";
+import hanslyPhoto from "@/assets/hanslysaw.png";
+import andrewPhoto from "@/assets/andrewyu.jpg";
+import kylePhoto from "@/assets/kylereynoso.png";
 
 export const Route = createFileRoute("/_site/about")({
   head: () => ({
@@ -58,15 +64,15 @@ const leadership = [
     org: "UC Berkeley, UC San Francisco",
     photo: adrianPhoto,
   },
-  { name: "Hansly Saw", role: "Scientific Committee", org: "University of the Philippines - Diliman" },
-  { name: "Paolo Rollan", role: "Scientific Committee", org: "University of the Philippines - Diliman" },
+  { name: "Hansly Saw", role: "Scientific Committee", org: "University of the Philippines - Diliman", photo: hanslyPhoto },
+  { name: "Paolo Rollan", role: "Scientific Committee", org: "University of the Philippines - Diliman", photo: paoloPhoto },
   { name: "Hans Tan", role: "Scientific Committee", org: "Sun Yat-Sen University" },
   { name: "James Bermudo", role: "Scientific Committee", org: "Ateneo de Manila University", photo: jamesPhoto },
-  { name: "Andrew Yu", role: "Scientific Committee", org: "Procter & Gamble" },
+  { name: "Andrew Yu", role: "Scientific Committee", org: "Procter & Gamble", photo: andrewPhoto },
   { name: "Gian Alingog", role: "Scientific Committee", org: "UC Sta Barbara" },
-  { name: "Timothy James Dimacali", role: "Media and Press Relations", org: "Ateneo de Manila University" },
-  { name: "Kyle Reynoso", role: "Sponsorships", org: "University of the Philippines - Diliman" },
-  { name: "Leonard Ang", role: "Partnerships", org: "University of the Philippines - Diliman" },
+  { name: "Timothy James Dimacali", role: "Media and Press Relations", org: "Ateneo de Manila University", photo: tjPhoto },
+  { name: "Kyle Reynoso", role: "Sponsorships", org: "University of the Philippines - Diliman", photo: kylePhoto },
+  { name: "Leonard Ang", role: "Partnerships", org: "University of the Philippines - Diliman", photo: leonardPhoto },
 ];
 
 function About() {
