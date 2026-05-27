@@ -25,9 +25,7 @@ export function SiteHeader() {
     <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 sm:pt-6">
       <div className="pointer-events-auto flex w-full items-center justify-between gap-4 rounded-full border border-border/60 bg-background/70 px-3 py-2 pl-4 shadow-2xl backdrop-blur-xl sm:px-4">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <div className="grid h-8 w-8 place-items-center rounded-full bg-primary text-primary-foreground font-mono text-xs font-bold">
-            AI
-          </div>
+          <img src={ioaiphLogo} alt="IOAI Philippines" className="h-9 w-9 rounded-full object-cover" />
           <div className="leading-tight">
             <div className="font-display text-sm font-semibold tracking-tight">IOAI Philippines</div>
             <div className="hidden font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:block">
