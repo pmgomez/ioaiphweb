@@ -25,7 +25,7 @@ const timeline = [
     date: "DEC 11, 2025 – JAN 25, 2026",
     phase: "01 / National",
     title: "Registration",
-    desc: "Open call to all senior high and early-undergraduate students across the Philippines. Free to apply.",
+    desc: "Open call to all high school students across the Philippines. Free to apply.",
     status: "complete",
   },
   {
