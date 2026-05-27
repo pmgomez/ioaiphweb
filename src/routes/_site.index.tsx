@@ -269,7 +269,7 @@ function Home() {
   );
 }
 
-type Partner = { name: string; src: string; href?: string };
+type Partner = { name: string; src: string; href?: string; subtitle?: string };
 
 const goldPartners: Partner[] = [{ name: "Joy-Nostalg Group", src: joyNostalgLogo, href: "https://joy-nostalg.com/" }];
 
@@ -289,18 +289,20 @@ const featuredPartners: Partner[] = [
 ];
 
 const communityPartners: Partner[] = [
-  { name: "TACTICS", src: tacticsLogo, href: "https://www.facebook.com/adnutactics" },
-  { name: "XCITeS", src: xcitesLogo, href: "https://www.facebook.com/XU.XCITES" },
-  { name: "SITEAO", src: siteaoLogo, href: "https://www.facebook.com/adzusiteao" },
+  { name: "TACTICS", src: tacticsLogo, href: "https://www.facebook.com/adnutactics", subtitle: "Ateneo de Naga University" },
+  { name: "XCITeS", src: xcitesLogo, href: "https://www.facebook.com/XU.XCITES", subtitle: "Xavier University - Ateneo de Cagayan" },
+  { name: "SITEAO", src: siteaoLogo, href: "https://www.facebook.com/adzusiteao", subtitle: "Ateneo de Zamboanga University" },
   {
     name: "Mapua SHS Science Club",
     src: mapuaShsSciClubLogo,
     href: "https://facebook.com/mapuashscienceclub",
+    subtitle: "Mapua University",
   },
   {
     name: "Tomorrow",
     src: tomorrowLogo,
     href: "https://www.facebook.com/profile.php?id=61563288622007",
+    subtitle: "Philippine Science High School - Main Campus",
   },
 ];
 
@@ -453,8 +455,13 @@ function PartnersSection() {
           <TierLabel accent="bg-primary/60">Community Partners</TierLabel>
           <div className="mt-6 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {communityPartners.map((p) => (
-              <div key={p.name} className="flex items-center justify-center bg-transparent py-8">
-                <LogoTile p={p} size="md" />
+              <div key={p.name} className="flex flex-col items-center justify-start gap-3 bg-transparent py-8">
+                <LogoTile p={p} size="lg" />
+                {p.subtitle && (
+                  <p className="px-2 text-center font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
+                    {p.subtitle}
+                  </p>
+                )}
               </div>
             ))}
           </div>
