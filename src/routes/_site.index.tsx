@@ -1,29 +1,89 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
 
-
 export const Route = createFileRoute("/_site/")({
   head: () => ({
     meta: [
       { title: "IOAI Philippines — Team PH at the International Olympiad in AI" },
-      { name: "description", content: "The official national program selecting and training the Philippine team for the International Olympiad in Artificial Intelligence." },
+      {
+        name: "description",
+        content:
+          "The official national program selecting and training the Philippine team for the International Olympiad in Artificial Intelligence.",
+      },
       { property: "og:title", content: "IOAI Philippines" },
-      { property: "og:description", content: "Road to Astana 2026. Filipino students competing at the world stage of AI." },
+      {
+        property: "og:description",
+        content: "Road to Astana 2026. Filipino students competing at the world stage of AI.",
+      },
     ],
   }),
   component: Home,
 });
 
 const timeline = [
-  { date: "DEC 11, 2025 – JAN 25, 2026", phase: "01 / National", title: "Registration", desc: "Open call to all senior high and early-undergraduate students across the Philippines. Free to apply.", status: "complete" },
-  { date: "JAN 31 – FEB 8, 2026", phase: "02 / National", title: "Eliminations", desc: "Online qualifying assessment on linear algebra, probability, classical ML and applied NLP/CV.", status: "complete" },
-  { date: "FEB 14 – 15, 2026", phase: "03 / National", title: "Semi-Finals", desc: "Top performers advance to a weekend of deeper technical rounds.", status: "complete" },
-  { date: "FEB 16 – 21, 2026", phase: "04 / National", title: "Finals", desc: "Week-long national finals determining the country's strongest young AI talent.", status: "complete" },
-  { date: "FEB 22 – APR 15, 2026", phase: "05 / National", title: "Selection & Training", desc: "Finalists enter intensive training. Team Philippines selected from this pool.", status: "active" },
-  { date: "MAY 3 – 4, 2026", phase: "06 / International", title: "Northern Eurasia Olympiad in AI", desc: "Philippine team fielded at the Northern Eurasia regional olympiad.", status: "upcoming" },
-  { date: "JUN 13, 2026", phase: "07 / International", title: "Asia Pacific Olympiad in AI", desc: "Philippine team competes in the Asia Pacific regional olympiad.", status: "upcoming" },
-  { date: "JUL 1 – AUG 1, 2026", phase: "08 / International", title: "IOAI 2026 · At-Home Round", desc: "Remote round of the International Olympiad in Artificial Intelligence.", status: "upcoming" },
-  { date: "AUG 2 – 8, 2026", phase: "09 / International", title: "IOAI 2026 · Onsite", desc: "Onsite finals of the International Olympiad in AI. 60+ national teams compete on the world stage.", status: "upcoming" },
+  {
+    date: "DEC 11, 2025 – JAN 25, 2026",
+    phase: "01 / National",
+    title: "Registration",
+    desc: "Open call to all senior high and early-undergraduate students across the Philippines. Free to apply.",
+    status: "complete",
+  },
+  {
+    date: "JAN 31 – FEB 8, 2026",
+    phase: "02 / National",
+    title: "Eliminations",
+    desc: "Online qualifying assessment on linear algebra, probability, classical ML and applied NLP/CV.",
+    status: "complete",
+  },
+  {
+    date: "FEB 14 – 15, 2026",
+    phase: "03 / National",
+    title: "Semi-Finals",
+    desc: "Top performers advance to a weekend of deeper technical rounds.",
+    status: "complete",
+  },
+  {
+    date: "FEB 16 – 21, 2026",
+    phase: "04 / National",
+    title: "Finals",
+    desc: "Week-long national finals determining the country's strongest young AI talent.",
+    status: "complete",
+  },
+  {
+    date: "FEB 22 – APR 15, 2026",
+    phase: "05 / National",
+    title: "Selection & Training",
+    desc: "Finalists enter intensive training. Team Philippines selected from this pool.",
+    status: "active",
+  },
+  {
+    date: "MAY 3 – 4, 2026",
+    phase: "06 / International",
+    title: "Northern Eurasia Olympiad in AI",
+    desc: "Philippine team fielded at the Northern Eurasia regional olympiad.",
+    status: "upcoming",
+  },
+  {
+    date: "JUN 13, 2026",
+    phase: "07 / International",
+    title: "Asia Pacific Olympiad in AI",
+    desc: "Philippine team competes in the Asia Pacific regional olympiad.",
+    status: "upcoming",
+  },
+  {
+    date: "JUL 1 – AUG 1, 2026",
+    phase: "08 / International",
+    title: "IOAI 2026 · At-Home Round",
+    desc: "Remote round of the International Olympiad in Artificial Intelligence.",
+    status: "upcoming",
+  },
+  {
+    date: "AUG 2 – 8, 2026",
+    phase: "09 / International",
+    title: "IOAI 2026 · Onsite",
+    desc: "Onsite finals of the International Olympiad in AI. 60+ national teams compete on the world stage.",
+    status: "upcoming",
+  },
 ];
 
 const stats = [
@@ -39,7 +99,7 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative -mt-24 overflow-hidden border-b border-border/60 pt-24">
+      <section className="relative overflow-hidden border-b border-border/60">
         <NeuralNetworkBg className="absolute inset-0 h-full w-full [mask-image:radial-gradient(ellipse_at_center,black_0%,transparent_75%)]" />
         <div className="absolute left-1/2 top-0 h-[480px] w-[820px] -translate-x-1/2 rounded-full bg-primary/15 blur-[140px]" />
         <div className="absolute right-0 top-1/3 h-[360px] w-[520px] rounded-full bg-signal/10 blur-[120px]" />
@@ -49,16 +109,26 @@ function Home() {
             IOAI 2026 · Astana, Kazakhstan · Aug 02–09
           </div>
           <h1 className="mt-6 max-w-4xl font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
-            <span className="text-gradient">Filipino intelligence</span><br />on the world stage of AI.
+            <span className="text-gradient">Filipino intelligence</span>
+            <br />
+            on the world stage of AI.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            IOAI Philippines is the national selection and training program sending Team PH to the International Olympiad in Artificial Intelligence. We identify, train and field the country's strongest young AI talent — at zero cost to students.
+            IOAI Philippines is the national selection and training program sending Team PH to the International
+            Olympiad in Artificial Intelligence. We identify, train and field the country's strongest young AI talent —
+            at zero cost to students.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
-            <Link to="/about" className="rounded-sm bg-primary px-5 py-3 font-mono text-xs uppercase tracking-wider text-primary-foreground transition-all hover:opacity-90">
+            <Link
+              to="/about"
+              className="rounded-sm bg-primary px-5 py-3 font-mono text-xs uppercase tracking-wider text-primary-foreground transition-all hover:opacity-90"
+            >
               Meet the Program →
             </Link>
-            <Link to="/partnerships" className="rounded-sm border border-border bg-surface px-5 py-3 font-mono text-xs uppercase tracking-wider transition-all hover:border-primary/40">
+            <Link
+              to="/partnerships"
+              className="rounded-sm border border-border bg-surface px-5 py-3 font-mono text-xs uppercase tracking-wider transition-all hover:border-primary/40"
+            >
               Partner with us
             </Link>
           </div>
@@ -83,7 +153,6 @@ function Home() {
               The 2026 cycle, from national qualifiers to the world stage.
             </h2>
           </div>
-
         </div>
 
         <div className="relative mt-16">
@@ -93,15 +162,20 @@ function Home() {
               const right = i % 2 === 1;
               return (
                 <li key={t.phase} className="relative md:grid md:grid-cols-2 md:gap-12">
-                  <div className={`absolute left-0 top-1.5 grid h-6 w-6 place-items-center md:left-1/2 md:-translate-x-1/2`}>
-                    <div className={`h-3 w-3 rounded-full ${t.status === "active" ? "bg-primary glow-primary animate-pulse" : t.status === "complete" ? "bg-primary" : "border border-border bg-background"}`} />
+                  <div
+                    className={`absolute left-0 top-1.5 grid h-6 w-6 place-items-center md:left-1/2 md:-translate-x-1/2`}
+                  >
+                    <div
+                      className={`h-3 w-3 rounded-full ${t.status === "active" ? "bg-primary glow-primary animate-pulse" : t.status === "complete" ? "bg-primary" : "border border-border bg-background"}`}
+                    />
                   </div>
                   <div className={`pl-10 md:pl-0 ${right ? "md:col-start-2" : "md:text-right md:pr-12"}`}>
-                    <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">{t.date} · {t.phase}</div>
+                    <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                      {t.date} · {t.phase}
+                    </div>
                     <h3 className="mt-2 font-display text-2xl font-semibold tracking-tight">{t.title}</h3>
                     <p className="mt-2 text-sm text-muted-foreground">{t.desc}</p>
                   </div>
-
                 </li>
               );
             })}
@@ -118,9 +192,21 @@ function Home() {
           </h2>
           <div className="mt-14 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-3">
             {[
-              { n: "01", t: "Free, merit-based selection", d: "No application fees. Every student in the Philippines can compete. Selection is purely by performance on technical assessments." },
-              { n: "02", t: "World-class curriculum", d: "Coursework mirrors the IOAI syllabus: classical ML, deep learning, NLP, computer vision, RL and applied agentic systems." },
-              { n: "03", t: "Mentor network", d: "Active researchers and engineers from UP, Ateneo, DLSU, plus industry leads from Google, Meta and local AI labs." },
+              {
+                n: "01",
+                t: "Free, merit-based selection",
+                d: "No application fees. Every student in the Philippines can compete. Selection is purely by performance on technical assessments.",
+              },
+              {
+                n: "02",
+                t: "World-class curriculum",
+                d: "Coursework mirrors the IOAI syllabus: classical ML, deep learning, NLP, computer vision, audio, and AI ethics.",
+              },
+              {
+                n: "03",
+                t: "Mentor network",
+                d: "Active researchers and engineers from local and global universities, plus industry leaders from here and abroad.",
+              },
             ].map((c) => (
               <div key={c.n} className="bg-surface p-8">
                 <div className="font-mono text-xs text-primary">{c.n}</div>
@@ -144,10 +230,21 @@ function Home() {
             <h2 className="mt-3 max-w-2xl font-display text-4xl font-semibold tracking-tight md:text-5xl">
               Applications for the 2027 cycle open this November.
             </h2>
-            <p className="mt-4 max-w-xl text-muted-foreground">Be the first to know when the qualifier opens. Join the IOAI Philippines mailing list.</p>
+            <p className="mt-4 max-w-xl text-muted-foreground">
+              Be the first to know when the qualifier opens. Join the IOAI Philippines mailing list.
+            </p>
             <form className="mt-8 flex max-w-md flex-col gap-2 sm:flex-row">
-              <input type="email" placeholder="your@school.edu.ph" className="flex-1 rounded-sm border border-border bg-background px-4 py-3 font-mono text-sm outline-none focus:border-primary" />
-              <button type="button" className="rounded-sm bg-primary px-5 py-3 font-mono text-xs uppercase tracking-wider text-primary-foreground hover:opacity-90">Notify me</button>
+              <input
+                type="email"
+                placeholder="your@school.edu.ph"
+                className="flex-1 rounded-sm border border-border bg-background px-4 py-3 font-mono text-sm outline-none focus:border-primary"
+              />
+              <button
+                type="button"
+                className="rounded-sm bg-primary px-5 py-3 font-mono text-xs uppercase tracking-wider text-primary-foreground hover:opacity-90"
+              >
+                Notify me
+              </button>
             </form>
           </div>
         </div>
@@ -167,19 +264,43 @@ const bronzePartners: Partner[] = [
 ];
 
 const featuredPartners: Partner[] = [
-  { name: "Analytics and AI Association of the Philippines", src: "https://ioaiph.org/partners/aaplogo.png", href: "https://www.aap.ph/" },
-  { name: "Dashlabs.ai", src: "https://ioaiph.org/partners/DashlabsWordmarkLogoBlue-Trademarked.png", href: "https://dashlabs.ai/" },
+  {
+    name: "Analytics and AI Association of the Philippines",
+    src: "https://ioaiph.org/partners/aaplogo.png",
+    href: "https://www.aap.ph/",
+  },
+  {
+    name: "Dashlabs.ai",
+    src: "https://ioaiph.org/partners/DashlabsWordmarkLogoBlue-Trademarked.png",
+    href: "https://dashlabs.ai/",
+  },
 ];
 
 const communityPartners: Partner[] = [
   { name: "TACTICS", src: "https://ioaiph.org/partners/tactics.png", href: "https://www.facebook.com/adnutactics" },
   { name: "XCITeS", src: "https://ioaiph.org/partners/XCITeS.png", href: "https://www.facebook.com/XU.XCITES" },
   { name: "SITEAO", src: "https://ioaiph.org/partners/siteao.png", href: "https://www.facebook.com/adzusiteao" },
-  { name: "Mapua SHS Science Club", src: "https://ioaiph.org/partners/mapuashssciclublogo.png", href: "https://facebook.com/mapuashscienceclub" },
-  { name: "Tomorrow", src: "https://ioaiph.org/partners/tomorrowlogo.png", href: "https://www.facebook.com/profile.php?id=61563288622007" },
+  {
+    name: "Mapua SHS Science Club",
+    src: "https://ioaiph.org/partners/mapuashssciclublogo.png",
+    href: "https://facebook.com/mapuashscienceclub",
+  },
+  {
+    name: "Tomorrow",
+    src: "https://ioaiph.org/partners/tomorrowlogo.png",
+    href: "https://www.facebook.com/profile.php?id=61563288622007",
+  },
 ];
 
-function LogoTile({ p, size = "md", widthClass }: { p: Partner; size?: "sm" | "md" | "lg" | "xl" | "2xl"; widthClass?: string }) {
+function LogoTile({
+  p,
+  size = "md",
+  widthClass,
+}: {
+  p: Partner;
+  size?: "sm" | "md" | "lg" | "xl" | "2xl";
+  widthClass?: string;
+}) {
   const heights = { sm: "h-8", md: "h-24", lg: "h-16", xl: "h-48", "2xl": "h-48" };
   const Tag: any = p.href ? "a" : "div";
   const props = p.href ? { href: p.href, target: "_blank", rel: "noopener noreferrer" } : {};
@@ -221,7 +342,10 @@ function PartnersSection() {
               Backed by a national coalition.
             </h2>
           </div>
-          <Link to="/partnerships" className="hidden shrink-0 rounded-sm border border-border bg-surface px-4 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground transition-all hover:border-primary/40 hover:text-primary md:inline-block">
+          <Link
+            to="/partnerships"
+            className="hidden shrink-0 rounded-sm border border-border bg-surface px-4 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground transition-all hover:border-primary/40 hover:text-primary md:inline-block"
+          >
             Become a partner →
           </Link>
         </div>
@@ -277,4 +401,3 @@ function PartnersSection() {
     </section>
   );
 }
-
