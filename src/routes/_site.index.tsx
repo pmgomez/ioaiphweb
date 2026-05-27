@@ -3,6 +3,8 @@ import { NeuralNetworkBg } from "@/components/neural-network-bg";
 import aapLogo from "@/assets/aaplogo.png";
 import timesPaintLogo from "@/assets/timespaintlogo.png";
 import joyNostalgLogo from "@/assets/joynostalg.png";
+import depedLogo from "@/assets/depedlogo.svg";
+import dostSeiLogo from "@/assets/dostseilogo.png";
 
 export const Route = createFileRoute("/_site/")({
   head: () => ({
@@ -391,13 +393,16 @@ function PartnersSection() {
             <TierLabel accent="bg-primary shadow-[0_0_10px_1px] shadow-primary/60">Recognized by</TierLabel>
             <div className="mt-6 grid h-56 grid-cols-2 gap-4 rounded-sm border border-primary/30 bg-transparent p-6">
               {[
-                { name: "DepEd", label: "Department of Education" },
-                { name: "DOST-SEI", label: "Science Education Institute" },
+                { name: "DepEd", label: "Department of Education", src: depedLogo },
+                { name: "DOST-SEI", label: "Science Education Institute", src: dostSeiLogo },
               ].map((o) => (
                 <div key={o.name} className="flex flex-col items-center justify-center gap-3 text-center">
-                  <div className="flex h-20 w-20 items-center justify-center rounded-sm border border-dashed border-border bg-surface/40 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                    Logo
-                  </div>
+                  <img
+                    src={o.src}
+                    alt={`${o.name} logo`}
+                    loading="lazy"
+                    className="h-20 w-auto object-contain"
+                  />
                   <div>
                     <div className="font-display text-sm font-semibold tracking-tight">{o.name}</div>
                     <div className="font-mono text-[9px] uppercase tracking-[0.2em] text-muted-foreground">
