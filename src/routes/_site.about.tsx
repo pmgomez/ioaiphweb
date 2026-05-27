@@ -74,12 +74,8 @@ function About() {
           <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
             {leadership.map((p) => (
               <div key={p.name} className="bg-surface p-6">
-                <div className="grid h-12 w-12 place-items-center rounded-sm bg-primary/10 font-mono text-sm text-primary">
-                  {p.name
-                    .split(" ")
-                    .map((n) => n[0])
-                    .slice(0, 2)
-                    .join("")}
+                <div className="h-20 w-20 overflow-hidden rounded-sm bg-primary/10">
+                  <img src={p.photo} alt={p.name} className="h-full w-full object-cover" />
                 </div>
                 <div className="mt-4 font-display text-lg font-semibold">{p.name}</div>
                 <div className="mt-1 text-sm text-primary">{p.role}</div>
