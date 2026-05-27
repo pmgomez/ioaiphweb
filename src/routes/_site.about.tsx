@@ -64,13 +64,28 @@ const leadership = [
     org: "UC Berkeley, UC San Francisco",
     photo: adrianPhoto,
   },
-  { name: "Hansly Saw", role: "Scientific Committee", org: "University of the Philippines - Diliman", photo: hanslyPhoto },
-  { name: "Paolo Rollan", role: "Scientific Committee", org: "University of the Philippines - Diliman", photo: paoloPhoto },
+  {
+    name: "Hansly Saw",
+    role: "Scientific Committee",
+    org: "University of the Philippines - Diliman",
+    photo: hanslyPhoto,
+  },
+  {
+    name: "Paolo Rollan",
+    role: "Scientific Committee",
+    org: "University of the Philippines - Diliman",
+    photo: paoloPhoto,
+  },
   { name: "Hans Tan", role: "Scientific Committee", org: "Sun Yat-Sen University" },
   { name: "James Bermudo", role: "Scientific Committee", org: "Ateneo de Manila University", photo: jamesPhoto },
   { name: "Andrew Yu", role: "Scientific Committee", org: "Procter & Gamble", photo: andrewPhoto },
   { name: "Gian Alingog", role: "Scientific Committee", org: "UC Sta Barbara" },
-  { name: "Timothy James Dimacali", role: "Media and Press Relations", org: "Ateneo de Manila University", photo: tjPhoto },
+  {
+    name: "Timothy James Dimacali",
+    role: "Media and Press Relations",
+    org: "Ateneo de Manila University",
+    photo: tjPhoto,
+  },
   { name: "Kyle Reynoso", role: "Sponsorships", org: "University of the Philippines - Diliman", photo: kylePhoto },
   { name: "Leonard Ang", role: "Partnerships", org: "University of the Philippines - Diliman", photo: leonardPhoto },
 ];
@@ -125,7 +140,8 @@ function About() {
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// behind the scenes</div>
           <h2 className="mt-3 font-display text-3xl font-semibold">People</h2>
           <p className="mt-4 max-w-3xl text-sm text-muted-foreground">
-            Everyone listed below contributes their expertise, time, and effort on a purely voluntary, pro bono basis — without compensation or anything sought in return.
+            Everyone listed below contributes their expertise, time, and effort on a purely voluntary, pro bono basis —
+            without compensation or anything sought in return. We thank them for their generosity and spirit of magis.
           </p>
           <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
             {leadership.map((p) => (
