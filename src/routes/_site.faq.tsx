@@ -29,7 +29,7 @@ const groups: Group[] = [
       },
       {
         q: "When and where are the Global Finals?",
-        a: "The 2026 IOAI Global Finals will take place from August 2 to August 8, 2026, in Astana, Kazakhstan.",
+        a: "The 2026 IOAI Global Finals will take place from August 2 to August 8, 2026, in Astana, Kazakhstan. The 2027 IOAI Global Finals will take place from July 4 to July 10, 2027 in Singapore.",
       },
       {
         q: "Has the Philippine team already been selected for the current cycle?",
@@ -177,9 +177,7 @@ function FAQ() {
           {groups.map((g, gi) => (
             <div key={g.cat}>
               <div className="flex items-baseline gap-4 border-b border-border pb-4">
-                <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
-                  0{gi + 1}
-                </div>
+                <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">0{gi + 1}</div>
                 <h2 className="font-display text-2xl font-semibold">{g.cat}</h2>
               </div>
               <div className="mt-2 divide-y divide-border">
