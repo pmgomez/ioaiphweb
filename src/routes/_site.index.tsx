@@ -80,7 +80,7 @@ function Home() {
           <div>
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// road_to_astana.log</div>
             <h2 className="mt-3 max-w-2xl font-display text-4xl font-semibold tracking-tight md:text-5xl">
-              The 2026 cycle, in six phases.
+              The 2026 cycle, from national qualifiers to the world stage.
             </h2>
           </div>
           <div className="hidden font-mono text-xs text-muted-foreground md:block">
