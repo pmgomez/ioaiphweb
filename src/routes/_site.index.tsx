@@ -184,7 +184,7 @@ const communityPartners: Partner[] = [
   { name: "XCITeS", src: "https://ioaiph.org/partners/XCITeS.png", href: "https://www.facebook.com/XU.XCITES" },
   { name: "SITEAO", src: "https://ioaiph.org/partners/siteao.png", href: "https://www.facebook.com/adzusiteao" },
   { name: "Mapua SHS Science Club", src: "https://ioaiph.org/partners/mapuashssciclublogo.png", href: "https://facebook.com/mapuashscienceclub" },
-  { name: "Tomorrow", src: "http://ioaiph.org/partners/tomorrowlogo.png", href: "https://www.facebook.com/profile.php?id=61563288622007" },
+  { name: "Tomorrow", src: "https://ioaiph.org/partners/tomorrowlogo.png", href: "https://www.facebook.com/profile.php?id=61563288622007" },
 ];
 
 function LogoTile({ p, size = "md", widthClass }: { p: Partner; size?: "sm" | "md" | "lg" | "xl" | "2xl"; widthClass?: string }) {

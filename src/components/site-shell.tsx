@@ -110,7 +110,7 @@ export function SiteFooter() {
           <div>
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Contact</div>
             <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-              <li>team@ioai.ph</li>
+              <li>info@ioaiph.org</li>
               <li>Manila, Philippines</li>
             </ul>
           </div>
