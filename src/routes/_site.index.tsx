@@ -268,7 +268,7 @@ function PartnersSection() {
         {/* ROW 3: COMMUNITY GRID */}
         <div className="mt-12">
           <TierLabel accent="bg-primary/60">Community Partners</TierLabel>
-          <div className="mt-6 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+          <div className="mt-6 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {communityPartners.map((p) => (
               <div key={p.name} className="flex items-center justify-center bg-transparent py-8">
                 <LogoTile p={p} size="md" />
