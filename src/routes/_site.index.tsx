@@ -6,6 +6,11 @@ import joyNostalgLogo from "@/assets/joynostalg.png";
 import depedLogo from "@/assets/depedlogo.svg";
 import dostSeiLogo from "@/assets/dostseilogo.png";
 import ateneoBuildLogo from "@/assets/ateneobuildlogo.jpg";
+import tacticsLogo from "@/assets/partners/tactics.png";
+import xcitesLogo from "@/assets/partners/xcites.png";
+import siteaoLogo from "@/assets/partners/siteao.png";
+import mapuaShsSciClubLogo from "@/assets/partners/mapuashssciclub.png";
+import tomorrowLogo from "@/assets/partners/tomorrow.png";
 
 export const Route = createFileRoute("/_site/")({
   head: () => ({
@@ -284,17 +289,17 @@ const featuredPartners: Partner[] = [
 ];
 
 const communityPartners: Partner[] = [
-  { name: "TACTICS", src: "https://ioaiph.org/partners/tactics.png", href: "https://www.facebook.com/adnutactics" },
-  { name: "XCITeS", src: "https://ioaiph.org/partners/XCITeS.png", href: "https://www.facebook.com/XU.XCITES" },
-  { name: "SITEAO", src: "https://ioaiph.org/partners/siteao.png", href: "https://www.facebook.com/adzusiteao" },
+  { name: "TACTICS", src: tacticsLogo, href: "https://www.facebook.com/adnutactics" },
+  { name: "XCITeS", src: xcitesLogo, href: "https://www.facebook.com/XU.XCITES" },
+  { name: "SITEAO", src: siteaoLogo, href: "https://www.facebook.com/adzusiteao" },
   {
     name: "Mapua SHS Science Club",
-    src: "https://ioaiph.org/partners/mapuashssciclublogo.png",
+    src: mapuaShsSciClubLogo,
     href: "https://facebook.com/mapuashscienceclub",
   },
   {
     name: "Tomorrow",
-    src: "https://ioaiph.org/partners/tomorrowlogo.png",
+    src: tomorrowLogo,
     href: "https://www.facebook.com/profile.php?id=61563288622007",
   },
 ];
