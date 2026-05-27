@@ -22,7 +22,15 @@ export const Route = createFileRoute("/_site/resources")({
 
 const sections = [
   {
-    tag: "01 / Foundations",
+    tag: "01 / Open Source",
+    title: "IOAI Philippines on GitHub",
+    desc: "Our official repository — training materials, problem sets, and tooling maintained by the IOAI Philippines team.",
+    links: [
+      { label: "IOAI Philippines GitHub Repo", href: "https://github.com/ioaiph" },
+    ],
+  },
+  {
+    tag: "02 / Foundations",
     title: "Math & Probability",
     desc: "Linear algebra, calculus, probability, and statistics — the bedrock of every IOAI round.",
     links: [
@@ -35,7 +43,7 @@ const sections = [
     ],
   },
   {
-    tag: "02 / Classical ML",
+    tag: "03 / Classical ML",
     title: "Machine Learning",
     desc: "Supervised and unsupervised methods, evaluation, and feature engineering.",
     links: [
@@ -48,7 +56,7 @@ const sections = [
     ],
   },
   {
-    tag: "03 / Deep Learning",
+    tag: "04 / Deep Learning",
     title: "Neural Networks & Transformers",
     desc: "From backprop to modern transformer architectures and training dynamics.",
     links: [
@@ -58,7 +66,7 @@ const sections = [
     ],
   },
   {
-    tag: "04 / NLP & CV",
+    tag: "05 / NLP & CV",
     title: "Language & Vision",
     desc: "Tokenization, embeddings, attention, and vision pipelines from CNNs to ViTs.",
     links: [
@@ -68,18 +76,17 @@ const sections = [
     ],
   },
   {
-    tag: "05 / Competition",
+    tag: "06 / Competition",
     title: "IOAI & Olympiad Prep",
     desc: "Official syllabus, past tasks, and competition-style practice.",
     links: [
       { label: "IOAI — Official Website", href: "https://ioai-official.org/" },
       { label: "IOAI Tasks & Solutions GitHub Repo", href: "https://github.com/IOAI-official" },
-      { label: "IOAI Philippines GitHub Repo", href: "https://github.com/ioaiph" },
       { label: "Kaggle — Learn", href: "https://www.kaggle.com/learn" },
     ],
   },
   {
-    tag: "06 / Tooling",
+    tag: "07 / Tooling",
     title: "Environments & Compute",
     desc: "Free notebooks, datasets, and GPU resources to practice on real workloads.",
     links: [
