@@ -13,22 +13,32 @@ export const Route = createFileRoute("/_site/partnerships")({
 
 const tiers = [
   {
+    name: "Steel",
+    code: "T-06",
+    price: "₱ 5,000",
+    accent: "steel",
+    desc: "An entry-level show of support for the national program.",
+    perks: [
+      "Logo placement on IOAI PH website",
+      "Annual impact report",
+    ],
+  },
+  {
     name: "Bronze",
-    code: "T-04",
-    price: "₱ 250,000",
+    code: "T-05",
+    price: "₱ 10,000",
     accent: "bronze",
     desc: "For organizations beginning a partnership with the national program.",
     perks: [
-      "Logo placement on IOAI PH website",
+      "Everything in Steel",
       "Recognition at the national bootcamp",
-      "Quarterly impact report",
       "1 invitation to send-off ceremony",
     ],
   },
   {
     name: "Silver",
-    code: "T-03",
-    price: "₱ 750,000",
+    code: "T-04",
+    price: "₱ 25,000",
     accent: "silver",
     desc: "For partners co-funding the bootcamp and selection phases.",
     perks: [
@@ -41,35 +51,46 @@ const tiers = [
   },
   {
     name: "Gold",
-    code: "T-02",
-    price: "₱ 2,000,000",
+    code: "T-03",
+    price: "₱ 50,000",
     accent: "gold",
-    featured: true,
-    desc: "For partners underwriting the full national delegation.",
+    desc: "For partners underwriting major parts of the national delegation.",
     perks: [
       "Everything in Silver",
       "Named title sponsor of training camp",
       "Logo on Team PH competition apparel",
       "Executive on advisory board",
-      "Featured documentary segment",
+      "Partnership feature",
       "Exclusive recruitment partnership",
     ],
   },
   {
     name: "Platinum",
+    code: "T-02",
+    price: "₱ 100,000",
+    accent: "platinum",
+    desc: "For partners underwriting the full national delegation.",
+    perks: [
+      "Everything in Gold",
+      "Dedicated AI research grant in your name",
+      "Named scholarship for top performer",
+    ],
+  },
+  {
+    name: "Diamond",
     code: "T-01",
     price: "Bespoke",
     accent: "primary",
+    featured: true,
     desc: "Lead sponsor of IOAI Philippines. Limited to one organization per cycle.",
     perks: [
-      "Everything in Gold",
+      "Everything in Platinum",
       "Presenting partner — 'IOAI PH presented by [Brand]'",
-      "Dedicated AI research grant in your name",
-      "Named scholarship for top performer",
       "Co-design of multi-year program roadmap",
     ],
   },
 ];
+
 
 function Partnerships() {
   return (
@@ -83,15 +104,21 @@ function Partnerships() {
             Fund the future of <span className="text-primary">Filipino AI.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            Every peso of sponsorship goes directly to student stipends, training infrastructure, travel to Astana, and the long-term sustainability of the national delegation. No middlemen.
+            Every peso of sponsorship goes directly to student stipends, training infrastructure, travel, and the long-term sustainability of the national delegation. No middlemen.
           </p>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="grid gap-6 lg:grid-cols-4">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {tiers.map((t) => {
-            const ring = t.accent === "gold" ? "var(--gold)" : t.accent === "silver" ? "var(--silver)" : t.accent === "bronze" ? "var(--bronze)" : "var(--primary)";
+            const ring =
+              t.accent === "gold" ? "var(--gold)"
+              : t.accent === "silver" ? "var(--silver)"
+              : t.accent === "bronze" ? "var(--bronze)"
+              : t.accent === "steel" ? "#8a8f99"
+              : t.accent === "platinum" ? "#d8dde6"
+              : "var(--primary)";
             return (
               <div
                 key={t.name}
@@ -130,7 +157,7 @@ function Partnerships() {
           {[
             { k: "100%", l: "Of funds go to students & program" },
             { k: "501(c)-equivalent", l: "Tax-deductible in PH & US" },
-            { k: "Quarterly", l: "Public audit & impact reports" },
+            { k: "Annual", l: "Public audit & impact reports" },
           ].map((s) => (
             <div key={s.l} className="bg-surface p-8">
               <div className="font-display text-3xl font-semibold text-primary">{s.k}</div>
