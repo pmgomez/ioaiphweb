@@ -1,7 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
-import jobenPhoto from "@/assets/joben.png";
-import martinPhoto from "@/assets/martin.png";
 
 export const Route = createFileRoute("/_site/about")({
   head: () => ({
@@ -18,8 +16,8 @@ export const Route = createFileRoute("/_site/about")({
 });
 
 const leadership = [
-  { name: "Joben Ilagan", role: "Founding Chair", org: "Director, Ateneo BUILD", photo: jobenPhoto },
-  { name: "Martin Gomez", role: "Founding Executive Director", org: "", photo: martinPhoto },
+  { name: "Dr. Joben Ilagan", role: "Founding Chair", org: "Director, Ateneo BUILD" },
+  { name: "Martin Gomez", role: "Founding Executive Director", org: "" },
 ];
 
 function About() {
@@ -31,8 +29,8 @@ function About() {
         <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-24">
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// about.program</div>
           <h1 className="mt-3 max-w-3xl font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
-            We exist so Filipino students will never have to choose between
-            <span className="text-primary"> ambition and access.</span>
+            We exist to put young Filipino talent on the world stage of AI — and let them
+            <span className="text-primary"> create what's possible for the country and humanity.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
             IOAI Philippines is the Philippines' official route to the International Olympiad in Artificial Intelligence
@@ -74,8 +72,12 @@ function About() {
           <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
             {leadership.map((p) => (
               <div key={p.name} className="bg-surface p-6">
-                <div className="h-24 w-24 overflow-hidden rounded-sm bg-primary/10">
-                  <img src={p.photo} alt={p.name} className="h-full w-full object-cover" />
+                <div className="grid h-12 w-12 place-items-center rounded-sm bg-primary/10 font-mono text-sm text-primary">
+                  {p.name
+                    .split(" ")
+                    .map((n) => n[0])
+                    .slice(0, 2)
+                    .join("")}
                 </div>
                 <div className="mt-4 font-display text-lg font-semibold">{p.name}</div>
                 <div className="mt-1 text-sm text-primary">{p.role}</div>
