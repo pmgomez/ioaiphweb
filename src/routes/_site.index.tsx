@@ -60,7 +60,7 @@ function Home() {
             </Link>
           </div>
 
-          <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-4">
+          <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-3 lg:grid-cols-6">
             {stats.map((s) => (
               <div key={s.l} className="bg-surface p-6">
                 <div className="font-display text-3xl font-semibold text-primary md:text-4xl">{s.k}</div>
