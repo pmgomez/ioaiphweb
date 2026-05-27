@@ -284,7 +284,7 @@ const featuredPartners: Partner[] = [
   },
   {
     name: "Dashlabs.ai",
-    src: "https://ioaiph.org/partners/DashlabsWordmarkLogoBlue-Trademarked.png",
+    src: dashlabsLogo,
     href: "https://dashlabs.ai/",
   },
 ];
