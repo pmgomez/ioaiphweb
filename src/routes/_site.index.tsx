@@ -379,7 +379,7 @@ function PartnersSection() {
             <TierLabel accent="bg-gold shadow-[0_0_12px_2px] shadow-gold/60">Gold Partners</TierLabel>
             <div className="mt-6 overflow-hidden rounded-sm border border-gold/30 bg-transparent">
               {goldPartners.map((p) => (
-                <PartnerBox key={p.name} p={p} imgClass="h-[90%]" />
+                <PartnerBox key={p.name} p={p} imgClass="h-[85%]" />
               ))}
             </div>
           </div>
@@ -387,7 +387,7 @@ function PartnersSection() {
             <TierLabel accent="bg-bronze shadow-[0_0_10px_1px] shadow-bronze/60">Bronze Partners</TierLabel>
             <div className="mt-6 overflow-hidden rounded-sm border border-bronze/30 bg-transparent">
               {bronzePartners.map((p) => (
-                <PartnerBox key={p.name} p={p} imgClass="h-[70%]" />
+                <PartnerBox key={p.name} p={p} imgClass="h-[65%]" />
               ))}
             </div>
           </div>
