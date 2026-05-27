@@ -16,10 +16,8 @@ export const Route = createFileRoute("/_site/about")({
 });
 
 const leadership = [
-  { name: "Dr. Maria Santos", role: "National Team Director", org: "UP Diliman · DCS" },
-  { name: "Prof. Liam Reyes", role: "Head of Curriculum", org: "Ateneo · Dept of IS&CS" },
-  { name: "Dr. Andrea Cruz", role: "Lead Coach, ML Track", org: "DLSU · CCS" },
-  { name: "Mr. Jonas Villar", role: "Operations & Outreach", org: "DOST-SEI" },
+  { name: "Dr. Joben Ilagan", role: "Founding Chair", org: "Director, Ateneo BUILD" },
+  { name: "Martin Gomez", role: "Founding Executive Director", org: "" },
 ];
 
 function About() {
@@ -70,7 +68,7 @@ function About() {
       <section className="border-y border-border/60 bg-surface/30">
         <div className="mx-auto max-w-7xl px-6 py-24">
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// leadership</div>
-          <h2 className="mt-3 font-display text-3xl font-semibold">Leadership & coaching</h2>
+          <h2 className="mt-3 font-display text-3xl font-semibold">Leadership</h2>
           <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
             {leadership.map((p) => (
               <div key={p.name} className="bg-surface p-6">
