@@ -83,9 +83,7 @@ function Home() {
               The 2026 cycle, from national qualifiers to the world stage.
             </h2>
           </div>
-          <div className="hidden font-mono text-xs text-muted-foreground md:block">
-            Last updated · 2026.06.14
-          </div>
+
         </div>
 
         <div className="relative mt-16">
@@ -102,14 +100,8 @@ function Home() {
                     <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">{t.date} · {t.phase}</div>
                     <h3 className="mt-2 font-display text-2xl font-semibold tracking-tight">{t.title}</h3>
                     <p className="mt-2 text-sm text-muted-foreground">{t.desc}</p>
-                    <div className={`mt-3 inline-flex items-center gap-2 rounded-sm border px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.15em] ${
-                      t.status === "active" ? "border-primary/40 bg-primary/10 text-primary"
-                      : t.status === "complete" ? "border-border bg-surface text-muted-foreground"
-                      : "border-dashed border-border text-muted-foreground"
-                    }`}>
-                      {t.status === "active" ? "● in progress" : t.status === "complete" ? "✓ complete" : "○ upcoming"}
-                    </div>
                   </div>
+
                 </li>
               );
             })}
