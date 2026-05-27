@@ -11,6 +11,7 @@ import xcitesLogo from "@/assets/partners/xcites.png";
 import siteaoLogo from "@/assets/partners/siteao.png";
 import mapuaShsSciClubLogo from "@/assets/partners/mapuashssciclub.png";
 import tomorrowLogo from "@/assets/partners/tomorrow.png";
+import dashlabsLogo from "@/assets/dashlabs-logo.png";
 
 export const Route = createFileRoute("/_site/")({
   head: () => ({
@@ -283,7 +284,7 @@ const featuredPartners: Partner[] = [
   },
   {
     name: "Dashlabs.ai",
-    src: "https://ioaiph.org/partners/DashlabsWordmarkLogoBlue-Trademarked.png",
+    src: dashlabsLogo,
     href: "https://dashlabs.ai/",
   },
 ];
