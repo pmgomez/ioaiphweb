@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
 import aapLogo from "@/assets/aaplogo.png";
 import timesPaintLogo from "@/assets/timespaintlogo.png";
+import joyNostalgLogo from "@/assets/joynostalg.png";
 
 export const Route = createFileRoute("/_site/")({
   head: () => ({
@@ -263,7 +264,7 @@ function Home() {
 type Partner = { name: string; src: string; href?: string };
 
 const goldPartners: Partner[] = [
-  { name: "Joy-Nostalg Group", src: "https://ioaiph.org/partners/joynostalg.png", href: "https://joy-nostalg.com/" },
+  { name: "Joy-Nostalg Group", src: joyNostalgLogo, href: "https://joy-nostalg.com/" },
 ];
 
 const bronzePartners: Partner[] = [
@@ -308,7 +309,7 @@ function LogoTile({
   size?: "sm" | "md" | "lg" | "xl" | "2xl";
   widthClass?: string;
 }) {
-  const heights = { sm: "h-8", md: "h-24", lg: "h-16", xl: "h-48", "2xl": "h-48" };
+  const heights = { sm: "h-8", md: "h-24", lg: "h-16", xl: "h-48", "2xl": "h-72" };
   const Tag: any = p.href ? "a" : "div";
   const props = p.href ? { href: p.href, target: "_blank", rel: "noopener noreferrer" } : {};
   return (
@@ -364,7 +365,8 @@ function PartnersSection() {
             <div className="mt-6 overflow-hidden rounded-sm border border-gold/30 bg-transparent">
               {goldPartners.map((p) => (
                 <div key={p.name} className="flex items-center justify-center py-12">
-                  <LogoTile p={p} size="xl" />
+                  <LogoTile p={p} size="2xl" />
+
                 </div>
               ))}
             </div>
