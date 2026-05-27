@@ -18,13 +18,24 @@ export const Route = createFileRoute("/_site/about")({
 });
 
 const leadership = [
-  { name: "Dr. Roberto Galang", role: "Honorary Chair", org: "Dean, JGSOM, Ateneo de Manila University" },
-  { name: "Joben Ilagan", role: "Founding Chair", org: "Director, Ateneo BUILD", photo: jobenPhoto },
+  {
+    name: "Dr. Roberto Galang",
+    role: "Honorary Chair",
+    org: "Dean, John Gokongwei School of Management, Ateneo de Manila University",
+  },
+  {
+    name: "Joben Ilagan",
+    role: "Founding Chair",
+    org: "Director, Ateneo BUILD; Program Director, ADMU BS ITE",
+    photo: jobenPhoto,
+  },
   { name: "Martin Gomez", role: "Founding Executive Director", org: "", photo: martinPhoto },
   { name: "Farrell Eldrian Wu", role: "Advisory Board", org: "Massachusetts Institute of Technology" },
   { name: "Dr. Charibeth Cheng", role: "Scientific Contributor", org: "Assoc Dean, CCS, De La Salle University" },
   { name: "Lester James Miranda", role: "Scientific Committee", org: "University of Cambridge" },
   { name: "Lorenzo Jaime Flores", role: "Scientific Committee", org: "Microsoft Research" },
+  { name: "James Bermudo", role: "Scientific Committee", org: "Ateneo de Manila University" },
+  { name: "Adrian Dar Serapio", role: "Scientific Committee", org: "UC Berkeley, UC San Francisco" },
 ];
 
 function About() {
@@ -74,7 +85,8 @@ function About() {
 
       <section className="border-y border-border/60 bg-surface/30">
         <div className="mx-auto max-w-7xl px-6 py-24">
-          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// people</div>
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// behind the scenes</div>
+          <h2 className="mt-3 font-display text-3xl font-semibold">People</h2>
           <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
             {leadership.map((p) => (
               <div key={p.name} className="bg-surface p-6">
