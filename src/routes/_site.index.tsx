@@ -259,7 +259,7 @@ function PartnersSection() {
           <div className="mt-6 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2">
             {featuredPartners.map((p) => (
               <div key={p.name} className="flex items-center justify-center bg-white py-10">
-                <LogoTile p={p} size="lg" />
+                <LogoTile p={p} size="lg" widthClass="w-56" />
               </div>
             ))}
           </div>
