@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SiteRouteImport } from './routes/_site'
 import { Route as SiteIndexRouteImport } from './routes/_site.index'
 import { Route as SiteResultsRouteImport } from './routes/_site.results'
+import { Route as SiteResourcesRouteImport } from './routes/_site.resources'
 import { Route as SitePartnershipsRouteImport } from './routes/_site.partnerships'
 import { Route as SiteFaqRouteImport } from './routes/_site.faq'
 import { Route as SiteAboutRouteImport } from './routes/_site.about'
@@ -28,6 +29,11 @@ const SiteIndexRoute = SiteIndexRouteImport.update({
 const SiteResultsRoute = SiteResultsRouteImport.update({
   id: '/results',
   path: '/results',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteResourcesRoute = SiteResourcesRouteImport.update({
+  id: '/resources',
+  path: '/resources',
   getParentRoute: () => SiteRoute,
 } as any)
 const SitePartnershipsRoute = SitePartnershipsRouteImport.update({
@@ -51,12 +57,14 @@ export interface FileRoutesByFullPath {
   '/about': typeof SiteAboutRoute
   '/faq': typeof SiteFaqRoute
   '/partnerships': typeof SitePartnershipsRoute
+  '/resources': typeof SiteResourcesRoute
   '/results': typeof SiteResultsRoute
 }
 export interface FileRoutesByTo {
   '/about': typeof SiteAboutRoute
   '/faq': typeof SiteFaqRoute
   '/partnerships': typeof SitePartnershipsRoute
+  '/resources': typeof SiteResourcesRoute
   '/results': typeof SiteResultsRoute
   '/': typeof SiteIndexRoute
 }
@@ -66,20 +74,28 @@ export interface FileRoutesById {
   '/_site/about': typeof SiteAboutRoute
   '/_site/faq': typeof SiteFaqRoute
   '/_site/partnerships': typeof SitePartnershipsRoute
+  '/_site/resources': typeof SiteResourcesRoute
   '/_site/results': typeof SiteResultsRoute
   '/_site/': typeof SiteIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/faq' | '/partnerships' | '/results'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/faq'
+    | '/partnerships'
+    | '/resources'
+    | '/results'
   fileRoutesByTo: FileRoutesByTo
-  to: '/about' | '/faq' | '/partnerships' | '/results' | '/'
+  to: '/about' | '/faq' | '/partnerships' | '/resources' | '/results' | '/'
   id:
     | '__root__'
     | '/_site'
     | '/_site/about'
     | '/_site/faq'
     | '/_site/partnerships'
+    | '/_site/resources'
     | '/_site/results'
     | '/_site/'
   fileRoutesById: FileRoutesById
@@ -111,6 +127,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SiteResultsRouteImport
       parentRoute: typeof SiteRoute
     }
+    '/_site/resources': {
+      id: '/_site/resources'
+      path: '/resources'
+      fullPath: '/resources'
+      preLoaderRoute: typeof SiteResourcesRouteImport
+      parentRoute: typeof SiteRoute
+    }
     '/_site/partnerships': {
       id: '/_site/partnerships'
       path: '/partnerships'
@@ -139,6 +162,7 @@ interface SiteRouteChildren {
   SiteAboutRoute: typeof SiteAboutRoute
   SiteFaqRoute: typeof SiteFaqRoute
   SitePartnershipsRoute: typeof SitePartnershipsRoute
+  SiteResourcesRoute: typeof SiteResourcesRoute
   SiteResultsRoute: typeof SiteResultsRoute
   SiteIndexRoute: typeof SiteIndexRoute
 }
@@ -147,6 +171,7 @@ const SiteRouteChildren: SiteRouteChildren = {
   SiteAboutRoute: SiteAboutRoute,
   SiteFaqRoute: SiteFaqRoute,
   SitePartnershipsRoute: SitePartnershipsRoute,
+  SiteResourcesRoute: SiteResourcesRoute,
   SiteResultsRoute: SiteResultsRoute,
   SiteIndexRoute: SiteIndexRoute,
 }
@@ -159,3 +184,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
