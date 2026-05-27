@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Facebook } from "lucide-react";
 import phFlag from "@/assets/ph-flag.svg";
+import ioaiphLogo from "@/assets/ioaiph-logo.png";
 
 const DiscordIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
