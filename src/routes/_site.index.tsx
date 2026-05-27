@@ -24,10 +24,12 @@ const timeline = [
 ];
 
 const stats = [
-  { k: "2,140", l: "Applicants" },
-  { k: "48", l: "Finalists" },
-  { k: "4", l: "Team Members" },
-  { k: "17", l: "Provinces" },
+  { k: "200+", l: "Applicants" },
+  { k: "30", l: "Finalists" },
+  { k: "15", l: "National Pool" },
+  { k: "4", l: "IOAI Team Members" },
+  { k: "17", l: "Regions" },
+  { k: "1", l: "Country" },
 ];
 
 function Home() {
