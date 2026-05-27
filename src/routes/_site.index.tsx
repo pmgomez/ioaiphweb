@@ -373,6 +373,44 @@ function PartnersSection() {
           </Link>
         </div>
 
+
+        {/* ROW 0: HOST + RECOGNITION */}
+        <div className="mt-16 grid gap-6 md:grid-cols-2">
+          <div>
+            <TierLabel accent="bg-primary shadow-[0_0_10px_1px] shadow-primary/60">Hosted by</TierLabel>
+            <div className="mt-6 flex h-56 items-center justify-center rounded-sm border border-primary/30 bg-transparent px-6">
+              <div className="flex items-center gap-4">
+                <div className="flex h-24 w-24 items-center justify-center rounded-sm border border-dashed border-border bg-surface/40 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                  Logo
+                </div>
+                <div>
+                  <div className="font-display text-lg font-semibold tracking-tight">Ateneo BUILD</div>
+                  <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Host Institution</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <TierLabel accent="bg-primary shadow-[0_0_10px_1px] shadow-primary/60">Recognized by</TierLabel>
+            <div className="mt-6 grid h-56 grid-cols-2 gap-4 rounded-sm border border-primary/30 bg-transparent p-6">
+              {[
+                { name: "DepEd", label: "Department of Education" },
+                { name: "DOST-SEI", label: "Science Education Institute" },
+              ].map((o) => (
+                <div key={o.name} className="flex flex-col items-center justify-center gap-3 text-center">
+                  <div className="flex h-20 w-20 items-center justify-center rounded-sm border border-dashed border-border bg-surface/40 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                    Logo
+                  </div>
+                  <div>
+                    <div className="font-display text-sm font-semibold tracking-tight">{o.name}</div>
+                    <div className="font-mono text-[9px] uppercase tracking-[0.2em] text-muted-foreground">{o.label}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* ROW 1: GOLD (left) + BRONZE (right) */}
         <div className="mt-16 grid gap-6 md:grid-cols-2">
           <div>
