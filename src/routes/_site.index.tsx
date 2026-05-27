@@ -84,7 +84,7 @@ const timeline = [
     date: "AUG 2 – 8, 2026",
     phase: "09 / International",
     title: "IOAI 2026 · Onsite",
-    desc: "Onsite finals of the International Olympiad in AI. 60+ national teams compete on the world stage.",
+    desc: "Onsite finals of the International Olympiad in AI. 100+ national teams compete on the world stage.",
     status: "upcoming",
   },
 ];
