@@ -2,6 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
 import jobenPhoto from "@/assets/joben.png";
 import martinPhoto from "@/assets/martin.png";
+import robertoPhoto from "@/assets/roberto.jpg";
+import farrellPhoto from "@/assets/farrell.png";
+import charibethPhoto from "@/assets/charibeth.jpg";
 
 export const Route = createFileRoute("/_site/about")({
   head: () => ({
@@ -22,6 +25,7 @@ const leadership = [
     name: "Dr. Roberto Galang",
     role: "Honorary Chair",
     org: "Dean, John Gokongwei School of Management, Ateneo de Manila University",
+    photo: robertoPhoto,
   },
   {
     name: "Joben Ilagan",
@@ -30,8 +34,8 @@ const leadership = [
     photo: jobenPhoto,
   },
   { name: "Martin Gomez", role: "Founding Executive Director", org: "", photo: martinPhoto },
-  { name: "Farrell Eldrian Wu", role: "Advisory Board", org: "Massachusetts Institute of Technology" },
-  { name: "Dr. Charibeth Cheng", role: "Scientific Contributor", org: "Assoc Dean, CCS, De La Salle University" },
+  { name: "Farrell Eldrian Wu", role: "Advisory Board", org: "Massachusetts Institute of Technology", photo: farrellPhoto },
+  { name: "Dr. Charibeth Cheng", role: "Scientific Contributor", org: "Assoc Dean, CCS, De La Salle University", photo: charibethPhoto },
   { name: "Lester James Miranda", role: "Scientific Committee", org: "University of Cambridge" },
   { name: "Lorenzo Jaime Flores", role: "Scientific Committee", org: "Microsoft Research" },
   { name: "James Bermudo", role: "Scientific Committee", org: "Ateneo de Manila University" },
