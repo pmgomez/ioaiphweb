@@ -139,11 +139,15 @@ function ResourcesPage() {
         Philippines cycle. Free, public, and aligned with the official IOAI syllabus.
       </p>
 
-      <div className="mt-16 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
-        {sections.map((s) => (
+      <div className="mt-16 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// ioai.ph</div>
+      <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight md:text-4xl">
+        IOAI Philippines Resources
+      </h2>
+      <div className="mt-8 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
+        {ioaiPhSections.map((s) => (
           <article key={s.title} className="flex flex-col bg-surface p-8">
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">{s.tag}</div>
-            <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight">{s.title}</h2>
+            <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight">{s.title}</h3>
             <p className="mt-3 text-sm text-muted-foreground">{s.desc}</p>
             <ul className="mt-6 space-y-2 border-t border-border/60 pt-4">
               {s.links.map((l) => (
@@ -165,6 +169,38 @@ function ResourcesPage() {
           </article>
         ))}
       </div>
+
+      <div className="mt-20 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// study.tracks</div>
+      <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight md:text-4xl">
+        Study Resources
+      </h2>
+      <div className="mt-8 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
+        {sections.map((s) => (
+          <article key={s.title} className="flex flex-col bg-surface p-8">
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">{s.tag}</div>
+            <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight">{s.title}</h3>
+            <p className="mt-3 text-sm text-muted-foreground">{s.desc}</p>
+            <ul className="mt-6 space-y-2 border-t border-border/60 pt-4">
+              {s.links.map((l) => (
+                <li key={l.href}>
+                  <a
+                    href={l.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-start justify-between gap-3 text-sm text-foreground transition-colors hover:text-primary"
+                  >
+                    <span>{l.label}</span>
+                    <span className="font-mono text-xs text-muted-foreground transition-colors group-hover:text-primary">
+                      ↗
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+
 
       <div className="mt-16 rounded-sm border border-primary/30 bg-gradient-to-br from-surface to-background p-10">
         <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// contribute</div>
