@@ -196,7 +196,7 @@ function LogoTile({ p, size = "md" }: { p: Partner; size?: "sm" | "md" | "lg" | 
         src={p.src}
         alt={p.name}
         loading="lazy"
-        className={`${heights[size]} w-auto object-contain brightness-0 invert opacity-60 transition-all duration-500 group-hover:brightness-100 group-hover:invert-0 group-hover:opacity-100 group-hover:scale-110`}
+        className={`${heights[size]} w-auto object-contain transition-transform duration-500 group-hover:scale-110`}
       />
     </Tag>
   );
