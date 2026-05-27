@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Facebook } from "lucide-react";
+import phFlag from "@/assets/ph-flag.svg";
 
 const DiscordIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -108,25 +109,9 @@ export function SiteFooter() {
               Building the next generation of Filipino AI researchers.
             </p>
           </div>
-          <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Program</div>
-            <ul className="mt-3 space-y-2 text-sm">
-              <li>
-                <Link to="/about" className="hover:text-primary">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/results" className="hover:text-primary">
-                  Results
-                </Link>
-              </li>
-              <li>
-                <Link to="/faq" className="hover:text-primary">
-                  FAQ
-                </Link>
-              </li>
-            </ul>
+          <div className="flex flex-col items-start">
+            <img src={phFlag} alt="Flag of the Philippines" className="h-14 w-auto rounded-sm shadow-sm" />
+            <div className="mt-3 font-mono text-sm font-semibold tracking-wide text-foreground">#ParaSaBayan</div>
           </div>
           <div>
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Contact</div>
