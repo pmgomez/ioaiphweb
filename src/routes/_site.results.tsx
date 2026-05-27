@@ -1,185 +1,279 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
+import { ArrowUpRight, Lock } from "lucide-react";
 
 export const Route = createFileRoute("/_site/results")({
   head: () => ({
     meta: [
-      { title: "Results Dashboard — IOAI Philippines" },
-      { name: "description", content: "Live performance and medal results for Team Philippines at the International Olympiad in AI." },
+      { title: "Results — IOAI Philippines" },
+      {
+        name: "description",
+        content:
+          "Official results, qualifiers, and certificates from the IOAI Philippines national selection cycle, plus regional and international standings.",
+      },
     ],
   }),
   component: Results,
 });
 
-const team = [
-  { name: "Carlos Aguinaldo", school: "Philippine Science HS — Main", sci: 92, pra: 88, total: 180, medal: "Gold" },
-  { name: "Mariel Tan", school: "Ateneo de Manila SHS", sci: 88, pra: 90, total: 178, medal: "Gold" },
-  { name: "Iñigo Bernardo", school: "Manila Science HS", sci: 84, pra: 79, total: 163, medal: "Silver" },
-  { name: "Sofia delos Reyes", school: "PSHS — Visayas Campus", sci: 78, pra: 81, total: 159, medal: "Silver" },
+type Resource = {
+  code: string;
+  title: string;
+  subtitle: string;
+  href: string;
+  kind: "sheet" | "doc" | "drive";
+  featured?: boolean;
+};
+
+// Ordered as the contestant journey: Round 1 → Semis Qualifiers → Semis Results → Finals → Team
+const selection: Resource[] = [
+  {
+    code: "R-01",
+    title: "Successful Round 1 Participants",
+    subtitle: "Contestants who advanced past the opening online round.",
+    href: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTGS-4r-EuryVT0-aoRbNhkdsmWN7T_JlIAmZeJ3-9UVchnT0hX5oSnWvKl2Qv20oU_sQcGOL1QN9gD/pubhtml",
+    kind: "sheet",
+  },
+  {
+    code: "R-02",
+    title: "Semi-Finals Qualifiers",
+    subtitle: "Roster of contestants invited to the national semi-finals.",
+    href: "https://bit.ly/ioaiph-semis",
+    kind: "sheet",
+  },
+  {
+    code: "R-03",
+    title: "Semi-Finals Results",
+    subtitle: "Scores and standings from the semi-final round.",
+    href: "https://bit.ly/ioaiph-semis-results",
+    kind: "sheet",
+  },
+  {
+    code: "R-04",
+    title: "National Finals Results",
+    subtitle: "Final scores from the IOAI PH national finals.",
+    href: "https://bit.ly/ioaiph-finals-results",
+    kind: "sheet",
+    featured: true,
+  },
+  {
+    code: "R-05",
+    title: "Team Selection Grade Book",
+    subtitle:
+      "Composite grade book used to assemble the official Philippine delegation.",
+    href: "https://docs.google.com/spreadsheets/d/1xsZy_sfp_xIhAP_qdBCWHEZ44De5QChR4Xe_LUQSX08/edit?gid=0#gid=0",
+    kind: "sheet",
+    featured: true,
+  },
 ];
 
-const nations = [
-  { rank: 1, country: "China", g: 4, s: 0, b: 0, pts: 720 },
-  { rank: 2, country: "USA", g: 3, s: 1, b: 0, pts: 698 },
-  { rank: 3, country: "Russia", g: 3, s: 1, b: 0, pts: 691 },
-  { rank: 4, country: "South Korea", g: 2, s: 2, b: 0, pts: 672 },
-  { rank: 12, country: "Philippines", g: 2, s: 2, b: 0, pts: 680, highlight: true },
-  { rank: 18, country: "Singapore", g: 1, s: 2, b: 1, pts: 631 },
-  { rank: 24, country: "Vietnam", g: 1, s: 1, b: 2, pts: 598 },
-  { rank: 31, country: "Indonesia", g: 0, s: 2, b: 2, pts: 562 },
-];
+const certificates: Resource = {
+  code: "C-00",
+  title: "Certificates",
+  subtitle:
+    "Downloadable certificates for students, teachers, coaches, and schools.",
+  href: "https://drive.google.com/drive/u/0/folders/1EXT7xkEyxnlSgNESNvF0JIjeT753SSuv",
+  kind: "drive",
+};
 
-const medalColor = (m: string) =>
-  m === "Gold" ? "var(--gold)" : m === "Silver" ? "var(--silver)" : m === "Bronze" ? "var(--bronze)" : "var(--muted-foreground)";
+const competitions = [
+  {
+    code: "N-01",
+    name: "NEOAI",
+    full: "North-East Asia Olympiad in AI",
+    window: "Results pending",
+  },
+  {
+    code: "N-02",
+    name: "APOAI",
+    full: "Asia-Pacific Olympiad in AI",
+    window: "Results pending",
+  },
+  {
+    code: "N-03",
+    name: "IOAI",
+    full: "International Olympiad in AI",
+    window: "Results pending",
+  },
+];
 
 function Results() {
   return (
     <>
+      {/* HERO */}
       <section className="relative border-b border-border/60">
         <NeuralNetworkBg className="absolute inset-0 h-full w-full [mask-image:radial-gradient(ellipse_at_center,black_0%,transparent_75%)]" />
         <div className="absolute left-1/2 top-0 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-primary/15 blur-[140px]" />
-        <div className="relative mx-auto max-w-7xl px-6 pb-12 pt-20">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <div>
-              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// results.dashboard · ioai_2026</div>
-              <h1 className="mt-3 font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
-                Astana 2026 · live results
-              </h1>
-            </div>
-            <div className="flex items-center gap-3 rounded-sm border border-primary/40 bg-primary/5 px-3 py-2 font-mono text-xs text-primary">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-primary" />
-              Last sync · 2026.08.09 · 18:42 UTC+6
-            </div>
+        <div className="relative mx-auto max-w-7xl px-6 pb-14 pt-20">
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+            // results.index · cycle_2026
           </div>
+          <h1 className="mt-3 font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
+            Results &amp; records
+          </h1>
+          <p className="mt-5 max-w-2xl text-base text-muted-foreground md:text-lg">
+            A single source of truth for every round of the IOAI PH selection
+            cycle — qualifiers, scores, the team grade book, and certificates —
+            plus the regional and international competitions our delegation
+            will contest next.
+          </p>
         </div>
       </section>
 
-      {/* TOP METRICS */}
-      <section className="mx-auto max-w-7xl px-6 py-10">
-        <div className="grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-4">
-          {[
-            { k: "12th", l: "Global rank", sub: "of 64 nations", color: "primary" },
-            { k: "2", l: "Gold medals", color: "gold" },
-            { k: "2", l: "Silver medals", color: "silver" },
-            { k: "680", l: "Total team points", color: "primary" },
-          ].map((m) => (
-            <div key={m.l} className="bg-surface p-6">
-              <div className="font-display text-4xl font-semibold" style={{ color: `var(--${m.color})` }}>{m.k}</div>
-              <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">{m.l}</div>
-              {m.sub && <div className="mt-0.5 text-xs text-muted-foreground">{m.sub}</div>}
+      {/* SELECTION CYCLE */}
+      <section className="mx-auto max-w-7xl px-6 py-14">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+              section · 01
             </div>
+            <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight md:text-4xl">
+              National selection cycle
+            </h2>
+          </div>
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+            round 1 → team selection
+          </div>
+        </div>
+
+        <div className="mt-8 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
+          {selection.map((r) => (
+            <ResourceCard key={r.code} r={r} />
           ))}
         </div>
       </section>
 
-      {/* TEAM BREAKDOWN */}
-      <section className="mx-auto max-w-7xl px-6 py-10">
-        <div className="rounded-sm border border-border bg-surface">
-          <div className="flex items-center justify-between border-b border-border px-6 py-4">
-            <h2 className="font-display text-xl font-semibold">Team Philippines · contestant scores</h2>
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">/200 max</div>
-          </div>
-          <div className="divide-y divide-border">
-            {team.map((c) => (
-              <div key={c.name} className="grid items-center gap-4 px-6 py-5 md:grid-cols-[2fr_1fr_1fr_auto]">
-                <div>
-                  <div className="font-display text-lg font-semibold">{c.name}</div>
-                  <div className="font-mono text-[11px] text-muted-foreground">{c.school}</div>
-                </div>
-                <ScoreBar label="SCI" value={c.sci} />
-                <ScoreBar label="PRA" value={c.pra} />
-                <div className="flex items-center justify-end gap-4">
-                  <div className="text-right">
-                    <div className="font-display text-2xl font-semibold">{c.total}</div>
-                    <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">total</div>
-                  </div>
-                  <div
-                    className="rounded-sm border px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.2em]"
-                    style={{ color: medalColor(c.medal), borderColor: medalColor(c.medal) + "55" }}
-                  >
-                    ● {c.medal}
-                  </div>
-                </div>
-              </div>
-            ))}
+      {/* CERTIFICATES */}
+      <section className="mx-auto max-w-7xl px-6 py-14">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+              section · 02
+            </div>
+            <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight md:text-4xl">
+              Certificates
+            </h2>
           </div>
         </div>
-      </section>
 
-      {/* NATION LEADERBOARD */}
-      <section className="mx-auto max-w-7xl px-6 py-10">
-        <div className="rounded-sm border border-border bg-surface">
-          <div className="flex items-center justify-between border-b border-border px-6 py-4">
-            <h2 className="font-display text-xl font-semibold">Nation leaderboard</h2>
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">selected entries</div>
-          </div>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-border font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                  <th className="px-6 py-3 text-left">Rank</th>
-                  <th className="px-6 py-3 text-left">Nation</th>
-                  <th className="px-6 py-3 text-right" style={{ color: "var(--gold)" }}>G</th>
-                  <th className="px-6 py-3 text-right" style={{ color: "var(--silver)" }}>S</th>
-                  <th className="px-6 py-3 text-right" style={{ color: "var(--bronze)" }}>B</th>
-                  <th className="px-6 py-3 text-right">Points</th>
-                </tr>
-              </thead>
-              <tbody>
-                {nations.map((n) => (
-                  <tr
-                    key={n.country}
-                    className={`border-b border-border/50 last:border-0 ${n.highlight ? "bg-primary/5" : ""}`}
+        <a
+          href={certificates.href}
+          target="_blank"
+          rel="noreferrer"
+          className="group mt-8 block overflow-hidden rounded-sm border border-border bg-surface transition-colors hover:border-primary/50"
+        >
+          <div className="grid items-stretch md:grid-cols-[1fr_auto]">
+            <div className="p-8">
+              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+                {certificates.code} · google drive
+              </div>
+              <h3 className="mt-3 font-display text-2xl font-semibold md:text-3xl">
+                {certificates.title}
+              </h3>
+              <p className="mt-2 max-w-xl text-sm text-muted-foreground md:text-base">
+                {certificates.subtitle}
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                {["Students", "Teachers", "Coaches", "Schools"].map((t) => (
+                  <span
+                    key={t}
+                    className="rounded-sm border border-border px-2 py-1"
                   >
-                    <td className="px-6 py-4 font-mono">{String(n.rank).padStart(2, "0")}</td>
-                    <td className="px-6 py-4 font-display">
-                      {n.highlight ? <span className="text-primary">▸ {n.country}</span> : n.country}
-                    </td>
-                    <td className="px-6 py-4 text-right font-mono">{n.g}</td>
-                    <td className="px-6 py-4 text-right font-mono">{n.s}</td>
-                    <td className="px-6 py-4 text-right font-mono">{n.b}</td>
-                    <td className="px-6 py-4 text-right font-mono">{n.pts}</td>
-                  </tr>
+                    {t}
+                  </span>
                 ))}
-              </tbody>
-            </table>
+              </div>
+            </div>
+            <div className="flex items-center justify-center border-t border-border bg-background/40 px-8 py-6 md:border-l md:border-t-0">
+              <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-primary">
+                Open folder
+                <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              </div>
+            </div>
           </div>
-        </div>
+        </a>
       </section>
 
-      {/* HISTORICAL */}
-      <section className="mx-auto max-w-7xl px-6 py-10">
-        <div className="rounded-sm border border-border bg-surface p-6">
-          <h2 className="font-display text-xl font-semibold">Cycle history</h2>
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
-            {[
-              { y: "2024 · Bulgaria", r: "23rd", m: "1 Silver · 1 Bronze" },
-              { y: "2026 · Kazakhstan", r: "12th", m: "2 Gold · 2 Silver", live: true },
-              { y: "2027 · TBD", r: "—", m: "Cycle opens Nov 2026", future: true },
-            ].map((h) => (
-              <div key={h.y} className={`rounded-sm border p-5 ${h.live ? "border-primary/40 bg-primary/5" : h.future ? "border-dashed border-border" : "border-border"}`}>
-                <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">{h.y}</div>
-                <div className="mt-3 font-display text-3xl font-semibold" style={{ color: h.live ? "var(--color-primary)" : undefined }}>{h.r}</div>
-                <div className="mt-1 text-sm text-muted-foreground">{h.m}</div>
-              </div>
-            ))}
+      {/* COMPETITIONS — PLACEHOLDERS */}
+      <section className="mx-auto max-w-7xl px-6 py-14">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+              section · 03
+            </div>
+            <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight md:text-4xl">
+              Competition results
+            </h2>
+            <p className="mt-2 max-w-xl text-sm text-muted-foreground">
+              Regional and international standings will appear here as each
+              competition concludes.
+            </p>
           </div>
+        </div>
+
+        <div className="mt-8 grid gap-px overflow-hidden rounded-sm border border-dashed border-border bg-border/60 md:grid-cols-3">
+          {competitions.map((c) => (
+            <div
+              key={c.code}
+              className="flex flex-col gap-6 bg-surface/60 p-8"
+            >
+              <div className="flex items-center justify-between">
+                <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                  {c.code}
+                </div>
+                <div className="flex items-center gap-1.5 rounded-sm border border-border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                  <Lock className="size-3" />
+                  Pending
+                </div>
+              </div>
+              <div>
+                <div className="font-display text-3xl font-semibold tracking-tight">
+                  {c.name}
+                </div>
+                <div className="mt-1 text-sm text-muted-foreground">
+                  {c.full}
+                </div>
+              </div>
+              <div className="mt-auto border-t border-border/70 pt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                {c.window}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </>
   );
 }
 
-function ScoreBar({ label, value }: { label: string; value: number }) {
+function ResourceCard({ r }: { r: Resource }) {
+  const kindLabel =
+    r.kind === "drive" ? "google drive" : r.kind === "doc" ? "google doc" : "google sheet";
   return (
-    <div>
-      <div className="flex justify-between font-mono text-[10px] uppercase tracking-[0.15em] text-muted-foreground">
-        <span>{label}</span>
-        <span>{value}/100</span>
+    <a
+      href={r.href}
+      target="_blank"
+      rel="noreferrer"
+      className={`group relative flex flex-col gap-5 bg-surface p-6 transition-colors hover:bg-surface/70 ${
+        r.featured ? "ring-1 ring-inset ring-primary/40" : ""
+      }`}
+    >
+      <div className="flex items-center justify-between">
+        <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+          {r.code} · {kindLabel}
+        </div>
+        <ArrowUpRight className="size-4 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
       </div>
-      <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-background">
-        <div className="h-full rounded-full bg-primary" style={{ width: `${value}%` }} />
+      <div>
+        <h3 className="font-display text-xl font-semibold leading-tight">
+          {r.title}
+        </h3>
+        <p className="mt-2 text-sm text-muted-foreground">{r.subtitle}</p>
       </div>
-    </div>
+      {r.featured && (
+        <div className="mt-auto inline-flex w-fit items-center gap-1.5 rounded-sm border border-primary/40 bg-primary/5 px-2 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+          ● Featured
+        </div>
+      )}
+    </a>
   );
 }
