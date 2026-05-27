@@ -365,7 +365,7 @@ function PartnersSection() {
             <div className="mt-6 overflow-hidden rounded-sm border border-gold/30 bg-transparent">
               {goldPartners.map((p) => (
                 <div key={p.name} className="flex items-center justify-center py-12">
-                  <LogoTile p={p} size="2xl" />
+                  <LogoTile p={p} size="xl" widthClass="h-72 w-auto" />
 
                 </div>
               ))}
