@@ -89,7 +89,7 @@ function FAQ() {
         <div className="mt-20 rounded-sm border border-border bg-surface p-8">
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// still_stuck?</div>
           <h3 className="mt-3 font-display text-2xl font-semibold">We read every message.</h3>
-          <p className="mt-2 text-muted-foreground">Reach the program team directly at <span className="text-primary font-mono">team@ioai.ph</span>.</p>
+          <p className="mt-2 text-muted-foreground">Reach the program team directly at <span className="text-primary font-mono">info@ioaiph.org</span>.</p>
         </div>
       </section>
     </>

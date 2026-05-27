@@ -118,7 +118,7 @@ function ResourcesPage() {
         </h2>
         <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
           We keep this list lean and high-signal. If you've found something exceptional, email{" "}
-          <a href="mailto:team@ioai.ph" className="text-primary hover:underline">team@ioai.ph</a> with the link and a short note on why.
+          <a href="mailto:info@ioaiph.org" className="text-primary hover:underline">info@ioaiph.org</a> with the link and a short note on why.
         </p>
       </div>
     </section>
