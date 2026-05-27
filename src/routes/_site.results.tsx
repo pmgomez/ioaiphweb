@@ -25,21 +25,24 @@ type Resource = {
   featured?: boolean;
 };
 
-// Ordered as the contestant journey: Round 1 → Semis Qualifiers → Semis Results → Finals → Team
+// Reverse chronological: Team Selection ← Finals ← Semis ← Round 1
 const selection: Resource[] = [
   {
     code: "R-01",
-    title: "Successful Round 1 Participants",
-    subtitle: "Contestants who advanced past the opening online round.",
-    href: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTGS-4r-EuryVT0-aoRbNhkdsmWN7T_JlIAmZeJ3-9UVchnT0hX5oSnWvKl2Qv20oU_sQcGOL1QN9gD/pubhtml",
+    title: "Team Selection Grade Book",
+    subtitle:
+      "Composite grade book used to assemble the official Philippine delegation.",
+    href: "https://docs.google.com/spreadsheets/d/1xsZy_sfp_xIhAP_qdBCWHEZ44De5QChR4Xe_LUQSX08/edit?gid=0#gid=0",
     kind: "sheet",
+    featured: true,
   },
   {
     code: "R-02",
-    title: "Semi-Finals Qualifiers",
-    subtitle: "Roster of contestants invited to the national semi-finals.",
-    href: "https://bit.ly/ioaiph-semis",
+    title: "National Finals Results",
+    subtitle: "Final scores from the IOAI PH national finals.",
+    href: "https://bit.ly/ioaiph-finals-results",
     kind: "sheet",
+    featured: true,
   },
   {
     code: "R-03",
@@ -50,20 +53,17 @@ const selection: Resource[] = [
   },
   {
     code: "R-04",
-    title: "National Finals Results",
-    subtitle: "Final scores from the IOAI PH national finals.",
-    href: "https://bit.ly/ioaiph-finals-results",
+    title: "Semi-Finals Qualifiers",
+    subtitle: "Roster of contestants invited to the national semi-finals.",
+    href: "https://bit.ly/ioaiph-semis",
     kind: "sheet",
-    featured: true,
   },
   {
     code: "R-05",
-    title: "Team Selection Grade Book",
-    subtitle:
-      "Composite grade book used to assemble the official Philippine delegation.",
-    href: "https://docs.google.com/spreadsheets/d/1xsZy_sfp_xIhAP_qdBCWHEZ44De5QChR4Xe_LUQSX08/edit?gid=0#gid=0",
+    title: "Successful Round 1 Participants",
+    subtitle: "Contestants who advanced past the opening online round.",
+    href: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTGS-4r-EuryVT0-aoRbNhkdsmWN7T_JlIAmZeJ3-9UVchnT0hX5oSnWvKl2Qv20oU_sQcGOL1QN9gD/pubhtml",
     kind: "sheet",
-    featured: true,
   },
 ];
 
@@ -76,23 +76,27 @@ const certificates: Resource = {
   kind: "drive",
 };
 
+// Reverse chronological: International → Regional → Sub-regional
 const competitions = [
   {
-    code: "N-01",
-    name: "NEOAI",
-    full: "North-East Asia Olympiad in AI",
-    window: "Results pending",
-  },
-  {
-    code: "N-02",
-    name: "APOAI",
-    full: "Asia-Pacific Olympiad in AI",
-    window: "Results pending",
-  },
-  {
-    code: "N-03",
+    code: "C-01",
     name: "IOAI",
-    full: "International Olympiad in AI",
+    full: "International Olympiad in Artificial Intelligence",
+    scope: "Global · final stage",
+    window: "Results pending",
+  },
+  {
+    code: "C-02",
+    name: "APOAI",
+    full: "Asia-Pacific Olympiad in Artificial Intelligence",
+    scope: "Asia-Pacific regional",
+    window: "Results pending",
+  },
+  {
+    code: "C-03",
+    name: "NEOAI",
+    full: "North-East Asia Olympiad in Artificial Intelligence",
+    scope: "North-East Asia sub-regional",
     window: "Results pending",
   },
 ];
@@ -112,15 +116,13 @@ function Results() {
             Results &amp; records
           </h1>
           <p className="mt-5 max-w-2xl text-base text-muted-foreground md:text-lg">
-            A single source of truth for every round of the IOAI PH selection
-            cycle — qualifiers, scores, the team grade book, and certificates —
-            plus the regional and international competitions our delegation
-            will contest next.
+            From the international podium back to the first qualifier — every
+            round Team Philippines moves through, in one place.
           </p>
         </div>
       </section>
 
-      {/* SELECTION CYCLE */}
+      {/* COMPETITION BANNERS */}
       <section className="mx-auto max-w-7xl px-6 py-14">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
@@ -128,11 +130,38 @@ function Results() {
               section · 01
             </div>
             <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight md:text-4xl">
+              Competition results
+            </h2>
+            <p className="mt-2 max-w-xl text-sm text-muted-foreground">
+              International, regional, and sub-regional standings will land
+              here as each competition concludes.
+            </p>
+          </div>
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+            international → sub-regional
+          </div>
+        </div>
+
+        <div className="mt-8 space-y-px overflow-hidden rounded-sm border border-border bg-border">
+          {competitions.map((c, i) => (
+            <CompetitionBanner key={c.code} c={c} primary={i === 0} />
+          ))}
+        </div>
+      </section>
+
+      {/* NATIONAL SELECTION CYCLE */}
+      <section className="mx-auto max-w-7xl px-6 py-14">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+              section · 02
+            </div>
+            <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight md:text-4xl">
               National selection cycle
             </h2>
           </div>
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-            round 1 → team selection
+            team selection → round 1
           </div>
         </div>
 
@@ -148,7 +177,7 @@ function Results() {
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-              section · 02
+              section · 03
             </div>
             <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight md:text-4xl">
               Certificates
@@ -193,61 +222,60 @@ function Results() {
           </div>
         </a>
       </section>
-
-      {/* COMPETITIONS — PLACEHOLDERS */}
-      <section className="mx-auto max-w-7xl px-6 py-14">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-              section · 03
-            </div>
-            <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight md:text-4xl">
-              Competition results
-            </h2>
-            <p className="mt-2 max-w-xl text-sm text-muted-foreground">
-              Regional and international standings will appear here as each
-              competition concludes.
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-8 grid gap-px overflow-hidden rounded-sm border border-dashed border-border bg-border/60 md:grid-cols-3">
-          {competitions.map((c) => (
-            <div
-              key={c.code}
-              className="flex flex-col gap-6 bg-surface/60 p-8"
-            >
-              <div className="flex items-center justify-between">
-                <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                  {c.code}
-                </div>
-                <div className="flex items-center gap-1.5 rounded-sm border border-border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                  <Lock className="size-3" />
-                  Pending
-                </div>
-              </div>
-              <div>
-                <div className="font-display text-3xl font-semibold tracking-tight">
-                  {c.name}
-                </div>
-                <div className="mt-1 text-sm text-muted-foreground">
-                  {c.full}
-                </div>
-              </div>
-              <div className="mt-auto border-t border-border/70 pt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                {c.window}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
     </>
+  );
+}
+
+function CompetitionBanner({
+  c,
+  primary,
+}: {
+  c: (typeof competitions)[number];
+  primary?: boolean;
+}) {
+  return (
+    <div
+      className={`relative grid gap-6 px-6 py-8 md:grid-cols-[auto_1fr_auto] md:items-center md:px-10 ${
+        primary ? "bg-primary/5" : "bg-surface"
+      }`}
+    >
+      {primary && (
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-[3px] bg-primary" />
+      )}
+      <div className="flex items-baseline gap-4">
+        <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+          {c.code}
+        </div>
+        <div
+          className={`font-display font-semibold tracking-tight ${
+            primary ? "text-5xl md:text-6xl" : "text-4xl md:text-5xl"
+          }`}
+          style={primary ? { color: "var(--color-primary)" } : undefined}
+        >
+          {c.name}
+        </div>
+      </div>
+      <div className="md:px-6">
+        <div className="font-display text-lg md:text-xl">{c.full}</div>
+        <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+          {c.scope}
+        </div>
+      </div>
+      <div className="flex items-center gap-2 self-start rounded-sm border border-border px-3 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground md:self-center">
+        <Lock className="size-3" />
+        {c.window}
+      </div>
+    </div>
   );
 }
 
 function ResourceCard({ r }: { r: Resource }) {
   const kindLabel =
-    r.kind === "drive" ? "google drive" : r.kind === "doc" ? "google doc" : "google sheet";
+    r.kind === "drive"
+      ? "google drive"
+      : r.kind === "doc"
+        ? "google doc"
+        : "google sheet";
   return (
     <a
       href={r.href}
