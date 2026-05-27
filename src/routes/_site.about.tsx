@@ -140,8 +140,12 @@ function About() {
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// behind the scenes</div>
           <h2 className="mt-3 font-display text-3xl font-semibold">People</h2>
           <p className="mt-4 max-w-3xl text-sm text-muted-foreground">
-            Everyone listed below contributes their expertise, time, and effort on a purely voluntary, pro bono basis —
-            without compensation or anything sought in return. We thank them for their generosity and spirit of magis.
+            Everyone listed below contributes their expertise, time, and effort on a{" "}
+            <span className="font-semibold text-foreground">purely voluntary</span>,{" "}
+            <span className="font-semibold text-foreground">pro bono basis</span> — without compensation or anything
+            sought in return. We thank them for their{" "}
+            <span className="font-semibold text-foreground">generosity</span> and{" "}
+            <span className="font-semibold text-foreground">spirit of <em>magis</em></span>.
           </p>
           <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
             {leadership.map((p) => (
