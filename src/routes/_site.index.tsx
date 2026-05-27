@@ -231,21 +231,26 @@ function Home() {
               Applications for the 2027 cycle open this November.
             </h2>
             <p className="mt-4 max-w-xl text-muted-foreground">
-              Be the first to know when the qualifier opens. Join the IOAI Philippines mailing list.
+              Be the first to know when the qualifier opens. Follow us on Facebook and join our Discord.
             </p>
-            <form className="mt-8 flex max-w-md flex-col gap-2 sm:flex-row">
-              <input
-                type="email"
-                placeholder="your@school.edu.ph"
-                className="flex-1 rounded-sm border border-border bg-background px-4 py-3 font-mono text-sm outline-none focus:border-primary"
-              />
-              <button
-                type="button"
-                className="rounded-sm bg-primary px-5 py-3 font-mono text-xs uppercase tracking-wider text-primary-foreground hover:opacity-90"
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="https://www.facebook.com/ioaiph"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-sm bg-primary px-5 py-3 font-mono text-xs uppercase tracking-wider text-primary-foreground transition-all hover:opacity-90"
               >
-                Notify me
-              </button>
-            </form>
+                Facebook →
+              </a>
+              <a
+                href="https://discord.gg/pBktCwHNkJ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-sm border border-border bg-surface px-5 py-3 font-mono text-xs uppercase tracking-wider transition-all hover:border-primary/40"
+              >
+                Discord →
+              </a>
+            </div>
           </div>
         </div>
       </section>
