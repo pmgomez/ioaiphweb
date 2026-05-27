@@ -5,6 +5,7 @@ import timesPaintLogo from "@/assets/timespaintlogo.png";
 import joyNostalgLogo from "@/assets/joynostalg.png";
 import depedLogo from "@/assets/depedlogo.svg";
 import dostSeiLogo from "@/assets/dostseilogo.png";
+import ateneoBuildLogo from "@/assets/ateneobuildlogo.jpg";
 
 export const Route = createFileRoute("/_site/")({
   head: () => ({
@@ -376,17 +377,12 @@ function PartnersSection() {
           <div>
             <TierLabel accent="bg-primary shadow-[0_0_10px_1px] shadow-primary/60">Hosted by</TierLabel>
             <div className="mt-6 flex h-56 items-center justify-center rounded-sm border border-primary/30 bg-transparent px-6">
-              <div className="flex items-center gap-4">
-                <div className="flex h-24 w-24 items-center justify-center rounded-sm border border-dashed border-border bg-surface/40 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                  Logo
-                </div>
-                <div>
-                  <div className="font-display text-lg font-semibold tracking-tight">Ateneo BUILD</div>
-                  <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                    Host Institution
-                  </div>
-                </div>
-              </div>
+              <img
+                src={ateneoBuildLogo}
+                alt="Ateneo BUILD logo"
+                loading="lazy"
+                className="h-[85%] w-auto object-contain"
+              />
             </div>
           </div>
           <div>
