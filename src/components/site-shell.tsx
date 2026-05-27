@@ -13,6 +13,7 @@ const DiscordIcon = ({ className }: { className?: string }) => (
 const nav = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
+  { to: "/team", label: "Team" },
   { to: "/partnerships", label: "Partnerships" },
   { to: "/results", label: "Results" },
   { to: "/resources", label: "Resources" },
