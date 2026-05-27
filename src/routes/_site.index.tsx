@@ -182,8 +182,8 @@ const communityPartners: Partner[] = [
   { name: "Tomorrow", src: "http://ioaiph.org/partners/tomorrowlogo.png", href: "https://www.facebook.com/profile.php?id=61563288622007" },
 ];
 
-function LogoTile({ p, size = "md" }: { p: Partner; size?: "sm" | "md" | "lg" | "xl" }) {
-  const heights = { sm: "h-8", md: "h-12", lg: "h-16", xl: "h-24" };
+function LogoTile({ p, size = "md", widthClass }: { p: Partner; size?: "sm" | "md" | "lg" | "xl" | "2xl"; widthClass?: string }) {
+  const heights = { sm: "h-8", md: "h-24", lg: "h-16", xl: "h-48", "2xl": "h-48" };
   const Tag: any = p.href ? "a" : "div";
   const props = p.href ? { href: p.href, target: "_blank", rel: "noopener noreferrer" } : {};
   return (
@@ -196,7 +196,7 @@ function LogoTile({ p, size = "md" }: { p: Partner; size?: "sm" | "md" | "lg" | 
         src={p.src}
         alt={p.name}
         loading="lazy"
-        className={`${heights[size]} w-auto object-contain transition-transform duration-500 group-hover:scale-110`}
+        className={`${heights[size]} ${widthClass ?? "w-auto"} object-contain transition-transform duration-500 group-hover:scale-110`}
       />
     </Tag>
   );
@@ -259,7 +259,7 @@ function PartnersSection() {
           <div className="mt-6 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2">
             {featuredPartners.map((p) => (
               <div key={p.name} className="flex items-center justify-center bg-white py-10">
-                <LogoTile p={p} size="lg" />
+                <LogoTile p={p} size="lg" widthClass="w-56" />
               </div>
             ))}
           </div>
