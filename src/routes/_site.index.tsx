@@ -328,6 +328,21 @@ function LogoTile({
   );
 }
 
+function PartnerBox({ p, imgClass }: { p: Partner; imgClass: string }) {
+  const Tag: any = p.href ? "a" : "div";
+  const props = p.href ? { href: p.href, target: "_blank", rel: "noopener noreferrer" } : {};
+  return (
+    <Tag {...props} title={p.name} className="group flex h-72 items-center justify-center px-6">
+      <img
+        src={p.src}
+        alt={p.name}
+        loading="lazy"
+        className={`${imgClass} w-auto object-contain transition-transform duration-500 group-hover:scale-105`}
+      />
+    </Tag>
+  );
+}
+
 function TierLabel({ children, accent }: { children: React.ReactNode; accent: string }) {
   return (
     <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
