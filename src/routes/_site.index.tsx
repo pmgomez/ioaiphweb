@@ -117,7 +117,7 @@ function Home() {
         <div className="relative mx-auto max-w-7xl px-6 pb-32 pt-24">
           <div className="inline-flex items-center gap-2 rounded-sm border border-primary/30 bg-primary/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
-            IOAI 2026 · Astana, Kazakhstan · Aug 02–09
+            IOAI 2026 · Astana, Kazakhstan · Aug 02–08
           </div>
           <h1 className="mt-6 max-w-4xl font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
             <span className="text-gradient">Filipino intelligence</span>
@@ -289,9 +289,24 @@ const featuredPartners: Partner[] = [
 ];
 
 const communityPartners: Partner[] = [
-  { name: "TACTICS", src: tacticsLogo, href: "https://www.facebook.com/adnutactics", subtitle: "Ateneo de Naga University" },
-  { name: "XCITeS", src: xcitesLogo, href: "https://www.facebook.com/XU.XCITES", subtitle: "Xavier University - Ateneo de Cagayan" },
-  { name: "SITEAO", src: siteaoLogo, href: "https://www.facebook.com/adzusiteao", subtitle: "Ateneo de Zamboanga University" },
+  {
+    name: "TACTICS",
+    src: tacticsLogo,
+    href: "https://www.facebook.com/adnutactics",
+    subtitle: "Ateneo de Naga University",
+  },
+  {
+    name: "XCITeS",
+    src: xcitesLogo,
+    href: "https://www.facebook.com/XU.XCITES",
+    subtitle: "Xavier University - Ateneo de Cagayan",
+  },
+  {
+    name: "SITEAO",
+    src: siteaoLogo,
+    href: "https://www.facebook.com/adzusiteao",
+    subtitle: "Ateneo de Zamboanga University",
+  },
   {
     name: "Mapua SHS Science Club",
     src: mapuaShsSciClubLogo,
@@ -400,12 +415,7 @@ function PartnersSection() {
                 { name: "DOST-SEI", label: "Science Education Institute", src: dostSeiLogo },
               ].map((o) => (
                 <div key={o.name} className="flex flex-col items-center justify-center gap-3 text-center">
-                  <img
-                    src={o.src}
-                    alt={`${o.name} logo`}
-                    loading="lazy"
-                    className="h-20 w-auto object-contain"
-                  />
+                  <img src={o.src} alt={`${o.name} logo`} loading="lazy" className="h-20 w-auto object-contain" />
                   <div>
                     <div className="font-display text-sm font-semibold tracking-tight">{o.name}</div>
                     <div className="font-mono text-[9px] uppercase tracking-[0.2em] text-muted-foreground">
