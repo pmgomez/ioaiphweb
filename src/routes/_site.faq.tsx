@@ -156,8 +156,48 @@ const groups: Group[] = [
   },
 ];
 
+function reactNodeToText(node: React.ReactNode): string {
+  if (node == null || typeof node === "boolean") return "";
+  if (typeof node === "string" || typeof node === "number") return String(node);
+  if (Array.isArray(node)) return node.map(reactNodeToText).join(" ");
+  if (typeof node === "object" && "props" in (node as object)) {
+    // @ts-expect-error - children may not exist on all element types
+    return reactNodeToText((node as React.ReactElement).props?.children);
+  }
+  return "";
+}
+
+function highlight(text: string, query: string): React.ReactNode {
+  if (!query) return text;
+  const parts = text.split(new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`, "ig"));
+  return parts.map((p, i) =>
+    p.toLowerCase() === query.toLowerCase() ? (
+      <mark key={i} className="bg-primary/20 text-foreground">{p}</mark>
+    ) : (
+      <span key={i}>{p}</span>
+    ),
+  );
+}
+
 function FAQ() {
   const [open, setOpen] = useState<string | null>("0-0");
+  const [query, setQuery] = useState("");
+  const q = query.trim();
+
+  const filtered = q
+    ? groups
+        .map((g) => ({
+          ...g,
+          items: g.items.filter((it) => {
+            const hay = `${it.q} ${reactNodeToText(it.a)}`.toLowerCase();
+            return hay.includes(q.toLowerCase());
+          }),
+        }))
+        .filter((g) => g.items.length > 0)
+    : groups;
+
+  const totalMatches = filtered.reduce((n, g) => n + g.items.length, 0);
+
   return (
     <>
       <section className="relative border-b border-border/60">
@@ -169,38 +209,79 @@ function FAQ() {
             Frequently asked, clearly answered.
           </h1>
           <p className="mt-6 font-mono text-xs text-muted-foreground">Updated 28 May 2026</p>
+
+          <div className="relative mt-10 max-w-2xl">
+            <div className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 font-mono text-xs text-primary">
+              ⌕
+            </div>
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search questions and answers…"
+              className="w-full rounded-sm border border-border bg-surface/60 py-4 pl-10 pr-32 font-mono text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary/60 focus:outline-none"
+            />
+            {q && (
+              <button
+                onClick={() => setQuery("")}
+                className="absolute right-3 top-1/2 -translate-y-1/2 rounded-sm border border-border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground hover:border-primary/40 hover:text-primary"
+              >
+                Clear
+              </button>
+            )}
+            {q && (
+              <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                {totalMatches} match{totalMatches === 1 ? "" : "es"}
+              </div>
+            )}
+          </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-5xl px-6 py-20">
         <div className="space-y-16">
-          {groups.map((g, gi) => (
-            <div key={g.cat}>
-              <div className="flex items-baseline gap-4 border-b border-border pb-4">
-                <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">0{gi + 1}</div>
-                <h2 className="font-display text-2xl font-semibold">{g.cat}</h2>
-              </div>
-              <div className="mt-2 divide-y divide-border">
-                {g.items.map((it, ii) => {
-                  const key = `${gi}-${ii}`;
-                  const isOpen = open === key;
-                  return (
-                    <div key={key}>
-                      <button
-                        onClick={() => setOpen(isOpen ? null : key)}
-                        className="flex w-full items-center justify-between gap-6 py-5 text-left transition-colors hover:text-primary"
-                      >
-                        <span className="font-display text-lg font-medium">{it.q}</span>
-                        <span className="font-mono text-xs text-primary">{isOpen ? "[ − ]" : "[ + ]"}</span>
-                      </button>
-                      {isOpen && <div className="pb-6 pr-12 text-muted-foreground">{it.a}</div>}
-                    </div>
-                  );
-                })}
-              </div>
+          {filtered.length === 0 ? (
+            <div className="rounded-sm border border-dashed border-border p-10 text-center">
+              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// no_results</div>
+              <p className="mt-3 text-muted-foreground">
+                Nothing matches "{q}". Try a different keyword or email{" "}
+                <a href="mailto:info@ioaiph.org" className="font-mono text-primary">info@ioaiph.org</a>.
+              </p>
             </div>
-          ))}
+          ) : (
+            filtered.map((g) => {
+              const gi = groups.indexOf(groups.find((og) => og.cat === g.cat)!);
+              return (
+                <div key={g.cat}>
+                  <div className="flex items-baseline gap-4 border-b border-border pb-4">
+                    <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">0{gi + 1}</div>
+                    <h2 className="font-display text-2xl font-semibold">{g.cat}</h2>
+                  </div>
+                  <div className="mt-2 divide-y divide-border">
+                    {g.items.map((it) => {
+                      const ii = groups[gi].items.indexOf(it);
+                      const key = `${gi}-${ii}`;
+                      const isOpen = q ? true : open === key;
+                      return (
+                        <div key={key}>
+                          <button
+                            onClick={() => setOpen(isOpen && !q ? null : key)}
+                            className="flex w-full items-center justify-between gap-6 py-5 text-left transition-colors hover:text-primary"
+                          >
+                            <span className="font-display text-lg font-medium">{highlight(it.q, q)}</span>
+                            <span className="font-mono text-xs text-primary">{isOpen ? "[ − ]" : "[ + ]"}</span>
+                          </button>
+                          {isOpen && <div className="pb-6 pr-12 text-muted-foreground">{it.a}</div>}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })
+          )}
         </div>
+
 
         <div className="mt-20 rounded-sm border border-border bg-surface p-8">
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// still_stuck?</div>
