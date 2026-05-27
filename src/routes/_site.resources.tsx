@@ -43,7 +43,7 @@ const sections = [
     ],
   },
   {
-    tag: "02 / Classical ML",
+    tag: "03 / Classical ML",
     title: "Machine Learning",
     desc: "Supervised and unsupervised methods, evaluation, and feature engineering.",
     links: [
@@ -56,7 +56,7 @@ const sections = [
     ],
   },
   {
-    tag: "03 / Deep Learning",
+    tag: "04 / Deep Learning",
     title: "Neural Networks & Transformers",
     desc: "From backprop to modern transformer architectures and training dynamics.",
     links: [
@@ -66,7 +66,7 @@ const sections = [
     ],
   },
   {
-    tag: "04 / NLP & CV",
+    tag: "05 / NLP & CV",
     title: "Language & Vision",
     desc: "Tokenization, embeddings, attention, and vision pipelines from CNNs to ViTs.",
     links: [
@@ -76,7 +76,7 @@ const sections = [
     ],
   },
   {
-    tag: "05 / Competition",
+    tag: "06 / Competition",
     title: "IOAI & Olympiad Prep",
     desc: "Official syllabus, past tasks, and competition-style practice.",
     links: [
@@ -86,7 +86,7 @@ const sections = [
     ],
   },
   {
-    tag: "06 / Tooling",
+    tag: "07 / Tooling",
     title: "Environments & Compute",
     desc: "Free notebooks, datasets, and GPU resources to practice on real workloads.",
     links: [
