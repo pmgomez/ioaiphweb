@@ -169,8 +169,9 @@ const bronzePartners: Partner[] = [
   { name: "Times Paint Corporation", src: "https://ioaiph.org/partners/timespaintlogo.png" },
 ];
 
-const communityLead: Partner[] = [
+const featuredPartners: Partner[] = [
   { name: "Analytics and AI Association of the Philippines", src: "https://ioaiph.org/partners/aaplogo.png", href: "https://www.aap.ph/" },
+  { name: "Dashlabs.ai", src: "https://ioaiph.org/partners/DashlabsWordmarkLogoBlue-Trademarked.png", href: "https://dashlabs.ai/" },
 ];
 
 const communityPartners: Partner[] = [
@@ -179,7 +180,6 @@ const communityPartners: Partner[] = [
   { name: "SITEAO", src: "https://ioaiph.org/partners/siteao.png", href: "https://www.facebook.com/adzusiteao" },
   { name: "Mapua SHS Science Club", src: "https://ioaiph.org/partners/mapuashssciclublogo.png", href: "https://facebook.com/mapuashscienceclub" },
   { name: "Tomorrow", src: "http://ioaiph.org/partners/tomorrowlogo.png", href: "https://www.facebook.com/profile.php?id=61563288622007" },
-  { name: "Dashlabs.ai", src: "https://ioaiph.org/partners/DashlabsWordmarkLogoBlue-Trademarked.png", href: "https://dashlabs.ai/" },
 ];
 
 function LogoTile({ p, size = "md" }: { p: Partner; size?: "sm" | "md" | "lg" | "xl" }) {
