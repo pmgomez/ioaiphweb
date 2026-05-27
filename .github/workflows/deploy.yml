@@ -20,7 +20,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # Clears the Node 20 deprecation warning
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -44,6 +44,9 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Patch SPA routing for GitHub Pages
+        run: cp ./dist/client/index.html ./dist/client/404.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
