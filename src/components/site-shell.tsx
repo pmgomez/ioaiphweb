@@ -22,7 +22,9 @@ export function SiteHeader() {
           </div>
           <div className="leading-tight">
             <div className="font-display text-sm font-semibold tracking-tight">IOAI Philippines</div>
-            <div className="hidden font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:block">Team PH · Astana 2026</div>
+            <div className="hidden font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:block">
+              Team PH · Astana 2026
+            </div>
           </div>
         </Link>
         <nav className="hidden items-center gap-1 md:flex">
@@ -96,15 +98,28 @@ export function SiteFooter() {
           <div className="md:col-span-2">
             <div className="font-display text-lg font-semibold">IOAI Philippines</div>
             <p className="mt-3 max-w-sm text-sm text-muted-foreground">
-              The national selection and training program for the International Olympiad in Artificial Intelligence. Building the next generation of Filipino AI researchers.
+              The national selection and training program for the International Olympiad in Artificial Intelligence.
+              Building the next generation of Filipino AI researchers.
             </p>
           </div>
           <div>
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Program</div>
             <ul className="mt-3 space-y-2 text-sm">
-              <li><Link to="/about" className="hover:text-primary">About</Link></li>
-              <li><Link to="/results" className="hover:text-primary">Results</Link></li>
-              <li><Link to="/faq" className="hover:text-primary">FAQ</Link></li>
+              <li>
+                <Link to="/about" className="hover:text-primary">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/results" className="hover:text-primary">
+                  Results
+                </Link>
+              </li>
+              <li>
+                <Link to="/faq" className="hover:text-primary">
+                  FAQ
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -116,7 +131,9 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-border/60 pt-6 text-xs text-muted-foreground md:flex-row">
-          <div className="font-mono">© {new Date().getFullYear()} IOAI Philippines · Operated under the National AI Education Initiative</div>
+          <div className="font-mono">
+            © {new Date().getFullYear()} IOAI Philippines · Hosted by Ateneo BUILD, JGSOM, Ateneo de Manila University
+          </div>
           <div className="font-mono">v2.025 · build.astana</div>
         </div>
       </div>
