@@ -20,14 +20,29 @@ export const Route = createFileRoute("/_site/resources")({
   component: ResourcesPage,
 });
 
-const sections = [
+const ioaiPhSections = [
   {
-    tag: "01 / IOAI Philippines",
-    title: "Official Channels & Announcements",
-    desc: "Our GitHub, social channels, and official advisories from DepEd and the Philippine coordinator.",
+    tag: "01 / Code",
+    title: "IOAI PH GitHub Repo",
+    desc: "Open-source training materials, problem sets, and reference implementations maintained by IOAI Philippines.",
     links: [
       { label: "IOAI Philippines GitHub Repo", href: "https://github.com/ioaiph" },
+    ],
+  },
+  {
+    tag: "02 / Community",
+    title: "Official Channels",
+    desc: "Connect with mentors, trainees, and alumni across our official social channels.",
+    links: [
       { label: "IOAI Philippines Facebook Page", href: "https://www.facebook.com/ioaiph" },
+      { label: "IOAI Philippines Discord Server", href: "https://discord.gg/pBktCwHNkJ" },
+    ],
+  },
+  {
+    tag: "03 / Documents",
+    title: "Official Documents",
+    desc: "Government advisories and accreditation records for the Philippine national contest.",
+    links: [
       {
         label: "DepEd Advisory No. 024, s. 2026",
         href: "https://www.deped.gov.ph/2026/01/22/january-22-2026-advisory-no-024-s-2026-international-olympiad-in-artificial-intelligence-philippines-national-contest-2026/",
@@ -40,11 +55,13 @@ const sections = [
         label: "Official Accreditation Announcement",
         href: "https://www.ateneo.edu/news/2025/09/27/ateneo-build-accredited-philippine-coordinator-international-olympiad-artificial",
       },
-      { label: "Global IOAI Website", href: "https://ioai-official.org/" },
     ],
   },
+];
+
+const sections = [
   {
-    tag: "02 / Foundations",
+    tag: "01 / Foundations",
     title: "Math & Probability",
     desc: "Linear algebra, calculus, probability, and statistics — the bedrock of every IOAI round.",
     links: [
@@ -57,7 +74,7 @@ const sections = [
     ],
   },
   {
-    tag: "03 / Classical ML",
+    tag: "02 / Classical ML",
     title: "Machine Learning",
     desc: "Supervised and unsupervised methods, evaluation, and feature engineering.",
     links: [
@@ -70,7 +87,7 @@ const sections = [
     ],
   },
   {
-    tag: "04 / Deep Learning",
+    tag: "03 / Deep Learning",
     title: "Neural Networks & Transformers",
     desc: "From backprop to modern transformer architectures and training dynamics.",
     links: [
@@ -80,7 +97,7 @@ const sections = [
     ],
   },
   {
-    tag: "05 / NLP & CV",
+    tag: "04 / NLP & CV",
     title: "Language & Vision",
     desc: "Tokenization, embeddings, attention, and vision pipelines from CNNs to ViTs.",
     links: [
@@ -90,7 +107,7 @@ const sections = [
     ],
   },
   {
-    tag: "06 / Competition",
+    tag: "05 / Competition",
     title: "IOAI & Olympiad Prep",
     desc: "Official syllabus, past tasks, and competition-style practice.",
     links: [
@@ -100,7 +117,7 @@ const sections = [
     ],
   },
   {
-    tag: "07 / Tooling",
+    tag: "06 / Tooling",
     title: "Environments & Compute",
     desc: "Free notebooks, datasets, and GPU resources to practice on real workloads.",
     links: [
@@ -110,6 +127,38 @@ const sections = [
     ],
   },
 ];
+
+function SectionGrid({ items }: { items: typeof sections }) {
+  return (
+    <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
+      {items.map((s) => (
+        <article key={s.title} className="flex flex-col bg-surface p-8">
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">{s.tag}</div>
+          <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight">{s.title}</h3>
+          <p className="mt-3 text-sm text-muted-foreground">{s.desc}</p>
+          <ul className="mt-6 space-y-2 border-t border-border/60 pt-4">
+            {s.links.map((l) => (
+              <li key={l.href}>
+                <a
+                  href={l.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-start justify-between gap-3 text-sm text-foreground transition-colors hover:text-primary"
+                >
+                  <span>{l.label}</span>
+                  <span className="font-mono text-xs text-muted-foreground transition-colors group-hover:text-primary">
+                    ↗
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+  );
+}
+
 
 function ResourcesPage() {
   return (
