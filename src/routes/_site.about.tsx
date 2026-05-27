@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
+import jobenPhoto from "@/assets/joben.png";
+import martinPhoto from "@/assets/martin.png";
 
 export const Route = createFileRoute("/_site/about")({
   head: () => ({
@@ -16,8 +18,8 @@ export const Route = createFileRoute("/_site/about")({
 });
 
 const leadership = [
-  { name: "Dr. Joben Ilagan", role: "Founding Chair", org: "Director, Ateneo BUILD" },
-  { name: "Martin Gomez", role: "Founding Executive Director", org: "" },
+  { name: "Joben Ilagan", role: "Founding Chair", org: "Director, Ateneo BUILD", photo: jobenPhoto },
+  { name: "Martin Gomez", role: "Founding Executive Director", org: "", photo: martinPhoto },
 ];
 
 function About() {
