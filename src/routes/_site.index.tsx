@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
+import aapLogo from "@/assets/aaplogo.png";
+import timesPaintLogo from "@/assets/timespaintlogo.png";
 
 export const Route = createFileRoute("/_site/")({
   head: () => ({
@@ -265,13 +267,13 @@ const goldPartners: Partner[] = [
 ];
 
 const bronzePartners: Partner[] = [
-  { name: "Times Paint Corporation", src: "https://ioaiph.org/partners/timespaintlogo.png" },
+  { name: "Times Paint Corporation", src: timesPaintLogo },
 ];
 
 const featuredPartners: Partner[] = [
   {
     name: "Analytics and AI Association of the Philippines",
-    src: "https://ioaiph.org/partners/aaplogo.png",
+    src: aapLogo,
     href: "https://www.aap.ph/",
   },
   {
