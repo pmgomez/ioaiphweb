@@ -20,6 +20,40 @@ export const Route = createFileRoute("/_site/resources")({
   component: ResourcesPage,
 });
 
+const ioaiPhSections = [
+  {
+    tag: "01 / Code",
+    title: "IOAI PH GitHub",
+    desc: "Our open-source repositories — training materials, problem sets, and tooling.",
+    links: [{ label: "github.com/ioaiph", href: "https://github.com/ioaiph" }],
+  },
+  {
+    tag: "02 / Community",
+    title: "Official Channels",
+    desc: "Follow announcements and join the conversation with fellow trainees and mentors.",
+    links: [
+      { label: "Facebook Page", href: "https://www.facebook.com/ioaiph" },
+      { label: "Discord Server", href: "https://discord.gg/pBktCwHNkJ" },
+    ],
+  },
+  {
+    tag: "03 / Documents",
+    title: "Official Documents",
+    desc: "DepEd advisories and accreditation announcements for the Philippine delegation.",
+    links: [
+      {
+        label: "DepEd Advisory No. 024, s. 2026",
+        href: "https://www.deped.gov.ph/2026/01/22/january-22-2026-advisory-no-024-s-2026-international-olympiad-in-artificial-intelligence-philippines-national-c",
+      },
+      { label: "Global IOAI Website", href: "https://ioai-official.org/" },
+      {
+        label: "Official Accreditation Announcement",
+        href: "https://www.ateneo.edu/news/2025/09/27/ateneo-build-accredited-philippine-coordinator-international-olympiad-artificial",
+      },
+    ],
+  },
+];
+
 const sections = [
   {
     tag: "01 / Foundations",
