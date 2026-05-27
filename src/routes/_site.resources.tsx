@@ -4,9 +4,17 @@ export const Route = createFileRoute("/_site/resources")({
   head: () => ({
     meta: [
       { title: "Resources — IOAI Philippines" },
-      { name: "description", content: "Curated study materials, syllabus references, and training resources for aspiring IOAI Philippines contestants." },
+      {
+        name: "description",
+        content:
+          "Curated study materials, syllabus references, and training resources for aspiring IOAI Philippines contestants.",
+      },
       { property: "og:title", content: "Resources — IOAI Philippines" },
-      { property: "og:description", content: "Curated study materials, syllabus references, and training resources for aspiring IOAI Philippines contestants." },
+      {
+        property: "og:description",
+        content:
+          "Curated study materials, syllabus references, and training resources for aspiring IOAI Philippines contestants.",
+      },
     ],
   }),
   component: ResourcesPage,
@@ -19,7 +27,10 @@ const sections = [
     desc: "Linear algebra, calculus, probability, and statistics — the bedrock of every IOAI round.",
     links: [
       { label: "3Blue1Brown — Essence of Linear Algebra", href: "https://www.3blue1brown.com/topics/linear-algebra" },
-      { label: "MIT 18.06 — Linear Algebra (OCW)", href: "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/" },
+      {
+        label: "MIT 18.06 — Linear Algebra (OCW)",
+        href: "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/",
+      },
       { label: "Harvard Stat 110 — Probability", href: "https://projects.iq.harvard.edu/stat110" },
     ],
   },
@@ -28,7 +39,10 @@ const sections = [
     title: "Machine Learning",
     desc: "Supervised and unsupervised methods, evaluation, and feature engineering.",
     links: [
-      { label: "Andrew Ng — Machine Learning Specialization", href: "https://www.coursera.org/specializations/machine-learning-introduction" },
+      {
+        label: "Andrew Ng — Machine Learning Specialization",
+        href: "https://www.coursera.org/specializations/machine-learning-introduction",
+      },
       { label: "scikit-learn — User Guide", href: "https://scikit-learn.org/stable/user_guide.html" },
       { label: "StatQuest — ML Playlist", href: "https://www.youtube.com/@statquest" },
     ],
@@ -59,7 +73,7 @@ const sections = [
     desc: "Official syllabus, past tasks, and competition-style practice.",
     links: [
       { label: "IOAI — Official Website", href: "https://ioai-official.org/" },
-      { label: "IOAI 2024 Tasks & Solutions", href: "https://ioai-official.org/competition/" },
+      { label: "IOAI Tasks & Solutions GitHub Repo", href: "https://github.com/IOAI-official" },
       { label: "Kaggle — Learn", href: "https://www.kaggle.com/learn" },
     ],
   },
@@ -83,7 +97,8 @@ function ResourcesPage() {
         Resources for the road to Astana.
       </h1>
       <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-        A living list of curated study material — the same references our mentors point trainees to throughout the IOAI Philippines cycle. Free, public, and aligned with the official IOAI syllabus.
+        A living list of curated study material — the same references our mentors point trainees to throughout the IOAI
+        Philippines cycle. Free, public, and aligned with the official IOAI syllabus.
       </p>
 
       <div className="mt-16 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
@@ -102,7 +117,9 @@ function ResourcesPage() {
                     className="group flex items-start justify-between gap-3 text-sm text-foreground transition-colors hover:text-primary"
                   >
                     <span>{l.label}</span>
-                    <span className="font-mono text-xs text-muted-foreground transition-colors group-hover:text-primary">↗</span>
+                    <span className="font-mono text-xs text-muted-foreground transition-colors group-hover:text-primary">
+                      ↗
+                    </span>
                   </a>
                 </li>
               ))}
@@ -118,7 +135,10 @@ function ResourcesPage() {
         </h2>
         <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
           We keep this list lean and high-signal. If you've found something exceptional, email{" "}
-          <a href="mailto:info@ioaiph.org" className="text-primary hover:underline">info@ioaiph.org</a> with the link and a short note on why.
+          <a href="mailto:info@ioaiph.org" className="text-primary hover:underline">
+            info@ioaiph.org
+          </a>{" "}
+          with the link and a short note on why.
         </p>
       </div>
     </section>
