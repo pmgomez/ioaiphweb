@@ -39,7 +39,7 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden border-b border-border/60">
+      <section className="relative -mt-24 overflow-hidden border-b border-border/60 pt-24">
         <NeuralNetworkBg className="absolute inset-0 h-full w-full [mask-image:radial-gradient(ellipse_at_center,black_0%,transparent_75%)]" />
         <div className="absolute left-1/2 top-0 h-[480px] w-[820px] -translate-x-1/2 rounded-full bg-primary/15 blur-[140px]" />
         <div className="absolute right-0 top-1/3 h-[360px] w-[520px] rounded-full bg-signal/10 blur-[120px]" />
