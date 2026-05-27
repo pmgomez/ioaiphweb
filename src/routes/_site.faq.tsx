@@ -46,7 +46,7 @@ const groups: Group[] = [
     items: [
       {
         q: "Who is eligible to compete in the national selection rounds?",
-        a: "For the 2027 cycle, any Filipino high school student, whether residing within the Philippines or living and studying abroad, is eligible to compete.",
+        a: "Traditionally, IOAI Philippines has accepted Filipino students in Grades 7 to 12. Beginning with the 2027 cycle, we are also opening the qualification track to promising younger students in Grades 1 to 6, whether residing within the Philippines or living and studying abroad.",
       },
       {
         q: "I am a Filipino citizen living and studying overseas. Am I eligible to join Team Philippines?",
