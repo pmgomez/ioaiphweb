@@ -113,7 +113,7 @@ function About() {
             },
             { t: "Free, always.", d: "No applicant pays a peso to participate." },
             {
-              t: "Rigorous, openly.",
+              t: "Rigorous, open.",
               d: "We publish our curriculum, our problem sets, and our selection criteria. The program is auditable.",
             },
           ].map((v) => (
