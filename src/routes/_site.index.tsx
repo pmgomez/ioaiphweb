@@ -365,7 +365,7 @@ function PartnersSection() {
             <div className="mt-6 overflow-hidden rounded-sm border border-gold/30 bg-transparent">
               {goldPartners.map((p) => (
                 <div key={p.name} className="flex h-72 items-center justify-center px-6">
-                  <LogoTile p={p} size="2xl" />
+                  <LogoTile p={p} widthClass="h-[90%] w-auto" />
                 </div>
               ))}
             </div>
@@ -375,7 +375,7 @@ function PartnersSection() {
             <div className="mt-6 overflow-hidden rounded-sm border border-bronze/30 bg-transparent">
               {bronzePartners.map((p) => (
                 <div key={p.name} className="flex h-72 items-center justify-center px-6">
-                  <LogoTile p={p} size="xl" />
+                  <LogoTile p={p} widthClass="h-[70%] w-auto" />
                 </div>
               ))}
             </div>
