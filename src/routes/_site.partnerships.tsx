@@ -76,6 +76,7 @@ const tiers = [
       "Everything in Gold",
       "Dedicated AI research grant in your name",
       "Named scholarship for top performer",
+      "Option to join Team PH at the IOAI as Guests (separate fee covers lodging & meals; all-access pass to the IOAI)",
     ],
   },
   {
