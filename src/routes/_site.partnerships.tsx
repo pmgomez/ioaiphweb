@@ -146,9 +146,9 @@ function Partnerships() {
                     </li>
                   ))}
                 </ul>
-                <button className={`mt-8 rounded-sm px-4 py-3 font-mono text-xs uppercase tracking-wider transition-all ${t.featured ? "bg-primary text-primary-foreground hover:opacity-90" : "border border-border hover:border-primary/40"}`}>
+                <a href={`mailto:info@ioaiph.org?subject=Partnership inquiry — ${t.name} tier`} className={`mt-8 inline-block rounded-sm px-4 py-3 text-center font-mono text-xs uppercase tracking-wider transition-all ${t.featured ? "bg-primary text-primary-foreground hover:opacity-90" : "border border-border hover:border-primary/40"}`}>
                   Inquire →
-                </button>
+                </a>
               </div>
             );
           })}

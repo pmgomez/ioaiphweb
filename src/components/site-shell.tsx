@@ -115,7 +115,7 @@ export function SiteFooter() {
           <div>
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Contact</div>
             <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-              <li>info@ioaiph.org</li>
+              <li><a href="mailto:info@ioaiph.org" className="hover:text-primary">info@ioaiph.org</a></li>
               <li>Manila, Philippines</li>
             </ul>
             <div className="mt-5 flex items-center gap-3">
