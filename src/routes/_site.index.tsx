@@ -213,7 +213,6 @@ function TierLabel({ children, accent }: { children: React.ReactNode; accent: st
 }
 
 function PartnersSection() {
-  const marqueeLoop = [...communityPartners, ...communityPartners];
   return (
     <section className="relative border-y border-border/60 bg-surface/20">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
@@ -230,58 +229,51 @@ function PartnersSection() {
           </Link>
         </div>
 
-        {/* GOLD */}
-        <div className="mt-16">
-          <TierLabel accent="bg-gold shadow-[0_0_12px_2px] shadow-gold/60">Gold Partners</TierLabel>
-          <div className="mt-6 grid gap-px overflow-hidden rounded-sm border border-gold/30 bg-border">
-            {goldPartners.map((p) => (
-              <div key={p.name} className="relative bg-gradient-to-br from-surface to-background">
-                <div className="absolute inset-0 bg-gold/5" />
-                <div className="relative flex items-center justify-center py-16">
+        {/* ROW 1: GOLD (left) + BRONZE (right) */}
+        <div className="mt-16 grid gap-6 md:grid-cols-2">
+          <div>
+            <TierLabel accent="bg-gold shadow-[0_0_12px_2px] shadow-gold/60">Gold Partners</TierLabel>
+            <div className="mt-6 overflow-hidden rounded-sm border border-gold/30 bg-white">
+              {goldPartners.map((p) => (
+                <div key={p.name} className="flex items-center justify-center py-12">
                   <LogoTile p={p} size="xl" />
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+          <div>
+            <TierLabel accent="bg-bronze shadow-[0_0_10px_1px] shadow-bronze/60">Bronze Partners</TierLabel>
+            <div className="mt-6 overflow-hidden rounded-sm border border-bronze/30 bg-white">
+              {bronzePartners.map((p) => (
+                <div key={p.name} className="flex items-center justify-center py-12">
+                  <LogoTile p={p} size="xl" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* BRONZE */}
+        {/* ROW 2: FEATURED (AAP + Dashlabs) */}
         <div className="mt-12">
-          <TierLabel accent="bg-bronze shadow-[0_0_10px_1px] shadow-bronze/60">Bronze Partners</TierLabel>
+          <TierLabel accent="bg-primary shadow-[0_0_10px_1px] shadow-primary/60">Featured Community Partners</TierLabel>
           <div className="mt-6 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2">
-            {bronzePartners.map((p) => (
-              <div key={p.name} className="flex items-center justify-center bg-surface py-10">
+            {featuredPartners.map((p) => (
+              <div key={p.name} className="flex items-center justify-center bg-white py-10">
                 <LogoTile p={p} size="lg" />
               </div>
             ))}
-            {bronzePartners.length % 2 === 1 && (
-              <div className="hidden bg-surface/40 md:block" />
-            )}
           </div>
         </div>
 
-        {/* COMMUNITY */}
+        {/* ROW 3: COMMUNITY GRID */}
         <div className="mt-12">
-          <TierLabel accent="bg-primary shadow-[0_0_10px_1px] shadow-primary/60">Community Partners</TierLabel>
-
-          <div className="mt-6 grid gap-px overflow-hidden rounded-sm border border-border bg-border">
-            {communityLead.map((p) => (
-              <div key={p.name} className="flex items-center justify-center bg-surface py-8">
+          <TierLabel accent="bg-primary/60">Community Partners</TierLabel>
+          <div className="mt-6 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+            {communityPartners.map((p) => (
+              <div key={p.name} className="flex items-center justify-center bg-white py-8">
                 <LogoTile p={p} size="md" />
               </div>
             ))}
-          </div>
-
-          {/* Infinite marquee */}
-          <div
-            className="group/marquee relative mt-px overflow-hidden rounded-sm border border-border bg-surface"
-            style={{ maskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)" }}
-          >
-            <div className="flex w-max animate-[marquee_40s_linear_infinite] group-hover/marquee:[animation-play-state:paused]">
-              {marqueeLoop.map((p, i) => (
-                <LogoTile key={`${p.name}-${i}`} p={p} size="lg" />
-              ))}
-            </div>
           </div>
         </div>
       </div>
