@@ -88,6 +88,7 @@ const leadership = [
   },
   { name: "Kyle Reynoso", role: "Sponsorships", org: "University of the Philippines - Diliman", photo: kylePhoto },
   { name: "Leonard Ang", role: "Partnerships", org: "University of the Philippines - Diliman", photo: leonardPhoto },
+  { name: "Troy Dylan Serapio", role: "Discord Admin", org: "Philippine Science High School - Main Campus" },
 ];
 
 function About() {
@@ -143,9 +144,12 @@ function About() {
             Everyone listed below contributes their expertise, time, and effort on a{" "}
             <span className="font-semibold text-foreground">purely voluntary</span>,{" "}
             <span className="font-semibold text-foreground">pro bono basis</span> — without compensation or anything
-            sought in return. We thank them for their{" "}
-            <span className="font-semibold text-foreground">generosity</span> and{" "}
-            <span className="font-semibold text-foreground">spirit of <em>magis</em></span>.
+            sought in return. We thank them for their <span className="font-semibold text-foreground">generosity</span>{" "}
+            and{" "}
+            <span className="font-semibold text-foreground">
+              spirit of <em>magis</em>
+            </span>
+            .
           </p>
           <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
             {leadership.map((p) => (
