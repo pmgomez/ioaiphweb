@@ -30,7 +30,7 @@ const leadership = [
   {
     name: "Joben Ilagan",
     role: "Founding Chair",
-    org: "Director, Ateneo BUILD; Program Director, ADMU BS ITE",
+    org: "Director, Ateneo BUILD\nProgram Director, ADMU BS ITE",
     photo: jobenPhoto,
   },
   { name: "Martin Gomez", role: "Founding Executive Director", org: "", photo: martinPhoto },
@@ -115,7 +115,7 @@ function About() {
                 </div>
                 <div className="mt-4 font-display text-lg font-semibold">{p.name}</div>
                 <div className="mt-1 text-sm text-primary">{p.role}</div>
-                <div className="mt-1 font-mono text-[11px] text-muted-foreground">{p.org}</div>
+                <div className="mt-1 whitespace-pre-line font-mono text-[11px] text-muted-foreground">{p.org}</div>
               </div>
             ))}
           </div>
