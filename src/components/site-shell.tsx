@@ -1,6 +1,12 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Facebook } from "lucide-react";
+
+const DiscordIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M20.317 4.369A19.79 19.79 0 0 0 16.558 3a14.59 14.59 0 0 0-.69 1.418 18.27 18.27 0 0 0-5.487 0A14.59 14.59 0 0 0 9.69 3a19.79 19.79 0 0 0-3.76 1.369C2.13 9.86 1.078 15.213 1.604 20.49a19.94 19.94 0 0 0 6.073 3.058c.49-.67.927-1.382 1.302-2.13a13.01 13.01 0 0 1-2.05-.98c.172-.126.34-.258.502-.392a14.18 14.18 0 0 0 12.94 0c.163.134.33.266.502.392-.654.39-1.34.718-2.05.98.375.748.811 1.46 1.302 2.13a19.93 19.93 0 0 0 6.073-3.058c.59-6.083-.972-11.39-4.078-16.121ZM8.68 16.43c-1.21 0-2.21-1.108-2.21-2.474 0-1.366.98-2.474 2.21-2.474 1.23 0 2.23 1.108 2.21 2.474 0 1.366-.98 2.474-2.21 2.474Zm6.64 0c-1.21 0-2.21-1.108-2.21-2.474 0-1.366.98-2.474 2.21-2.474 1.23 0 2.23 1.108 2.21 2.474 0 1.366-.98 2.474-2.21 2.474Z"/>
+  </svg>
+);
 
 const nav = [
   { to: "/", label: "Home" },
@@ -128,6 +134,26 @@ export function SiteFooter() {
               <li>info@ioaiph.org</li>
               <li>Manila, Philippines</li>
             </ul>
+            <div className="mt-5 flex items-center gap-3">
+              <a
+                href="https://www.facebook.com/ioaiph"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="grid h-9 w-9 place-items-center rounded-full border border-border/60 text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
+              >
+                <Facebook className="h-4 w-4" />
+              </a>
+              <a
+                href="https://discord.gg/pBktCwHNkJ"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Discord"
+                className="grid h-9 w-9 place-items-center rounded-full border border-border/60 text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
+              >
+                <DiscordIcon className="h-4 w-4" />
+              </a>
+            </div>
           </div>
         </div>
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-border/60 pt-6 text-xs text-muted-foreground md:flex-row">
