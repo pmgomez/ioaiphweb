@@ -18,9 +18,13 @@ export const Route = createFileRoute("/_site/about")({
 });
 
 const leadership = [
-  { name: "Dr. Roberto Galang", role: "Honorary Chair", org: "Dean, JGSOM, Ateneo de Manila" },
+  { name: "Dr. Roberto Galang", role: "Honorary Chair", org: "Dean, JGSOM, Ateneo de Manila University" },
   { name: "Joben Ilagan", role: "Founding Chair", org: "Director, Ateneo BUILD", photo: jobenPhoto },
   { name: "Martin Gomez", role: "Founding Executive Director", org: "", photo: martinPhoto },
+  { name: "Farrell Eldrian Wu", role: "Advisory Board", org: "Massachusetts Institute of Technology" },
+  { name: "Dr. Charibeth Cheng", role: "Scientific Contributor", org: "Assoc Dean, CCS, De La Salle University" },
+  { name: "Lester James Miranda", role: "Scientific Committee", org: "University of Cambridge" },
+  { name: "Lorenzo Jaime Flores", role: "Scientific Committee", org: "Microsoft Research" },
 ];
 
 function About() {
