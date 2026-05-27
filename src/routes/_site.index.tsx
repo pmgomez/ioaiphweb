@@ -328,6 +328,21 @@ function LogoTile({
   );
 }
 
+function PartnerBox({ p, imgClass }: { p: Partner; imgClass: string }) {
+  const Tag: any = p.href ? "a" : "div";
+  const props = p.href ? { href: p.href, target: "_blank", rel: "noopener noreferrer" } : {};
+  return (
+    <Tag {...props} title={p.name} className="group flex h-72 items-center justify-center px-6">
+      <img
+        src={p.src}
+        alt={p.name}
+        loading="lazy"
+        className={`${imgClass} w-auto object-contain transition-transform duration-500 group-hover:scale-105`}
+      />
+    </Tag>
+  );
+}
+
 function TierLabel({ children, accent }: { children: React.ReactNode; accent: string }) {
   return (
     <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
@@ -364,9 +379,7 @@ function PartnersSection() {
             <TierLabel accent="bg-gold shadow-[0_0_12px_2px] shadow-gold/60">Gold Partners</TierLabel>
             <div className="mt-6 overflow-hidden rounded-sm border border-gold/30 bg-transparent">
               {goldPartners.map((p) => (
-                <div key={p.name} className="flex h-72 items-center justify-center px-6">
-                  <LogoTile p={p} size="2xl" />
-                </div>
+                <PartnerBox key={p.name} p={p} imgClass="h-[90%]" />
               ))}
             </div>
           </div>
@@ -374,9 +387,7 @@ function PartnersSection() {
             <TierLabel accent="bg-bronze shadow-[0_0_10px_1px] shadow-bronze/60">Bronze Partners</TierLabel>
             <div className="mt-6 overflow-hidden rounded-sm border border-bronze/30 bg-transparent">
               {bronzePartners.map((p) => (
-                <div key={p.name} className="flex h-72 items-center justify-center px-6">
-                  <LogoTile p={p} size="xl" />
-                </div>
+                <PartnerBox key={p.name} p={p} imgClass="h-[70%]" />
               ))}
             </div>
           </div>
