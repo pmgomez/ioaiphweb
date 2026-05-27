@@ -261,7 +261,7 @@ function CompetitionBanner({
       <div className="md:px-6">
         <div className="font-display text-lg md:text-xl">{c.full}</div>
         <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-          {c.scope}
+          {c.scope} · {c.host}
         </div>
       </div>
       <div className="flex items-center gap-2 self-start rounded-sm border border-border px-3 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground md:self-center">
