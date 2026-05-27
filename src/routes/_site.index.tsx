@@ -233,7 +233,7 @@ function PartnersSection() {
         <div className="mt-16 grid gap-6 md:grid-cols-2">
           <div>
             <TierLabel accent="bg-gold shadow-[0_0_12px_2px] shadow-gold/60">Gold Partners</TierLabel>
-            <div className="mt-6 overflow-hidden rounded-sm border border-gold/30 bg-white">
+            <div className="mt-6 overflow-hidden rounded-sm border border-gold/30 bg-transparent">
               {goldPartners.map((p) => (
                 <div key={p.name} className="flex items-center justify-center py-12">
                   <LogoTile p={p} size="xl" />
@@ -243,7 +243,7 @@ function PartnersSection() {
           </div>
           <div>
             <TierLabel accent="bg-bronze shadow-[0_0_10px_1px] shadow-bronze/60">Bronze Partners</TierLabel>
-            <div className="mt-6 overflow-hidden rounded-sm border border-bronze/30 bg-white">
+            <div className="mt-6 overflow-hidden rounded-sm border border-bronze/30 bg-transparent">
               {bronzePartners.map((p) => (
                 <div key={p.name} className="flex items-center justify-center py-12">
                   <LogoTile p={p} size="xl" />
@@ -258,7 +258,7 @@ function PartnersSection() {
           <TierLabel accent="bg-primary shadow-[0_0_10px_1px] shadow-primary/60">Featured Community Partners</TierLabel>
           <div className="mt-6 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2">
             {featuredPartners.map((p) => (
-              <div key={p.name} className="flex items-center justify-center bg-white py-10">
+              <div key={p.name} className="flex items-center justify-center bg-transparent py-10">
                 <LogoTile p={p} size="lg" widthClass="w-56" />
               </div>
             ))}
@@ -270,7 +270,7 @@ function PartnersSection() {
           <TierLabel accent="bg-primary/60">Community Partners</TierLabel>
           <div className="mt-6 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {communityPartners.map((p) => (
-              <div key={p.name} className="flex items-center justify-center bg-white py-8">
+              <div key={p.name} className="flex items-center justify-center bg-transparent py-8">
                 <LogoTile p={p} size="md" />
               </div>
             ))}
