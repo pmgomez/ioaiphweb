@@ -102,7 +102,7 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden border-b border-border/60">
+      <section className="relative -mt-24 overflow-hidden border-b border-border/60 pt-24">
         <NeuralNetworkBg className="absolute inset-0 h-full w-full [mask-image:radial-gradient(ellipse_at_center,black_0%,transparent_75%)]" />
         <div className="absolute left-1/2 top-0 h-[480px] w-[820px] -translate-x-1/2 rounded-full bg-primary/15 blur-[140px]" />
         <div className="absolute right-0 top-1/3 h-[360px] w-[520px] rounded-full bg-signal/10 blur-[120px]" />
@@ -263,13 +263,9 @@ function Home() {
 
 type Partner = { name: string; src: string; href?: string };
 
-const goldPartners: Partner[] = [
-  { name: "Joy-Nostalg Group", src: joyNostalgLogo, href: "https://joy-nostalg.com/" },
-];
+const goldPartners: Partner[] = [{ name: "Joy-Nostalg Group", src: joyNostalgLogo, href: "https://joy-nostalg.com/" }];
 
-const bronzePartners: Partner[] = [
-  { name: "Times Paint Corporation", src: timesPaintLogo },
-];
+const bronzePartners: Partner[] = [{ name: "Times Paint Corporation", src: timesPaintLogo }];
 
 const featuredPartners: Partner[] = [
   {
@@ -373,7 +369,6 @@ function PartnersSection() {
           </Link>
         </div>
 
-
         {/* ROW 0: HOST + RECOGNITION */}
         <div className="mt-16 grid gap-6 md:grid-cols-2">
           <div>
@@ -385,7 +380,9 @@ function PartnersSection() {
                 </div>
                 <div>
                   <div className="font-display text-lg font-semibold tracking-tight">Ateneo BUILD</div>
-                  <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Host Institution</div>
+                  <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                    Host Institution
+                  </div>
                 </div>
               </div>
             </div>
@@ -403,7 +400,9 @@ function PartnersSection() {
                   </div>
                   <div>
                     <div className="font-display text-sm font-semibold tracking-tight">{o.name}</div>
-                    <div className="font-mono text-[9px] uppercase tracking-[0.2em] text-muted-foreground">{o.label}</div>
+                    <div className="font-mono text-[9px] uppercase tracking-[0.2em] text-muted-foreground">
+                      {o.label}
+                    </div>
                   </div>
                 </div>
               ))}
