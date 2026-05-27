@@ -15,12 +15,15 @@ export const Route = createFileRoute("/_site/")({
 });
 
 const timeline = [
-  { date: "MAR 2026", phase: "01 / Open Call", title: "National Registration", desc: "Open call to all senior high and early-undergraduate students across the Philippines. Free to apply.", status: "complete" },
-  { date: "APR 2026", phase: "02 / Qualifier", title: "Online Qualifying Round", desc: "Four-hour assessment on linear algebra, probability, classical ML and applied NLP/CV.", status: "complete" },
-  { date: "MAY 2026", phase: "03 / Bootcamp", title: "National Training Camp", desc: "Intensive two-week residency with mentors from UP Diliman, Ateneo, DLSU and industry researchers.", status: "complete" },
-  { date: "JUN 2026", phase: "04 / Selection", title: "Final Team Selection", desc: "Top four contestants chosen as Team Philippines. Two reserves named.", status: "active" },
-  { date: "JUL 2026", phase: "05 / Pre-Departure", title: "Final Sprint in Manila", desc: "Custom curriculum on agents, RL and competition strategy with international coaches.", status: "upcoming" },
-  { date: "AUG 2026", phase: "06 / Astana", title: "IOAI 2026 · Astana, Kazakhstan", desc: "Eight days of competition at the world stage. 60+ national teams compete in scientific and practical rounds.", status: "upcoming" },
+  { date: "DEC 11, 2025 – JAN 25, 2026", phase: "01 / National", title: "Registration", desc: "Open call to all senior high and early-undergraduate students across the Philippines. Free to apply.", status: "complete" },
+  { date: "JAN 31 – FEB 8, 2026", phase: "02 / National", title: "Eliminations", desc: "Online qualifying assessment on linear algebra, probability, classical ML and applied NLP/CV.", status: "complete" },
+  { date: "FEB 14 – 15, 2026", phase: "03 / National", title: "Semi-Finals", desc: "Top performers advance to a weekend of deeper technical rounds.", status: "complete" },
+  { date: "FEB 16 – 21, 2026", phase: "04 / National", title: "Finals", desc: "Week-long national finals determining the country's strongest young AI talent.", status: "complete" },
+  { date: "FEB 22 – APR 15, 2026", phase: "05 / National", title: "Selection & Training", desc: "Finalists enter intensive training. Team Philippines selected from this pool.", status: "active" },
+  { date: "MAY 3 – 4, 2026", phase: "06 / International", title: "Northern Eurasia Olympiad in AI", desc: "Philippine team fielded at the Northern Eurasia regional olympiad.", status: "upcoming" },
+  { date: "JUN 13, 2026", phase: "07 / International", title: "Asia Pacific Olympiad in AI", desc: "Philippine team competes in the Asia Pacific regional olympiad.", status: "upcoming" },
+  { date: "JUL 1 – AUG 1, 2026", phase: "08 / International", title: "IOAI 2026 · At-Home Round", desc: "Remote round of the International Olympiad in Artificial Intelligence.", status: "upcoming" },
+  { date: "AUG 2 – 8, 2026", phase: "09 / International", title: "IOAI 2026 · Onsite", desc: "Onsite finals of the International Olympiad in AI. 60+ national teams compete on the world stage.", status: "upcoming" },
 ];
 
 const stats = [
@@ -77,7 +80,7 @@ function Home() {
           <div>
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// road_to_astana.log</div>
             <h2 className="mt-3 max-w-2xl font-display text-4xl font-semibold tracking-tight md:text-5xl">
-              The 2026 cycle, in six phases.
+              The 2026 cycle, from national qualifiers to the world stage.
             </h2>
           </div>
           <div className="hidden font-mono text-xs text-muted-foreground md:block">
