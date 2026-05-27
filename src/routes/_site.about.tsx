@@ -52,11 +52,18 @@ const leadership = [
   },
   { name: "Lester James Miranda", role: "Scientific Committee", org: "University of Cambridge", photo: lesterPhoto },
   { name: "Lorenzo Jaime Flores", role: "Scientific Committee", org: "Microsoft Research", photo: lorenzoPhoto },
-  { name: "Adrian Dar Serapio", role: "Scientific Committee", org: "UC Berkeley, UC San Francisco", photo: adrianPhoto },
+  {
+    name: "Adrian Dar Serapio",
+    role: "Scientific Committee",
+    org: "UC Berkeley, UC San Francisco",
+    photo: adrianPhoto,
+  },
   { name: "Hansly Saw", role: "Scientific Committee", org: "University of the Philippines - Diliman" },
   { name: "Paolo Rollan", role: "Scientific Committee", org: "University of the Philippines - Diliman" },
   { name: "Hans Tan", role: "Scientific Committee", org: "Sun Yat-Sen University" },
   { name: "James Bermudo", role: "Scientific Committee", org: "Ateneo de Manila University", photo: jamesPhoto },
+  { name: "Andrew Yu", role: "Scientific Committee", org: "Procter & Gamble" },
+  { name: "Gian Alingog", role: "Scientific Committee", org: "UC Sta Barbara" },
   { name: "Timothy James Dimacali", role: "Media and Press Relations", org: "Ateneo de Manila University" },
   { name: "Kyle Reynoso", role: "Sponsorships", org: "University of the Philippines - Diliman" },
   { name: "Leonard Ang", role: "Partnerships", org: "University of the Philippines - Diliman" },
@@ -115,9 +122,7 @@ function About() {
             {leadership.map((p) => (
               <div key={p.name} className="bg-surface p-6">
                 <div className="h-20 w-20 overflow-hidden rounded-full bg-primary/10">
-                  {p.photo ? (
-                    <img src={p.photo} alt={p.name} className="h-full w-full object-cover" />
-                  ) : null}
+                  {p.photo ? <img src={p.photo} alt={p.name} className="h-full w-full object-cover" /> : null}
                 </div>
                 <div className="mt-4 font-display text-lg font-semibold">{p.name}</div>
                 <div className="mt-1 text-sm text-primary">{p.role}</div>
