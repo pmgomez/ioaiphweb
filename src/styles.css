@@ -72,6 +72,7 @@
   --gold: oklch(0.82 0.15 85);
   --silver: oklch(0.78 0.02 250);
   --bronze: oklch(0.65 0.12 50);
+  --steel: oklch(0.7 0.02 250);
   --radius: 4px;
 }
 
