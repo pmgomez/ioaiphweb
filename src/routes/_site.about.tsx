@@ -79,6 +79,7 @@ const leadership = [
     photo: paoloPhoto,
   },
   { name: "Hans Tan", role: "Scientific Committee", org: "Sun Yat-Sen University" },
+  { name: "Conner Manuel", role: "Guest Scientific Lecturer", org: "Together AI" },
   { name: "James Bermudo", role: "Scientific Committee", org: "Ateneo de Manila University", photo: jamesPhoto },
   { name: "Andrew Yu", role: "Scientific Committee", org: "ex-P&G Singapore", photo: andrewPhoto },
   { name: "Mikhail Borbe", role: "Scientific Committee", org: "University of Washington", photo: mikborbePhoto },
