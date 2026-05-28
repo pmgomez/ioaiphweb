@@ -80,6 +80,7 @@ const leadership = [
   { name: "Hans Tan", role: "Scientific Committee", org: "Sun Yat-Sen University" },
   { name: "James Bermudo", role: "Scientific Committee", org: "Ateneo de Manila University", photo: jamesPhoto },
   { name: "Andrew Yu", role: "Scientific Committee", org: "Procter & Gamble", photo: andrewPhoto },
+  { name: "Mikhail Borbe", role: "Scientific Committee", org: "University of Washington", photo: mikborbePhoto },
   { name: "Gian Alingog", role: "Scientific Committee", org: "UC Sta Barbara" },
   {
     name: "Timothy James Dimacali",
