@@ -431,9 +431,9 @@ function PartnersSection() {
           </div>
         </div>
 
-        {/* ROW 1: GOLD (left) + BRONZE (right) */}
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
-          <div>
+        {/* ROW 1: GOLD (widest) + BRONZE + STEEL */}
+        <div className="mt-16 grid gap-6 md:grid-cols-12">
+          <div className="md:col-span-6">
             <TierLabel accent="bg-gold shadow-[0_0_12px_2px] shadow-gold/60">Gold Partners</TierLabel>
             <div className="mt-6 overflow-hidden rounded-sm border border-gold/30 bg-transparent">
               {goldPartners.map((p) => (
@@ -441,7 +441,7 @@ function PartnersSection() {
               ))}
             </div>
           </div>
-          <div>
+          <div className="md:col-span-4">
             <TierLabel accent="bg-bronze shadow-[0_0_10px_1px] shadow-bronze/60">Bronze Partners</TierLabel>
             <div className="mt-6 overflow-hidden rounded-sm border border-bronze/30 bg-transparent">
               {bronzePartners.map((p) => (
@@ -449,7 +449,18 @@ function PartnersSection() {
               ))}
             </div>
           </div>
+          <div className="md:col-span-2">
+            <TierLabel accent="bg-steel shadow-[0_0_10px_1px] shadow-steel/60">Steel Partners</TierLabel>
+            <div className="mt-6 overflow-hidden rounded-sm border border-steel/30 bg-transparent">
+              {steelPartners.map((p) => (
+                <div key={p.name} className="flex h-72 items-center justify-center px-4 text-center">
+                  <span className="font-display text-lg font-semibold text-steel">{p.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
+
 
         {/* ROW 2: FEATURED (AAP + Dashlabs) */}
         <div className="mt-12">
