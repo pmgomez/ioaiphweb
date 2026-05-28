@@ -13,7 +13,8 @@ import tjPhoto from "@/assets/tjdimacali.png";
 import leonardPhoto from "@/assets/leonardang.jpg";
 import paoloPhoto from "@/assets/paolorollan.png";
 import hanslyPhoto from "@/assets/hanslysaw.png";
-import andrewPhoto from "@/assets/andrewyu.jpg";
+import andrewPhoto from "@/assets/andrewyu.png";
+import hansPhoto from "@/assets/hanstan.png";
 import kylePhoto from "@/assets/kylereynoso.png";
 import mikborbePhoto from "@/assets/mikborbe.png";
 import troyPhoto from "@/assets/troy.png";
@@ -98,7 +99,7 @@ const leadership = [
     org: "Philippine Science High School -\nMain Campus",
     photo: troyPhoto,
   },
-  { name: "Hans Tan", role: "Scientific Committee", org: "Sun Yat-Sen University" },
+  { name: "Hans Tan", role: "Scientific Committee", org: "Sun Yat-Sen University", photo: hansPhoto },
   { name: "Andrew Yu", role: "Scientific Committee", org: "ex-P&G Singapore", photo: andrewPhoto },
 ];
 
