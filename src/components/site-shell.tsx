@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Menu, X, Facebook } from "lucide-react";
 import phFlag from "@/assets/ph-flag.svg";
 import ioaiphLogo from "@/assets/ioaiph-logo.png";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const DiscordIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -50,6 +51,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <a
             href="#apply"
             className="hidden rounded-full border border-primary/40 bg-primary/10 px-4 py-2 font-mono text-xs uppercase tracking-wider text-primary transition-all hover:bg-primary hover:text-primary-foreground md:inline-flex"
