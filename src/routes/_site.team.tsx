@@ -36,10 +36,16 @@ const ioai: Member[] = [
 ];
 
 
-const apoai: Member[] = Array.from({ length: 8 }, (_, i) => ({
-  name: `TBA Member ${i + 1}`,
-  school: "School TBA",
-}));
+const apoai: Member[] = [
+  { name: "Ellison Matthew S. Ang", school: "Philippine Science High School - Main Campus", photo: angPhoto },
+  { name: "Ryan James L. Alfaro", school: "Philippine Science High School - Calabarzon Region Campus", photo: alfaroPhoto },
+  { name: "Noe Nathan Y. Arreza", school: "Philippine Science High School - Calabarzon Region Campus", photo: arrezaPhoto },
+  { name: "Sean Marcus N. Castillo", school: "Philippine Science High School - Central Luzon Campus" },
+  { name: "Daphne Eunice U. Acena", school: "De La Salle University - Dasmariñas High School", photo: acenaPhoto },
+  { name: "Troy Dylan T. Serapio", school: "Philippine Science High School - Main Campus", photo: troyPhoto },
+  { name: "Jhareign S. Solidum", school: "University of Mindanao Ilang High School", photo: solidumPhoto },
+  { name: "Aretha Cai Faustine M. Sy", school: "St. Scholastica's Academy of Marikina", photo: syPhoto },
+];
 
 const neoai: Member[] = [
   { name: "Daphne Eunice U. Acena", school: "De La Salle University - Dasmariñas High School", photo: acenaPhoto },
