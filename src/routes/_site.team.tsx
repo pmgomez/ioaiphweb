@@ -7,6 +7,11 @@ import angPhoto from "@/assets/ang.png";
 import arrezaPhoto from "@/assets/arreza.png";
 import bustamantePhoto from "@/assets/bustamante.png";
 import desuasidoPhoto from "@/assets/desuasido.png";
+import marquezPhoto from "@/assets/marquez.png";
+import obedozaPhoto from "@/assets/obedoza.png";
+import solidumPhoto from "@/assets/solidum.png";
+import syPhoto from "@/assets/sy.png";
+import tanPhoto from "@/assets/tan.png";
 
 export const Route = createFileRoute("/_site/team")({
   head: () => ({
@@ -40,12 +45,12 @@ const neoai: Member[] = [
   { name: "Noe Nathan Y. Arreza", school: "Philippine Science High School - Calabarzon Region Campus", photo: arrezaPhoto },
   { name: "Theo Lorenzo T. Bustamante", school: "Philippine Science High School - Calabarzon Region Campus", photo: bustamantePhoto },
   { name: "Juan Mateo J. Desuasido", school: "Brent International School Manila", photo: desuasidoPhoto },
-  { name: "Tristan Japheth L. Marquez", school: "Philippine Science High School - Central Luzon Campus" },
-  { name: "Almond Rose M. Obedoza", school: "Stanford Online High School" },
+  { name: "Tristan Japheth L. Marquez", school: "Philippine Science High School - Central Luzon Campus", photo: marquezPhoto },
+  { name: "Almond Rose M. Obedoza", school: "Stanford Online High School", photo: obedozaPhoto },
   { name: "Troy Dylan T. Serapio", school: "Philippine Science High School - Main Campus", photo: troyPhoto },
-  { name: "Jhareign S. Solidum", school: "University of Mindanao Ilang High School" },
-  { name: "Aretha Cai Faustine M. Sy", school: "St. Scholastica's Academy of Marikina" },
-  { name: "Conrad Jeffrey C. Tan", school: "Grace Christian College" },
+  { name: "Jhareign S. Solidum", school: "University of Mindanao Ilang High School", photo: solidumPhoto },
+  { name: "Aretha Cai Faustine M. Sy", school: "St. Scholastica's Academy of Marikina", photo: syPhoto },
+  { name: "Conrad Jeffrey C. Tan", school: "Grace Christian College", photo: tanPhoto },
 ];
 
 function MemberCard({ m }: { m: Member }) {
