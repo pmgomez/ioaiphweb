@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
+import troyPhoto from "@/assets/troy.png";
 
 export const Route = createFileRoute("/_site/team")({
   head: () => ({
@@ -35,7 +36,7 @@ const neoai: Member[] = [
   { name: "Juan Mateo J. Desuasido", school: "Brent International School Manila" },
   { name: "Tristan Japheth L. Marquez", school: "Philippine Science High School - Central Luzon Campus" },
   { name: "Almond Rose M. Obedoza", school: "Stanford Online High School" },
-  { name: "Troy Dylan T. Serapio", school: "Philippine Science High School - Main Campus" },
+  { name: "Troy Dylan T. Serapio", school: "Philippine Science High School - Main Campus", photo: troyPhoto },
   { name: "Jhareign S. Solidum", school: "University of Mindanao Ilang High School" },
   { name: "Aretha Cai Faustine M. Sy", school: "St. Scholastica's Academy of Marikina" },
   { name: "Conrad Jeffrey C. Tan", school: "Grace Christian College" },
