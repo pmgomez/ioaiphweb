@@ -22,6 +22,7 @@ type Resource = {
   subtitle: string;
   href: string;
   kind: "sheet" | "doc" | "drive";
+  window?: string;
   featured?: boolean;
 };
 
@@ -34,6 +35,7 @@ const selection: Resource[] = [
       "Composite grade book used to assemble the official Philippine delegation.",
     href: "https://docs.google.com/spreadsheets/d/1xsZy_sfp_xIhAP_qdBCWHEZ44De5QChR4Xe_LUQSX08/edit?gid=0#gid=0",
     kind: "sheet",
+    window: "Feb 22 – Apr 15, 2026",
     featured: true,
   },
   {
@@ -42,6 +44,7 @@ const selection: Resource[] = [
     subtitle: "Final scores from the IOAI PH national finals.",
     href: "https://bit.ly/ioaiph-finals-results",
     kind: "sheet",
+    window: "Feb 16 – 21, 2026",
     featured: true,
   },
   {
@@ -50,6 +53,7 @@ const selection: Resource[] = [
     subtitle: "Scores and standings from the semi-final round.",
     href: "https://bit.ly/ioaiph-semis-results",
     kind: "sheet",
+    window: "Feb 14 – 15, 2026",
   },
   {
     code: "R-04",
@@ -57,6 +61,7 @@ const selection: Resource[] = [
     subtitle: "Roster of contestants invited to the national semi-finals.",
     href: "https://bit.ly/ioaiph-semis",
     kind: "sheet",
+    window: "Feb 14 – 15, 2026",
   },
   {
     code: "R-05",
@@ -64,8 +69,10 @@ const selection: Resource[] = [
     subtitle: "Contestants who advanced past the opening online round.",
     href: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTGS-4r-EuryVT0-aoRbNhkdsmWN7T_JlIAmZeJ3-9UVchnT0hX5oSnWvKl2Qv20oU_sQcGOL1QN9gD/pubhtml",
     kind: "sheet",
+    window: "Jan 31 – Feb 8, 2026",
   },
 ];
+
 
 const certificates: Resource = {
   code: "C-00",
