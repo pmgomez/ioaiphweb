@@ -149,7 +149,7 @@ function About() {
 
       <section className="border-y border-border/60 bg-surface/30">
         <div className="mx-auto max-w-7xl px-6 py-24">
-          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// behind the scenes</div>
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// it takes a village</div>
           <h2 className="mt-3 font-display text-3xl font-semibold">People</h2>
           <p className="mt-4 max-w-3xl text-sm text-muted-foreground">
             Everyone listed below contributes their expertise, time, and effort on a{" "}
