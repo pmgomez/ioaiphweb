@@ -16,6 +16,8 @@ import hanslyPhoto from "@/assets/hanslysaw.png";
 import andrewPhoto from "@/assets/andrewyu.jpg";
 import kylePhoto from "@/assets/kylereynoso.png";
 import mikborbePhoto from "@/assets/mikborbe.png";
+import gianPhoto from "@/assets/alingog.png";
+import troyPhoto from "@/assets/troy.png";
 
 export const Route = createFileRoute("/_site/about")({
   head: () => ({
