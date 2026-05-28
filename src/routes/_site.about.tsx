@@ -17,6 +17,8 @@ import andrewPhoto from "@/assets/andrewyu.jpg";
 import kylePhoto from "@/assets/kylereynoso.png";
 import mikborbePhoto from "@/assets/mikborbe.png";
 import troyPhoto from "@/assets/troy.png";
+import cristyPhoto from "@/assets/cristy.png";
+import connerPhoto from "@/assets/conner.jpg";
 
 export const Route = createFileRoute("/_site/about")({
   head: () => ({
@@ -79,7 +81,7 @@ const leadership = [
     photo: paoloPhoto,
   },
   { name: "Hans Tan", role: "Scientific Committee", org: "Sun Yat-Sen University" },
-  { name: "Conner Manuel", role: "Guest Scientific Lecturer", org: "Together AI" },
+  { name: "Conner Manuel", role: "Guest Scientific Lecturer", org: "Together AI", photo: connerPhoto },
   { name: "James Bermudo", role: "Scientific Committee", org: "Ateneo de Manila University", photo: jamesPhoto },
   { name: "Andrew Yu", role: "Scientific Committee", org: "ex-P&G Singapore", photo: andrewPhoto },
   { name: "Mikhail Borbe", role: "Scientific Committee", org: "University of Washington", photo: mikborbePhoto },
@@ -97,7 +99,7 @@ const leadership = [
     org: "Philippine Science High School -\nMain Campus",
     photo: troyPhoto,
   },
-  { name: "Cristy Esteban", role: "JGSOM QMIT Admin", org: "Ateneo de Manila University" },
+  { name: "Cristy Esteban", role: "JGSOM QMIT Admin", org: "Ateneo de Manila University", photo: cristyPhoto },
 ];
 
 function About() {
