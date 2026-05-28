@@ -128,13 +128,7 @@ function Partnerships() {
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {tiers.map((t) => {
-            const ring =
-              t.accent === "gold" ? "var(--gold)"
-              : t.accent === "silver" ? "var(--silver)"
-              : t.accent === "bronze" ? "var(--bronze)"
-              : t.accent === "steel" ? "#8a8f99"
-              : t.accent === "platinum" ? "#d8dde6"
-              : "var(--primary)";
+            const ring = t.color;
             return (
               <div
                 key={t.name}
