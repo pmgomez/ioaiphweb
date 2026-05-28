@@ -276,6 +276,8 @@ const goldPartners: Partner[] = [{ name: "Joy-Nostalg Group", src: joyNostalgLog
 
 const bronzePartners: Partner[] = [{ name: "Times Paint Corporation", src: timesPaintLogo }];
 
+const steelPartners: Partner[] = [{ name: "The Tiu Family", src: "" }];
+
 const featuredPartners: Partner[] = [
   {
     name: "Analytics and AI Association of the Philippines",
