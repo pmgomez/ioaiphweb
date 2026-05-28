@@ -307,7 +307,13 @@ function ResourceCard({ r }: { r: Resource }) {
           {r.title}
         </h3>
         <p className="mt-2 text-sm text-muted-foreground">{r.subtitle}</p>
+        {r.window && (
+          <div className="mt-3 inline-block rounded-sm border border-border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+            {r.window}
+          </div>
+        )}
       </div>
+
       {r.featured && (
         <div className="mt-auto inline-flex w-fit items-center gap-1.5 rounded-sm border border-primary/40 bg-primary/5 px-2 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
           ● Featured
