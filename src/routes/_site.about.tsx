@@ -92,7 +92,7 @@ const leadership = [
   },
   { name: "Kyle Reynoso", role: "Sponsorships", org: "University of the Philippines - Diliman", photo: kylePhoto },
   { name: "Leonard Ang", role: "Partnerships", org: "University of the Philippines - Diliman", photo: leonardPhoto },
-  { name: "Troy Dylan Serapio", role: "Discord Admin", org: "Philippine Science High School -\nMain Campus" },
+  { name: "Troy Dylan Serapio", role: "Discord Admin", org: "Philippine Science High School -\nMain Campus", photo: troyPhoto },
 ];
 
 function About() {
