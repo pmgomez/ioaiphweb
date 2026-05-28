@@ -117,6 +117,7 @@ const tiers = [
 
 
 function Partnerships() {
+  const { resolvedTheme } = useTheme();
   return (
     <>
       <section className="relative border-b border-border/60">
@@ -136,7 +137,7 @@ function Partnerships() {
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {tiers.map((t) => {
-            const ring = t.color;
+            const ring = resolvedTheme === "dark" ? t.color : t.colorLight;
             return (
               <div
                 key={t.name}
