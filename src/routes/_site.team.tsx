@@ -7,8 +7,7 @@ export const Route = createFileRoute("/_site/team")({
       { title: "Team — IOAI Philippines" },
       {
         name: "description",
-        content:
-          "Meet Team PH for the 2026 IOAI, APOAI, and NEOAI international AI competitions.",
+        content: "Meet Team PH for the 2026 IOAI, APOAI, and NEOAI international AI competitions.",
       },
     ],
   }),
@@ -36,9 +35,7 @@ function MemberCard({ m }: { m: Member }) {
   return (
     <div className="bg-surface p-6">
       <div className="mx-auto h-24 w-24 overflow-hidden rounded-full bg-primary/10">
-        {m.photo ? (
-          <img src={m.photo} alt={m.name} className="h-full w-full object-cover" />
-        ) : null}
+        {m.photo ? <img src={m.photo} alt={m.name} className="h-full w-full object-cover" /> : null}
       </div>
       <div className="mt-4 text-center font-display text-base font-semibold">{m.name}</div>
       <div className="mt-1 text-center font-mono text-[11px] text-muted-foreground">{m.school}</div>
@@ -83,8 +80,8 @@ function Team() {
             Team PH for the<span className="text-primary"> 2026 international AI competitions.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            The Filipino students selected to represent the country at IOAI, APOAI, and NEOAI in 2026.
-            Rosters below are placeholders and will be finalized after national selection.
+            The Filipino students selected to represent the country at IOAI, APOAI, and NEOAI in 2026. Rosters below are
+            placeholders and will be finalized after national selection.
           </p>
         </div>
       </section>
@@ -101,7 +98,7 @@ function Team() {
       <CompetitionSection
         tag="apoai.2026"
         title="APOAI — Asia-Pacific Olympiad in Artificial Intelligence"
-        subtitle="Eight-member team competing across the Asia-Pacific region."
+        subtitle="Eight-member team competing across the best in the Asia-Pacific region."
         members={apoai}
       />
 
@@ -109,8 +106,8 @@ function Team() {
 
       <CompetitionSection
         tag="neoai.2026"
-        title="NEOAI — National Engagement Olympiad in Artificial Intelligence"
-        subtitle="Twelve-member national engagement squad for NEOAI 2026."
+        title="NEOAI — Northern Eurasia Olympiad in Artificial Intelligence"
+        subtitle="Twelve-member national delegation for NEOAI 2026."
         members={neoai}
       />
     </>
