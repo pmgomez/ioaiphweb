@@ -479,10 +479,11 @@ function PartnersSection() {
           <TierLabel accent="bg-primary/60">Community Partners</TierLabel>
           <div className="mt-6 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {communityPartners.map((p) => (
-              <div key={p.name} className="flex flex-col items-center justify-start gap-3 bg-transparent py-8">
+              <div key={p.name} className="flex flex-col items-center justify-start gap-2 bg-transparent py-8">
+                <div className="font-display text-sm font-semibold tracking-tight">{p.name}</div>
                 <LogoTile p={p} size="lg" />
                 {p.subtitle && (
-                  <p className="px-2 text-center font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
+                  <p className="px-2 text-center text-xs text-muted-foreground">
                     {p.subtitle}
                   </p>
                 )}
