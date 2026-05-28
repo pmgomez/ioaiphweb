@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
+import { useTheme } from "@/components/theme-provider";
 
 export const Route = createFileRoute("/_site/partnerships")({
   head: () => ({
