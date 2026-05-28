@@ -1,6 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
 import troyPhoto from "@/assets/troy.png";
+import acenaPhoto from "@/assets/acena.png";
+import alfaroPhoto from "@/assets/alfaro.png";
+import angPhoto from "@/assets/ang.png";
+import arrezaPhoto from "@/assets/arreza.png";
+import bustamantePhoto from "@/assets/bustamante.png";
+import desuasidoPhoto from "@/assets/desuasido.png";
 
 export const Route = createFileRoute("/_site/team")({
   head: () => ({
@@ -28,12 +34,12 @@ const apoai: Member[] = Array.from({ length: 8 }, (_, i) => ({
 }));
 
 const neoai: Member[] = [
-  { name: "Daphne Eunice U. Acena", school: "De La Salle University - Dasmariñas High School" },
-  { name: "Ryan James L. Alfaro", school: "Philippine Science High School - Calabarzon Region Campus" },
-  { name: "Ellison Matthew S. Ang", school: "Philippine Science High School - Main Campus" },
-  { name: "Noe Nathan Y. Arreza", school: "Philippine Science High School - Calabarzon Region Campus" },
-  { name: "Theo Lorenzo T. Bustamante", school: "Philippine Science High School - Calabarzon Region Campus" },
-  { name: "Juan Mateo J. Desuasido", school: "Brent International School Manila" },
+  { name: "Daphne Eunice U. Acena", school: "De La Salle University - Dasmariñas High School", photo: acenaPhoto },
+  { name: "Ryan James L. Alfaro", school: "Philippine Science High School - Calabarzon Region Campus", photo: alfaroPhoto },
+  { name: "Ellison Matthew S. Ang", school: "Philippine Science High School - Main Campus", photo: angPhoto },
+  { name: "Noe Nathan Y. Arreza", school: "Philippine Science High School - Calabarzon Region Campus", photo: arrezaPhoto },
+  { name: "Theo Lorenzo T. Bustamante", school: "Philippine Science High School - Calabarzon Region Campus", photo: bustamantePhoto },
+  { name: "Juan Mateo J. Desuasido", school: "Brent International School Manila", photo: desuasidoPhoto },
   { name: "Tristan Japheth L. Marquez", school: "Philippine Science High School - Central Luzon Campus" },
   { name: "Almond Rose M. Obedoza", school: "Stanford Online High School" },
   { name: "Troy Dylan T. Serapio", school: "Philippine Science High School - Main Campus", photo: troyPhoto },
