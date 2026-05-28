@@ -84,7 +84,7 @@ const competitions = [
     full: "International Olympiad in Artificial Intelligence",
     scope: "Global · final stage",
     host: "Hosted by Kazakhstan",
-    window: "Results pending",
+    window: "Jul 1 – Aug 8, 2026",
   },
   {
     code: "C-02",
@@ -92,7 +92,7 @@ const competitions = [
     full: "Asia-Pacific Olympiad in Artificial Intelligence",
     scope: "Asia-Pacific regional",
     host: "Hosted by China",
-    window: "Results pending",
+    window: "Jun 13, 2026",
   },
   {
     code: "C-03",
@@ -100,8 +100,9 @@ const competitions = [
     full: "Northern Eurasia Olympiad in Artificial Intelligence",
     scope: "Northern Eurasia sub-regional",
     host: "Hosted by Russia",
-    window: "Results pending",
+    window: "May 3 – 4, 2026",
   },
+
 ];
 
 function Results() {
