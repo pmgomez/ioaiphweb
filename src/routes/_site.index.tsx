@@ -461,7 +461,6 @@ function PartnersSection() {
           </div>
         </div>
 
-
         {/* ROW 2: FEATURED (AAP + Dashlabs) */}
         <div className="mt-12">
           <TierLabel accent="bg-primary shadow-[0_0_10px_1px] shadow-primary/60">Featured Community Partners</TierLabel>
@@ -480,13 +479,9 @@ function PartnersSection() {
           <div className="mt-6 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {communityPartners.map((p) => (
               <div key={p.name} className="flex flex-col items-center justify-start gap-2 bg-transparent py-8">
-                <div className="font-display text-sm font-semibold tracking-tight">{p.name}</div>
                 <LogoTile p={p} size="lg" />
-                {p.subtitle && (
-                  <p className="px-2 text-center text-xs text-muted-foreground">
-                    {p.subtitle}
-                  </p>
-                )}
+                <div className="font-display text-sm font-semibold tracking-tight">{p.name}</div>
+                {p.subtitle && <p className="px-2 text-center text-xs text-muted-foreground">{p.subtitle}</p>}
               </div>
             ))}
           </div>
