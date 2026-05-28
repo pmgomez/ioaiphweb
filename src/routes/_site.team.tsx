@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
+import troyPhoto from "@/assets/troy.png";
 
 export const Route = createFileRoute("/_site/team")({
   head: () => ({
