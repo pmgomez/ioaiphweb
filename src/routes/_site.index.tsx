@@ -311,7 +311,7 @@ const communityPartners: Partner[] = [
     subtitle: "Ateneo de Zamboanga University",
   },
   {
-    name: "Mapua SHS Science Club",
+    name: "SHS Science Club",
     src: mapuaShsSciClubLogo,
     href: "https://facebook.com/mapuashscienceclub",
     subtitle: "Mapua University",
