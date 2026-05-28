@@ -14,6 +14,7 @@ import { Route as SiteIndexRouteImport } from './routes/_site.index'
 import { Route as SiteTeamRouteImport } from './routes/_site.team'
 import { Route as SiteResultsRouteImport } from './routes/_site.results'
 import { Route as SiteResourcesRouteImport } from './routes/_site.resources'
+import { Route as SitePressRouteImport } from './routes/_site.press'
 import { Route as SitePartnershipsRouteImport } from './routes/_site.partnerships'
 import { Route as SiteFaqRouteImport } from './routes/_site.faq'
 import { Route as SiteAboutRouteImport } from './routes/_site.about'
@@ -42,6 +43,11 @@ const SiteResourcesRoute = SiteResourcesRouteImport.update({
   path: '/resources',
   getParentRoute: () => SiteRoute,
 } as any)
+const SitePressRoute = SitePressRouteImport.update({
+  id: '/press',
+  path: '/press',
+  getParentRoute: () => SiteRoute,
+} as any)
 const SitePartnershipsRoute = SitePartnershipsRouteImport.update({
   id: '/partnerships',
   path: '/partnerships',
@@ -63,6 +69,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof SiteAboutRoute
   '/faq': typeof SiteFaqRoute
   '/partnerships': typeof SitePartnershipsRoute
+  '/press': typeof SitePressRoute
   '/resources': typeof SiteResourcesRoute
   '/results': typeof SiteResultsRoute
   '/team': typeof SiteTeamRoute
@@ -71,6 +78,7 @@ export interface FileRoutesByTo {
   '/about': typeof SiteAboutRoute
   '/faq': typeof SiteFaqRoute
   '/partnerships': typeof SitePartnershipsRoute
+  '/press': typeof SitePressRoute
   '/resources': typeof SiteResourcesRoute
   '/results': typeof SiteResultsRoute
   '/team': typeof SiteTeamRoute
@@ -82,6 +90,7 @@ export interface FileRoutesById {
   '/_site/about': typeof SiteAboutRoute
   '/_site/faq': typeof SiteFaqRoute
   '/_site/partnerships': typeof SitePartnershipsRoute
+  '/_site/press': typeof SitePressRoute
   '/_site/resources': typeof SiteResourcesRoute
   '/_site/results': typeof SiteResultsRoute
   '/_site/team': typeof SiteTeamRoute
@@ -94,6 +103,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/faq'
     | '/partnerships'
+    | '/press'
     | '/resources'
     | '/results'
     | '/team'
@@ -102,6 +112,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/faq'
     | '/partnerships'
+    | '/press'
     | '/resources'
     | '/results'
     | '/team'
@@ -112,6 +123,7 @@ export interface FileRouteTypes {
     | '/_site/about'
     | '/_site/faq'
     | '/_site/partnerships'
+    | '/_site/press'
     | '/_site/resources'
     | '/_site/results'
     | '/_site/team'
@@ -159,6 +171,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SiteResourcesRouteImport
       parentRoute: typeof SiteRoute
     }
+    '/_site/press': {
+      id: '/_site/press'
+      path: '/press'
+      fullPath: '/press'
+      preLoaderRoute: typeof SitePressRouteImport
+      parentRoute: typeof SiteRoute
+    }
     '/_site/partnerships': {
       id: '/_site/partnerships'
       path: '/partnerships'
@@ -187,6 +206,7 @@ interface SiteRouteChildren {
   SiteAboutRoute: typeof SiteAboutRoute
   SiteFaqRoute: typeof SiteFaqRoute
   SitePartnershipsRoute: typeof SitePartnershipsRoute
+  SitePressRoute: typeof SitePressRoute
   SiteResourcesRoute: typeof SiteResourcesRoute
   SiteResultsRoute: typeof SiteResultsRoute
   SiteTeamRoute: typeof SiteTeamRoute
@@ -197,6 +217,7 @@ const SiteRouteChildren: SiteRouteChildren = {
   SiteAboutRoute: SiteAboutRoute,
   SiteFaqRoute: SiteFaqRoute,
   SitePartnershipsRoute: SitePartnershipsRoute,
+  SitePressRoute: SitePressRoute,
   SiteResourcesRoute: SiteResourcesRoute,
   SiteResultsRoute: SiteResultsRoute,
   SiteTeamRoute: SiteTeamRoute,
