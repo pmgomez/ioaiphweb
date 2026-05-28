@@ -18,6 +18,7 @@ const tiers = [
     code: "T-07",
     price: "Up to ₱5,000",
     color: "#10B981",
+    colorLight: "#047857",
     desc: "A grassroots contribution that helps cover essential administrative and incidental costs during the national selection phase.",
     perks: [
       "Name listed on the dedicated 'Friends of IOAI PH' page",
@@ -29,6 +30,7 @@ const tiers = [
     code: "T-06",
     price: "Up to ₱10,000",
     color: "#6B7280",
+    colorLight: "#374151",
     desc: "An entry-level partnership that offsets specialized bootcamp materials and meals for our national finalists.",
     perks: [
       "Everything in Friend",
@@ -42,6 +44,7 @@ const tiers = [
     code: "T-05",
     price: "Up to ₱25,000",
     color: "#D97706",
+    colorLight: "#92400E",
     desc: "Co-funds operational stipends, training infrastructure, and logistics for the national bootcamp and selection rounds.",
     perks: [
       "Everything in Steel",
@@ -55,6 +58,7 @@ const tiers = [
     code: "T-04",
     price: "Up to ₱50,000",
     color: "#E5E7EB",
+    colorLight: "#4B5563",
     desc: "Underwrites a meaningful share of advanced training operations and contestant mentoring across the cycle.",
     perks: [
       "Everything in Bronze",
@@ -69,6 +73,7 @@ const tiers = [
     code: "T-03",
     price: "Up to ₱100,000",
     color: "#F59E0B",
+    colorLight: "#B45309",
     featured: true,
     desc: "Provides high-level operational anchoring, ensuring the delegation's core competitive needs are met.",
     perks: [
@@ -85,6 +90,7 @@ const tiers = [
     code: "T-02",
     price: "Up to ₱250,000",
     color: "#38BDF8",
+    colorLight: "#0369A1",
     desc: "Anchors a major component of the international delegation — directly subsidizing registration, travel, and logistics for the 5-person team (4 contestants + 1 team leader).",
     perks: [
       "Everything in Gold",
@@ -97,6 +103,7 @@ const tiers = [
     code: "T-01",
     price: "Bespoke",
     color: "#FFFFFF",
+    colorLight: "#111827",
     desc: "Lead presenting sponsor of IOAI Philippines. Fully secures the international campaign, offsetting registration, airfare, lodging, and equipment overhead exceeding ₱500,000. Exclusive — 1 slot per cycle.",
     perks: [
       "Everything in Platinum",
