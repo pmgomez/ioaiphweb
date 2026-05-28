@@ -28,10 +28,13 @@ export const Route = createFileRoute("/_site/team")({
 
 type Member = { name: string; school: string; photo?: string };
 
-const ioai: Member[] = Array.from({ length: 4 }, (_, i) => ({
-  name: `TBA Member ${i + 1}`,
-  school: "School TBA",
-}));
+const ioai: Member[] = [
+  { name: "Ellison Matthew S. Ang", school: "Philippine Science High School - Main Campus", photo: angPhoto },
+  { name: "Theo Lorenzo T. Bustamante", school: "Philippine Science High School - Calabarzon Region Campus", photo: bustamantePhoto },
+  { name: "Juan Mateo J. Desuasido", school: "Brent International School Manila", photo: desuasidoPhoto },
+  { name: "Jhareign S. Solidum", school: "University of Mindanao Ilang High School", photo: solidumPhoto },
+];
+
 
 const apoai: Member[] = Array.from({ length: 8 }, (_, i) => ({
   name: `TBA Member ${i + 1}`,
