@@ -16,6 +16,8 @@ import hanslyPhoto from "@/assets/hanslysaw.png";
 import andrewPhoto from "@/assets/andrewyu.jpg";
 import kylePhoto from "@/assets/kylereynoso.png";
 import mikborbePhoto from "@/assets/mikborbe.png";
+import gianPhoto from "@/assets/alingog.png";
+import troyPhoto from "@/assets/troy.png";
 
 export const Route = createFileRoute("/_site/about")({
   head: () => ({
@@ -81,7 +83,7 @@ const leadership = [
   { name: "James Bermudo", role: "Scientific Committee", org: "Ateneo de Manila University", photo: jamesPhoto },
   { name: "Andrew Yu", role: "Scientific Committee", org: "Procter & Gamble", photo: andrewPhoto },
   { name: "Mikhail Borbe", role: "Scientific Committee", org: "University of Washington", photo: mikborbePhoto },
-  { name: "Gian Alingog", role: "Scientific Committee", org: "UC Sta Barbara" },
+  { name: "Gian Alingog", role: "Scientific Committee", org: "UC Sta Barbara", photo: gianPhoto },
   {
     name: "Timothy James Dimacali",
     role: "Media and Press Relations",
@@ -90,7 +92,7 @@ const leadership = [
   },
   { name: "Kyle Reynoso", role: "Sponsorships", org: "University of the Philippines - Diliman", photo: kylePhoto },
   { name: "Leonard Ang", role: "Partnerships", org: "University of the Philippines - Diliman", photo: leonardPhoto },
-  { name: "Troy Dylan Serapio", role: "Discord Admin", org: "Philippine Science High School -\nMain Campus" },
+  { name: "Troy Dylan Serapio", role: "Discord Admin", org: "Philippine Science High School -\nMain Campus", photo: troyPhoto },
 ];
 
 function About() {
