@@ -96,7 +96,7 @@ const leadership = [
     org: "Philippine Science High School -\nMain Campus",
     photo: troyPhoto,
   },
-  { name: "Cristy Esteban", role: "Administrative Support", org: "JGSOM, Ateneo de Manila University" },
+  { name: "Cristy Esteban", role: "JGSOM QMIT Admin", org: "Ateneo de Manila University" },
 ];
 
 function About() {
