@@ -73,7 +73,7 @@ const tiers = [
     code: "T-03",
     price: "Up to ₱100,000",
     color: "#F59E0B",
-    colorLight: "#B45309",
+    colorLight: "#D97706",
     featured: true,
     desc: "Provides high-level operational anchoring, ensuring the delegation's core competitive needs are met.",
     perks: [
