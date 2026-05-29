@@ -76,14 +76,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "IOAI Philippines" },
+      { name: "description", content: "Team Philippines to the IOAI" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "IOAI Philippines" },
+      { property: "og:description", content: "Team Philippines to the IOAI" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "IOAI Philippines" },
+      { name: "twitter:description", content: "Team Philippines to the IOAI" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/xo4zqaDl45RCF3HcAL7CiifNHCf1/social-images/social-1780039030632-Screenshot_2026-05-29_at_3.16.56_PM.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/xo4zqaDl45RCF3HcAL7CiifNHCf1/social-images/social-1780039030632-Screenshot_2026-05-29_at_3.16.56_PM.webp" },
     ],
     links: [
       {
