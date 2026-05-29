@@ -117,6 +117,14 @@ export function SiteFooter() {
             <img src={phFlag} alt="Flag of the Philippines" className="h-14 w-auto rounded-sm shadow-sm" />
             <div className="mt-3 font-mono text-sm font-semibold tracking-wide text-foreground">#ParaSaBayan</div>
           </div>
+          <div className="flex flex-col items-start">
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Accredited by</div>
+            <img
+              src={ioaiAccreditation}
+              alt="International Olympiad in Artificial Intelligence"
+              className="mt-3 h-14 w-auto object-contain"
+            />
+          </div>
           <div>
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Contact</div>
             <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
