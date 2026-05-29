@@ -105,22 +105,29 @@ function PressPage() {
           </span>
         </div>
 
-        <ul className="mt-8 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2">
+        <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
           {articles.map((a) => (
-            <li key={a.href} className="flex flex-col bg-surface p-8 transition-colors hover:bg-background">
-              <div className="flex items-center justify-between gap-4 font-mono text-[10px] uppercase tracking-[0.2em]">
-                <span className="font-bold text-primary">{a.outlet}</span>
-                {a.date ? <span className="text-muted-foreground">{a.date}</span> : null}
+            <li
+              key={a.href}
+              className="group flex h-full flex-col rounded-sm border border-border bg-surface p-5 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg"
+            >
+              <div className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+                {a.outlet}
               </div>
-              <h3 className="mt-3 font-display text-lg font-semibold tracking-tight text-foreground">
+              {a.date ? (
+                <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                  {a.date}
+                </div>
+              ) : null}
+              <h3 className="mt-3 line-clamp-3 font-display text-base font-semibold leading-snug tracking-tight text-foreground">
                 {a.title}
               </h3>
-              <div className="mt-6 flex-1" />
+              <div className="flex-1" />
               <a
                 href={a.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 inline-flex w-fit items-center gap-2 rounded-sm border border-border bg-background px-4 py-2 font-mono text-xs uppercase tracking-wider text-foreground transition-all hover:border-primary/50 hover:text-primary"
+                className="mt-5 inline-flex items-center justify-center gap-1.5 rounded-sm border border-border bg-background px-3 py-2 font-mono text-[10px] uppercase tracking-wider text-foreground transition-all group-hover:border-primary/50 group-hover:text-primary"
               >
                 Read Article <span aria-hidden>↗</span>
               </a>
