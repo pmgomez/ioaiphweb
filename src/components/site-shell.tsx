@@ -120,11 +120,18 @@ export function SiteFooter() {
           </div>
           <div className="flex flex-col items-start">
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Accredited by</div>
-            <img
-              src={ioaiAccreditation}
-              alt="International Olympiad in Artificial Intelligence"
-              className="mt-3 h-14 w-auto object-contain"
-            />
+            <a
+              href="https://ioai-official.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-block transition-opacity hover:opacity-80"
+            >
+              <img
+                src={ioaiAccreditation}
+                alt="International Olympiad in Artificial Intelligence"
+                className="h-14 w-auto object-contain"
+              />
+            </a>
           </div>
           <div>
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Contact</div>
