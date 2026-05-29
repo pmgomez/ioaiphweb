@@ -1,7 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
+import { useTheme } from "@/components/theme-provider";
 import aapLogo from "@/assets/aaplogo.png";
+import aapLogoLight from "@/assets/aaplogo-light.png";
 import timesPaintLogo from "@/assets/timespaintlogo.png";
+import timesPaintLogoLight from "@/assets/timespaintlogo-light.png";
 import joyNostalgLogo from "@/assets/joynostalg.png";
 import depedLogo from "@/assets/depedlogo.svg";
 import dostSeiLogo from "@/assets/dostseilogo.png";
@@ -11,6 +14,7 @@ import xcitesLogo from "@/assets/partners/xcites.png";
 import siteaoLogo from "@/assets/partners/siteao.png";
 import mapuaShsSciClubLogo from "@/assets/partners/mapuashssciclub.png";
 import tomorrowLogo from "@/assets/partners/tomorrow.png";
+import tomorrowLogoLight from "@/assets/partners/tomorrow-light.png";
 import dashlabsLogo from "@/assets/dashlabs-logo.png";
 
 export const Route = createFileRoute("/_site/")({
@@ -270,11 +274,11 @@ function Home() {
   );
 }
 
-type Partner = { name: string; src: string; href?: string; subtitle?: string };
+type Partner = { name: string; src: string; lightSrc?: string; href?: string; subtitle?: string };
 
 const goldPartners: Partner[] = [{ name: "Joy-Nostalg Group", src: joyNostalgLogo, href: "https://joy-nostalg.com/" }];
 
-const bronzePartners: Partner[] = [{ name: "Times Paint Corporation", src: timesPaintLogo }];
+const bronzePartners: Partner[] = [{ name: "Times Paint Corporation", src: timesPaintLogo, lightSrc: timesPaintLogoLight }];
 
 const steelPartners: Partner[] = [{ name: "The Tiu Family", src: "" }];
 
@@ -282,6 +286,7 @@ const featuredPartners: Partner[] = [
   {
     name: "Analytics and AI Association of the Philippines",
     src: aapLogo,
+    lightSrc: aapLogoLight,
     href: "https://www.aap.ph/",
   },
   {
@@ -319,6 +324,7 @@ const communityPartners: Partner[] = [
   {
     name: "Tomorrow",
     src: tomorrowLogo,
+    lightSrc: tomorrowLogoLight,
     href: "https://www.facebook.com/profile.php?id=61563288622007",
     subtitle: "Philippine Science High School - Main Campus",
   },
