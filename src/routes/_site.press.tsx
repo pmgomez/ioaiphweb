@@ -49,8 +49,8 @@ function PressPage() {
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// coming.soon</div>
           <p className="mt-3 text-sm text-muted-foreground">
             Press coverage will be linked here as it's published. For media inquiries, email{" "}
-            <a href="mailto:info@ioaiph.org" className="text-primary hover:underline">
-              info@ioaiph.org
+            <a href="mailto:press@ioaiph.org" className="text-primary hover:underline">
+              press@ioaiph.org
             </a>
             .
           </p>
@@ -72,9 +72,7 @@ function PressPage() {
                 <h2 className="mt-3 font-display text-xl font-semibold tracking-tight group-hover:text-primary">
                   {a.title}
                 </h2>
-                {a.excerpt ? (
-                  <p className="mt-3 text-sm text-muted-foreground">{a.excerpt}</p>
-                ) : null}
+                {a.excerpt ? <p className="mt-3 text-sm text-muted-foreground">{a.excerpt}</p> : null}
                 <div className="mt-6 flex items-center gap-2 font-mono text-xs text-muted-foreground group-hover:text-primary">
                   Read article <span aria-hidden>↗</span>
                 </div>
