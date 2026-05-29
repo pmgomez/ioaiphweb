@@ -12,6 +12,7 @@ import obedozaPhoto from "@/assets/obedoza.png";
 import solidumPhoto from "@/assets/solidum.png";
 import syPhoto from "@/assets/sy.png";
 import tanPhoto from "@/assets/tan.png";
+import castilloPhoto from "@/assets/castillo.png";
 
 export const Route = createFileRoute("/_site/team")({
   head: () => ({
