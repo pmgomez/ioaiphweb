@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Menu, X, Facebook } from "lucide-react";
 import phFlag from "@/assets/ph-flag.svg";
 import ioaiphLogo from "@/assets/ioaiph-logo.png";
+import ioaiAccreditation from "@/assets/ioai-accreditation.png";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const DiscordIcon = ({ className }: { className?: string }) => (
@@ -104,8 +105,9 @@ export function SiteFooter() {
   return (
     <footer className="mt-32 border-t border-border/60">
       <div className="mx-auto max-w-7xl px-6 py-12">
-        <div className="grid gap-10 md:grid-cols-4">
+        <div className="grid gap-10 md:grid-cols-5">
           <div className="md:col-span-2">
+
             <div className="font-display text-lg font-semibold">IOAI Philippines</div>
             <p className="mt-3 max-w-sm text-sm text-muted-foreground">
               The Philippines' national selection and training program for the International Olympiad in Artificial
@@ -115,6 +117,14 @@ export function SiteFooter() {
           <div className="flex flex-col items-start">
             <img src={phFlag} alt="Flag of the Philippines" className="h-14 w-auto rounded-sm shadow-sm" />
             <div className="mt-3 font-mono text-sm font-semibold tracking-wide text-foreground">#ParaSaBayan</div>
+          </div>
+          <div className="flex flex-col items-start">
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Accredited by</div>
+            <img
+              src={ioaiAccreditation}
+              alt="International Olympiad in Artificial Intelligence"
+              className="mt-3 h-14 w-auto object-contain"
+            />
           </div>
           <div>
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Contact</div>
