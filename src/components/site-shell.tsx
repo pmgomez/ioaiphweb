@@ -105,8 +105,9 @@ export function SiteFooter() {
   return (
     <footer className="mt-32 border-t border-border/60">
       <div className="mx-auto max-w-7xl px-6 py-12">
-        <div className="grid gap-10 md:grid-cols-4">
+        <div className="grid gap-10 md:grid-cols-5">
           <div className="md:col-span-2">
+
             <div className="font-display text-lg font-semibold">IOAI Philippines</div>
             <p className="mt-3 max-w-sm text-sm text-muted-foreground">
               The Philippines' national selection and training program for the International Olympiad in Artificial
