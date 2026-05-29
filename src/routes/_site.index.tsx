@@ -342,6 +342,8 @@ function LogoTile({
   const heights = { sm: "h-8", md: "h-24", lg: "h-16", xl: "h-48", "2xl": "h-72" };
   const Tag: any = p.href ? "a" : "div";
   const props = p.href ? { href: p.href, target: "_blank", rel: "noopener noreferrer" } : {};
+  const { resolvedTheme } = useTheme();
+  const src = resolvedTheme === "light" && p.lightSrc ? p.lightSrc : p.src;
   return (
     <Tag
       {...props}
@@ -349,7 +351,7 @@ function LogoTile({
       className="group relative flex shrink-0 items-center justify-center px-8 py-6 transition-all"
     >
       <img
-        src={p.src}
+        src={src}
         alt={p.name}
         loading="lazy"
         className={`${heights[size]} ${widthClass ?? "w-auto"} object-contain transition-transform duration-500 group-hover:scale-110`}
@@ -361,10 +363,12 @@ function LogoTile({
 function PartnerBox({ p, imgClass }: { p: Partner; imgClass: string }) {
   const Tag: any = p.href ? "a" : "div";
   const props = p.href ? { href: p.href, target: "_blank", rel: "noopener noreferrer" } : {};
+  const { resolvedTheme } = useTheme();
+  const src = resolvedTheme === "light" && p.lightSrc ? p.lightSrc : p.src;
   return (
     <Tag {...props} title={p.name} className="group flex h-72 items-center justify-center px-6">
       <img
-        src={p.src}
+        src={src}
         alt={p.name}
         loading="lazy"
         className={`${imgClass} w-auto object-contain transition-transform duration-500 group-hover:scale-105`}
