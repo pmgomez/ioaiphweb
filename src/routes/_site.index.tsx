@@ -106,7 +106,7 @@ const stats = [
   { k: "200+", l: "Applicants" },
   { k: "30", l: "Finalists" },
   { k: "15", l: "National Pool" },
-  { k: "4", l: "IOAI Team Members" },
+  { k: "4", l: "IOAI Team" },
   { k: "82", l: "Provinces" },
   { k: "18", l: "Regions" },
   { k: "1", l: "Country" },
@@ -279,7 +279,9 @@ type Partner = { name: string; src: string; lightSrc?: string; href?: string; su
 
 const goldPartners: Partner[] = [{ name: "Joy-Nostalg Group", src: joyNostalgLogo, href: "https://joy-nostalg.com/" }];
 
-const bronzePartners: Partner[] = [{ name: "Times Paint Corporation", src: timesPaintLogo, lightSrc: timesPaintLogoLight }];
+const bronzePartners: Partner[] = [
+  { name: "Times Paint Corporation", src: timesPaintLogo, lightSrc: timesPaintLogoLight },
+];
 
 const steelPartners: Partner[] = [{ name: "The Tiu Family", src: "" }];
 
