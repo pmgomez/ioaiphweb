@@ -106,6 +106,7 @@ const leadership = [
     photo: troyPhoto,
   },
   { name: "Hans Tan", role: "Scientific Committee", org: "Sun Yat-Sen University", photo: hansPhoto },
+  { name: "Sean Anderson Ty", role: "Guest Scientific Lecturer", org: "Two Sigma", photo: seanTyPhoto },
   { name: "Andrew Yu", role: "Scientific Committee", org: "ex-P&G Singapore", photo: andrewPhoto },
 ];
 
