@@ -74,7 +74,12 @@ const leadership = [
   { name: "Lorenzo Jaime Flores", role: "Scientific Committee", org: "Microsoft Research", photo: lorenzoPhoto },
   { name: "Conner Manuel", role: "Guest Scientific Lecturer", org: "Together AI", photo: connerPhoto },
   { name: "Lester James Miranda", role: "Scientific Committee", org: "University of Cambridge", photo: lesterPhoto },
-  { name: "Kyle Reynoso", role: "Sponsorships", org: "University of the Philippines - Diliman", photo: kylePhoto },
+  {
+    name: "Kyle Reynoso",
+    role: "Sponsorships and Scientific Committee",
+    org: "University of the Philippines - Diliman",
+    photo: kylePhoto,
+  },
   {
     name: "Paolo Rollan",
     role: "Scientific Committee",
