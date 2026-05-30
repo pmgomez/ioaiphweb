@@ -15,6 +15,7 @@ import paoloPhoto from "@/assets/paolorollan.png";
 import hanslyPhoto from "@/assets/hanslysaw.png";
 import andrewPhoto from "@/assets/andrewyu.png";
 import hansPhoto from "@/assets/hanstan.png";
+import seanTyPhoto from "@/assets/seanty.png";
 import kylePhoto from "@/assets/kylereynoso.png";
 import mikborbePhoto from "@/assets/mikborbe.png";
 import troyPhoto from "@/assets/troy.png";
@@ -105,6 +106,7 @@ const leadership = [
     photo: troyPhoto,
   },
   { name: "Hans Tan", role: "Scientific Committee", org: "Sun Yat-Sen University", photo: hansPhoto },
+  { name: "Sean Anderson Ty", role: "Guest Scientific Lecturer", org: "Two Sigma", photo: seanTyPhoto },
   { name: "Andrew Yu", role: "Scientific Committee", org: "ex-P&G Singapore", photo: andrewPhoto },
 ];
 
