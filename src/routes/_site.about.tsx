@@ -15,6 +15,7 @@ import paoloPhoto from "@/assets/paolorollan.png";
 import hanslyPhoto from "@/assets/hanslysaw.png";
 import andrewPhoto from "@/assets/andrewyu.png";
 import hansPhoto from "@/assets/hanstan.png";
+import seanTyPhoto from "@/assets/seanty.png";
 import kylePhoto from "@/assets/kylereynoso.png";
 import mikborbePhoto from "@/assets/mikborbe.png";
 import troyPhoto from "@/assets/troy.png";
