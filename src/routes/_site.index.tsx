@@ -108,6 +108,7 @@ const stats = [
   { k: "15", l: "National Pool" },
   { k: "4", l: "IOAI Team Members" },
   { k: "82", l: "Provinces" },
+  { k: "18", l: "Regions" },
   { k: "1", l: "Country" },
 ];
 
@@ -149,7 +150,7 @@ function Home() {
             </Link>
           </div>
 
-          <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-3 lg:grid-cols-6">
+          <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-4 lg:grid-cols-7">
             {stats.map((s) => (
               <div key={s.l} className="bg-surface p-6">
                 <div className="font-display text-3xl font-semibold text-primary md:text-4xl">{s.k}</div>
