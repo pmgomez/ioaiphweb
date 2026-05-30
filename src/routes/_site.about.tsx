@@ -21,6 +21,7 @@ import mikborbePhoto from "@/assets/mikborbe.png";
 import troyPhoto from "@/assets/troy.png";
 import cristyPhoto from "@/assets/cristy.png";
 import connerPhoto from "@/assets/conner.jpg";
+import gramPhoto from "@/assets/gramliu.png";
 
 export const Route = createFileRoute("/_site/about")({
   head: () => ({
@@ -73,6 +74,7 @@ const leadership = [
   },
   { name: "Cristy Esteban", role: "JGSOM QMIT Admin", org: "Ateneo de Manila University", photo: cristyPhoto },
   { name: "Lorenzo Jaime Flores", role: "Scientific Committee", org: "Microsoft Research", photo: lorenzoPhoto },
+  { name: "Gram Liu", role: "Scientific Committee", org: "Decagon", photo: gramPhoto },
   { name: "Conner Manuel", role: "Guest Scientific Lecturer", org: "Together AI", photo: connerPhoto },
   { name: "Lester James Miranda", role: "Scientific Committee", org: "University of Cambridge", photo: lesterPhoto },
   {
