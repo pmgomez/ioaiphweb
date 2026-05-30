@@ -108,6 +108,7 @@ const stats = [
   { k: "15", l: "National Pool" },
   { k: "4", l: "IOAI Team Members" },
   { k: "82", l: "Provinces" },
+  { k: "18", l: "Regions" },
   { k: "1", l: "Country" },
 ];
 
