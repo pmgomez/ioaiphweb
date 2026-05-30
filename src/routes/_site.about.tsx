@@ -76,7 +76,7 @@ const leadership = [
   { name: "Lester James Miranda", role: "Scientific Committee", org: "University of Cambridge", photo: lesterPhoto },
   {
     name: "Kyle Reynoso",
-    role: "Sponsorships and Scientific Committee",
+    role: "Sponsorships + Scientific Committee",
     org: "University of the Philippines - Diliman",
     photo: kylePhoto,
   },
