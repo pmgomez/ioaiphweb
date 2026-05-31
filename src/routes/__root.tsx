@@ -86,8 +86,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "IOAI Philippines" },
       { name: "twitter:description", content: "Team Philippines to the IOAI" },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/xo4zqaDl45RCF3HcAL7CiifNHCf1/social-images/social-1780039030632-Screenshot_2026-05-29_at_3.16.56_PM.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/xo4zqaDl45RCF3HcAL7CiifNHCf1/social-images/social-1780039030632-Screenshot_2026-05-29_at_3.16.56_PM.webp" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/xo4zqaDl45RCF3HcAL7CiifNHCf1/social-images/social-1780214472156-Screenshot_2026-05-31_at_4.00.13_PM.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/xo4zqaDl45RCF3HcAL7CiifNHCf1/social-images/social-1780214472156-Screenshot_2026-05-31_at_4.00.13_PM.webp" },
     ],
     links: [
       {
