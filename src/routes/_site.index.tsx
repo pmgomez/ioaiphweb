@@ -70,7 +70,7 @@ const timeline = [
     phase: "05 / National",
     title: "Selection & Training",
     desc: "Finalists enter intensive training. Team Philippines selected from this pool.",
-    status: "active",
+    status: "complete",
   },
   {
     date: "MAY 3 – 4, 2026",
@@ -84,7 +84,7 @@ const timeline = [
     phase: "07 / International",
     title: "APOAI · Asia Pacific Olympiad in AI",
     desc: "Philippine team competes in the Asia Pacific regional olympiad, hosted by China.",
-    status: "upcoming",
+    status: "active",
   },
   {
     date: "JUL 1 – AUG 1, 2026",
