@@ -45,7 +45,7 @@ const leadership = [
     photo: robertoPhoto,
   },
   {
-    name: "Joben Ilagan",
+    name: "Dr. Joben Ilagan",
     role: "Founding Chair",
     org: "Director, Ateneo BUILD\nProgram Director, ADMU BS ITE",
     photo: jobenPhoto,
