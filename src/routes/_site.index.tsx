@@ -77,7 +77,7 @@ const timeline = [
     phase: "06 / International",
     title: "NEOAI · Northern Eurasia Olympiad in AI",
     desc: "Philippine team fielded at the Northern Eurasia regional olympiad, hosted by Russia.",
-    status: "upcoming",
+    status: "complete",
   },
   {
     date: "JUN 13, 2026",
