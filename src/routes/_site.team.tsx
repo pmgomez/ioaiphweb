@@ -31,17 +31,32 @@ type Member = { name: string; school: string; photo?: string };
 
 const ioai: Member[] = [
   { name: "Ellison Matthew S. Ang", school: "Philippine Science High School - Main Campus", photo: angPhoto },
-  { name: "Theo Lorenzo T. Bustamante", school: "Philippine Science High School - Calabarzon Region Campus", photo: bustamantePhoto },
+  {
+    name: "Theo Lorenzo T. Bustamante",
+    school: "Philippine Science High School - Calabarzon Region Campus",
+    photo: bustamantePhoto,
+  },
   { name: "Juan Mateo J. Desuasido", school: "Brent International School Manila", photo: desuasidoPhoto },
   { name: "Jhareign S. Solidum", school: "University of Mindanao Ilang High School", photo: solidumPhoto },
 ];
 
-
 const apoai: Member[] = [
   { name: "Ellison Matthew S. Ang", school: "Philippine Science High School - Main Campus", photo: angPhoto },
-  { name: "Ryan James L. Alfaro", school: "Philippine Science High School - Calabarzon Region Campus", photo: alfaroPhoto },
-  { name: "Noe Nathan Y. Arreza", school: "Philippine Science High School - Calabarzon Region Campus", photo: arrezaPhoto },
-  { name: "Sean Marcus N. Castillo", school: "Philippine Science High School - Central Luzon Campus", photo: castilloPhoto },
+  {
+    name: "Ryan James L. Alfaro",
+    school: "Philippine Science High School - Calabarzon Region Campus",
+    photo: alfaroPhoto,
+  },
+  {
+    name: "Noe Nathan Y. Arreza",
+    school: "Philippine Science High School - Calabarzon Region Campus",
+    photo: arrezaPhoto,
+  },
+  {
+    name: "Sean Marcus N. Castillo",
+    school: "Philippine Science High School - Central Luzon Campus",
+    photo: castilloPhoto,
+  },
   { name: "Daphne Eunice U. Acena", school: "De La Salle University - Dasmariñas High School", photo: acenaPhoto },
   { name: "Troy Dylan T. Serapio", school: "Philippine Science High School - Main Campus", photo: troyPhoto },
   { name: "Jhareign S. Solidum", school: "University of Mindanao Ilang High School", photo: solidumPhoto },
@@ -50,12 +65,28 @@ const apoai: Member[] = [
 
 const neoai: Member[] = [
   { name: "Daphne Eunice U. Acena", school: "De La Salle University - Dasmariñas High School", photo: acenaPhoto },
-  { name: "Ryan James L. Alfaro", school: "Philippine Science High School - Calabarzon Region Campus", photo: alfaroPhoto },
+  {
+    name: "Ryan James L. Alfaro",
+    school: "Philippine Science High School - Calabarzon Region Campus",
+    photo: alfaroPhoto,
+  },
   { name: "Ellison Matthew S. Ang", school: "Philippine Science High School - Main Campus", photo: angPhoto },
-  { name: "Noe Nathan Y. Arreza", school: "Philippine Science High School - Calabarzon Region Campus", photo: arrezaPhoto },
-  { name: "Theo Lorenzo T. Bustamante", school: "Philippine Science High School - Calabarzon Region Campus", photo: bustamantePhoto },
+  {
+    name: "Noe Nathan Y. Arreza",
+    school: "Philippine Science High School - Calabarzon Region Campus",
+    photo: arrezaPhoto,
+  },
+  {
+    name: "Theo Lorenzo T. Bustamante",
+    school: "Philippine Science High School - Calabarzon Region Campus",
+    photo: bustamantePhoto,
+  },
   { name: "Juan Mateo J. Desuasido", school: "Brent International School Manila", photo: desuasidoPhoto },
-  { name: "Tristan Japheth L. Marquez", school: "Philippine Science High School - Central Luzon Campus", photo: marquezPhoto },
+  {
+    name: "Tristan Japheth L. Marquez",
+    school: "Philippine Science High School - Central Luzon Campus",
+    photo: marquezPhoto,
+  },
   { name: "Almond Rose M. Obedoza", school: "Stanford Online High School", photo: obedozaPhoto },
   { name: "Troy Dylan T. Serapio", school: "Philippine Science High School - Main Campus", photo: troyPhoto },
   { name: "Jhareign S. Solidum", school: "University of Mindanao Ilang High School", photo: solidumPhoto },
@@ -112,8 +143,7 @@ function Team() {
             Team PH for the<span className="text-primary"> 2026 international AI competitions.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            The Filipino students selected to represent the country at IOAI, APOAI, and NEOAI in 2026. Rosters below are
-            placeholders and will be finalized after national selection.
+            The Filipino students selected to represent the country at IOAI, APOAI, and NEOAI in 2026.
           </p>
         </div>
       </section>
