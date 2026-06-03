@@ -29,6 +29,12 @@ type Article = {
 
 const articles: Article[] = [
   {
+    outlet: "Ateneo de Manila University",
+    date: "Jun 3, 2026",
+    title: "Philippines among top 3 nations in AI Olympiad",
+    href: "https://www.ateneo.edu/news/2026/06/philippines-among-top-3-nations-ai-olympiad",
+  },
+  {
     outlet: "The Manila Times",
     date: "Jan 17, 2026",
     title: "Search is on for PH first AI Olympiad team",
@@ -97,9 +103,7 @@ function PressPage() {
 
       <div className="mt-20">
         <div className="flex items-baseline justify-between border-b border-border pb-4">
-          <h2 className="font-display text-2xl font-semibold tracking-tight md:text-3xl">
-            Press &amp; Media Coverage
-          </h2>
+          <h2 className="font-display text-2xl font-semibold tracking-tight md:text-3xl">Press &amp; Media Coverage</h2>
           <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
             {articles.length} features
           </span>
@@ -111,9 +115,7 @@ function PressPage() {
               key={a.href}
               className="group flex h-full flex-col rounded-sm border border-border bg-surface p-5 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg"
             >
-              <div className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-                {a.outlet}
-              </div>
+              <div className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">{a.outlet}</div>
               {a.date ? (
                 <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
                   {a.date}
