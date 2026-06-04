@@ -139,18 +139,25 @@ function CompetitionSection({
   title,
   subtitle,
   members,
+  cols = 4,
 }: {
   tag: string;
   title: string;
   subtitle: string;
   members: Member[];
+  cols?: number;
 }) {
+  const gridClass =
+    cols === 5
+      ? "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
+      : "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4";
+
   return (
     <section className="mx-auto max-w-7xl px-6 py-20">
       <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// {tag}</div>
       <h2 className="mt-3 font-display text-3xl font-semibold">{title}</h2>
       <p className="mt-2 max-w-2xl text-sm text-muted-foreground">{subtitle}</p>
-      <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className={`mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border ${gridClass}`}>
         {members.map((m, i) => (
           <MemberCard key={`${tag}-${i}`} m={m} />
         ))}
