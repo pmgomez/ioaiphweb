@@ -36,7 +36,7 @@ type Member = { name: string; school: string; role?: string; photo?: string };
 
 const ioai: Member[] = [
   {
-    name: "Peter Martin D. Gomez",
+    name: "Martin Gomez",
     role: "Team Leader",
     school: "IOAI Philippines",
     photo: gomezIoaiPhoto.url,
@@ -139,18 +139,25 @@ function CompetitionSection({
   title,
   subtitle,
   members,
+  cols = 4,
 }: {
   tag: string;
   title: string;
   subtitle: string;
   members: Member[];
+  cols?: number;
 }) {
+  const gridClass =
+    cols === 5
+      ? "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
+      : "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4";
+
   return (
     <section className="mx-auto max-w-7xl px-6 py-20">
       <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// {tag}</div>
       <h2 className="mt-3 font-display text-3xl font-semibold">{title}</h2>
       <p className="mt-2 max-w-2xl text-sm text-muted-foreground">{subtitle}</p>
-      <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className={`mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border ${gridClass}`}>
         {members.map((m, i) => (
           <MemberCard key={`${tag}-${i}`} m={m} />
         ))}
@@ -179,8 +186,9 @@ function Team() {
       <CompetitionSection
         tag="ioai.2026"
         title="IOAI — International Olympiad in Artificial Intelligence"
-        subtitle="Five-member national delegation representing the Philippines on the global IOAI stage, led by Team Leader Peter Martin D. Gomez."
+        subtitle="Five-member national delegation representing the Philippines on the global IOAI stage, led by Team Leader Martin Gomez."
         members={ioai}
+        cols={5}
       />
 
       <div className="border-t border-border/60" />
