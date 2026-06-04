@@ -186,8 +186,9 @@ function Team() {
       <CompetitionSection
         tag="ioai.2026"
         title="IOAI — International Olympiad in Artificial Intelligence"
-        subtitle="Five-member national delegation representing the Philippines on the global IOAI stage, led by Team Leader Peter Martin D. Gomez."
+        subtitle="Five-member national delegation representing the Philippines on the global IOAI stage, led by Team Leader Martin Gomez."
         members={ioai}
+        cols={5}
       />
 
       <div className="border-t border-border/60" />
