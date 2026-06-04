@@ -36,7 +36,7 @@ type Member = { name: string; school: string; role?: string; photo?: string };
 
 const ioai: Member[] = [
   {
-    name: "Peter Martin D. Gomez",
+    name: "Martin Gomez",
     role: "Team Leader",
     school: "IOAI Philippines",
     photo: gomezIoaiPhoto.url,
