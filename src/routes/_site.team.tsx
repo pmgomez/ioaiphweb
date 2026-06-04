@@ -128,7 +128,9 @@ function MemberCard({ m }: { m: Member }) {
         {m.photo ? <img src={m.photo} alt={m.name} className="h-full w-full object-cover" /> : null}
       </div>
       <div className="mt-4 text-center font-display text-base font-semibold">{m.name}</div>
-      {m.role ? <div className="mt-1 text-center font-mono text-[11px] uppercase tracking-[0.16em] text-primary">{m.role}</div> : null}
+      {m.role ? (
+        <div className="mt-1 text-center font-mono text-[11px] uppercase tracking-[0.16em] text-primary">{m.role}</div>
+      ) : null}
       <div className="mt-1 text-center font-mono text-[11px] text-muted-foreground">{m.school}</div>
     </div>
   );
@@ -148,9 +150,7 @@ function CompetitionSection({
   cols?: number;
 }) {
   const gridClass =
-    cols === 5
-      ? "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
-      : "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4";
+    cols === 5 ? "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5" : "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4";
 
   return (
     <section className="mx-auto max-w-7xl px-6 py-20">
@@ -186,7 +186,7 @@ function Team() {
       <CompetitionSection
         tag="ioai.2026"
         title="IOAI — International Olympiad in Artificial Intelligence"
-        subtitle="Five-member national delegation representing the Philippines on the global IOAI stage, led by Team Leader Martin Gomez."
+        subtitle="Five-member national delegation representing the Philippines on the global IOAI stage."
         members={ioai}
         cols={5}
       />
@@ -211,4 +211,3 @@ function Team() {
     </>
   );
 }
-
