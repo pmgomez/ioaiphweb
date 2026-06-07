@@ -107,7 +107,14 @@ function MemberCard({ m }: { m: Member }) {
         {m.photo ? <img src={m.photo} alt={m.name} className="h-full w-full object-cover" /> : null}
       </div>
       <div className="mt-4 text-center font-display text-base font-semibold">{m.name}</div>
-      <div className="mt-1 text-center font-mono text-[11px] text-muted-foreground">{m.school}</div>
+      {m.role ? (
+        <div className="mt-1 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-primary">
+          {m.role}
+        </div>
+      ) : null}
+      {m.school ? (
+        <div className="mt-1 text-center font-mono text-[11px] text-muted-foreground">{m.school}</div>
+      ) : null}
     </div>
   );
 }
@@ -117,18 +124,20 @@ function CompetitionSection({
   title,
   subtitle,
   members,
+  columnsClass = "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4",
 }: {
   tag: string;
   title: string;
   subtitle: string;
   members: Member[];
+  columnsClass?: string;
 }) {
   return (
     <section className="mx-auto max-w-7xl px-6 py-20">
       <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// {tag}</div>
       <h2 className="mt-3 font-display text-3xl font-semibold">{title}</h2>
       <p className="mt-2 max-w-2xl text-sm text-muted-foreground">{subtitle}</p>
-      <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className={`mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border ${columnsClass}`}>
         {members.map((m, i) => (
           <MemberCard key={`${tag}-${i}`} m={m} />
         ))}
