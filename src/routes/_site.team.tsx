@@ -14,7 +14,7 @@ import syPhoto from "@/assets/sy.png";
 import tanPhoto from "@/assets/tan.png";
 import castilloPhoto from "@/assets/castillo.png";
 
-const gomezIoaiPhoto = "/images/ioaiteam2026/gomez.jpg";
+const gomezIoaiPhoto = "/images/ioaiteam2026/pmg.jpg";
 const angIoaiPhoto = "/images/ioaiteam2026/elli.jpg";
 const bustamanteIoaiPhoto = "/images/ioaiteam2026/theo.jpg";
 const desuasidoIoaiPhoto = "/images/ioaiteam2026/mateo.jpg";
