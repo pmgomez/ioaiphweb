@@ -3,11 +3,8 @@
   "name": "ioaiphweb",
   "compatibility_date": "2025-09-24",
   "compatibility_flags": ["nodejs_compat"],
-  "main": "src/server.ts",
-  "alias": {
-    "#tanstack-router-entry": "./.tanstack/router/entry.js",
-    "#tanstack-start-plugin-adapters": "node_modules/@tanstack/start-server-core/dist/esm/plugin-adapters.js",
-    "tanstack-start-manifest:v": "node_modules/@tanstack/start-server-core/dist/esm/router-manifest.js",
-    "tanstack-start-injected-head-scripts:v": "node_modules/@tanstack/start-server-core/dist/esm/injected-head-scripts.js"
+  "main": ".output/server/index.mjs",
+  "assets": {
+    "directory": ".output/public"
   }
 }
