@@ -32,17 +32,18 @@ export const Route = createFileRoute("/_site/team")({
   component: Team,
 });
 
-type Member = { name: string; school: string; photo?: string };
+type Member = { name: string; school: string; photo?: string; role?: string };
 
 const ioai: Member[] = [
-  { name: "Ellison Matthew S. Ang", school: "Philippine Science High School - Main Campus", photo: angPhoto },
+  { name: "Martin Gomez", school: "Team Leader", photo: gomezIoaiAsset.url, role: "Team Leader" },
+  { name: "Ellison Matthew S. Ang", school: "Philippine Science High School - Main Campus", photo: angIoaiAsset.url },
   {
     name: "Theo Lorenzo T. Bustamante",
     school: "Philippine Science High School - Calabarzon Region Campus",
-    photo: bustamantePhoto,
+    photo: bustamanteIoaiAsset.url,
   },
-  { name: "Juan Mateo J. Desuasido", school: "Brent International School Manila", photo: desuasidoPhoto },
-  { name: "Jhareign S. Solidum", school: "University of Mindanao Ilang High School", photo: solidumPhoto },
+  { name: "Juan Mateo J. Desuasido", school: "Brent International School Manila", photo: desuasidoIoaiAsset.url },
+  { name: "Jhareign S. Solidum", school: "University of Mindanao Ilang High School", photo: solidumIoaiAsset.url },
 ];
 
 const apoai: Member[] = [
