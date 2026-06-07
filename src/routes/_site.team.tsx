@@ -35,7 +35,7 @@ export const Route = createFileRoute("/_site/team")({
 type Member = { name: string; school: string; photo?: string; role?: string };
 
 const ioai: Member[] = [
-  { name: "Martin Gomez", school: "Team Leader", photo: gomezIoaiAsset.url, role: "Team Leader" },
+  { name: "Martin Gomez", school: "", photo: gomezIoaiAsset.url, role: "Team Leader" },
   { name: "Ellison Matthew S. Ang", school: "Philippine Science High School - Main Campus", photo: angIoaiAsset.url },
   {
     name: "Theo Lorenzo T. Bustamante",
