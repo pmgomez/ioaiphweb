@@ -5,9 +5,7 @@
   "compatibility_flags": ["nodejs_compat"],
   "main": "src/worker.ts",
   "alias": {
-    "#tanstack-router-entry": "./.tanstack/router/entry.js",
-    "#tanstack-start-plugin-adapters": "./node_modules/@tanstack/start-server-core/dist/esm/plugin-adapters.js",
-    "tanstack-start-manifest:v": "./node_modules/@tanstack/start-server-core/dist/esm/router-manifest.js",
-    "tanstack-start-injected-head-scripts:v": "./node_modules/@tanstack/start-server-core/dist/esm/injected-head-scripts.js"
-  }
+    "#tanstack-router-entry": "./.tanstack/router/entry.js"
+  },
+  "no_bundle": true
 }
