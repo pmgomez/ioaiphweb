@@ -14,11 +14,11 @@ import syPhoto from "@/assets/sy.png";
 import tanPhoto from "@/assets/tan.png";
 import castilloPhoto from "@/assets/castillo.png";
 
-const gomezIoaiPhoto from "/images/ioaiteam2026/gomez.jpg";
-const angIoaiPhoto from "/images/ioaiteam2026/elli.jpg";
-const bustamanteIoaiPhoto from "/images/ioaiteam2026/theo.jpg";
-const desuasidoIoaiPhoto from "/images/ioaiteam2026/mateo.jpg";
-const solidumIoaiPhoto from "/images/ioaiteam2026/jha.jpg";
+const gomezIoaiPhoto = "/images/ioaiteam2026/gomez.jpg";
+const angIoaiPhoto = "/images/ioaiteam2026/elli.jpg";
+const bustamanteIoaiPhoto = "/images/ioaiteam2026/theo.jpg";
+const desuasidoIoaiPhoto = "/images/ioaiteam2026/mateo.jpg";
+const solidumIoaiPhoto = "/images/ioaiteam2026/jha.jpg";
 
 export const Route = createFileRoute("/_site/team")({
   head: () => ({
