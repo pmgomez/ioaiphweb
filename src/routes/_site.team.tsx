@@ -17,7 +17,7 @@ import gomezIoaiPhoto from "@/assets/gomez-peter-martin-dy.png.asset.json";
 import angIoaiPhoto from "@/assets/ang-ellison-matthew-siajuat.png.asset.json";
 import bustamanteIoaiPhoto from "@/assets/bustamante-theo-lorenzo-tardecilla.png.asset.json";
 import desuasidoIoaiPhoto from "@/assets/desuasido-juan-mateo-jarantilla.png.asset.json";
-import solidumIoaiPhoto from "@/assets/solidum-jhareign-segura.png.asset.json";
+import solidumIoaiPhoto from "@/assets/solidum-jhareign-segura-v2.png.asset.json";
 
 export const Route = createFileRoute("/_site/team")({
   head: () => ({
