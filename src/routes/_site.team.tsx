@@ -166,8 +166,9 @@ function Team() {
       <CompetitionSection
         tag="ioai.2026"
         title="IOAI — International Olympiad in Artificial Intelligence"
-        subtitle="Four-member national team representing the Philippines on the global IOAI stage."
+        subtitle="National team representing the Philippines on the global IOAI stage."
         members={ioai}
+        columnsClass="sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
       />
 
       <div className="border-t border-border/60" />
