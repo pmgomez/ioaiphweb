@@ -13,6 +13,11 @@ import solidumPhoto from "@/assets/solidum.png";
 import syPhoto from "@/assets/sy.png";
 import tanPhoto from "@/assets/tan.png";
 import castilloPhoto from "@/assets/castillo.png";
+import angIoaiAsset from "@/assets/ang-ioai.png.asset.json";
+import bustamanteIoaiAsset from "@/assets/bustamante-ioai.png.asset.json";
+import desuasidoIoaiAsset from "@/assets/desuasido-ioai.png.asset.json";
+import gomezIoaiAsset from "@/assets/gomez-ioai.png.asset.json";
+import solidumIoaiAsset from "@/assets/solidum-ioai.png.asset.json";
 
 export const Route = createFileRoute("/_site/team")({
   head: () => ({
@@ -27,17 +32,18 @@ export const Route = createFileRoute("/_site/team")({
   component: Team,
 });
 
-type Member = { name: string; school: string; photo?: string };
+type Member = { name: string; school: string; photo?: string; role?: string };
 
 const ioai: Member[] = [
-  { name: "Ellison Matthew S. Ang", school: "Philippine Science High School - Main Campus", photo: angPhoto },
+  { name: "Martin Gomez", school: "", photo: gomezIoaiAsset.url, role: "Team Leader" },
+  { name: "Ellison Matthew S. Ang", school: "Philippine Science High School - Main Campus", photo: angIoaiAsset.url },
   {
     name: "Theo Lorenzo T. Bustamante",
     school: "Philippine Science High School - Calabarzon Region Campus",
-    photo: bustamantePhoto,
+    photo: bustamanteIoaiAsset.url,
   },
-  { name: "Juan Mateo J. Desuasido", school: "Brent International School Manila", photo: desuasidoPhoto },
-  { name: "Jhareign S. Solidum", school: "University of Mindanao Ilang High School", photo: solidumPhoto },
+  { name: "Juan Mateo J. Desuasido", school: "Brent International School Manila", photo: desuasidoIoaiAsset.url },
+  { name: "Jhareign S. Solidum", school: "University of Mindanao Ilang High School", photo: solidumIoaiAsset.url },
 ];
 
 const apoai: Member[] = [
@@ -101,7 +107,14 @@ function MemberCard({ m }: { m: Member }) {
         {m.photo ? <img src={m.photo} alt={m.name} className="h-full w-full object-cover" /> : null}
       </div>
       <div className="mt-4 text-center font-display text-base font-semibold">{m.name}</div>
-      <div className="mt-1 text-center font-mono text-[11px] text-muted-foreground">{m.school}</div>
+      {m.role ? (
+        <div className="mt-1 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-primary">
+          {m.role}
+        </div>
+      ) : null}
+      {m.school ? (
+        <div className="mt-1 text-center font-mono text-[11px] text-muted-foreground">{m.school}</div>
+      ) : null}
     </div>
   );
 }
@@ -111,18 +124,20 @@ function CompetitionSection({
   title,
   subtitle,
   members,
+  columnsClass = "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4",
 }: {
   tag: string;
   title: string;
   subtitle: string;
   members: Member[];
+  columnsClass?: string;
 }) {
   return (
     <section className="mx-auto max-w-7xl px-6 py-20">
       <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// {tag}</div>
       <h2 className="mt-3 font-display text-3xl font-semibold">{title}</h2>
       <p className="mt-2 max-w-2xl text-sm text-muted-foreground">{subtitle}</p>
-      <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className={`mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border ${columnsClass}`}>
         {members.map((m, i) => (
           <MemberCard key={`${tag}-${i}`} m={m} />
         ))}
@@ -151,8 +166,9 @@ function Team() {
       <CompetitionSection
         tag="ioai.2026"
         title="IOAI — International Olympiad in Artificial Intelligence"
-        subtitle="Four-member national team representing the Philippines on the global IOAI stage."
+        subtitle="National team representing the Philippines on the global IOAI stage."
         members={ioai}
+        columnsClass="sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
       />
 
       <div className="border-t border-border/60" />
