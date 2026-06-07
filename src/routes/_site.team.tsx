@@ -25,7 +25,7 @@ export const Route = createFileRoute("/_site/team")({
       { title: "Team — IOAI Philippines" },
       {
         name: "description",
-        content: "Meet Team PH for the 2026 IOAI, APOAI, and NEOAI international AI competitions..",
+        content: "Meet Team PH for the 2026 IOAI, APOAI, and NEOAI international AI competitions.",
       },
     ],
   }),
