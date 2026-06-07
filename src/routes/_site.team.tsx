@@ -13,11 +13,12 @@ import solidumPhoto from "@/assets/solidum.png";
 import syPhoto from "@/assets/sy.png";
 import tanPhoto from "@/assets/tan.png";
 import castilloPhoto from "@/assets/castillo.png";
-import gomezIoaiPhoto from "/images/ioaiteam2026/gomez.jpg";
-import angIoaiPhoto from "/images/ioaiteam2026/elli.jpg";
-import bustamanteIoaiPhoto from "/images/ioaiteam2026/theo.jpg";
-import desuasidoIoaiPhoto from "/images/ioaiteam2026/mateo.jpg";
-import solidumIoaiPhoto from "/images/ioaiteam2026/jha.jpg";
+
+const gomezIoaiPhoto from "/images/ioaiteam2026/gomez.jpg";
+const angIoaiPhoto from "/images/ioaiteam2026/elli.jpg";
+const bustamanteIoaiPhoto from "/images/ioaiteam2026/theo.jpg";
+const desuasidoIoaiPhoto from "/images/ioaiteam2026/mateo.jpg";
+const solidumIoaiPhoto from "/images/ioaiteam2026/jha.jpg";
 
 export const Route = createFileRoute("/_site/team")({
   head: () => ({
