@@ -13,6 +13,11 @@ import solidumPhoto from "@/assets/solidum.png";
 import syPhoto from "@/assets/sy.png";
 import tanPhoto from "@/assets/tan.png";
 import castilloPhoto from "@/assets/castillo.png";
+import gomezIoaiPhoto from "@/assets/gomez-peter-martin-dy.png.asset.json";
+import angIoaiPhoto from "@/assets/ang-ellison-matthew-siajuat.png.asset.json";
+import bustamanteIoaiPhoto from "@/assets/bustamante-theo-lorenzo-tardecilla.png.asset.json";
+import desuasidoIoaiPhoto from "@/assets/desuasido-juan-mateo-jarantilla.png.asset.json";
+import solidumIoaiPhoto from "@/assets/solidum-jhareign-segura-v2.png.asset.json";
 
 export const Route = createFileRoute("/_site/team")({
   head: () => ({
@@ -27,17 +32,39 @@ export const Route = createFileRoute("/_site/team")({
   component: Team,
 });
 
-type Member = { name: string; school: string; photo?: string };
+type Member = { name: string; school: string; role?: string; photo?: string };
 
 const ioai: Member[] = [
-  { name: "Ellison Matthew S. Ang", school: "Philippine Science High School - Main Campus", photo: angPhoto },
+  {
+    name: "Martin Gomez",
+    role: "Team Leader",
+    school: "IOAI Philippines",
+    photo: gomezIoaiPhoto.url,
+  },
+  {
+    name: "Ellison Matthew S. Ang",
+    role: "Contestant",
+    school: "Philippine Science High School - Main Campus",
+    photo: angIoaiPhoto.url,
+  },
   {
     name: "Theo Lorenzo T. Bustamante",
+    role: "Contestant",
     school: "Philippine Science High School - Calabarzon Region Campus",
-    photo: bustamantePhoto,
+    photo: bustamanteIoaiPhoto.url,
   },
-  { name: "Juan Mateo J. Desuasido", school: "Brent International School Manila", photo: desuasidoPhoto },
-  { name: "Jhareign S. Solidum", school: "University of Mindanao Ilang High School", photo: solidumPhoto },
+  {
+    name: "Juan Mateo J. Desuasido",
+    role: "Contestant",
+    school: "Brent International School Manila",
+    photo: desuasidoIoaiPhoto.url,
+  },
+  {
+    name: "Jhareign S. Solidum",
+    role: "Contestant",
+    school: "University of Mindanao Ilang High School",
+    photo: solidumIoaiPhoto.url,
+  },
 ];
 
 const apoai: Member[] = [
@@ -101,6 +128,9 @@ function MemberCard({ m }: { m: Member }) {
         {m.photo ? <img src={m.photo} alt={m.name} className="h-full w-full object-cover" /> : null}
       </div>
       <div className="mt-4 text-center font-display text-base font-semibold">{m.name}</div>
+      {m.role ? (
+        <div className="mt-1 text-center font-mono text-[11px] uppercase tracking-[0.16em] text-primary">{m.role}</div>
+      ) : null}
       <div className="mt-1 text-center font-mono text-[11px] text-muted-foreground">{m.school}</div>
     </div>
   );
@@ -111,18 +141,23 @@ function CompetitionSection({
   title,
   subtitle,
   members,
+  cols = 4,
 }: {
   tag: string;
   title: string;
   subtitle: string;
   members: Member[];
+  cols?: number;
 }) {
+  const gridClass =
+    cols === 5 ? "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5" : "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4";
+
   return (
     <section className="mx-auto max-w-7xl px-6 py-20">
       <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// {tag}</div>
       <h2 className="mt-3 font-display text-3xl font-semibold">{title}</h2>
       <p className="mt-2 max-w-2xl text-sm text-muted-foreground">{subtitle}</p>
-      <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className={`mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border ${gridClass}`}>
         {members.map((m, i) => (
           <MemberCard key={`${tag}-${i}`} m={m} />
         ))}
@@ -151,8 +186,9 @@ function Team() {
       <CompetitionSection
         tag="ioai.2026"
         title="IOAI — International Olympiad in Artificial Intelligence"
-        subtitle="Four-member national team representing the Philippines on the global IOAI stage."
+        subtitle="Five-member national delegation representing the Philippines on the global IOAI stage."
         members={ioai}
+        cols={5}
       />
 
       <div className="border-t border-border/60" />
