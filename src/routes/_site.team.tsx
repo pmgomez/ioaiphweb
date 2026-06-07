@@ -39,30 +39,25 @@ const ioai: Member[] = [
   {
     name: "Martin Gomez",
     role: "Team Leader",
-    school: "IOAI Philippines",
     photo: gomezIoaiPhoto,
   },
   {
     name: "Ellison Matthew S. Ang",
-    role: "Contestant",
     school: "Philippine Science High School - Main Campus",
     photo: angIoaiPhoto,
   },
   {
     name: "Theo Lorenzo T. Bustamante",
-    role: "Contestant",
     school: "Philippine Science High School - Calabarzon Region Campus",
     photo: bustamanteIoaiPhoto,
   },
   {
     name: "Juan Mateo J. Desuasido",
-    role: "Contestant",
     school: "Brent International School Manila",
     photo: desuasidoIoaiPhoto,
   },
   {
     name: "Jhareign S. Solidum",
-    role: "Contestant",
     school: "University of Mindanao Ilang High School",
     photo: solidumIoaiPhoto,
   },
@@ -132,7 +127,9 @@ function MemberCard({ m }: { m: Member }) {
       {m.role ? (
         <div className="mt-1 text-center font-mono text-[11px] uppercase tracking-[0.16em] text-primary">{m.role}</div>
       ) : null}
-      <div className="mt-1 text-center font-mono text-[11px] text-muted-foreground">{m.school}</div>
+      {m.school ? (
+        <div className="mt-1 text-center font-mono text-[11px] text-muted-foreground">{m.school}</div>
+      ) : null}
     </div>
   );
 }
