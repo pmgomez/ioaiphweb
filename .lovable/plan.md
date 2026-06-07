@@ -1,6 +1,7 @@
-Upload the new Solidum photo as a Lovable asset and update the IOAI section in `src/routes/_site.team.tsx` to use it (replacing `solidum-jhareign-segura.png.asset.json`). The APOAI/NEOAI Solidum photo (`@/assets/solidum.png`) stays unchanged.
+Fix Wrangler Worker name mismatch in `wrangler.jsonc`.
 
-Steps:
-1. Run `lovable-assets create` on the uploaded image → write `src/assets/solidum-jhareign-segura-v2.png.asset.json`.
-2. Update the `solidumIoaiPhoto` import in `_site.team.tsx` to point at the new pointer file.
-3. Delete the old `solidum-jhareign-segura.png.asset.json` via `assets--delete_asset`.
+The CI warning indicates the config file uses `"tanstack-start-app"`, but the CI system expects `"ioaiphweb"`. This is a one-line change in `wrangler.jsonc`.
+
+- Change `"name": "tanstack-start-app"` → `"name": "ioaiphweb"`
+
+This resolves the CI override warning and keeps the config consistent with the published project name.
