@@ -1,25 +1,50 @@
-## Press & Media Coverage — 5-column card redesign
+## What's happening
 
-Refactor the existing press list on `src/routes/_site.press.tsx` from a 2-column bordered grid into a responsive 5-column layout of distinct cards.
+`#tanstack-router-entry` is a **virtual module** created by the `tanstackStart` Vite plugin at build time. It's never a real file on disk — it only exists while `vite build` is running. Your `src/server.ts` doesn't import it directly, but the chain `src/server.ts → @tanstack/react-start/server-entry → #tanstack-router-entry` does.
 
-### Layout
-- Responsive grid: 1 col (mobile) → 2 (sm) → 3 (md) → 5 (xl). Keeps cards readable on smaller screens; 5-up only kicks in on wide displays (the user's 1439px viewport hits xl).
-- Gap-based grid (`gap-4`) instead of the current `gap-px` hairline-border trick, so each item reads as a standalone card.
+That import only resolves when the build goes through Vite. The error `Could not resolve "#tanstack-router-entry"` means something is trying to bundle `src/server.ts` with **esbuild/Wrangler directly, skipping Vite**. That "something" is almost certainly `wrangler deploy` running against your source files (because `wrangler.jsonc` has `"main": "src/server.ts"`).
 
-### Card styling
-- Rounded-sm card: `border border-border bg-surface p-5`, with hover lift (`hover:border-primary/40 hover:-translate-y-0.5 transition-all`) and subtle shadow on hover.
-- Internal structure (top → bottom, flex column, full height so cards in a row align):
-  1. Outlet name — bold, `text-primary`, mono uppercase micro-label
-  2. Date (if present) — muted mono caption
-  3. Article title — `font-display`, slightly smaller (`text-base`) to fit narrower 5-col cards, clamped to 3 lines (`line-clamp-3`)
-  4. Spacer
-  5. "Read Article ↗" button — compact, full-width within card, same slate/blue palette
-- Equal-height cards via `h-full` + `flex flex-col` on the `<li>`.
+Nothing in the recent team-page edit can cause this — it's a deploy-pipeline issue that surfaces whenever Cloudflare Workers Builds runs `wrangler deploy` without first running `vite build` (or runs `wrangler deploy` from the repo root instead of the Vite output directory).
 
-### Preserved
-- All 10 entries, exact URLs untouched.
-- `target="_blank"` + `rel="noopener noreferrer"` on every link.
-- Section heading, count chip, and media-inquiry footer block unchanged.
+## Plan
 
-### File touched
-- `src/routes/_site.press.tsx` — only the `<ul>` grid classes and `<li>` card markup change.
+### 1. Confirm the Cloudflare Workers Build configuration
+
+In the Cloudflare dashboard → **Workers & Pages → your worker → Settings → Builds**, check:
+- **Build command** — should be `npm run build` (i.e. `vite build`).
+- **Deploy command** — should be `npx wrangler deploy` running against the **Vite-emitted output**, not the source `src/server.ts`.
+- **Root directory** — should be the repo root.
+
+The most common broken setup is: build command empty (or just `npm install`), deploy command `npx wrangler deploy`. That makes Wrangler bundle `src/server.ts` itself with esbuild and fail on `#tanstack-router-entry`.
+
+### 2. Fix the build/deploy pipeline
+
+`@cloudflare/vite-plugin` (already in this project) emits a deployable worker bundle plus its own `wrangler.json` into `dist/<worker-name>/` when you run `vite build`. The correct sequence on Cloudflare Workers Builds is:
+
+- **Build command:** `npm run build`
+- **Deploy command:** `npx wrangler deploy --config dist/ioaiphweb/wrangler.json`
+  - (Exact path becomes visible after the first local `npm run build` — usually `dist/ioaiphweb/wrangler.json` based on the worker name in `wrangler.jsonc`.)
+
+That ensures Wrangler deploys the **Vite-built worker** (which has `#tanstack-router-entry` already inlined) instead of trying to re-bundle the source.
+
+### 3. Verify locally before pushing
+
+Before changing the Cloudflare settings, I'll have you run `npm run build` locally and confirm:
+- Build succeeds with no `#tanstack-router-entry` error.
+- `dist/ioaiphweb/` contains a built worker file and a generated `wrangler.json`.
+
+If the local build passes, the fix is purely a Cloudflare dashboard config change — no code edits needed in the repo. If the local build also fails, something in the repo itself is wrong and we'll dig further from there.
+
+### 4. Do NOT change wrangler.jsonc `main`
+
+`"main": "src/server.ts"` is correct for **local dev** (Vite reads it). Don't repoint it at a `dist/` path — that breaks dev. The Vite plugin handles the dist path automatically via the generated `dist/.../wrangler.json` used at deploy time.
+
+## What I need from you to execute
+
+A screenshot (or copy/paste) of the **Builds** section of your Cloudflare Worker settings — specifically the Build command and Deploy command fields — so I can tell you the exact strings to put there. If you'd rather just try the change, set build = `npm run build` and deploy = `npx wrangler deploy --config dist/ioaiphweb/wrangler.json` and re-run the deploy.
+
+## Technical notes
+
+- `#tanstack-router-entry` is registered by `tanstackStart()` (included via `@lovable.dev/vite-tanstack-config`). It is not an npm package, not a file, and not something to add to `package.json`.
+- The hint about `.env` / `VITE_SUPABASE_*` env vars is unrelated to this specific error — missing env vars fail differently. Don't change env vars to chase this.
+- Self-hosting docs: https://docs.lovable.dev/tips-tricks/self-hosting
