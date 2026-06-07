@@ -13,11 +13,11 @@ import solidumPhoto from "@/assets/solidum.png";
 import syPhoto from "@/assets/sy.png";
 import tanPhoto from "@/assets/tan.png";
 import castilloPhoto from "@/assets/castillo.png";
-import gomezIoaiPhoto from "@/images/ioaiteam2026/gomez.jpg";
-import angIoaiPhoto from "@/images/ioaiteam2026/elli.jpg";
-import bustamanteIoaiPhoto from "@/images/ioaiteam2026/theo.jpg";
-import desuasidoIoaiPhoto from "@/images/ioaiteam2026/mateo.jpg";
-import solidumIoaiPhoto from "@/images/ioaiteam2026/jha.jpg";
+import gomezIoaiPhoto from "/images/ioaiteam2026/gomez.jpg";
+import angIoaiPhoto from "/images/ioaiteam2026/elli.jpg";
+import bustamanteIoaiPhoto from "/images/ioaiteam2026/theo.jpg";
+import desuasidoIoaiPhoto from "/images/ioaiteam2026/mateo.jpg";
+import solidumIoaiPhoto from "/images/ioaiteam2026/jha.jpg";
 
 export const Route = createFileRoute("/_site/team")({
   head: () => ({
@@ -39,31 +39,31 @@ const ioai: Member[] = [
     name: "Martin Gomez",
     role: "Team Leader",
     school: "IOAI Philippines",
-    photo: gomezIoaiPhoto.url,
+    photo: gomezIoaiPhoto,
   },
   {
     name: "Ellison Matthew S. Ang",
     role: "Contestant",
     school: "Philippine Science High School - Main Campus",
-    photo: angIoaiPhoto.url,
+    photo: angIoaiPhoto,
   },
   {
     name: "Theo Lorenzo T. Bustamante",
     role: "Contestant",
     school: "Philippine Science High School - Calabarzon Region Campus",
-    photo: bustamanteIoaiPhoto.url,
+    photo: bustamanteIoaiPhoto,
   },
   {
     name: "Juan Mateo J. Desuasido",
     role: "Contestant",
     school: "Brent International School Manila",
-    photo: desuasidoIoaiPhoto.url,
+    photo: desuasidoIoaiPhoto,
   },
   {
     name: "Jhareign S. Solidum",
     role: "Contestant",
     school: "University of Mindanao Ilang High School",
-    photo: solidumIoaiPhoto.url,
+    photo: solidumIoaiPhoto,
   },
 ];
 
