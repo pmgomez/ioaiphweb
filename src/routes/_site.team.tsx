@@ -13,6 +13,11 @@ import solidumPhoto from "@/assets/solidum.png";
 import syPhoto from "@/assets/sy.png";
 import tanPhoto from "@/assets/tan.png";
 import castilloPhoto from "@/assets/castillo.png";
+import angIoaiAsset from "@/assets/ang-ioai.png.asset.json";
+import bustamanteIoaiAsset from "@/assets/bustamante-ioai.png.asset.json";
+import desuasidoIoaiAsset from "@/assets/desuasido-ioai.png.asset.json";
+import gomezIoaiAsset from "@/assets/gomez-ioai.png.asset.json";
+import solidumIoaiAsset from "@/assets/solidum-ioai.png.asset.json";
 
 export const Route = createFileRoute("/_site/team")({
   head: () => ({
