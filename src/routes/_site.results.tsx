@@ -26,6 +26,16 @@ type Resource = {
   featured?: boolean;
 };
 
+type Competition = {
+  code: string;
+  name: string;
+  full: string;
+  scope: string;
+  host: string;
+  window: string;
+  href?: string;
+};
+
 // Reverse chronological: Team Selection ← Finals ← Semis ← Round 1
 const selection: Resource[] = [
   {
@@ -73,7 +83,6 @@ const selection: Resource[] = [
   },
 ];
 
-
 const certificates: Resource = {
   code: "C-00",
   title: "Certificates",
@@ -84,7 +93,7 @@ const certificates: Resource = {
 };
 
 // Reverse chronological: International → Regional → Sub-regional
-const competitions = [
+const competitions: Competition[] = [
   {
     code: "C-01",
     name: "IOAI",
@@ -92,7 +101,6 @@ const competitions = [
     scope: "Global · final stage",
     host: "Hosted by Kazakhstan",
     window: "Jul 1 – Aug 8, 2026",
-    // Kept without href so it remains locked
   },
   {
     code: "C-02",
@@ -111,8 +119,6 @@ const competitions = [
     window: "May 3 – 4, 2026",
     href: "https://www.ateneo.edu/news/2026/06/philippines-among-top-3-nations-ai-olympiad-hosted-ateneo-build",
   },
-];
-
 ];
 
 function Results() {
@@ -244,7 +250,7 @@ function CompetitionBanner({
   c,
   primary,
 }: {
-  c: (typeof competitions)[number] & { href?: string };
+  c: Competition;
   primary?: boolean;
 }) {
   const isLink = !!c.href;
@@ -255,12 +261,11 @@ function CompetitionBanner({
       {...(isLink ? { href: c.href, target: "_blank", rel: "noreferrer" } : {})}
       className={`relative grid gap-6 px-6 py-8 md:grid-cols-[auto_1fr_auto] md:items-center md:px-10 ${
         primary ? "bg-primary/5" : "bg-surface"
-      } ${isLink ? "group transition-colors hover:bg-surface/70 cursor-pointer" : ""}`}
+      } ${isLink ? "group transition-colors hover:bg-muted/40 cursor-pointer" : ""}`}
     >
       {primary && (
         <div className="pointer-events-none absolute inset-y-0 left-0 w-[3px] bg-primary" />
       )}
-      
       <div className="flex items-baseline gap-4">
         <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
           {c.code}
@@ -273,14 +278,12 @@ function CompetitionBanner({
           {c.name}
         </div>
       </div>
-
       <div className="md:px-6">
         <div className="font-display text-lg md:text-xl">{c.full}</div>
         <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
           {c.scope} · {c.host}
         </div>
       </div>
-
       <div className={`flex items-center gap-2 self-start rounded-sm border border-border px-3 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground md:self-center transition-colors ${
         isLink ? "group-hover:text-primary group-hover:border-primary/40" : ""
       }`}>
@@ -296,19 +299,20 @@ function CompetitionBanner({
 }
 
 function ResourceCard({ r }: { r: Resource }) {
-  const kindLabel =
-    r.kind === "drive"
-      ? "google drive"
-      : r.kind === "doc"
-        ? "google doc"
-        : "google sheet";
+  const KIND_LABELS: Record<Resource["kind"], string> = {
+    drive: "google drive",
+    doc: "google doc",
+    sheet: "google sheet",
+  };
+  const kindLabel = KIND_LABELS[r.kind];
+
   return (
     <a
       href={r.href}
       target="_blank"
       rel="noreferrer"
-      className={`group relative flex flex-col gap-5 bg-surface p-6 transition-colors hover:bg-surface/70 ${
-        r.featured ? "ring-1 ring-inset ring-primary/40" : ""
+      className={`group relative flex flex-col gap-5 bg-surface p-6 transition-colors hover:bg-muted/50 ${
+        r.featured ? "ring-1 ring-inset ring-primary/40 lg:col-span-2" : ""
       }`}
     >
       <div className="flex items-center justify-between">
