@@ -312,7 +312,7 @@ function ResourceCard({ r }: { r: Resource }) {
       target="_blank"
       rel="noreferrer"
       className={`group relative flex flex-col gap-5 bg-surface p-6 transition-colors hover:bg-muted/50 ${
-        r.featured ? "ring-1 ring-inset ring-primary/40 lg:col-span-2" : ""
+        r.featured ? "ring-1 ring-inset ring-primary/40" : ""
       }`}
     >
       <div className="flex items-center justify-between">
