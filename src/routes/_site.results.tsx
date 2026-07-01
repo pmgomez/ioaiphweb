@@ -92,6 +92,7 @@ const competitions = [
     scope: "Global · final stage",
     host: "Hosted by Kazakhstan",
     window: "Jul 1 – Aug 8, 2026",
+    // Kept without href so it remains locked
   },
   {
     code: "C-02",
@@ -108,7 +109,9 @@ const competitions = [
     scope: "Northern Eurasia sub-regional",
     host: "Hosted by Russia",
     window: "May 3 – 4, 2026",
+    href: "https://www.ateneo.edu/news/2026/06/philippines-among-top-3-nations-ai-olympiad-hosted-ateneo-build",
   },
+];
 
 ];
 
@@ -241,42 +244,54 @@ function CompetitionBanner({
   c,
   primary,
 }: {
-  c: (typeof competitions)[number];
+  c: (typeof competitions)[number] & { href?: string };
   primary?: boolean;
 }) {
+  const isLink = !!c.href;
+  const Tag = isLink ? "a" : "div";
+
   return (
-    <div
+    <Tag
+      {...(isLink ? { href: c.href, target: "_blank", rel: "noreferrer" } : {})}
       className={`relative grid gap-6 px-6 py-8 md:grid-cols-[auto_1fr_auto] md:items-center md:px-10 ${
         primary ? "bg-primary/5" : "bg-surface"
-      }`}
+      } ${isLink ? "group transition-colors hover:bg-surface/70 cursor-pointer" : ""}`}
     >
       {primary && (
         <div className="pointer-events-none absolute inset-y-0 left-0 w-[3px] bg-primary" />
       )}
+      
       <div className="flex items-baseline gap-4">
         <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
           {c.code}
         </div>
         <div
           className={`font-display font-semibold tracking-tight ${
-            primary ? "text-5xl md:text-6xl" : "text-4xl md:text-5xl"
+            primary ? "text-primary text-5xl md:text-6xl" : "text-4xl md:text-5xl"
           }`}
-          style={primary ? { color: "var(--color-primary)" } : undefined}
         >
           {c.name}
         </div>
       </div>
+
       <div className="md:px-6">
         <div className="font-display text-lg md:text-xl">{c.full}</div>
         <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
           {c.scope} · {c.host}
         </div>
       </div>
-      <div className="flex items-center gap-2 self-start rounded-sm border border-border px-3 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground md:self-center">
-        <Lock className="size-3" />
+
+      <div className={`flex items-center gap-2 self-start rounded-sm border border-border px-3 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground md:self-center transition-colors ${
+        isLink ? "group-hover:text-primary group-hover:border-primary/40" : ""
+      }`}>
+        {isLink ? (
+          <ArrowUpRight className="size-3 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
+        ) : (
+          <Lock className="size-3" />
+        )}
         {c.window}
       </div>
-    </div>
+    </Tag>
   );
 }
 
