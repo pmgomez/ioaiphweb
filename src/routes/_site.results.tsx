@@ -108,7 +108,7 @@ const competitions: Competition[] = [
     full: "Asia-Pacific Olympiad in Artificial Intelligence",
     scope: "Asia-Pacific regional",
     host: "Hosted by China",
-    window: "Jun 13,, 2026",
+    window: "Jun 13, 2026",
     href: "https://www.ateneo.edu/news/2026/07/team-philippines-wins-gold-places-6th-overall-first-asia-pacific-ai-olympiad-led-build",
   },
   {
