@@ -84,21 +84,21 @@ const timeline = [
     phase: "07 / International",
     title: "APOAI · Asia Pacific Olympiad in AI",
     desc: "Philippine team competes in the Asia Pacific regional olympiad, hosted by China.",
-    status: "active",
+    status: "complete",
   },
   {
     date: "JUL 1 – AUG 1, 2026",
     phase: "08 / International",
     title: "IOAI 2026 · At-Home Round",
     desc: "Remote round of the International Olympiad in Artificial Intelligence, hosted by Kazakhstan.",
-    status: "upcoming",
+    status: "complete",
   },
   {
     date: "AUG 2 – 8, 2026",
     phase: "09 / International",
     title: "IOAI 2026 · Onsite",
     desc: "Onsite finals of the International Olympiad in AI in Astana, Kazakhstan. 100+ national teams compete on the world stage.",
-    status: "upcoming",
+    status: "complete",
   },
 ];
 
