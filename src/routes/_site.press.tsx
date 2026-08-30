@@ -210,7 +210,7 @@ const articles: Article[] = [
   },
   {
     outlet: "Aksyon Sa Balita",
-    title: "News Update",
+    title: "Open call for Pinoy HS students to compete in world AI olympiad",
     href: "https://www.facebook.com/AksyonSaBalita/posts/pfbid02ZzopqSSttcKjXqoksV41GPcReZCDDEu9pGde3MqQDiD8gQnrbppGFr4zmBKeyTzEl",
   },
 ];
@@ -266,9 +266,14 @@ function PressPage() {
 
       <div className="mt-16 rounded-sm border border-border bg-surface p-8 text-center">
         <p className="text-sm text-muted-foreground">
-          For media inquiries, email{" "}
+          For media inquiries, please reach out to Ateneo's Office of the Assistant Vice President for Research, Creative
+          Work, and Innovation (OAVP-RCWI) or email{" "}
           <a href="mailto:press@ioaiph.org" className="text-primary hover:underline">
             press@ioaiph.org
+          </a>{" "}
+          or{" "}
+          <a href="mailto:media.research@ateneo.edu" className="text-primary hover:underline">
+            media.research@ateneo.edu
           </a>
           .
         </p>
