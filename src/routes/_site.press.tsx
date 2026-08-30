@@ -266,8 +266,6 @@ function PressPage() {
 
       <div className="mt-16 rounded-sm border border-border bg-surface p-8 text-center">
         <p className="text-sm text-muted-foreground">
-          For media inquiries, please reach out to Ateneo's Office of the Assistant Vice President for Research, Creative
-          Work, and Innovation (OAVP-RCWI) or email{" "}
           For media inquiries, please reach out to Ateneo's Office of the Assistant Vice President for Research,
           Creative Work, and Innovation (OAVP-RCWI).
           <br />
