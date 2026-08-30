@@ -279,6 +279,8 @@ type Partner = { name: string; src: string; lightSrc?: string; href?: string; su
 
 const goldPartners: Partner[] = [{ name: "Joy-Nostalg Group", src: joyNostalgLogo, href: "https://joy-nostalg.com/" }];
 
+const silverPartners: Partner[] = [{ name: "The Desuasido Family", src: "" }];
+
 const bronzePartners: Partner[] = [
   { name: "Times Paint Corporation", src: timesPaintLogo, lightSrc: timesPaintLogoLight },
 ];
@@ -444,9 +446,9 @@ function PartnersSection() {
           </div>
         </div>
 
-        {/* ROW 1: GOLD (widest) + BRONZE + STEEL */}
+        {/* ROW 1: GOLD (widest) + SILVER + BRONZE + STEEL */}
         <div className="mt-16 grid gap-6 md:grid-cols-12">
-          <div className="md:col-span-6">
+          <div className="md:col-span-4">
             <TierLabel accent="bg-gold shadow-[0_0_12px_2px] shadow-gold/60">Gold Partners</TierLabel>
             <div className="mt-6 overflow-hidden rounded-sm border border-gold/30 bg-transparent">
               {goldPartners.map((p) => (
@@ -454,7 +456,17 @@ function PartnersSection() {
               ))}
             </div>
           </div>
-          <div className="md:col-span-4">
+          <div className="md:col-span-3">
+            <TierLabel accent="bg-silver shadow-[0_0_10px_1px] shadow-silver/60">Silver Partners</TierLabel>
+            <div className="mt-6 overflow-hidden rounded-sm border border-silver/30 bg-transparent">
+              {silverPartners.map((p) => (
+                <div key={p.name} className="flex h-72 items-center justify-center px-4 text-center">
+                  <span className="font-display text-lg font-semibold text-silver">{p.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="md:col-span-3">
             <TierLabel accent="bg-bronze shadow-[0_0_10px_1px] shadow-bronze/60">Bronze Partners</TierLabel>
             <div className="mt-6 overflow-hidden rounded-sm border border-bronze/30 bg-transparent">
               {bronzePartners.map((p) => (
