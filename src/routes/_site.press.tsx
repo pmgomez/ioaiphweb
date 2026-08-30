@@ -268,6 +268,10 @@ function PressPage() {
         <p className="text-sm text-muted-foreground">
           For media inquiries, please reach out to Ateneo's Office of the Assistant Vice President for Research, Creative
           Work, and Innovation (OAVP-RCWI) or email{" "}
+          For media inquiries, please reach out to Ateneo's Office of the Assistant Vice President for Research,
+          Creative Work, and Innovation (OAVP-RCWI).
+          <br />
+          Please email{" "}
           <a href="mailto:press@ioaiph.org" className="text-primary hover:underline">
             press@ioaiph.org
           </a>{" "}
