@@ -101,6 +101,7 @@ const competitions: Competition[] = [
     scope: "Global · final stage",
     host: "Hosted by Kazakhstan",
     window: "Jul 1 – Aug 8, 2026",
+    href: "https://www.ateneo.edu/news/2026/08/build-mentees-bag-silver-bronze-medals-intl-ai-olympiad-debut",
   },
   {
     code: "C-02",
