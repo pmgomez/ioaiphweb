@@ -6,6 +6,8 @@ import aapLogoLight from "@/assets/aaplogo-light.png";
 import timesPaintLogo from "@/assets/timespaintlogo.png";
 import timesPaintLogoLight from "@/assets/timespaintlogo-light.png";
 import joyNostalgLogo from "@/assets/joynostalg.png";
+import opLogo from "@/assets/oplogo.svg";
+import oesLogo from "@/assets/oeslogo.png";
 import depedLogo from "@/assets/depedlogo.svg";
 import dostSeiLogo from "@/assets/dostseilogo.png";
 import ateneoBuildLogo from "@/assets/ateneobuildlogo.jpg";
@@ -277,6 +279,15 @@ function Home() {
 
 type Partner = { name: string; src: string; lightSrc?: string; href?: string; subtitle?: string };
 
+type Recognition = { name: string; label: string; src: string; lightSrc?: string; href?: string };
+
+const recognizedBy: Recognition[] = [
+  { name: "OP", label: "Office of the President", src: opLogo },
+  { name: "OES", label: "Office of the Executive Secretary", src: oesLogo },
+  { name: "DepEd", label: "Department of Education", src: depedLogo },
+  { name: "DOST-SEI", label: "Science Education Institute", src: dostSeiLogo },
+];
+
 const goldPartners: Partner[] = [{ name: "Joy-Nostalg Group", src: joyNostalgLogo, href: "https://joy-nostalg.com/" }];
 
 const silverPartners: Partner[] = [{ name: "The Desuasido Family", src: "" }];
@@ -427,16 +438,19 @@ function PartnersSection() {
           </div>
           <div>
             <TierLabel accent="bg-primary shadow-[0_0_10px_1px] shadow-primary/60">Recognized by</TierLabel>
-            <div className="mt-6 grid h-56 grid-cols-2 gap-4 rounded-sm border border-primary/30 bg-transparent p-6">
-              {[
-                { name: "DepEd", label: "Department of Education", src: depedLogo },
-                { name: "DOST-SEI", label: "Science Education Institute", src: dostSeiLogo },
-              ].map((o) => (
-                <div key={o.name} className="flex flex-col items-center justify-center gap-3 text-center">
-                  <img src={o.src} alt={`${o.name} logo`} loading="lazy" className="h-20 w-auto object-contain" />
+            <div className="mt-6 grid h-auto min-h-56 sm:h-56 grid-cols-2 sm:grid-cols-4 items-center gap-3 rounded-sm border border-primary/30 bg-transparent p-4">
+              {recognizedBy.map((o) => (
+                <div key={o.name} className="flex flex-col items-center justify-center gap-2 text-center">
+                  {o.src ? (
+                    <img src={o.src} alt={`${o.name} logo`} loading="lazy" className="h-14 w-auto max-w-full object-contain" />
+                  ) : (
+                    <div className="flex h-14 w-14 items-center justify-center rounded-full border border-dashed border-primary/40 bg-primary/5 font-mono text-xs font-semibold text-primary">
+                      {o.name}
+                    </div>
+                  )}
                   <div>
-                    <div className="font-display text-sm font-semibold tracking-tight">{o.name}</div>
-                    <div className="font-mono text-[9px] uppercase tracking-[0.2em] text-muted-foreground">
+                    <div className="font-display text-xs sm:text-sm font-semibold tracking-tight">{o.name}</div>
+                    <div className="font-mono text-[8px] sm:text-[9px] uppercase tracking-[0.15em] text-muted-foreground line-clamp-2">
                       {o.label}
                     </div>
                   </div>
