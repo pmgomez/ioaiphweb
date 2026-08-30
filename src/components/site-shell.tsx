@@ -54,7 +54,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-2">
           <ThemeToggle />
           <a
-            href="#apply"
+            href="/#apply"
             className="hidden rounded-full border border-primary/40 bg-primary/10 px-4 py-2 font-mono text-xs uppercase tracking-wider text-primary transition-all hover:bg-primary hover:text-primary-foreground md:inline-flex"
           >
             Apply →
@@ -88,7 +88,7 @@ export function SiteHeader() {
               </Link>
             ))}
             <a
-              href="#apply"
+              href="/#apply"
               onClick={() => setOpen(false)}
               className="mt-1 inline-flex justify-center rounded-md border border-primary/40 bg-primary/10 px-4 py-3 font-mono text-xs uppercase tracking-wider text-primary"
             >
