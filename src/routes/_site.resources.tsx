@@ -56,6 +56,18 @@ const ioaiPhSections = [
 
 const sections = [
   {
+    tag: "00 / Core",
+    title: "The High Schooler's Guide to AI",
+    desc: "For High Schoolers by High Schoolers",
+    links: [
+      { label: "HSGuide2AI Website", href: "https://hsguide2ai.vercel.app/" },
+      {
+        label: "HSGuide2AI Discord",
+        href: "https://discord.gg/R3t5uKKg",
+      },
+    ],
+  },
+  {
     tag: "01 / Foundations",
     title: "Math & Probability",
     desc: "Linear algebra, calculus, probability, and statistics — the bedrock of every IOAI round.",
