@@ -137,7 +137,7 @@ function About() {
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// mandate</div>
             <h2 className="mt-3 font-display text-3xl font-semibold">A national mandate</h2>
             <p className="mt-4 text-muted-foreground">
-              Founded in 2024, IOAI Philippines was established as the official body to organize the country's IOAI
+              Founded in 2025, IOAI Philippines was established as the official body to organize the country's IOAI
               campaign. We operate under Ateneo BUILD, with academic, government, nonprofit, and private-sector
               partnerships.
             </p>
