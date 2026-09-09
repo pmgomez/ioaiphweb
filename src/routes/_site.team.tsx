@@ -1,24 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
-import troyPhoto from "@/assets/troy.png";
-import acenaPhoto from "@/assets/acena.png";
-import alfaroPhoto from "@/assets/alfaro.png";
-import angPhoto from "@/assets/ang.png";
-import arrezaPhoto from "@/assets/arreza.png";
-import bustamantePhoto from "@/assets/bustamante.png";
-import desuasidoPhoto from "@/assets/desuasido.png";
-import marquezPhoto from "@/assets/marquez.png";
-import obedozaPhoto from "@/assets/obedoza.png";
-import solidumPhoto from "@/assets/solidum.png";
-import syPhoto from "@/assets/sy.png";
-import tanPhoto from "@/assets/tan.png";
-import castilloPhoto from "@/assets/castillo.png";
-
-const gomezIoaiPhoto = "/images/ioaiteam2026/pmg.jpg";
-const angIoaiPhoto = "/images/ioaiteam2026/elli.jpg";
-const bustamanteIoaiPhoto = "/images/ioaiteam2026/theo.jpg";
-const desuasidoIoaiPhoto = "/images/ioaiteam2026/mateo.jpg";
-const solidumIoaiPhoto = "/images/ioaiteam2026/jha.jpg";
+import { Lock, User } from "lucide-react";
 
 export const Route = createFileRoute("/_site/team")({
   head: () => ({
@@ -26,110 +8,97 @@ export const Route = createFileRoute("/_site/team")({
       { title: "Team — IOAI Philippines" },
       {
         name: "description",
-        content: "Meet Team PH for the 2026 IOAI, APOAI, and NEOAI international AI competitions.",
+        content:
+          "Meet the official Philippine delegations for the 2027 IOAI (Singapore) and APOAI (Russia) international AI competitions.",
       },
     ],
   }),
   component: Team,
 });
 
-type Member = { name: string; school: string; role?: string; photo?: string };
+type Slot = {
+  seat: string;
+  role: string;
+  criterion: string;
+  status: string;
+};
 
-const ioai: Member[] = [
+const ioaiSlots: Slot[] = [
   {
-    name: "Martin Gomez",
-    role: "Team Leader",
-    photo: gomezIoaiPhoto,
+    seat: "Delegate 01",
+    role: "Primary Delegation",
+    criterion: "National Finals · Rank 1",
+    status: "Determined Apr 11, 2027",
   },
   {
-    name: "Ellison Matthew S. Ang",
-    school: "Philippine Science High School - Main Campus",
-    photo: angIoaiPhoto,
+    seat: "Delegate 02",
+    role: "Primary Delegation",
+    criterion: "National Finals · Rank 2",
+    status: "Determined Apr 11, 2027",
   },
   {
-    name: "Theo Lorenzo T. Bustamante",
-    school: "Philippine Science High School - Calabarzon Region Campus",
-    photo: bustamanteIoaiPhoto,
+    seat: "Delegate 03",
+    role: "Primary Delegation",
+    criterion: "National Finals · Rank 3",
+    status: "Determined Apr 11, 2027",
   },
   {
-    name: "Juan Mateo J. Desuasido",
-    school: "Brent International School Manila",
-    photo: desuasidoIoaiPhoto,
-  },
-  {
-    name: "Jhareign S. Solidum",
-    school: "University of Mindanao Ilang High School",
-    photo: solidumIoaiPhoto,
+    seat: "Delegate 04",
+    role: "Primary Delegation",
+    criterion: "National Finals · Rank 4",
+    status: "Determined Apr 11, 2027",
   },
 ];
 
-const apoai: Member[] = [
-  { name: "Ellison Matthew S. Ang", school: "Philippine Science High School - Main Campus", photo: angPhoto },
+const apoaiSlots: Slot[] = [
   {
-    name: "Ryan James L. Alfaro",
-    school: "Philippine Science High School - Calabarzon Region Campus",
-    photo: alfaroPhoto,
+    seat: "Junior Delegate 01",
+    role: "Junior Pipeline Delegation",
+    criterion: "Top Non-Graduating Finalist (K–11)",
+    status: "Determined Apr 11, 2027",
   },
   {
-    name: "Noe Nathan Y. Arreza",
-    school: "Philippine Science High School - Calabarzon Region Campus",
-    photo: arrezaPhoto,
+    seat: "Junior Delegate 02",
+    role: "Junior Pipeline Delegation",
+    criterion: "Top Non-Graduating Finalist (K–11)",
+    status: "Determined Apr 11, 2027",
   },
   {
-    name: "Sean Marcus N. Castillo",
-    school: "Philippine Science High School - Central Luzon Campus",
-    photo: castilloPhoto,
+    seat: "Junior Delegate 03",
+    role: "Junior Pipeline Delegation",
+    criterion: "Top Non-Graduating Finalist (K–11)",
+    status: "Determined Apr 11, 2027",
   },
-  { name: "Daphne Eunice U. Acena", school: "De La Salle University - Dasmariñas High School", photo: acenaPhoto },
-  { name: "Troy Dylan T. Serapio", school: "Philippine Science High School - Main Campus", photo: troyPhoto },
-  { name: "Jhareign S. Solidum", school: "University of Mindanao Ilang High School", photo: solidumPhoto },
-  { name: "Aretha Cai Faustine M. Sy", school: "St. Scholastica's Academy of Marikina", photo: syPhoto },
+  {
+    seat: "Junior Delegate 04",
+    role: "Junior Pipeline Delegation",
+    criterion: "Top Non-Graduating Finalist (K–11)",
+    status: "Determined Apr 11, 2027",
+  },
 ];
 
-const neoai: Member[] = [
-  { name: "Daphne Eunice U. Acena", school: "De La Salle University - Dasmariñas High School", photo: acenaPhoto },
-  {
-    name: "Ryan James L. Alfaro",
-    school: "Philippine Science High School - Calabarzon Region Campus",
-    photo: alfaroPhoto,
-  },
-  { name: "Ellison Matthew S. Ang", school: "Philippine Science High School - Main Campus", photo: angPhoto },
-  {
-    name: "Noe Nathan Y. Arreza",
-    school: "Philippine Science High School - Calabarzon Region Campus",
-    photo: arrezaPhoto,
-  },
-  {
-    name: "Theo Lorenzo T. Bustamante",
-    school: "Philippine Science High School - Calabarzon Region Campus",
-    photo: bustamantePhoto,
-  },
-  { name: "Juan Mateo J. Desuasido", school: "Brent International School Manila", photo: desuasidoPhoto },
-  {
-    name: "Tristan Japheth L. Marquez",
-    school: "Philippine Science High School - Central Luzon Campus",
-    photo: marquezPhoto,
-  },
-  { name: "Almond Rose M. Obedoza", school: "Stanford Online High School", photo: obedozaPhoto },
-  { name: "Troy Dylan T. Serapio", school: "Philippine Science High School - Main Campus", photo: troyPhoto },
-  { name: "Jhareign S. Solidum", school: "University of Mindanao Ilang High School", photo: solidumPhoto },
-  { name: "Aretha Cai Faustine M. Sy", school: "St. Scholastica's Academy of Marikina", photo: syPhoto },
-  { name: "Conrad Jeffrey C. Tan", school: "Grace Christian College", photo: tanPhoto },
-];
-
-function MemberCard({ m }: { m: Member }) {
+function PlaceholderCard({ slot }: { slot: Slot }) {
   return (
-    <div className="bg-surface p-6">
-      <div className="mx-auto h-24 w-24 overflow-hidden rounded-full bg-primary/10">
-        {m.photo ? <img src={m.photo} alt={m.name} className="h-full w-full object-cover" /> : null}
+    <div className="flex flex-col justify-between bg-surface p-6 text-center">
+      <div>
+        <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full border border-dashed border-border/80 bg-background/50 text-muted-foreground/60">
+          <User className="h-8 w-8 stroke-[1.25]" />
+        </div>
+        <div className="mt-4 font-display text-lg font-semibold tracking-tight text-foreground">
+          {slot.seat}
+        </div>
+        <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-primary">
+          {slot.role}
+        </div>
+        <div className="mt-2 text-xs text-muted-foreground">
+          {slot.criterion}
+        </div>
       </div>
-      <div className="mt-4 text-center font-display text-base font-semibold">{m.name}</div>
-      {m.role ? (
-        <div className="mt-1 text-center font-mono text-[11px] uppercase tracking-[0.16em] text-primary">{m.role}</div>
-      ) : null}
-      {m.school ? (
-        <div className="mt-1 text-center font-mono text-[11px] text-muted-foreground">{m.school}</div>
-      ) : null}
+
+      <div className="mt-6 flex items-center justify-center gap-1.5 border-t border-border/60 pt-4 font-mono text-[10px] uppercase tracking-[0.15em] text-muted-foreground">
+        <Lock className="h-3 w-3 text-muted-foreground/70" />
+        {slot.status}
+      </div>
     </div>
   );
 }
@@ -138,26 +107,28 @@ function CompetitionSection({
   tag,
   title,
   subtitle,
-  members,
-  cols = 4,
+  slots,
 }: {
   tag: string;
   title: string;
   subtitle: string;
-  members: Member[];
-  cols?: number;
+  slots: Slot[];
 }) {
-  const gridClass =
-    cols === 5 ? "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5" : "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4";
-
   return (
     <section className="mx-auto max-w-7xl px-6 py-20">
-      <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// {tag}</div>
-      <h2 className="mt-3 font-display text-3xl font-semibold">{title}</h2>
-      <p className="mt-2 max-w-2xl text-sm text-muted-foreground">{subtitle}</p>
-      <div className={`mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border ${gridClass}`}>
-        {members.map((m, i) => (
-          <MemberCard key={`${tag}-${i}`} m={m} />
+      <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+        // {tag}
+      </div>
+      <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight md:text-4xl">
+        {title}
+      </h2>
+      <p className="mt-2 max-w-2xl text-sm text-muted-foreground md:text-base">
+        {subtitle}
+      </p>
+
+      <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
+        {slots.map((s, i) => (
+          <PlaceholderCard key={`${tag}-${i}`} slot={s} />
         ))}
       </div>
     </section>
@@ -167,44 +138,40 @@ function CompetitionSection({
 function Team() {
   return (
     <>
-      <section className="relative border-b border-border/60">
-        <NeuralNetworkBg className="absolute inset-0 h-full w-full [mask-image:radial-gradient(ellipse_at_center,black_0%,transparent_75%)]" />
-        <div className="absolute left-1/2 top-0 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-primary/15 blur-[140px]" />
+      {/* HERO */}
+      <section className="relative overflow-hidden border-b border-border/60 bg-background">
+        <NeuralNetworkBg className="pointer-events-none absolute inset-0 h-full w-full opacity-30 [mask-image:radial-gradient(ellipse_at_center,black_0%,transparent_75%)]" />
+        <div className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-primary/10 blur-[130px]" />
         <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-24">
-          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// team.2026</div>
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+            // team.2027
+          </div>
           <h1 className="mt-3 max-w-3xl font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
-            Team PH for the<span className="text-primary"> 2026 international AI competitions.</span>
+            Team PH for the{" "}
+            <span className="text-primary">2027 international campaigns.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            The Filipino students selected to represent the country at IOAI, APOAI, and NEOAI in 2026.
+            Official delegations representing the Philippines at IOAI 2027 (Singapore) and APOAI 2027 (Russia) will be determined during the National Finals at the Ateneo CTC Build Lab in April 2027.
           </p>
         </div>
       </section>
 
+      {/* IOAI SINGAPORE */}
       <CompetitionSection
-        tag="ioai.2026"
+        tag="ioai.2027"
         title="IOAI — International Olympiad in Artificial Intelligence"
-        subtitle="Five-member national delegation representing the Philippines on the global IOAI stage."
-        members={ioai}
-        cols={5}
+        subtitle="Flagship 4-student national delegation competing onsite in Singapore (July 4–10, 2027). Open to all qualified finalists, including graduating Grade 12 seniors."
+        slots={ioaiSlots}
       />
 
       <div className="border-t border-border/60" />
 
+      {/* APOAI RUSSIA */}
       <CompetitionSection
-        tag="apoai.2026"
+        tag="apoai.2027"
         title="APOAI — Asia-Pacific Olympiad in Artificial Intelligence"
-        subtitle="Eight-member team competing across the best in the Asia-Pacific region."
-        members={apoai}
-      />
-
-      <div className="border-t border-border/60" />
-
-      <CompetitionSection
-        tag="neoai.2026"
-        title="NEOAI — Northern Eurasia Olympiad in Artificial Intelligence"
-        subtitle="Twelve-member national delegation for NEOAI 2026."
-        members={neoai}
+        subtitle="4-student junior development delegation competing in Russia (April–June 2027 window). Reserved for the top non-graduating finalists (Kindergarten through Grade 11)."
+        slots={apoaiSlots}
       />
     </>
   );

@@ -115,9 +115,9 @@ const leadership = [
 function About() {
   return (
     <>
-      <section className="relative border-b border-border/60">
-        <NeuralNetworkBg className="absolute inset-0 h-full w-full [mask-image:radial-gradient(ellipse_at_center,black_0%,transparent_75%)]" />
-        <div className="absolute left-1/2 top-0 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-primary/15 blur-[140px]" />
+      <section className="relative overflow-hidden border-b border-border/60 bg-background">
+        <NeuralNetworkBg className="pointer-events-none absolute inset-0 h-full w-full opacity-30 [mask-image:radial-gradient(ellipse_at_center,black_0%,transparent_75%)]" />
+        <div className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-primary/10 blur-[130px]" />
         <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-24">
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// about.program</div>
           <h1 className="mt-3 max-w-3xl font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl">

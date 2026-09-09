@@ -3,14 +3,23 @@ import { NeuralNetworkBg } from "@/components/neural-network-bg";
 import { useTheme } from "@/components/theme-provider";
 import aapLogo from "@/assets/aaplogo.png";
 import aapLogoLight from "@/assets/aaplogo-light.png";
+import timesPaintLogo from "@/assets/timespaintlogo.png";
+import timesPaintLogoLight from "@/assets/timespaintlogo-light.png";
+import joyNostalgLogo from "@/assets/joynostalg.png";
 import opLogo from "@/assets/oplogo.svg";
 import oesLogo from "@/assets/oeslogo.png";
 import depedLogo from "@/assets/depedlogo.svg";
 import dostSeiLogo from "@/assets/dostseilogo.png";
 import ateneoBuildLogo from "@/assets/ateneobuildlogo.jpg";
+import tacticsLogo from "@/assets/partners/tactics.png";
+import xcitesLogo from "@/assets/partners/xcites.png";
+import siteaoLogo from "@/assets/partners/siteao.png";
+import mapuaShsSciClubLogo from "@/assets/partners/mapuashssciclub.png";
+import tomorrowLogo from "@/assets/partners/tomorrow.png";
+import tomorrowLogoLight from "@/assets/partners/tomorrow-light.png";
 import dashlabsLogo from "@/assets/dashlabs-logo.png";
 
-export const Route = createFileRoute("/_site/")({
+export const Route = createFileRoute("/_site/2026/")({
   head: () => ({
     meta: [
       { title: "IOAI Philippines — Team PH at the International Olympiad in AI" },
@@ -22,7 +31,7 @@ export const Route = createFileRoute("/_site/")({
       { property: "og:title", content: "IOAI Philippines" },
       {
         property: "og:description",
-        content: "Road to Singapore 2027. Filipino K-12 students worldwide competing on the world stage of AI.",
+        content: "Road to Astana 2026. Filipino students competing at the world stage of AI.",
       },
     ],
   }),
@@ -31,80 +40,78 @@ export const Route = createFileRoute("/_site/")({
 
 const timeline = [
   {
-    date: "SEP 12, 2026 – JAN 10, 2027",
-    phase: "01 / Registration",
-    title: "Open Registration",
-    desc: "Nationwide public application window open to all eligible Filipino K-12 students worldwide. Free to apply.",
-    status: "upcoming",
+    date: "DEC 11, 2025 – JAN 25, 2026",
+    phase: "01 / National",
+    title: "Registration",
+    desc: "Open call to all high school students across the Philippines. Free to apply.",
+    status: "complete",
   },
   {
-    date: "JAN 11 – 17, 2027",
+    date: "JAN 31 – FEB 8, 2026",
     phase: "02 / National",
-    title: "Stage 1: Eliminations",
-    desc: "Online asynchronous, Open Pool → Top 300.",
-    status: "upcoming",
+    title: "Eliminations",
+    desc: "Online qualifying assessment on linear algebra, probability, classical ML and applied NLP/CV.",
+    status: "complete",
   },
   {
-    date: "FEB 13, 2027",
+    date: "FEB 14 – 15, 2026",
     phase: "03 / National",
-    title: "Stage 2: Qualifiers",
-    desc: "Timed proctored sprint, Top 300 → Top 80.",
-    status: "upcoming",
+    title: "Semi-Finals",
+    desc: "Top performers advance to a weekend of deeper technical rounds.",
+    status: "complete",
   },
   {
-    date: "MAR 6, 2027",
+    date: "FEB 16 – 21, 2026",
     phase: "04 / National",
-    title: "Stage 3: Quarter-Finals",
-    desc: "Online proctored, Top 80 → Top 40.",
-    status: "upcoming",
+    title: "Finals",
+    desc: "Week-long national finals determining the country's strongest young AI talent.",
+    status: "complete",
   },
   {
-    date: "MAR 20, 2027",
+    date: "FEB 22 – APR 15, 2026",
     phase: "05 / National",
-    title: "Stage 4: Semi-Finals",
-    desc: "Hybrid sprint, Top 40 + seeds → Top 24 Finals berths.",
-    status: "upcoming",
+    title: "Selection & Training",
+    desc: "Finalists enter intensive training. Team Philippines selected from this pool.",
+    status: "complete",
   },
   {
-    date: "APR 10 – 11, 2027",
-    phase: "06 / National",
-    title: "Stage 5: National Finals",
-    desc: "2 days onsite at Ateneo BUILD, up to 31 finalists.",
-    status: "upcoming",
+    date: "MAY 3 – 4, 2026",
+    phase: "06 / International",
+    title: "NEOAI · Northern Eurasia Olympiad in AI",
+    desc: "Philippine team fielded at the Northern Eurasia regional olympiad, hosted by Russia.",
+    status: "complete",
   },
   {
-    date: "APR 19 – JUN 27, 2027",
-    phase: "07 / Preparation",
-    title: "Pre-Departure Boot Camp",
-    desc: "Intensive hybrid to full-time lab training.",
-    status: "upcoming",
+    date: "JUN 13, 2026",
+    phase: "07 / International",
+    title: "APOAI · Asia Pacific Olympiad in AI",
+    desc: "Philippine team competes in the Asia Pacific regional olympiad, hosted by China.",
+    status: "complete",
   },
   {
-    date: "APR – JUN 2027 (TBD)",
-    phase: "08 / Regional",
-    title: "APOAI 2027 · Russia",
-    desc: "4 non-graduating students in junior pipeline.",
-    status: "upcoming",
+    date: "JUL 1 – AUG 1, 2026",
+    phase: "08 / International",
+    title: "IOAI 2026 · At-Home Round",
+    desc: "Remote round of the International Olympiad in Artificial Intelligence, hosted by Kazakhstan.",
+    status: "complete",
   },
   {
-    date: "JUL 4 – 10, 2027",
+    date: "AUG 2 – 8, 2026",
     phase: "09 / International",
-    title: "IOAI 2027 · Singapore",
-    desc: "Top 4 national finalists at the world championship.",
-    status: "upcoming",
+    title: "IOAI 2026 · Onsite",
+    desc: "Onsite finals of the International Olympiad in AI in Astana, Kazakhstan. 100+ national teams compete on the world stage.",
+    status: "complete",
   },
 ];
 
 const stats = [
-  { value: "300", label: "STAGE 1 QUALIFIERS" },
-  { value: "80", label: "QUARTER-FINALISTS" },
-  { value: "40", label: "SEMI-FINALISTS" },
-  { value: "24", label: "FINALS QUALIFIERS" },
-  { value: "4", label: "APOAI RUSSIA" },
-  { value: "4", label: "IOAI SINGAPORE" },
-  { value: "82", label: "PROVINCES" },
-  { value: "18", label: "REGIONS" },
-  { value: "1", label: "COUNTRY" },
+  { k: "200+", l: "Applicants" },
+  { k: "30", l: "Finalists" },
+  { k: "15", l: "National Pool" },
+  { k: "4", l: "IOAI Team" },
+  { k: "82", l: "Provinces" },
+  { k: "18", l: "Regions" },
+  { k: "1", l: "Country" },
 ];
 
 function Home() {
@@ -113,61 +120,55 @@ function Home() {
       {/* HERO */}
       <section className="relative -mt-24 overflow-hidden border-b border-border/60 bg-background pt-24">
         <NeuralNetworkBg className="pointer-events-none absolute inset-0 h-full w-full opacity-30 [mask-image:radial-gradient(ellipse_at_center,black_0%,transparent_75%)]" />
-        <div className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-primary/15 blur-[140px]" />
+        <div className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-primary/10 blur-[130px]" />
         <div className="relative mx-auto max-w-7xl px-6 pb-32 pt-24">
           <div className="inline-flex items-center gap-2 rounded-sm border border-primary/30 bg-primary/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
-            IOAI 2027 · Singapore · Jul 04–10
+            IOAI 2026 · Astana, Kazakhstan · Aug 02–08
           </div>
-          <h1 className="mt-4 max-w-5xl font-display text-6xl font-semibold leading-[1.0] tracking-tight text-foreground md:text-7xl lg:text-[5.25rem]">
+          <h1 className="mt-6 max-w-4xl font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
             <span className="text-gradient">Filipino intelligence</span>
             <br />
             on the world stage of AI.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
             IOAI Philippines is the national selection and training program sending Team PH to the International
-            Olympiad in Artificial Intelligence. We identify, train, and field the country's strongest Filipino K-12 AI talent —
+            Olympiad in Artificial Intelligence. We identify, train and field the country's strongest young AI talent —
             at zero cost to students.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
-            <a
-              href="https://forms.gle/Xoiq3YQE3Z3HqATG7"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-sm bg-primary px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-primary-foreground shadow-sm transition-all hover:opacity-90"
+            <Link
+              to="/about"
+              className="rounded-sm bg-primary px-5 py-3 font-mono text-xs uppercase tracking-wider text-primary-foreground transition-all hover:opacity-90"
             >
-              Register for 2027 →
-            </a>
+              Meet the Program →
+            </Link>
             <Link
               to="/partnerships"
-              className="rounded-sm border border-border bg-surface px-6 py-3 font-mono text-xs uppercase tracking-wider text-foreground transition-all hover:border-primary/40"
+              className="rounded-sm border border-border bg-surface px-5 py-3 font-mono text-xs uppercase tracking-wider transition-all hover:border-primary/40"
             >
               Partner with us
             </Link>
           </div>
 
-          <div className="mt-16 grid grid-cols-3 gap-px overflow-hidden rounded-sm border border-border bg-border shadow-sm sm:grid-cols-9">
+          <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-4 lg:grid-cols-7">
             {stats.map((s) => (
-              <div key={s.label} className="bg-surface/80 px-3 py-4 text-center backdrop-blur-sm">
-                <div className="font-display text-2xl font-bold tracking-tight text-primary md:text-3xl">
-                  {s.value}
-                </div>
-                <div className="mt-1 font-mono text-[9px] uppercase tracking-wider text-muted-foreground">
-                  {s.label}
-                </div>
+              <div key={s.l} className="bg-surface p-6">
+                <div className="font-display text-3xl font-semibold text-primary md:text-4xl">{s.k}</div>
+                <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">{s.l}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SINGAPORE TIMELINE */}
+      {/* ASTANA TIMELINE */}
       <section className="relative mx-auto max-w-7xl px-6 py-28">
         <div className="flex items-end justify-between gap-6">
           <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// road_to_singapore.log</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// road_to_astana.log</div>
             <h2 className="mt-3 max-w-2xl font-display text-4xl font-semibold tracking-tight md:text-5xl">
-              The 2027 selection cycle, from national qualifiers to the world stage.
+              The 2026 cycle, from national qualifiers to the world stage.
             </h2>
           </div>
         </div>
@@ -212,7 +213,7 @@ function Home() {
               {
                 n: "01",
                 t: "Free, merit-based selection",
-                d: "No application fees. Open to all Filipino K-12 students worldwide. Selection is purely by performance on technical assessments.",
+                d: "No application fees. Every student in the Philippines can compete. Selection is purely by performance on technical assessments.",
               },
               {
                 n: "02",
@@ -234,51 +235,43 @@ function Home() {
           </div>
         </div>
       </section>
+      {/* PARTNERS */}
+      <PartnersSection />
 
       {/* CTA */}
+
       <section id="apply" className="relative mx-auto max-w-7xl px-6 py-28">
-        <div className="relative overflow-hidden rounded-sm border border-border/80 bg-surface p-8 transition-colors hover:border-primary/40 md:p-14">
-          <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-primary/10 blur-3xl" />
+        <div className="relative overflow-hidden rounded-sm border border-primary/30 bg-gradient-to-br from-surface to-background p-12 md:p-16">
+          <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
           <div className="relative">
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// 2027_cycle.register</div>
-            <h2 className="mt-3 max-w-2xl font-display text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-              Registration for the 2027 cycle is now open.
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// 2027_cycle.init</div>
+            <h2 className="mt-3 max-w-2xl font-display text-4xl font-semibold tracking-tight md:text-5xl">
+              Applications for the 2027 cycle open this November.
             </h2>
-            <p className="mt-4 max-w-xl text-sm text-muted-foreground md:text-base">
-              Open to all eligible Filipino K-12 students worldwide. Free to apply. Complete the official registration form to enter Stage 1 screening for the national delegations to Singapore (IOAI) and Russia (APOAI).
+            <p className="mt-4 max-w-xl text-muted-foreground">
+              Be the first to know when the qualifier opens. Follow us on Facebook and join our Discord.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="https://forms.gle/Xoiq3YQE3Z3HqATG7"
+                href="https://www.facebook.com/ioaiph"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-sm bg-primary px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-primary-foreground transition-all hover:opacity-90"
+                className="rounded-sm bg-primary px-5 py-3 font-mono text-xs uppercase tracking-wider text-primary-foreground transition-all hover:opacity-90"
               >
-                Register for 2027 →
+                Facebook →
               </a>
               <a
                 href="https://discord.gg/pBktCwHNkJ"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-sm border border-border bg-background px-5 py-3 font-mono text-xs uppercase tracking-wider text-foreground transition-all hover:border-primary/40"
+                className="rounded-sm border border-border bg-surface px-5 py-3 font-mono text-xs uppercase tracking-wider transition-all hover:border-primary/40"
               >
                 Discord →
-              </a>
-              <a
-                href="https://www.facebook.com/ioaiph"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-sm border border-border bg-background px-5 py-3 font-mono text-xs uppercase tracking-wider text-foreground transition-all hover:border-primary/40"
-              >
-                Facebook →
               </a>
             </div>
           </div>
         </div>
       </section>
-
-      {/* PARTNERS */}
-      <PartnersSection />
     </>
   );
 }
@@ -294,6 +287,16 @@ const recognizedBy: Recognition[] = [
   { name: "DOST-SEI", label: "Science Education Institute", src: dostSeiLogo },
 ];
 
+const goldPartners: Partner[] = [{ name: "Joy-Nostalg Group", src: joyNostalgLogo, href: "https://joy-nostalg.com/" }];
+
+const silverPartners: Partner[] = [{ name: "The Desuasido Family", src: "" }];
+
+const bronzePartners: Partner[] = [
+  { name: "Times Paint Corporation", src: timesPaintLogo, lightSrc: timesPaintLogoLight },
+];
+
+const steelPartners: Partner[] = [{ name: "The Tiu Family", src: "" }];
+
 const featuredPartners: Partner[] = [
   {
     name: "Analytics and AI Association of the Philippines",
@@ -305,6 +308,40 @@ const featuredPartners: Partner[] = [
     name: "Dashlabs.ai",
     src: dashlabsLogo,
     href: "https://dashlabs.ai/",
+  },
+];
+
+const communityPartners: Partner[] = [
+  {
+    name: "TACTICS",
+    src: tacticsLogo,
+    href: "https://www.facebook.com/adnutactics",
+    subtitle: "Ateneo de Naga University",
+  },
+  {
+    name: "XCITeS",
+    src: xcitesLogo,
+    href: "https://www.facebook.com/XU.XCITES",
+    subtitle: "Xavier University - Ateneo de Cagayan",
+  },
+  {
+    name: "SITEAO",
+    src: siteaoLogo,
+    href: "https://www.facebook.com/adzusiteao",
+    subtitle: "Ateneo de Zamboanga University",
+  },
+  {
+    name: "SHS Science Club",
+    src: mapuaShsSciClubLogo,
+    href: "https://facebook.com/mapuashscienceclub",
+    subtitle: "Mapua University",
+  },
+  {
+    name: "Tomorrow",
+    src: tomorrowLogo,
+    lightSrc: tomorrowLogoLight,
+    href: "https://www.facebook.com/profile.php?id=61563288622007",
+    subtitle: "Philippine Science High School - Main Campus",
   },
 ];
 
@@ -333,6 +370,23 @@ function LogoTile({
         alt={p.name}
         loading="lazy"
         className={`${heights[size]} ${widthClass ?? "w-auto"} object-contain transition-transform duration-500 group-hover:scale-110`}
+      />
+    </Tag>
+  );
+}
+
+function PartnerBox({ p, imgClass }: { p: Partner; imgClass: string }) {
+  const Tag: any = p.href ? "a" : "div";
+  const props = p.href ? { href: p.href, target: "_blank", rel: "noopener noreferrer" } : {};
+  const { resolvedTheme } = useTheme();
+  const src = resolvedTheme === "light" && p.lightSrc ? p.lightSrc : p.src;
+  return (
+    <Tag {...props} title={p.name} className="group flex h-72 items-center justify-center px-6">
+      <img
+        src={src}
+        alt={p.name}
+        loading="lazy"
+        className={`${imgClass} w-auto object-contain transition-transform duration-500 group-hover:scale-105`}
       />
     </Tag>
   );
@@ -405,8 +459,48 @@ function PartnersSection() {
           </div>
         </div>
 
+        {/* ROW 1: GOLD (widest) + SILVER + BRONZE + STEEL */}
+        <div className="mt-16 grid gap-6 md:grid-cols-12">
+          <div className="md:col-span-4">
+            <TierLabel accent="bg-gold shadow-[0_0_12px_2px] shadow-gold/60">Gold Partners</TierLabel>
+            <div className="mt-6 overflow-hidden rounded-sm border border-gold/30 bg-transparent">
+              {goldPartners.map((p) => (
+                <PartnerBox key={p.name} p={p} imgClass="h-[85%]" />
+              ))}
+            </div>
+          </div>
+          <div className="md:col-span-3">
+            <TierLabel accent="bg-silver shadow-[0_0_10px_1px] shadow-silver/60">Silver Partners</TierLabel>
+            <div className="mt-6 overflow-hidden rounded-sm border border-silver/30 bg-transparent">
+              {silverPartners.map((p) => (
+                <div key={p.name} className="flex h-72 items-center justify-center px-4 text-center">
+                  <span className="font-display text-lg font-semibold text-silver">{p.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="md:col-span-3">
+            <TierLabel accent="bg-bronze shadow-[0_0_10px_1px] shadow-bronze/60">Bronze Partners</TierLabel>
+            <div className="mt-6 overflow-hidden rounded-sm border border-bronze/30 bg-transparent">
+              {bronzePartners.map((p) => (
+                <PartnerBox key={p.name} p={p} imgClass="h-[65%]" />
+              ))}
+            </div>
+          </div>
+          <div className="md:col-span-2">
+            <TierLabel accent="bg-steel shadow-[0_0_10px_1px] shadow-steel/60">Steel Partners</TierLabel>
+            <div className="mt-6 overflow-hidden rounded-sm border border-steel/30 bg-transparent">
+              {steelPartners.map((p) => (
+                <div key={p.name} className="flex h-72 items-center justify-center px-4 text-center">
+                  <span className="font-display text-lg font-semibold text-steel">{p.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* ROW 2: FEATURED (AAP + Dashlabs) */}
-        <div className="mt-16">
+        <div className="mt-12">
           <TierLabel accent="bg-primary shadow-[0_0_10px_1px] shadow-primary/60">Featured Community Partners</TierLabel>
           <div className="mt-6 grid gap-6 md:grid-cols-2">
             {featuredPartners.map((p) => (
@@ -417,26 +511,17 @@ function PartnersSection() {
           </div>
         </div>
 
-        {/* 2027 SPONSORSHIP CALLOUT CARD */}
-        <div className="mt-14 rounded-sm border border-border/80 bg-surface/40 p-8 transition-colors hover:border-primary/40 md:flex md:items-center md:justify-between md:p-10">
-          <div className="max-w-2xl">
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
-              // corporate.sponsorship · cycle_2027
-            </div>
-            <h3 className="mt-2 font-display text-2xl font-semibold tracking-tight md:text-3xl">
-              Power Team Philippines on the world stage.
-            </h3>
-            <p className="mt-2 text-sm text-muted-foreground md:text-base">
-              Partner with us to build the country’s premier AI talent pipeline. Accessible to over 27 million K-12 learners across all 82 provinces, 18 regions, and Filipino students worldwide, corporate and compute partnerships power the entire 2027 national selection cycle—from open screening to intensive training boot camps, and dual international delegations—at zero cost to students.
-            </p>
-          </div>
-          <div className="mt-6 shrink-0 md:ml-8 md:mt-0">
-            <Link
-              to="/partnerships"
-              className="inline-flex items-center justify-center rounded-sm bg-primary px-6 py-3 font-mono text-xs uppercase tracking-wider text-primary-foreground transition-all hover:opacity-90"
-            >
-              View 2027 Prospectus →
-            </Link>
+        {/* ROW 3: COMMUNITY GRID */}
+        <div className="mt-12">
+          <TierLabel accent="bg-primary/60">Community Partners</TierLabel>
+          <div className="mt-6 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+            {communityPartners.map((p) => (
+              <div key={p.name} className="flex flex-col items-center justify-start gap-2 bg-transparent py-8">
+                <LogoTile p={p} size="lg" />
+                <div className="font-display text-sm font-semibold tracking-tight">{p.name}</div>
+                {p.subtitle && <p className="px-2 text-center text-xs text-muted-foreground">{p.subtitle}</p>}
+              </div>
+            ))}
           </div>
         </div>
       </div>

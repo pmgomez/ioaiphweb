@@ -18,6 +18,10 @@ import { Route as SitePressRouteImport } from './routes/_site.press'
 import { Route as SitePartnershipsRouteImport } from './routes/_site.partnerships'
 import { Route as SiteFaqRouteImport } from './routes/_site.faq'
 import { Route as SiteAboutRouteImport } from './routes/_site.about'
+import { Route as Site2026IndexRouteImport } from './routes/_site.2026.index'
+import { Route as Site2026TeamRouteImport } from './routes/_site.2026.team'
+import { Route as Site2026ResultsRouteImport } from './routes/_site.2026.results'
+import { Route as Site2026FaqRouteImport } from './routes/_site.2026.faq'
 
 const SiteRoute = SiteRouteImport.update({
   id: '/_site',
@@ -63,6 +67,26 @@ const SiteAboutRoute = SiteAboutRouteImport.update({
   path: '/about',
   getParentRoute: () => SiteRoute,
 } as any)
+const Site2026IndexRoute = Site2026IndexRouteImport.update({
+  id: '/2026/',
+  path: '/2026/',
+  getParentRoute: () => SiteRoute,
+} as any)
+const Site2026TeamRoute = Site2026TeamRouteImport.update({
+  id: '/2026/team',
+  path: '/2026/team',
+  getParentRoute: () => SiteRoute,
+} as any)
+const Site2026ResultsRoute = Site2026ResultsRouteImport.update({
+  id: '/2026/results',
+  path: '/2026/results',
+  getParentRoute: () => SiteRoute,
+} as any)
+const Site2026FaqRoute = Site2026FaqRouteImport.update({
+  id: '/2026/faq',
+  path: '/2026/faq',
+  getParentRoute: () => SiteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof SiteIndexRoute
@@ -73,6 +97,10 @@ export interface FileRoutesByFullPath {
   '/resources': typeof SiteResourcesRoute
   '/results': typeof SiteResultsRoute
   '/team': typeof SiteTeamRoute
+  '/2026/faq': typeof Site2026FaqRoute
+  '/2026/results': typeof Site2026ResultsRoute
+  '/2026/team': typeof Site2026TeamRoute
+  '/2026/': typeof Site2026IndexRoute
 }
 export interface FileRoutesByTo {
   '/about': typeof SiteAboutRoute
@@ -83,6 +111,10 @@ export interface FileRoutesByTo {
   '/results': typeof SiteResultsRoute
   '/team': typeof SiteTeamRoute
   '/': typeof SiteIndexRoute
+  '/2026/faq': typeof Site2026FaqRoute
+  '/2026/results': typeof Site2026ResultsRoute
+  '/2026/team': typeof Site2026TeamRoute
+  '/2026': typeof Site2026IndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -95,6 +127,10 @@ export interface FileRoutesById {
   '/_site/results': typeof SiteResultsRoute
   '/_site/team': typeof SiteTeamRoute
   '/_site/': typeof SiteIndexRoute
+  '/_site/2026/faq': typeof Site2026FaqRoute
+  '/_site/2026/results': typeof Site2026ResultsRoute
+  '/_site/2026/team': typeof Site2026TeamRoute
+  '/_site/2026/': typeof Site2026IndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -107,6 +143,10 @@ export interface FileRouteTypes {
     | '/resources'
     | '/results'
     | '/team'
+    | '/2026/faq'
+    | '/2026/results'
+    | '/2026/team'
+    | '/2026/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/about'
@@ -117,6 +157,10 @@ export interface FileRouteTypes {
     | '/results'
     | '/team'
     | '/'
+    | '/2026/faq'
+    | '/2026/results'
+    | '/2026/team'
+    | '/2026'
   id:
     | '__root__'
     | '/_site'
@@ -128,6 +172,10 @@ export interface FileRouteTypes {
     | '/_site/results'
     | '/_site/team'
     | '/_site/'
+    | '/_site/2026/faq'
+    | '/_site/2026/results'
+    | '/_site/2026/team'
+    | '/_site/2026/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -199,6 +247,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SiteAboutRouteImport
       parentRoute: typeof SiteRoute
     }
+    '/_site/2026/': {
+      id: '/_site/2026/'
+      path: '/2026'
+      fullPath: '/2026/'
+      preLoaderRoute: typeof Site2026IndexRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/2026/team': {
+      id: '/_site/2026/team'
+      path: '/2026/team'
+      fullPath: '/2026/team'
+      preLoaderRoute: typeof Site2026TeamRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/2026/results': {
+      id: '/_site/2026/results'
+      path: '/2026/results'
+      fullPath: '/2026/results'
+      preLoaderRoute: typeof Site2026ResultsRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/2026/faq': {
+      id: '/_site/2026/faq'
+      path: '/2026/faq'
+      fullPath: '/2026/faq'
+      preLoaderRoute: typeof Site2026FaqRouteImport
+      parentRoute: typeof SiteRoute
+    }
   }
 }
 
@@ -211,6 +287,10 @@ interface SiteRouteChildren {
   SiteResultsRoute: typeof SiteResultsRoute
   SiteTeamRoute: typeof SiteTeamRoute
   SiteIndexRoute: typeof SiteIndexRoute
+  Site2026FaqRoute: typeof Site2026FaqRoute
+  Site2026ResultsRoute: typeof Site2026ResultsRoute
+  Site2026TeamRoute: typeof Site2026TeamRoute
+  Site2026IndexRoute: typeof Site2026IndexRoute
 }
 
 const SiteRouteChildren: SiteRouteChildren = {
@@ -222,6 +302,10 @@ const SiteRouteChildren: SiteRouteChildren = {
   SiteResultsRoute: SiteResultsRoute,
   SiteTeamRoute: SiteTeamRoute,
   SiteIndexRoute: SiteIndexRoute,
+  Site2026FaqRoute: Site2026FaqRoute,
+  Site2026ResultsRoute: Site2026ResultsRoute,
+  Site2026TeamRoute: Site2026TeamRoute,
+  Site2026IndexRoute: Site2026IndexRoute,
 }
 
 const SiteRouteWithChildren = SiteRoute._addFileChildren(SiteRouteChildren)

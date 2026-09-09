@@ -1,10 +1,20 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, Facebook } from "lucide-react";
+import { Menu, X, Facebook, ChevronDown } from "lucide-react";
 import phFlag from "@/assets/ph-flag.svg";
 import ioaiphLogo from "@/assets/ioaiph-logo.png";
 import ioaiAccreditation from "@/assets/ioai-accreditation.png";
 import { ThemeToggle } from "@/components/theme-toggle";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSub,
+  DropdownMenuSubTrigger,
+  DropdownMenuSubContent,
+} from "@/components/ui/dropdown-menu";
+import { cn } from "@/lib/utils";
 
 const DiscordIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -23,57 +33,50 @@ const nav = [
   { to: "/faq", label: "FAQ" },
 ] as const;
 
+const archive2026Links = [
+  { to: "/2026", label: "OVERVIEW", exact: true },
+  { to: "/2026/team", label: "TEAM", exact: false },
+  { to: "/2026/results", label: "RESULTS", exact: false },
+  { to: "/2026/faq", label: "FAQ", exact: false },
+] as const;
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
-  return (
-    <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 sm:pt-6">
-      <div className="pointer-events-auto flex w-full items-center justify-between gap-4 rounded-full border border-border/60 bg-background/70 px-3 py-2 pl-4 shadow-2xl backdrop-blur-xl sm:px-4">
-        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={ioaiphLogo} alt="IOAI Philippines" className="h-9 w-9 rounded-full object-cover" />
-          <div className="leading-tight">
-            <div className="font-display text-sm font-semibold tracking-tight">IOAI Philippines</div>
-            <div className="hidden font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:block">
-              Team PH · Astana 2026
-            </div>
-          </div>
-        </Link>
-        <nav className="hidden items-center gap-1 md:flex">
-          {nav.map((n) => (
-            <Link
-              key={n.to}
-              to={n.to}
-              activeOptions={{ exact: n.to === "/" }}
-              activeProps={{ className: "text-primary" }}
-              inactiveProps={{ className: "text-muted-foreground" }}
-              className="rounded-full px-3 py-1.5 font-mono text-xs uppercase tracking-wider transition-colors hover:text-foreground"
-            >
-              {n.label}
-            </Link>
-          ))}
-        </nav>
-        <div className="flex items-center gap-2">
-          <ThemeToggle />
-          <a
-            href="/#apply"
-            className="hidden rounded-full border border-primary/40 bg-primary/10 px-4 py-2 font-mono text-xs uppercase tracking-wider text-primary transition-all hover:bg-primary hover:text-primary-foreground md:inline-flex"
-          >
-            Apply →
-          </a>
-          <button
-            type="button"
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-            onClick={() => setOpen((v) => !v)}
-            className="grid h-9 w-9 place-items-center rounded-full border border-border/60 text-foreground transition-colors hover:border-primary/40 md:hidden"
-          >
-            {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
-          </button>
-        </div>
-      </div>
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const isArchive = pathname.startsWith("/2026");
 
-      {open && (
-        <div className="pointer-events-auto mt-2 w-full rounded-2xl border border-border/60 bg-background/90 p-3 shadow-2xl backdrop-blur-xl md:hidden">
-          <nav className="flex flex-col">
+  return (
+    <header className="pointer-events-none fixed inset-x-0 top-0 z-50">
+      {/* Archive Banner */}
+      {isArchive && (
+        <aside
+          aria-label="Archive Notice"
+          className="pointer-events-auto border-b border-border/60 bg-surface/90 px-4 py-2 text-center font-mono text-xs text-muted-foreground backdrop-blur-xl transition-all"
+        >
+          <div className="mx-auto flex max-w-7xl items-center justify-center gap-1.5 text-[11px] sm:text-xs">
+            <span>You are viewing the archived 2026 IOAI Philippines season.</span>{" "}
+            <Link
+              to="/"
+              className="font-medium text-primary underline underline-offset-4 transition-colors hover:text-primary/80"
+            >
+              Return to current home.
+            </Link>
+          </div>
+        </aside>
+      )}
+
+      <div className={cn("px-4 sm:px-6", isArchive ? "pt-2.5 sm:pt-3" : "pt-4 sm:pt-6")}>
+        <div className="pointer-events-auto mx-auto flex w-full max-w-7xl items-center justify-between gap-4 rounded-full border border-border/60 bg-background/70 px-3 py-2 pl-4 shadow-2xl backdrop-blur-xl sm:px-4">
+          <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+            <img src={ioaiphLogo} alt="IOAI Philippines" className="h-9 w-9 rounded-full object-cover" />
+            <div className="leading-tight">
+              <div className="font-display text-sm font-semibold tracking-tight">IOAI Philippines</div>
+              <div className="hidden font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:block">
+                Team PH · Singapore 2027
+              </div>
+            </div>
+          </Link>
+          <nav className="hidden items-center gap-1 md:flex">
             {nav.map((n) => (
               <Link
                 key={n.to}
@@ -81,22 +84,160 @@ export function SiteHeader() {
                 activeOptions={{ exact: n.to === "/" }}
                 activeProps={{ className: "text-primary" }}
                 inactiveProps={{ className: "text-muted-foreground" }}
-                onClick={() => setOpen(false)}
-                className="rounded-md px-3 py-3 font-mono text-xs uppercase tracking-wider transition-colors hover:text-foreground"
+                className="rounded-full px-3 py-1.5 font-mono text-xs uppercase tracking-wider transition-colors hover:text-foreground"
               >
                 {n.label}
               </Link>
             ))}
+
+            {/* Desktop Archive Dropdown with Submenu */}
+            <DropdownMenu>
+              <DropdownMenuTrigger
+                className={cn(
+                  "flex items-center gap-1 rounded-full px-3 py-1.5 font-mono text-xs uppercase tracking-wider transition-colors outline-none cursor-pointer",
+                  isArchive ? "text-primary font-medium" : "text-muted-foreground hover:text-foreground"
+                )}
+              >
+                <span>ARCHIVE</span>
+                <ChevronDown className="h-3 w-3 opacity-70" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent
+                align="end"
+                className="w-40 overflow-visible rounded-xl border border-border/60 bg-background/95 p-1.5 shadow-2xl backdrop-blur-xl"
+              >
+                <DropdownMenuSub>
+                  <DropdownMenuSubTrigger
+                    className={cn(
+                      "flex h-9 cursor-pointer items-center rounded-lg px-2.5 py-2 font-mono text-xs uppercase tracking-wider transition-colors",
+                      isArchive ? "text-primary font-medium" : "text-muted-foreground hover:text-foreground"
+                    )}
+                  >
+                    <span>2026</span>
+                  </DropdownMenuSubTrigger>
+                  <DropdownMenuSubContent
+                    sideOffset={2}
+                    className="w-40 rounded-xl border border-border/60 bg-background/95 p-1.5 shadow-2xl backdrop-blur-xl"
+                  >
+                    {archive2026Links.map((item) => (
+                      <DropdownMenuItem key={item.to} asChild className="cursor-pointer">
+                        <Link
+                          to={item.to}
+                          activeOptions={{ exact: item.exact }}
+                          activeProps={{
+                            className:
+                              "text-primary font-medium bg-primary/10 hover:text-primary focus:text-primary data-[highlighted]:text-primary",
+                          }}
+                          inactiveProps={{ className: "text-muted-foreground" }}
+                          className="flex h-9 w-full items-center rounded-lg px-2.5 py-2 font-mono text-xs uppercase tracking-wider transition-colors"
+                        >
+                          {item.label}
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuSubContent>
+                </DropdownMenuSub>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </nav>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
             <a
               href="/#apply"
-              onClick={() => setOpen(false)}
-              className="mt-1 inline-flex justify-center rounded-md border border-primary/40 bg-primary/10 px-4 py-3 font-mono text-xs uppercase tracking-wider text-primary"
+              className="hidden rounded-full border border-primary/40 bg-primary/10 px-4 py-2 font-mono text-xs uppercase tracking-wider text-primary transition-all hover:bg-primary hover:text-primary-foreground md:inline-flex"
             >
               Apply →
             </a>
-          </nav>
+            <button
+              type="button"
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+              onClick={() => setOpen((v) => !v)}
+              className="grid h-9 w-9 place-items-center rounded-full border border-border/60 text-foreground transition-colors hover:border-primary/40 md:hidden"
+            >
+              {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+            </button>
+          </div>
         </div>
-      )}
+
+        {open && (
+          <div className="pointer-events-auto mx-auto mt-2 w-full max-w-7xl rounded-2xl border border-border/60 bg-background/90 p-3 shadow-2xl backdrop-blur-xl md:hidden">
+            <nav className="flex flex-col">
+              {nav.map((n) => (
+                <Link
+                  key={n.to}
+                  to={n.to}
+                  activeOptions={{ exact: n.to === "/" }}
+                  activeProps={{ className: "text-primary" }}
+                  inactiveProps={{ className: "text-muted-foreground" }}
+                  onClick={() => setOpen(false)}
+                  className="rounded-md px-3 py-3 font-mono text-xs uppercase tracking-wider transition-colors hover:text-foreground"
+                >
+                  {n.label}
+                </Link>
+              ))}
+
+              {/* Mobile Archive Grouped Section */}
+              <div className="mt-2 border-t border-border/60 pt-3">
+                <div className="px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                  Archive
+                </div>
+                <div className="ml-2 mt-1 border-l border-border/60 pl-3">
+                  <div className="py-1 font-mono text-xs font-semibold uppercase tracking-wider text-foreground">
+                    2026
+                  </div>
+                  <div className="flex flex-col space-y-1">
+                    <Link
+                      to="/2026"
+                      activeOptions={{ exact: true }}
+                      activeProps={{ className: "text-primary font-medium bg-primary/10" }}
+                      inactiveProps={{ className: "text-muted-foreground" }}
+                      onClick={() => setOpen(false)}
+                      className="rounded-md px-2.5 py-2 font-mono text-xs uppercase tracking-wider transition-colors hover:bg-accent hover:text-foreground"
+                    >
+                      Overview
+                    </Link>
+                    <Link
+                      to="/2026/team"
+                      activeProps={{ className: "text-primary font-medium bg-primary/10" }}
+                      inactiveProps={{ className: "text-muted-foreground" }}
+                      onClick={() => setOpen(false)}
+                      className="rounded-md px-2.5 py-2 font-mono text-xs uppercase tracking-wider transition-colors hover:bg-accent hover:text-foreground"
+                    >
+                      Team
+                    </Link>
+                    <Link
+                      to="/2026/results"
+                      activeProps={{ className: "text-primary font-medium bg-primary/10" }}
+                      inactiveProps={{ className: "text-muted-foreground" }}
+                      onClick={() => setOpen(false)}
+                      className="rounded-md px-2.5 py-2 font-mono text-xs uppercase tracking-wider transition-colors hover:bg-accent hover:text-foreground"
+                    >
+                      Results
+                    </Link>
+                    <Link
+                      to="/2026/faq"
+                      activeProps={{ className: "text-primary font-medium bg-primary/10" }}
+                      inactiveProps={{ className: "text-muted-foreground" }}
+                      onClick={() => setOpen(false)}
+                      className="rounded-md px-2.5 py-2 font-mono text-xs uppercase tracking-wider transition-colors hover:bg-accent hover:text-foreground"
+                    >
+                      FAQ
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              <a
+                href="/#apply"
+                onClick={() => setOpen(false)}
+                className="mt-3 inline-flex justify-center rounded-md border border-primary/40 bg-primary/10 px-4 py-3 font-mono text-xs uppercase tracking-wider text-primary"
+              >
+                Apply →
+              </a>
+            </nav>
+          </div>
+        )}
+      </div>
     </header>
   );
 }
@@ -107,7 +248,6 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-6 py-12">
         <div className="grid gap-10 md:grid-cols-5">
           <div className="md:col-span-2">
-
             <div className="font-display text-lg font-semibold">IOAI Philippines</div>
             <p className="mt-3 max-w-sm text-sm text-muted-foreground">
               The Philippines' national selection and training program for the International Olympiad in Artificial
@@ -170,6 +310,7 @@ export function SiteFooter() {
             © {new Date().getFullYear()} IOAI Philippines · Hosted by Ateneo BUILD, JGSOM, Ateneo de Manila University
           </div>
           <div className="font-mono">v2.025 · build.astana</div>
+          <div className="font-mono">v2.027 · build.singapore</div>
         </div>
       </div>
     </footer>

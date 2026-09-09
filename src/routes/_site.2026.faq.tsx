@@ -2,18 +2,18 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
 
-export const Route = createFileRoute("/_site/faq")({
+export const Route = createFileRoute("/_site/2026/faq")({
   head: () => ({
     meta: [
-      { title: "FAQ — IOAI Philippines" },
+      { title: "FAQ (2026) — IOAI Philippines" },
       {
         name: "description",
         content:
-          "Answers to common questions about IOAI Philippines: eligibility, the 2027 national selection pipeline, direct seeding, competition mechanics, and sponsorship.",
+          "Archived answers to common questions about the 2026 IOAI Philippines season: eligibility, selection, competition mechanics, and Astana finals.",
       },
     ],
   }),
-  component: FAQ,
+  component: FAQ2026,
 });
 
 type QA = { q: string; a: React.ReactNode };
@@ -25,19 +25,19 @@ const groups: Group[] = [
     items: [
       {
         q: "What is the IOAI, and who oversees the Philippine delegation?",
-        a: "The International Olympiad in Artificial Intelligence (IOAI) is the premier global championship challenging young minds in machine learning, deep learning architectures, computer vision, natural language processing, and AI ethics. Ateneo BUILD serves as the accredited, sole Philippine Country Coordinator responsible for managing national talent scouting, testing infrastructure, and team training.",
+        a: "The International Olympiad in Artificial Intelligence (IOAI) is an elite global competition for high school students designed to challenge skills in mainstream AI concepts, machine learning, and data science. Ateneo BUILD serves as the accredited, sole Philippine Country Coordinator responsible for national selection and delegation management.",
       },
       {
-        q: "When and where are the 2027 international competitions?",
-        a: "Team Philippines will field delegations across two major tournaments in 2027: the flagship IOAI 2027 Global Finals in Singapore (July 4–10, 2027) and the Asia-Pacific Olympiad in Artificial Intelligence (APOAI 2027) in Russia (April–June 2027 window).",
+        q: "When and where are the Global Finals?",
+        a: "The 2026 IOAI Global Finals will take place from August 2 to August 8, 2026, in Astana, Kazakhstan. The 2027 IOAI Global Finals will take place from July 4 to July 10, 2027 in Singapore.",
       },
       {
-        q: "When does the 2027 national selection cycle run?",
-        a: "The 2027 cycle opens for nationwide public registration on September 12, 2026, and closes on January 10, 2027. Selection testing runs sequentially from Stage 1 Eliminations in January 2027 through the onsite National Finals in April 2027.",
+        q: "Has the Philippine team already been selected for the current cycle?",
+        a: "Yes. Following the conclusion of the National Eliminations, Semi-Finals, National Finals, and the Team Selection Bootcamp in March 2026, the official national delegation representing the Philippines has been finalized.",
       },
       {
-        q: "How does the dual-delegation selection work for Singapore and Russia?",
-        a: "The official delegations are selected directly from the aggregate standings of the Stage 5 National Finals. Ranks 1 through 4 earn seats on the primary IOAI Singapore delegation (open to all students, including graduating Grade 12 seniors). The top 4 non-graduating students (Kindergarten through Grade 11) earn seats on the APOAI Russia junior development delegation.",
+        q: "When will applications open for the next national selection cycle?",
+        a: "The registration portal for the 2027 selection cycle will officially open in November 2026. Sign up for updates on our main page to receive immediate notification when the portal goes live.",
       },
     ],
   },
@@ -45,51 +45,47 @@ const groups: Group[] = [
     cat: "Qualifications, Eligibility, & National Pool",
     items: [
       {
-        q: "Who is eligible to compete in the 2027 national selection cycle?",
-        a: "The 2027 cycle is open to all Filipino K-12 students worldwide who are enrolled in an accredited primary or secondary institution (Kindergarten through Grade 12, or equivalent) on or after December 1, 2026, across public, private, science high schools, or homeschool programs. Contestants must be 20 years old or younger as of July 1, 2027.",
+        q: "Who is eligible to compete in the national selection rounds?",
+        a: "Traditionally, IOAI Philippines has accepted Filipino students in Grades 7 to 12. Beginning with the 2027 cycle, we are also opening the qualification track to promising younger students in Grades 1 to 6, whether residing within the Philippines or living and studying abroad.",
       },
       {
-        q: "Are overseas Filipino students eligible to join Team Philippines?",
-        a: "Yes. Filipino citizens enrolled in primary or secondary schools abroad are fully eligible to compete. Overseas qualifiers participate remotely through Stage 4 (Semi-Finals) under synchronized online proctoring. Contestants who advance to Stage 5 (National Finals) must compete in person in Metro Manila.",
+        q: "I am a Filipino citizen living and studying overseas. Am I eligible to join Team Philippines?",
+        a: "Yes. Under the updated IOAI and APOAI Rules and Regulations, students are permitted to represent their country of citizenship. Consequently, starting with the 2027 selection cycle (opening November 2026), Filipino students residing or enrolled in institutions abroad can formally enter the IOAIPH qualification track.",
       },
       {
         q: "Are homeschooled students eligible to join?",
-        a: "Yes. Homeschooled Filipino K-12 students, whether based in the Philippines or abroad, are fully eligible under standard competition regulations.",
+        a: "Yes. Homeschooled Filipino students, whether based domestically or internationally, are fully qualified to participate under standard competition regulations.",
       },
       {
-        q: "Is this an individual or team competition?",
-        a: "The national selection pipeline is strictly an individual competition across all five stages. Once selected at the National Finals, delegates train collaboratively during the Pre-Departure Boot Camp and compete as unified national teams representing the Philippines.",
+        q: "Is this a team or individual competition?",
+        a: "The initial national selection phases are strictly individual contests. The final four-student national team selected during the Bootcamp phase will collaborate, train, and compete as a unified unit during the Global Finals.",
       },
       {
-        q: "How does the 2027 multi-stage selection funnel work?",
-        a: "The pipeline consists of five progressive stages: Stage 1 Eliminations (7-day asynchronous online screening, Open Pool to Top 300); Stage 2 Qualifiers (timed online proctored sprint, 300 to 80); Stage 3 Quarter-Finals (5-hour online proctored contest, 80 to 40); Stage 4 Semi-Finals (hybrid sprint, 40 to 24); and Stage 5 National Finals (two 6-hour onsite contest days at the Ateneo CTC Build Lab, crowning the national delegations).",
+        q: "Are there other international opportunities if I make the National Training Pool but am not chosen for the final IOAI four-student team?",
+        a: "Yes. While securing gold at the IOAI remains the ultimate objective, IOAI Philippines extends accredited international opportunities to the broader National Training Pool. Members of the pool will be fielded to represent Team Philippines in other recognized continental, regional, and specialized tournaments, including the Northern Eurasia Olympiad in Artificial Intelligence (NEOAI), the Asia-Pacific Olympiad in Artificial Intelligence (APOAI), and other global fixtures requiring official national delegations.",
       },
       {
-        q: "Are returning 2026 international medalists exempt from early rounds?",
-        a: "Yes, under our additive direct-seeding policy (+N principle). Returning 2026 IOAI and APOAI medalists advance directly to Stage 5 (National Finals) without displacing any open qualifiers. Returning 2026 APOAI Honorable Mentions advance directly to Stage 4 (Semi-Finals). All direct seeds must be enrolled K-12 students for SY 2026–2027 and complete registration by January 10, 2027.",
+        q: "Are there any registration or participation fees?",
+        a: "No. Participation across all domestic selection stages organized by IOAI Philippines is entirely free of charge.",
       },
       {
-        q: "Are there any registration or examination fees?",
-        a: "No. Participation across every domestic round of the IOAI Philippines selection cycle is entirely free of charge.",
-      },
-      {
-        q: "Can I participate in IOAI alongside other International Science Olympiads?",
-        a: "Yes. Students are welcome to compete in informatics (NOI/IOI), mathematics (IMO), physics (IPhO), chemistry (IChO), linguistics (IOL), among others. Our master calendar deliberately incorporates blackout windows around major examination blocks and international fixtures.",
+        q: "Can I participate in both the IOAI and other International Science Olympiads (e.g., NOI/IOI, IMO, IPhO)?",
+        a: "Yes. IOAI Philippines permits and welcomes students to qualify across multiple international frameworks. Participants must independently verify schedule conflicts, rules, and eligibility regulations with the other respective organizing committees.",
       },
     ],
   },
   {
-    cat: "Competition Mechanics, Hardware, & Preparation",
+    cat: "Competition Mechanics & Preparation",
     items: [
       {
-        q: "What technical competencies are tested across the selection rounds?",
-        a: "Early rounds emphasize algorithmic logic, linear algebra, probability, and introductory machine learning. Advanced stages require implementing and evaluating deep neural networks, computer vision models, NLP architectures, audio processing pipelines, and AI ethics frameworks in Python.",
+        q: "What knowledge and technical skills are required to participate?",
+        a: "The foundational rounds prioritize logical reasoning, algorithmic thinking, and baseline technical literacy. Success in advanced selection stages requires familiarity with the official IOAI Syllabus, which covers core machine learning architectures, data processing frameworks, and evaluation metrics.",
       },
       {
         q: "Where can I find the official syllabus?",
         a: (
           <>
-            The topics align with the{" "}
+            The comprehensive scope of topics is delineated in the{" "}
             <a
               href="https://ioai-official.org/wp-content/uploads/2025/10/Syllabus.pdf"
               target="_blank"
@@ -98,25 +94,21 @@ const groups: Group[] = [
             >
               Official IOAI Syllabus
             </a>
-            , covering supervised/unsupervised machine learning, deep learning architectures, generative models, and evaluation methodologies.
+            .
           </>
         ),
       },
       {
-        q: "What hardware and connectivity do I need for the online stages?",
-        a: "Participants need a computer with reliable internet access and Python development tooling. Stages 2, 3, and 4 require a functional webcam, screen-sharing, and screen-recording setup for proctored validation.",
+        q: "What hardware or software configuration do I need for the online rounds?",
+        a: "Participants require a standard computational device with a reliable web browser and internet connectivity. Early rounds are optimized to allow asynchronous submission, accommodating potential local power, connectivity, or time-zone variations.",
       },
       {
-        q: "What is the hardware and BYOD policy for the onsite National Finals?",
-        a: "The National Finals are hosted at the Ateneo CTC Build Lab with dedicated, high-performance desktop workstations and idling hot-swap spares. Finalists may also opt to Bring Your Own Device (BYOD), subject to pre-contest environment inspection.",
+        q: "Who produces the competition problems?",
+        a: "National selection rounds leverage the official testing infrastructures and problem sets curated by the IOAI International Scientific Committee. The final Team Selection Bootcamp phase utilizes problems engineered by the Philippine Scientific Committee, which is composed of domestic industry experts and artificial intelligence researchers.",
       },
       {
-        q: "How does the contest appeals and grievance procedure work?",
-        a: "Contestants may submit written appeals regarding grading results, proctoring flags, or environment checks within 48 hours of official posting. Appeals are independently evaluated by the IOAIPH Scientific Committee and resolved within 3 business days.",
-      },
-      {
-        q: "Will participants receive performance certificates?",
-        a: "Yes. Verifiable digital certificates are awarded to all students who submit valid work in the qualification rounds, with tiered credentials awarded to Stage Qualifiers, Quarter-Finalists, Semi-Finalists, and National Finalists.",
+        q: "Will participants receive documentation of their performance?",
+        a: "Yes. Official Certificates of Participation are issued to all students who validly complete and submit responses during the qualification phases.",
       },
     ],
   },
@@ -124,14 +116,11 @@ const groups: Group[] = [
     cat: "Support, Sponsorship, & Media",
     items: [
       {
-        q: "How can corporate or institutional partners sponsor the 2027 season?",
+        q: "How can our organization sponsor the Philippine National Team?",
         a: (
           <>
-            Organizations can sponsor compute infrastructure, training boot camps, and delegate travel for Singapore and Russia. For partnership tiers and prospectus inquiries, visit our{" "}
-            <a href="/partnerships" className="text-primary underline underline-offset-4 hover:no-underline">
-              Partnerships page
-            </a>{" "}
-            or contact{" "}
+            Corporate entities, academic institutions, and individual patrons looking to provide financial or
+            infrastructural support can coordinate directly with leadership by emailing{" "}
             <a href="mailto:info@ioaiph.org" className="font-mono text-primary">
               info@ioaiph.org
             </a>
@@ -143,7 +132,7 @@ const groups: Group[] = [
         q: "Who should members of the press contact for media assets and interview requests?",
         a: (
           <>
-            Direct all press inquiries, high-resolution media requests, and interview coordination to{" "}
+            All media inquiries, press packet requests, and official interview coordination must be routed through{" "}
             <a href="mailto:press@ioaiph.org" className="font-mono text-primary">
               press@ioaiph.org
             </a>
@@ -152,10 +141,10 @@ const groups: Group[] = [
         ),
       },
       {
-        q: "Where can I ask a question not answered here?",
+        q: "I have an administrative query not addressed in this FAQ. Where do I send it?",
         a: (
           <>
-            Reach out to our secretariat directly at{" "}
+            For all general programmatic or operational questions, contact the secretariat at{" "}
             <a href="mailto:info@ioaiph.org" className="font-mono text-primary">
               info@ioaiph.org
             </a>
@@ -190,7 +179,7 @@ function highlight(text: string, query: string): React.ReactNode {
   );
 }
 
-function FAQ() {
+function FAQ2026() {
   const [open, setOpen] = useState<string | null>("0-0");
   const [query, setQuery] = useState("");
   const q = query.trim();
@@ -215,13 +204,14 @@ function FAQ() {
         <NeuralNetworkBg className="pointer-events-none absolute inset-0 h-full w-full opacity-30 [mask-image:radial-gradient(ellipse_at_center,black_0%,transparent_75%)]" />
         <div className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-primary/10 blur-[130px]" />
         <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-24">
-          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
-            // help.index · cycle_2027
-          </div>
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// faq.archive · cycle_2026</div>
           <h1 className="mt-3 max-w-3xl font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
             Frequently asked, clearly answered.
           </h1>
-          <p className="mt-6 font-mono text-xs text-muted-foreground">Updated 7 September 2026</p>
+          <p className="mt-4 max-w-2xl text-base text-muted-foreground">
+            Guidelines, rules, and questions specific to the concluded 2026 inaugural selection cycle and Astana delegation.
+          </p>
+          <p className="mt-4 font-mono text-xs text-muted-foreground">Archived · Concluded 2026 Season</p>
 
           <div className="relative mt-10 max-w-2xl">
             <div className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 font-mono text-xs text-primary">
@@ -310,3 +300,4 @@ function FAQ() {
     </>
   );
 }
+

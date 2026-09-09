@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
 import { ArrowUpRight, Lock } from "lucide-react";
 
-export const Route = createFileRoute("/_site/results")({
+export const Route = createFileRoute("/_site/2026/results")({
   head: () => ({
     meta: [
       { title: "Results — IOAI Philippines" },
@@ -20,8 +20,8 @@ type Resource = {
   code: string;
   title: string;
   subtitle: string;
-  href?: string;
-  kind: "sheet" | "doc" | "drive" | "pending";
+  href: string;
+  kind: "sheet" | "doc" | "drive";
   window?: string;
   featured?: boolean;
 };
@@ -36,87 +36,92 @@ type Competition = {
   href?: string;
 };
 
-// 2027 International & Regional Competitions (Locked until competition windows conclude)
+// Reverse chronological: Team Selection ← Finals ← Semis ← Round 1
+const selection: Resource[] = [
+  {
+    code: "R-01",
+    title: "Team Selection Grade Book",
+    subtitle:
+      "Composite grade book used to assemble the official Philippine delegation.",
+    href: "https://docs.google.com/spreadsheets/d/1xsZy_sfp_xIhAP_qdBCWHEZ44De5QChR4Xe_LUQSX08/edit?gid=0#gid=0",
+    kind: "sheet",
+    window: "Feb 22 – Apr 15, 2026",
+    featured: true,
+  },
+  {
+    code: "R-02",
+    title: "National Finals Results",
+    subtitle: "Final scores from the IOAI PH national finals.",
+    href: "https://bit.ly/ioaiph-finals-results",
+    kind: "sheet",
+    window: "Feb 16 – 21, 2026",
+    featured: true,
+  },
+  {
+    code: "R-03",
+    title: "Semi-Finals Results",
+    subtitle: "Scores and standings from the semi-final round.",
+    href: "https://bit.ly/ioaiph-semis-results",
+    kind: "sheet",
+    window: "Feb 14 – 15, 2026",
+  },
+  {
+    code: "R-04",
+    title: "Semi-Finals Qualifiers",
+    subtitle: "Roster of contestants invited to the national semi-finals.",
+    href: "https://bit.ly/ioaiph-semis",
+    kind: "sheet",
+    window: "Feb 14 – 15, 2026",
+  },
+  {
+    code: "R-05",
+    title: "Successful Round 1 Participants",
+    subtitle: "Contestants who advanced past the opening online round.",
+    href: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTGS-4r-EuryVT0-aoRbNhkdsmWN7T_JlIAmZeJ3-9UVchnT0hX5oSnWvKl2Qv20oU_sQcGOL1QN9gD/pubhtml",
+    kind: "sheet",
+    window: "Jan 31 – Feb 8, 2026",
+  },
+];
+
+const certificates: Resource = {
+  code: "C-00",
+  title: "Certificates",
+  subtitle:
+    "Downloadable certificates for students, teachers, coaches, and schools.",
+  href: "https://drive.google.com/drive/u/0/folders/1EXT7xkEyxnlSgNESNvF0JIjeT753SSuv",
+  kind: "drive",
+};
+
+// Reverse chronological: International → Regional → Sub-regional
 const competitions: Competition[] = [
   {
     code: "C-01",
     name: "IOAI",
     full: "International Olympiad in Artificial Intelligence",
     scope: "Global · final stage",
-    host: "Hosted by Singapore",
-    window: "Jul 4 – 10, 2027",
+    host: "Hosted by Kazakhstan",
+    window: "Jul 1 – Aug 8, 2026",
+    href: "https://www.ateneo.edu/news/2026/08/build-mentees-bag-silver-bronze-medals-intl-ai-olympiad-debut",
   },
   {
     code: "C-02",
     name: "APOAI",
     full: "Asia-Pacific Olympiad in Artificial Intelligence",
     scope: "Asia-Pacific regional",
+    host: "Hosted by China",
+    window: "Jun 13, 2026",
+    href: "https://www.ateneo.edu/news/2026/07/team-philippines-wins-gold-places-6th-overall-first-asia-pacific-ai-olympiad-led-build",
+  },
+  {
+    code: "C-03",
+    name: "NEOAI",
+    full: "Northern Eurasia Olympiad in Artificial Intelligence",
+    scope: "Northern Eurasia sub-regional",
     host: "Hosted by Russia",
-    window: "Apr – Jun 2027 (TBD)",
+    window: "May 3 – 4, 2026",
+    href: "https://www.ateneo.edu/news/2026/06/philippines-among-top-3-nations-ai-olympiad-hosted-ateneo-build",
   },
 ];
-
-// 2027 National Selection Pipeline Placeholders (Reverse chronological: Selection ← Finals ← Semis ← Quarters ← Qualifiers ← Eliminations)
-const selection: Resource[] = [
-  {
-    code: "R-01",
-    title: "Team Selection & Final Delegations",
-    subtitle:
-      "Official Philippine delegations for IOAI 2027 Singapore and APOAI 2027 Russia.",
-    kind: "pending",
-    window: "Apr 10 – 11, 2027",
-    featured: true,
-  },
-  {
-    code: "R-02",
-    title: "Stage 5: National Finals Results",
-    subtitle:
-      "Aggregate task scores from the two-day onsite finals at the Ateneo CTC Build Lab.",
-    kind: "pending",
-    window: "Apr 10 – 11, 2027",
-    featured: true,
-  },
-  {
-    code: "R-03",
-    title: "Stage 4: Semi-Finals Qualifiers & Standings",
-    subtitle:
-      "Standings from the hybrid sprint; top 24 qualifiers advancing to the National Finals.",
-    kind: "pending",
-    window: "Mar 20, 2027",
-  },
-  {
-    code: "R-04",
-    title: "Stage 3: Quarter-Finals Results",
-    subtitle:
-      "Scores from the online proctored round; top 40 advancing to the Semi-Finals.",
-    kind: "pending",
-    window: "Mar 6, 2027",
-  },
-  {
-    code: "R-05",
-    title: "Stage 2: Qualifiers Results",
-    subtitle:
-      "Results from the timed proctored sprint; top 80 advancing to the Quarter-Finals.",
-    kind: "pending",
-    window: "Feb 13, 2027",
-  },
-  {
-    code: "R-06",
-    title: "Stage 1: Eliminations Results",
-    subtitle:
-      "Contestants advancing past the nationwide seven-day asynchronous round (Top 300).",
-    kind: "pending",
-    window: "Jan 11 – 17, 2027",
-  },
-];
-
-const certificates = {
-  code: "C-00",
-  title: "Certificates (Cycle 2027)",
-  subtitle:
-    "Official downloadable certificates for contestants, coaches, and partner institutions will be published here following the completion of each selection stage.",
-  status: "Locked · Available post-contest",
-};
 
 function Results() {
   return (
@@ -127,7 +132,7 @@ function Results() {
         <div className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-primary/10 blur-[130px]" />
         <div className="relative mx-auto max-w-7xl px-6 pb-14 pt-20">
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
-            // results.index · cycle_2027
+            // results.index · cycle_2026
           </div>
           <h1 className="mt-3 font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
             Results &amp; records
@@ -139,7 +144,7 @@ function Results() {
         </div>
       </section>
 
-      {/* SECTION 1: COMPETITION RESULTS (LOCKED) */}
+      {/* COMPETITION BANNERS */}
       <section className="mx-auto max-w-7xl px-6 py-14">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
@@ -150,12 +155,12 @@ function Results() {
               Competition results
             </h2>
             <p className="mt-2 max-w-xl text-sm text-muted-foreground">
-              International and regional standings will be unlocked and posted
+              International, regional, and sub-regional standings will land
               here as each competition concludes.
             </p>
           </div>
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-            international → regional
+            international → sub-regional
           </div>
         </div>
 
@@ -166,7 +171,7 @@ function Results() {
         </div>
       </section>
 
-      {/* SECTION 2: NATIONAL SELECTION CYCLE (PLACEHOLDERS) */}
+      {/* NATIONAL SELECTION CYCLE */}
       <section className="mx-auto max-w-7xl px-6 py-14">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
@@ -176,13 +181,9 @@ function Results() {
             <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight md:text-4xl">
               National selection cycle
             </h2>
-            <p className="mt-2 max-w-xl text-sm text-muted-foreground">
-              Official grade books and qualifying rosters will be published
-              sequentially throughout the 2027 campaign.
-            </p>
           </div>
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-            team selection ← eliminations
+            team selection → round 1
           </div>
         </div>
 
@@ -193,7 +194,7 @@ function Results() {
         </div>
       </section>
 
-      {/* SECTION 3: CERTIFICATES (PLACEHOLDER) */}
+      {/* CERTIFICATES */}
       <section className="mx-auto max-w-7xl px-6 py-14">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
@@ -206,11 +207,16 @@ function Results() {
           </div>
         </div>
 
-        <div className="mt-8 block overflow-hidden rounded-sm border border-border bg-surface">
+        <a
+          href={certificates.href}
+          target="_blank"
+          rel="noreferrer"
+          className="group mt-8 block overflow-hidden rounded-sm border border-border bg-surface transition-colors hover:border-primary/50"
+        >
           <div className="grid items-stretch md:grid-cols-[1fr_auto]">
             <div className="p-8">
-              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                {certificates.code} · credentials
+              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+                {certificates.code} · google drive
               </div>
               <h3 className="mt-3 font-display text-2xl font-semibold md:text-3xl">
                 {certificates.title}
@@ -230,13 +236,13 @@ function Results() {
               </div>
             </div>
             <div className="flex items-center justify-center border-t border-border bg-background/40 px-8 py-6 md:border-l md:border-t-0">
-              <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                <Lock className="size-4" />
-                {certificates.status}
+              <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-primary">
+                Open folder
+                <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </div>
             </div>
           </div>
-        </div>
+        </a>
       </section>
     </>
   );
@@ -280,11 +286,9 @@ function CompetitionBanner({
           {c.scope} · {c.host}
         </div>
       </div>
-      <div
-        className={`flex items-center gap-2 self-start rounded-sm border border-border px-3 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground md:self-center transition-colors ${
-          isLink ? "group-hover:text-primary group-hover:border-primary/40" : ""
-        }`}
-      >
+      <div className={`flex items-center gap-2 self-start rounded-sm border border-border px-3 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground md:self-center transition-colors ${
+        isLink ? "group-hover:text-primary group-hover:border-primary/40" : ""
+      }`}>
         {isLink ? (
           <ArrowUpRight className="size-3 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
         ) : (
@@ -301,28 +305,23 @@ function ResourceCard({ r }: { r: Resource }) {
     drive: "google drive",
     doc: "google doc",
     sheet: "google sheet",
-    pending: "locked",
   };
   const kindLabel = KIND_LABELS[r.kind];
-  const isLink = !!r.href;
-  const Tag = isLink ? "a" : "div";
 
   return (
-    <Tag
-      {...(isLink ? { href: r.href, target: "_blank", rel: "noreferrer" } : {})}
-      className={`group relative flex flex-col gap-5 bg-surface p-6 transition-colors ${
-        isLink ? "hover:bg-muted/50 cursor-pointer" : "opacity-85"
-      } ${r.featured ? "ring-1 ring-inset ring-primary/40" : ""}`}
+    <a
+      href={r.href}
+      target="_blank"
+      rel="noreferrer"
+      className={`group relative flex flex-col gap-5 bg-surface p-6 transition-colors hover:bg-muted/50 ${
+        r.featured ? "ring-1 ring-inset ring-primary/40" : ""
+      }`}
     >
       <div className="flex items-center justify-between">
-        <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+        <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
           {r.code} · {kindLabel}
         </div>
-        {isLink ? (
-          <ArrowUpRight className="size-4 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
-        ) : (
-          <Lock className="size-3.5 text-muted-foreground" />
-        )}
+        <ArrowUpRight className="size-4 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
       </div>
       <div>
         <h3 className="font-display text-xl font-semibold leading-tight">
@@ -338,9 +337,9 @@ function ResourceCard({ r }: { r: Resource }) {
 
       {r.featured && (
         <div className="mt-auto inline-flex w-fit items-center gap-1.5 rounded-sm border border-primary/40 bg-primary/5 px-2 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
-          ● Target Milestone
+          ● Featured
         </div>
       )}
-    </Tag>
+    </a>
   );
 }

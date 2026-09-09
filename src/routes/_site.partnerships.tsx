@@ -47,7 +47,7 @@ const premierTiers: CorporateTier[] = [
     scope: "Full domestic operational underwriting, compute platform scale, and multi-year emergency travel reserves.",
     deliverables: [
       '"IOAI Philippines presented by [Sponsor]" title rights',
-      "Primary chest logo on all official international delegation uniforms",
+      "Primary chest logo on official international delegation team shirts",
       "VIP press seats and board-level briefing access",
     ],
   },
@@ -90,7 +90,7 @@ const coreTiers: CorporateTier[] = [
     colorLight: "#4B5563",
     scope: "Official national team apparel, travel insurance policies, and Visayas/Mindanao regional selection roadshows.",
     deliverables: [
-      "Logo placement on official international team jackets",
+      "Logo placement on official international team shirts",
       "Logo on printed event collateral",
       "Priority access to finalist resume books",
     ],
@@ -143,9 +143,9 @@ function Partnerships() {
   return (
     <>
       {/* HERO */}
-      <section className="relative border-b border-border/60">
-        <NeuralNetworkBg className="absolute inset-0 h-full w-full [mask-image:radial-gradient(ellipse_at_center,black_0%,transparent_75%)]" />
-        <div className="absolute left-1/2 top-0 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-primary/15 blur-[140px]" />
+      <section className="relative overflow-hidden border-b border-border/60 bg-background">
+        <NeuralNetworkBg className="pointer-events-none absolute inset-0 h-full w-full opacity-30 [mask-image:radial-gradient(ellipse_at_center,black_0%,transparent_75%)]" />
+        <div className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-primary/10 blur-[130px]" />
         <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-24">
           <div className="inline-flex items-center gap-2 rounded-sm border border-primary/30 bg-primary/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
