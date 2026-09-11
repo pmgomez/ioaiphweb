@@ -107,10 +107,14 @@
   --steel: oklch(0.7 0.02 250);
 }
 
-
 @layer base {
-  * { border-color: var(--color-border); }
-  html { scroll-behavior: smooth; }
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+  }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -118,8 +122,18 @@
     font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
-  .font-mono, code, kbd { font-family: var(--font-mono); }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+  .font-mono,
+  code,
+  kbd {
+    font-family: var(--font-mono);
+  }
 }
 
 @layer utilities {
@@ -133,31 +147,42 @@
     mask-image: radial-gradient(ellipse at center, black 0%, transparent 75%);
   }
   .text-gradient {
-    background: linear-gradient(135deg, oklch(0.25 0.05 255), oklch(0.55 0.18 230));
+    background: linear-gradient(135deg, #000033 0%, #0000d1 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
   :where(.dark) .text-gradient {
-    background: linear-gradient(135deg, oklch(0.97 0.005 250), oklch(0.82 0.18 195));
+    background: linear-gradient(135deg, #f0f9ff 0%, #38bdf8 55%, #60a5fa 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
   .glow-primary {
-    box-shadow: 0 0 0 1px color-mix(in oklab, var(--color-primary) 30%, transparent),
-                0 0 40px -8px color-mix(in oklab, var(--color-primary) 60%, transparent);
+    box-shadow:
+      0 0 0 1px color-mix(in oklab, var(--color-primary) 30%, transparent),
+      0 0 40px -8px color-mix(in oklab, var(--color-primary) 60%, transparent);
   }
   .scanline::after {
     content: "";
-    position: absolute; inset: 0;
-    background: repeating-linear-gradient(0deg, transparent 0, transparent 2px, color-mix(in oklab, var(--color-primary) 4%, transparent) 2px, color-mix(in oklab, var(--color-primary) 4%, transparent) 3px);
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 2px,
+      color-mix(in oklab, var(--color-primary) 4%, transparent) 2px,
+      color-mix(in oklab, var(--color-primary) 4%, transparent) 3px
+    );
     pointer-events: none;
   }
 }
 
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
-

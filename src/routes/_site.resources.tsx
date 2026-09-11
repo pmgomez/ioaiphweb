@@ -39,8 +39,16 @@ const ioaiPhSections = [
   {
     tag: "03 / Documents",
     title: "Official Documents",
-    desc: "DepEd advisories and accreditation announcements for the Philippine delegation.",
+    desc: "National reports, DepEd advisories, and accreditation announcements for the Philippine delegation.",
     links: [
+      {
+        label: "2027 National Selection & Campaign Roadmap",
+        href: "/selection-2027",
+      },
+      {
+        label: "2026 Performance Report & FY 2027 Policy Roadmap (PDF)",
+        href: "https://drive.google.com/file/d/17A4lrbMgY4y4jXcQ0atATUSjwEQ6rH0W/view?usp=drive_link",
+      },
       {
         label: "DepEd Advisory No. 024, s. 2026",
         href: "https://www.deped.gov.ph/2026/01/22/january-22-2026-advisory-no-024-s-2026-international-olympiad-in-artificial-intelligence-philippines-national-c",
@@ -72,7 +80,10 @@ const sections = [
     title: "Math & Probability",
     desc: "Linear algebra, calculus, probability, and statistics — the bedrock of every IOAI round.",
     links: [
-      { label: "3Blue1Brown — Essence of Linear Algebra", href: "https://www.3blue1brown.com/topics/linear-algebra" },
+      {
+        label: "3Blue1Brown — Essence of Linear Algebra",
+        href: "https://www.3blue1brown.com/topics/linear-algebra",
+      },
       {
         label: "MIT 18.06 — Linear Algebra (OCW)",
         href: "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/",
@@ -89,7 +100,10 @@ const sections = [
         label: "Andrew Ng — Machine Learning Specialization",
         href: "https://www.coursera.org/specializations/machine-learning-introduction",
       },
-      { label: "scikit-learn — User Guide", href: "https://scikit-learn.org/stable/user_guide.html" },
+      {
+        label: "scikit-learn — User Guide",
+        href: "https://scikit-learn.org/stable/user_guide.html",
+      },
       { label: "StatQuest — ML Playlist", href: "https://www.youtube.com/@statquest" },
     ],
   },
@@ -98,7 +112,10 @@ const sections = [
     title: "Neural Networks & Transformers",
     desc: "From backprop to modern transformer architectures and training dynamics.",
     links: [
-      { label: "Karpathy — Neural Networks: Zero to Hero", href: "https://karpathy.ai/zero-to-hero.html" },
+      {
+        label: "Karpathy — Neural Networks: Zero to Hero",
+        href: "https://karpathy.ai/zero-to-hero.html",
+      },
       { label: "fast.ai — Practical Deep Learning", href: "https://course.fast.ai/" },
       { label: "Dive into Deep Learning (d2l.ai)", href: "https://d2l.ai/" },
     ],
@@ -109,8 +126,14 @@ const sections = [
     desc: "Tokenization, embeddings, attention, and vision pipelines from CNNs to ViTs.",
     links: [
       { label: "Hugging Face — NLP Course", href: "https://huggingface.co/learn/nlp-course" },
-      { label: "Stanford CS231n — CNNs for Visual Recognition", href: "https://cs231n.stanford.edu/" },
-      { label: "Stanford CS224n — NLP with Deep Learning", href: "https://web.stanford.edu/class/cs224n/" },
+      {
+        label: "Stanford CS231n — CNNs for Visual Recognition",
+        href: "https://cs231n.stanford.edu/",
+      },
+      {
+        label: "Stanford CS224n — NLP with Deep Learning",
+        href: "https://web.stanford.edu/class/cs224n/",
+      },
     ],
   },
   {
@@ -142,23 +165,57 @@ const sections = [
 function ResourcesPage() {
   return (
     <section className="relative mx-auto max-w-7xl px-6 pb-28 pt-32">
-      <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// training.index</div>
+      <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+        // training.index
+      </div>
       <h1 className="mt-3 max-w-3xl font-display text-4xl font-semibold tracking-tight md:text-6xl">
         Resources for the road to Astana.
       </h1>
       <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-        A living list of curated study material — the same references our mentors point trainees to throughout the IOAI
-        Philippines cycle. Free, public, and aligned with the official IOAI syllabus.
+        A living list of curated study material — the same references our mentors point trainees to
+        throughout the IOAI Philippines cycle. Free, public, and aligned with the official IOAI
+        syllabus.
       </p>
 
-      <div className="mt-16 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// ioai.ph</div>
+      {/* FEATURED REPORT CARD */}
+      <div className="mt-12 overflow-hidden rounded-sm border border-border/80 bg-surface p-6 sm:p-8 md:flex md:items-center md:justify-between gap-6">
+        <div>
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+            // institutional.publication
+          </div>
+          <h2 className="mt-2 font-display text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
+            2026 Performance Report & FY 2027 Policy Roadmap
+          </h2>
+          <p className="mt-2 max-w-2xl text-sm text-muted-foreground leading-relaxed">
+            A comprehensive institutional brief detailing national talent screening, the 2026
+            Kazakhstan delegation performance, curriculum frameworks, and strategic policy
+            recommendations for Philippine AI education.
+          </p>
+        </div>
+        <div className="mt-6 shrink-0 md:mt-0">
+          <a
+            href="https://drive.google.com/file/d/17A4lrbMgY4y4jXcQ0atATUSjwEQ6rH0W/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-sm bg-primary px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-primary-foreground shadow-sm hover:opacity-90 transition-all text-center"
+          >
+            Read Report (PDF) →
+          </a>
+        </div>
+      </div>
+
+      <div className="mt-16 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+        // ioai.ph
+      </div>
       <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight md:text-4xl">
         IOAI Philippines Resources
       </h2>
       <div className="mt-8 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
         {ioaiPhSections.map((s) => (
           <article key={s.title} className="flex flex-col bg-surface p-8">
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">{s.tag}</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+              {s.tag}
+            </div>
             <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight">{s.title}</h3>
             <p className="mt-3 text-sm text-muted-foreground">{s.desc}</p>
             <ul className="mt-6 space-y-2 border-t border-border/60 pt-4">
@@ -182,14 +239,18 @@ function ResourcesPage() {
         ))}
       </div>
 
-      <div className="mt-20 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// study.tracks</div>
+      <div className="mt-20 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+        // study.tracks
+      </div>
       <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight md:text-4xl">
         Study Resources
       </h2>
       <div className="mt-8 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
         {sections.map((s) => (
           <article key={s.title} className="flex flex-col bg-surface p-8">
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">{s.tag}</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+              {s.tag}
+            </div>
             <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight">{s.title}</h3>
             <p className="mt-3 text-sm text-muted-foreground">{s.desc}</p>
             <ul className="mt-6 space-y-2 border-t border-border/60 pt-4">
@@ -213,9 +274,10 @@ function ResourcesPage() {
         ))}
       </div>
 
-
       <div className="mt-16 rounded-sm border border-primary/30 bg-gradient-to-br from-surface to-background p-10">
-        <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// contribute</div>
+        <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+          // contribute
+        </div>
         <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight md:text-3xl">
           Have a resource to suggest?
         </h2>

@@ -122,9 +122,20 @@ function Home() {
         <NeuralNetworkBg className="pointer-events-none absolute inset-0 h-full w-full opacity-30 [mask-image:radial-gradient(ellipse_at_center,black_0%,transparent_75%)]" />
         <div className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-primary/10 blur-[130px]" />
         <div className="relative mx-auto max-w-7xl px-6 pb-32 pt-24">
-          <div className="inline-flex items-center gap-2 rounded-sm border border-primary/30 bg-primary/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
-            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
-            IOAI 2026 · Astana, Kazakhstan · Aug 02–08
+          <div className="flex flex-wrap items-center gap-3">
+            <div className="inline-flex items-center gap-2 rounded-sm border border-primary/30 bg-primary/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
+              IOAI 2026 · Astana, Kazakhstan · Aug 02–08
+            </div>
+            <a
+              href="https://drive.google.com/file/d/17A4lrbMgY4y4jXcQ0atATUSjwEQ6rH0W/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-sm border border-primary/40 bg-primary/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-primary transition-colors hover:bg-primary/20"
+            >
+              <span>2026 Report & Policy Roadmap (PDF)</span>
+              <span>↗</span>
+            </a>
           </div>
           <h1 className="mt-6 max-w-4xl font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
             <span className="text-gradient">Filipino intelligence</span>
@@ -132,14 +143,22 @@ function Home() {
             on the world stage of AI.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            IOAI Philippines is the national selection and training program sending Team PH to the International
-            Olympiad in Artificial Intelligence. We identify, train and field the country's strongest young AI talent —
-            at zero cost to students.
+            IOAI Philippines is the national selection and training program sending Team PH to the
+            International Olympiad in Artificial Intelligence. We identify, train and field the
+            country's strongest young AI talent — at zero cost to students.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
+            <a
+              href="https://drive.google.com/file/d/17A4lrbMgY4y4jXcQ0atATUSjwEQ6rH0W/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-sm bg-primary px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-primary-foreground shadow-sm transition-all hover:opacity-90"
+            >
+              Read 2026 Report (PDF) →
+            </a>
             <Link
               to="/about"
-              className="rounded-sm bg-primary px-5 py-3 font-mono text-xs uppercase tracking-wider text-primary-foreground transition-all hover:opacity-90"
+              className="rounded-sm border border-border bg-surface px-5 py-3 font-mono text-xs uppercase tracking-wider transition-all hover:border-primary/40"
             >
               Meet the Program →
             </Link>
@@ -154,8 +173,12 @@ function Home() {
           <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-4 lg:grid-cols-7">
             {stats.map((s) => (
               <div key={s.l} className="bg-surface p-6">
-                <div className="font-display text-3xl font-semibold text-primary md:text-4xl">{s.k}</div>
-                <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">{s.l}</div>
+                <div className="font-display text-3xl font-semibold text-primary md:text-4xl">
+                  {s.k}
+                </div>
+                <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                  {s.l}
+                </div>
               </div>
             ))}
           </div>
@@ -166,7 +189,9 @@ function Home() {
       <section className="relative mx-auto max-w-7xl px-6 py-28">
         <div className="flex items-end justify-between gap-6">
           <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// road_to_astana.log</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+              // road_to_astana.log
+            </div>
             <h2 className="mt-3 max-w-2xl font-display text-4xl font-semibold tracking-tight md:text-5xl">
               The 2026 cycle, from national qualifiers to the world stage.
             </h2>
@@ -187,11 +212,15 @@ function Home() {
                       className={`h-3 w-3 rounded-full ${t.status === "active" ? "bg-primary glow-primary animate-pulse" : t.status === "complete" ? "bg-primary" : "border border-border bg-background"}`}
                     />
                   </div>
-                  <div className={`pl-10 md:pl-0 ${right ? "md:col-start-2" : "md:text-right md:pr-12"}`}>
+                  <div
+                    className={`pl-10 md:pl-0 ${right ? "md:col-start-2" : "md:text-right md:pr-12"}`}
+                  >
                     <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
                       {t.date} · {t.phase}
                     </div>
-                    <h3 className="mt-2 font-display text-2xl font-semibold tracking-tight">{t.title}</h3>
+                    <h3 className="mt-2 font-display text-2xl font-semibold tracking-tight">
+                      {t.title}
+                    </h3>
                     <p className="mt-2 text-sm text-muted-foreground">{t.desc}</p>
                   </div>
                 </li>
@@ -204,7 +233,9 @@ function Home() {
       {/* PILLARS */}
       <section className="border-t border-border/60 bg-surface/30">
         <div className="mx-auto max-w-7xl px-6 py-28">
-          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// system.architecture</div>
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+            // system.architecture
+          </div>
           <h2 className="mt-3 max-w-2xl font-display text-4xl font-semibold tracking-tight md:text-5xl">
             An infrastructure for national AI talent.
           </h2>
@@ -244,12 +275,15 @@ function Home() {
         <div className="relative overflow-hidden rounded-sm border border-primary/30 bg-gradient-to-br from-surface to-background p-12 md:p-16">
           <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
           <div className="relative">
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// 2027_cycle.init</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+              // 2027_cycle.init
+            </div>
             <h2 className="mt-3 max-w-2xl font-display text-4xl font-semibold tracking-tight md:text-5xl">
               Applications for the 2027 cycle open this November.
             </h2>
             <p className="mt-4 max-w-xl text-muted-foreground">
-              Be the first to know when the qualifier opens. Follow us on Facebook and join our Discord.
+              Be the first to know when the qualifier opens. Follow us on Facebook and join our
+              Discord.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
@@ -287,7 +321,9 @@ const recognizedBy: Recognition[] = [
   { name: "DOST-SEI", label: "Science Education Institute", src: dostSeiLogo },
 ];
 
-const goldPartners: Partner[] = [{ name: "Joy-Nostalg Group", src: joyNostalgLogo, href: "https://joy-nostalg.com/" }];
+const goldPartners: Partner[] = [
+  { name: "Joy-Nostalg Group", src: joyNostalgLogo, href: "https://joy-nostalg.com/" },
+];
 
 const silverPartners: Partner[] = [{ name: "The Desuasido Family", src: "" }];
 
@@ -409,7 +445,9 @@ function PartnersSection() {
       <div className="mx-auto max-w-7xl px-6 py-28">
         <div className="flex items-end justify-between gap-6">
           <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// coalition.manifest</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+              // coalition.manifest
+            </div>
             <h2 className="mt-3 max-w-2xl font-display text-4xl font-semibold tracking-tight md:text-5xl">
               Backed by a national coalition.
             </h2>
@@ -425,7 +463,9 @@ function PartnersSection() {
         {/* ROW 0: HOST + RECOGNITION */}
         <div className="mt-16 grid gap-6 md:grid-cols-2">
           <div>
-            <TierLabel accent="bg-primary shadow-[0_0_10px_1px] shadow-primary/60">Hosted by</TierLabel>
+            <TierLabel accent="bg-primary shadow-[0_0_10px_1px] shadow-primary/60">
+              Hosted by
+            </TierLabel>
             <div className="mt-6 flex h-56 items-center justify-center rounded-sm border border-primary/30 bg-transparent px-6">
               <img
                 src={ateneoBuildLogo}
@@ -436,19 +476,31 @@ function PartnersSection() {
             </div>
           </div>
           <div>
-            <TierLabel accent="bg-primary shadow-[0_0_10px_1px] shadow-primary/60">Recognized by</TierLabel>
+            <TierLabel accent="bg-primary shadow-[0_0_10px_1px] shadow-primary/60">
+              Recognized by
+            </TierLabel>
             <div className="mt-6 grid h-auto min-h-56 sm:h-56 grid-cols-2 sm:grid-cols-4 items-center gap-3 rounded-sm border border-primary/30 bg-transparent p-4">
               {recognizedBy.map((o) => (
-                <div key={o.name} className="flex flex-col items-center justify-center gap-2 text-center">
+                <div
+                  key={o.name}
+                  className="flex flex-col items-center justify-center gap-2 text-center"
+                >
                   {o.src ? (
-                    <img src={o.src} alt={`${o.name} logo`} loading="lazy" className="h-14 w-auto max-w-full object-contain" />
+                    <img
+                      src={o.src}
+                      alt={`${o.name} logo`}
+                      loading="lazy"
+                      className="h-14 w-auto max-w-full object-contain"
+                    />
                   ) : (
                     <div className="flex h-14 w-14 items-center justify-center rounded-full border border-dashed border-primary/40 bg-primary/5 font-mono text-xs font-semibold text-primary">
                       {o.name}
                     </div>
                   )}
                   <div>
-                    <div className="font-display text-xs sm:text-sm font-semibold tracking-tight">{o.name}</div>
+                    <div className="font-display text-xs sm:text-sm font-semibold tracking-tight">
+                      {o.name}
+                    </div>
                     <div className="font-mono text-[8px] sm:text-[9px] uppercase tracking-[0.15em] text-muted-foreground line-clamp-2">
                       {o.label}
                     </div>
@@ -462,7 +514,9 @@ function PartnersSection() {
         {/* ROW 1: GOLD (widest) + SILVER + BRONZE + STEEL */}
         <div className="mt-16 grid gap-6 md:grid-cols-12">
           <div className="md:col-span-4">
-            <TierLabel accent="bg-gold shadow-[0_0_12px_2px] shadow-gold/60">Gold Partners</TierLabel>
+            <TierLabel accent="bg-gold shadow-[0_0_12px_2px] shadow-gold/60">
+              Gold Partners
+            </TierLabel>
             <div className="mt-6 overflow-hidden rounded-sm border border-gold/30 bg-transparent">
               {goldPartners.map((p) => (
                 <PartnerBox key={p.name} p={p} imgClass="h-[85%]" />
@@ -470,17 +524,24 @@ function PartnersSection() {
             </div>
           </div>
           <div className="md:col-span-3">
-            <TierLabel accent="bg-silver shadow-[0_0_10px_1px] shadow-silver/60">Silver Partners</TierLabel>
+            <TierLabel accent="bg-silver shadow-[0_0_10px_1px] shadow-silver/60">
+              Silver Partners
+            </TierLabel>
             <div className="mt-6 overflow-hidden rounded-sm border border-silver/30 bg-transparent">
               {silverPartners.map((p) => (
-                <div key={p.name} className="flex h-72 items-center justify-center px-4 text-center">
+                <div
+                  key={p.name}
+                  className="flex h-72 items-center justify-center px-4 text-center"
+                >
                   <span className="font-display text-lg font-semibold text-silver">{p.name}</span>
                 </div>
               ))}
             </div>
           </div>
           <div className="md:col-span-3">
-            <TierLabel accent="bg-bronze shadow-[0_0_10px_1px] shadow-bronze/60">Bronze Partners</TierLabel>
+            <TierLabel accent="bg-bronze shadow-[0_0_10px_1px] shadow-bronze/60">
+              Bronze Partners
+            </TierLabel>
             <div className="mt-6 overflow-hidden rounded-sm border border-bronze/30 bg-transparent">
               {bronzePartners.map((p) => (
                 <PartnerBox key={p.name} p={p} imgClass="h-[65%]" />
@@ -488,10 +549,15 @@ function PartnersSection() {
             </div>
           </div>
           <div className="md:col-span-2">
-            <TierLabel accent="bg-steel shadow-[0_0_10px_1px] shadow-steel/60">Steel Partners</TierLabel>
+            <TierLabel accent="bg-steel shadow-[0_0_10px_1px] shadow-steel/60">
+              Steel Partners
+            </TierLabel>
             <div className="mt-6 overflow-hidden rounded-sm border border-steel/30 bg-transparent">
               {steelPartners.map((p) => (
-                <div key={p.name} className="flex h-72 items-center justify-center px-4 text-center">
+                <div
+                  key={p.name}
+                  className="flex h-72 items-center justify-center px-4 text-center"
+                >
                   <span className="font-display text-lg font-semibold text-steel">{p.name}</span>
                 </div>
               ))}
@@ -501,7 +567,9 @@ function PartnersSection() {
 
         {/* ROW 2: FEATURED (AAP + Dashlabs) */}
         <div className="mt-12">
-          <TierLabel accent="bg-primary shadow-[0_0_10px_1px] shadow-primary/60">Featured Community Partners</TierLabel>
+          <TierLabel accent="bg-primary shadow-[0_0_10px_1px] shadow-primary/60">
+            Featured Community Partners
+          </TierLabel>
           <div className="mt-6 grid gap-6 md:grid-cols-2">
             {featuredPartners.map((p) => (
               <div key={p.name} className="flex items-center justify-center bg-transparent py-10">
@@ -516,10 +584,15 @@ function PartnersSection() {
           <TierLabel accent="bg-primary/60">Community Partners</TierLabel>
           <div className="mt-6 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {communityPartners.map((p) => (
-              <div key={p.name} className="flex flex-col items-center justify-start gap-2 bg-transparent py-8">
+              <div
+                key={p.name}
+                className="flex flex-col items-center justify-start gap-2 bg-transparent py-8"
+              >
                 <LogoTile p={p} size="lg" />
                 <div className="font-display text-sm font-semibold tracking-tight">{p.name}</div>
-                {p.subtitle && <p className="px-2 text-center text-xs text-muted-foreground">{p.subtitle}</p>}
+                {p.subtitle && (
+                  <p className="px-2 text-center text-xs text-muted-foreground">{p.subtitle}</p>
+                )}
               </div>
             ))}
           </div>

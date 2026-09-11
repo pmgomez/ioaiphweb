@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SiteRouteImport } from './routes/_site'
 import { Route as SiteIndexRouteImport } from './routes/_site.index'
 import { Route as SiteTeamRouteImport } from './routes/_site.team'
+import { Route as SiteSelection2027RouteImport } from './routes/_site.selection-2027'
 import { Route as SiteResultsRouteImport } from './routes/_site.results'
 import { Route as SiteResourcesRouteImport } from './routes/_site.resources'
 import { Route as SitePressRouteImport } from './routes/_site.press'
@@ -35,6 +36,11 @@ const SiteIndexRoute = SiteIndexRouteImport.update({
 const SiteTeamRoute = SiteTeamRouteImport.update({
   id: '/team',
   path: '/team',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteSelection2027Route = SiteSelection2027RouteImport.update({
+  id: '/selection-2027',
+  path: '/selection-2027',
   getParentRoute: () => SiteRoute,
 } as any)
 const SiteResultsRoute = SiteResultsRouteImport.update({
@@ -96,6 +102,7 @@ export interface FileRoutesByFullPath {
   '/press': typeof SitePressRoute
   '/resources': typeof SiteResourcesRoute
   '/results': typeof SiteResultsRoute
+  '/selection-2027': typeof SiteSelection2027Route
   '/team': typeof SiteTeamRoute
   '/2026/faq': typeof Site2026FaqRoute
   '/2026/results': typeof Site2026ResultsRoute
@@ -109,6 +116,7 @@ export interface FileRoutesByTo {
   '/press': typeof SitePressRoute
   '/resources': typeof SiteResourcesRoute
   '/results': typeof SiteResultsRoute
+  '/selection-2027': typeof SiteSelection2027Route
   '/team': typeof SiteTeamRoute
   '/': typeof SiteIndexRoute
   '/2026/faq': typeof Site2026FaqRoute
@@ -125,6 +133,7 @@ export interface FileRoutesById {
   '/_site/press': typeof SitePressRoute
   '/_site/resources': typeof SiteResourcesRoute
   '/_site/results': typeof SiteResultsRoute
+  '/_site/selection-2027': typeof SiteSelection2027Route
   '/_site/team': typeof SiteTeamRoute
   '/_site/': typeof SiteIndexRoute
   '/_site/2026/faq': typeof Site2026FaqRoute
@@ -142,6 +151,7 @@ export interface FileRouteTypes {
     | '/press'
     | '/resources'
     | '/results'
+    | '/selection-2027'
     | '/team'
     | '/2026/faq'
     | '/2026/results'
@@ -155,6 +165,7 @@ export interface FileRouteTypes {
     | '/press'
     | '/resources'
     | '/results'
+    | '/selection-2027'
     | '/team'
     | '/'
     | '/2026/faq'
@@ -170,6 +181,7 @@ export interface FileRouteTypes {
     | '/_site/press'
     | '/_site/resources'
     | '/_site/results'
+    | '/_site/selection-2027'
     | '/_site/team'
     | '/_site/'
     | '/_site/2026/faq'
@@ -203,6 +215,13 @@ declare module '@tanstack/react-router' {
       path: '/team'
       fullPath: '/team'
       preLoaderRoute: typeof SiteTeamRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/selection-2027': {
+      id: '/_site/selection-2027'
+      path: '/selection-2027'
+      fullPath: '/selection-2027'
+      preLoaderRoute: typeof SiteSelection2027RouteImport
       parentRoute: typeof SiteRoute
     }
     '/_site/results': {
@@ -285,6 +304,7 @@ interface SiteRouteChildren {
   SitePressRoute: typeof SitePressRoute
   SiteResourcesRoute: typeof SiteResourcesRoute
   SiteResultsRoute: typeof SiteResultsRoute
+  SiteSelection2027Route: typeof SiteSelection2027Route
   SiteTeamRoute: typeof SiteTeamRoute
   SiteIndexRoute: typeof SiteIndexRoute
   Site2026FaqRoute: typeof Site2026FaqRoute
@@ -300,6 +320,7 @@ const SiteRouteChildren: SiteRouteChildren = {
   SitePressRoute: SitePressRoute,
   SiteResourcesRoute: SiteResourcesRoute,
   SiteResultsRoute: SiteResultsRoute,
+  SiteSelection2027Route: SiteSelection2027Route,
   SiteTeamRoute: SiteTeamRoute,
   SiteIndexRoute: SiteIndexRoute,
   Site2026FaqRoute: Site2026FaqRoute,
