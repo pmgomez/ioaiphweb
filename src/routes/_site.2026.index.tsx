@@ -18,6 +18,7 @@ import mapuaShsSciClubLogo from "@/assets/partners/mapuashssciclub.png";
 import tomorrowLogo from "@/assets/partners/tomorrow.png";
 import tomorrowLogoLight from "@/assets/partners/tomorrow-light.png";
 import dashlabsLogo from "@/assets/dashlabs-logo.png";
+import ioaiAccreditation from "@/assets/ioai-accreditation.png";
 
 export const Route = createFileRoute("/_site/2026/")({
   head: () => ({
@@ -443,6 +444,51 @@ function PartnersSection() {
     <section className="relative border-y border-border/60 bg-surface/20">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
       <div className="mx-auto max-w-7xl px-6 py-28">
+        {/* GRANT ACKNOWLEDGEMENT */}
+        <div className="mb-20 overflow-hidden rounded-sm border border-primary/30 bg-surface/40 p-8 md:p-12">
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+            // grant.acknowledgement
+          </div>
+          <div className="mt-6 flex flex-col items-center gap-8 md:flex-row md:items-start md:justify-between">
+            <div className="max-w-2xl">
+              <h3 className="font-display text-2xl font-semibold tracking-tight md:text-3xl">
+                Supported by Full Financial Aid from the IOAI Board & Committee
+              </h3>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
+                We gratefully acknowledge the International Olympiad in Artificial Intelligence
+                (IOAI) Board and Committee for awarding Full Financial Aid to Team Philippines for
+                IOAI 2026 in Astana, Kazakhstan.
+              </p>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                <div className="rounded-sm border border-border/60 bg-background/60 p-4">
+                  <div className="font-mono text-[10px] uppercase tracking-[0.15em] text-primary">
+                    Travel Grant
+                  </div>
+                  <div className="mt-1 text-sm font-medium">
+                    Round-trip airfare to and from Astana, Kazakhstan
+                  </div>
+                </div>
+                <div className="rounded-sm border border-border/60 bg-background/60 p-4">
+                  <div className="font-mono text-[10px] uppercase tracking-[0.15em] text-primary">
+                    Delegation Grant
+                  </div>
+                  <div className="mt-1 text-sm font-medium">
+                    Full registration fee covering participation, accommodation, and meals
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex shrink-0 items-center justify-center rounded-sm border border-border bg-background/80 p-6 md:w-64">
+              <img
+                src={ioaiAccreditation}
+                alt="IOAI Accreditation Logo"
+                loading="lazy"
+                className="h-24 w-auto object-contain transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+          </div>
+        </div>
+
         <div className="flex items-end justify-between gap-6">
           <div>
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
