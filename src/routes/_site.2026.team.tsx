@@ -33,7 +33,7 @@ export const Route = createFileRoute("/_site/2026/team")({
   component: Team,
 });
 
-type Member = { name: string; school: string; role?: string; photo?: string };
+type Member = { name: string; school?: string; role?: string; photo?: string };
 
 const ioai: Member[] = [
   {

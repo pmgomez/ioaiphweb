@@ -534,7 +534,13 @@ export function SiteFooter() {
             © {new Date().getFullYear()} IOAI Philippines · Hosted by Ateneo BUILD, JGSOM, Ateneo de
             Manila University
           </div>
-          <div className="font-mono">v2.027 · build.singapore</div>
+          <div className="flex flex-wrap items-center gap-2 font-mono text-[10px] text-muted-foreground">
+            <span>v2.027 · build.singapore</span>
+            <span className="opacity-40">·</span>
+            <span>
+              Last updated: <time dateTime={__LAST_UPDATED__}>{__LAST_UPDATED__}</time>
+            </span>
+          </div>
         </div>
       </div>
     </footer>
