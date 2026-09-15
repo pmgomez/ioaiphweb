@@ -35,65 +35,74 @@ export const Route = createFileRoute("/_site/selection-2027")({
 const calendarData = [
   {
     stage: "Open Registration Window",
-    date: "Sep 12, 2026 – Jan 10, 2027",
+    date: "Sep 12 – Nov 11, 2026",
     format: "Centralized Online Portal",
     progression: "Open Pool (K–12)",
     notes:
-      "Institutional portal opens for nationwide candidate registration and institutional validation. National advisories and circulars are coordinated across DepEd, PSHS, and private school networks.",
+      "Institutional portal open for nationwide candidate registration. Registration closes early to onboard candidates into the mandatory EduSpace Round 1 platform.",
     status: "active",
   },
   {
     stage: "Stage 1: Eliminations",
-    date: "Jan 11–17, 2027",
-    format: "Online (Asynchronous 7-day window)",
+    date: "Nov 16–22, 2026",
+    format: "Online (Window-Locked Asynchronous 7-Day Window)",
     progression: "Open Pool → Top 300",
     notes:
-      "Commences upon post-holiday school resumption across public, science, and private secondary education systems.",
+      "Dual-screening assessment combining mandatory completion of IOAI EduSpace Round 1 with an internal timed National MCQ assessment.",
     status: "upcoming",
   },
   {
     stage: "Stage 2: Qualifiers",
-    date: "Feb 13, 2027 (Saturday)",
+    date: "Dec 12, 2026 (Saturday)",
     format: "Synchronous Proctored Online (3–4 hours)",
     progression: "Top 300 → Top 80",
     notes:
-      "High-intensity sprint scheduled ahead of third-quarter secondary school periodic examinations.",
+      "High-intensity sprint scheduled following Term 2 examinations and ahead of the nationwide secondary school holiday recess.",
     status: "upcoming",
   },
   {
-    stage: "Institutional Blackout Window",
-    date: "Feb 22 – Mar 5, 2027",
-    format: "Academic Pause",
-    progression: "—",
-    notes:
-      "Academic pause accommodating secondary periodic examinations and Philippine national participation in sanctioned international invitationals.",
-    status: "blackout",
-  },
-  {
     stage: "Stage 3: Quarter-Finals",
-    date: "Mar 6, 2027 (Saturday)",
+    date: "Jan 16, 2027 (Saturday)",
     format: "Synchronous Proctored Online (5 hours)",
     progression: "Top 80 → Top 40",
     notes:
-      "Standardized virtual contest ensuring rigorous national talent filtering while minimizing travel displacement.",
+      "Standardized virtual contest resuming two weeks after post-holiday school resumption, minimizing travel displacement.",
     status: "upcoming",
   },
   {
     stage: "Stage 4: Semi-Finals",
-    date: "Mar 20, 2027 (Saturday)",
+    date: "Jan 30, 2027 (Saturday)",
     format: "Hybrid Sprint (5 hours) • Luzon: Onsite at Ateneo • VisMin / Overseas: Synchronous",
     progression: "Top 40 + Returning APOAI HMs → Top 24",
     notes:
-      "Scheduled prior to Holy Week. Returning 2026 APOAI Honorable Mentions enter the active pipeline. Non-Luzon and overseas candidates test synchronously under multi-stream surveillance.",
+      "Returning 2026 APOAI Honorable Mentions enter the active pipeline. Non-Luzon and overseas candidates test synchronously under multi-stream surveillance.",
     status: "upcoming",
   },
   {
     stage: "Stage 5: National Finals",
-    date: "Apr 10–11, 2027 (Sat–Sun)",
+    date: "Feb 20–21, 2027 (Sat–Sun)",
     format: "Onsite (Ateneo CTC Build Lab, 2 Days)",
     progression: "Top 31 (24 Semi-Finalists + up to 7 seeded medalists) → Official Delegations",
     notes:
-      "Two independent 6-hour contest days replicating official IOAI individual competition rules. Non-Metro Manila finalists arrive Friday, April 9 (Araw ng Kagitingan).",
+      "Two independent 6-hour contest days replicating official IOAI individual competition rules. Non-Metro Manila finalists arrive Friday, February 19, 2027.",
+    status: "upcoming",
+  },
+  {
+    stage: "IAIO 2027 (Vietnam)",
+    date: "Feb 25 – Mar 2, 2027",
+    format: "Onsite (Vietnam) / Invitational",
+    progression: "2026 Medalist Pool",
+    notes:
+      "Invitational delegation fielded from the 2026 medalist pool, subject to final international host accreditation and bilateral confirmation.",
+    status: "upcoming",
+  },
+  {
+    stage: "National Team Lock & Clearances",
+    date: "Mar 1 – Apr 15, 2027",
+    format: "Administrative & School Clearances",
+    progression: "Official Delegations",
+    notes:
+      "Academic buffer covering secondary school Term 3 exams, graduation rites, host financial aid filings (Waves 1 & 2), and participant registration ahead of Singapore's Apr 15 team lock.",
     status: "upcoming",
   },
   {
@@ -102,7 +111,7 @@ const calendarData = [
     format: "Hybrid & Onsite Laboratories",
     progression: "Official Delegations",
     notes:
-      "Paced hybrid instruction throughout late April and May to accommodate secondary graduation ceremonies, followed by intensive, full-time laboratory simulations in June.",
+      "10-week intensive training block combining hybrid problem sets and full-time lab drills, running concurrent with Singapore V39A visa processing and health screening.",
     status: "upcoming",
   },
   {
@@ -111,7 +120,7 @@ const calendarData = [
     format: "Onsite (Russian Federation) / Remote Contingency",
     progression: "APOAI Development Delegation",
     notes:
-      "Regional talent development olympiad. The committee will make best efforts to field an onsite delegation in Russia, maintaining a centralized Manila-based proctored site as contingency.",
+      "Regional talent development olympiad fielding the top 4 non-graduating students. The committee will make best efforts to field an onsite delegation in Russia, maintaining a Manila-based proctored site as contingency.",
     status: "upcoming",
   },
   {
@@ -119,7 +128,8 @@ const calendarData = [
     date: "Jul 4–10, 2027",
     format: "Onsite (Singapore)",
     progression: "Primary IOAI Delegation",
-    notes: "World championship; the official Philippine delegation departs Manila on July 3, 2027.",
+    notes:
+      "World championship; official 4-student Philippine delegation arrives July 4 (Opening Ceremony July 5).",
     status: "upcoming",
   },
 ];
@@ -462,8 +472,8 @@ function SelectionRoadmap2027() {
 
                 <div className="mt-4 border-t border-border/60 pt-4 text-sm leading-relaxed text-muted-foreground">
                   Advance directly to{" "}
-                  <strong className="text-foreground">Stage 5 (National Finals)</strong> on April
-                  10–11, 2027, bypassing Eliminations, Qualifiers, Quarter-Finals, and Semi-Finals.
+                  <strong className="text-foreground">Stage 5 (National Finals)</strong> on February
+                  20–21, 2027, bypassing Eliminations, Qualifiers, Quarter-Finals, and Semi-Finals.
                 </div>
               </div>
 
@@ -481,7 +491,7 @@ function SelectionRoadmap2027() {
 
                 <div className="mt-4 border-t border-border/60 pt-4 text-sm leading-relaxed text-muted-foreground">
                   Advance directly to{" "}
-                  <strong className="text-foreground">Stage 4 (Semi-Finals)</strong> on March 20,
+                  <strong className="text-foreground">Stage 4 (Semi-Finals)</strong> on January 30,
                   2027, bypassing Eliminations, Qualifiers, and Quarter-Finals. Tier 2 candidates
                   must compete in Stage 4 and earn qualification into the Top 24 on raw contest
                   score.
@@ -535,7 +545,7 @@ function SelectionRoadmap2027() {
                   <strong className="text-foreground">Conditions of Seeding:</strong> Exemptions are
                   strictly contingent upon verified enrolment in an accredited primary or secondary
                   institution for SY 2026–2027 and formal administrative confirmation submitted by
-                  January 10, 2027. Past medalists who have completed secondary education prior to
+                  November 11, 2026. Past medalists who have completed secondary education prior to
                   the contest cycle forfeit eligibility.
                 </div>
               </div>
@@ -744,14 +754,14 @@ function SelectionRoadmap2027() {
 
             <div className="mt-8 grid gap-6 md:grid-cols-3">
               <div className="rounded-sm border border-border bg-surface/60 p-6">
-                <div className="font-mono text-xs text-primary">Apr 9, 2027</div>
+                <div className="font-mono text-xs text-primary">Feb 19, 2027</div>
                 <h3 className="mt-2 font-display text-lg font-semibold text-foreground">
                   Finals Deployment
                 </h3>
                 <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
-                  Non-Metro Manila finalists arrive in Quezon City on Friday, April 9 (Araw ng
-                  Kagitingan). Technical dry runs, hardware audits, and identity checks take place
-                  Friday afternoon.
+                  Non-Metro Manila finalists arrive in Quezon City on Friday, February 19, 2027.
+                  Technical dry runs, hardware audits, and identity checks take place Friday
+                  afternoon.
                 </p>
               </div>
 
@@ -859,8 +869,8 @@ function SelectionRoadmap2027() {
                   Ready to represent the Philippines?
                 </h2>
                 <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-                  Open registration closes on January 10, 2027. Apply now to enter Stage 1 screening
-                  for Singapore (IOAI) and Russia (APOAI).
+                  Open registration closes on November 11, 2026. Apply now to enter Stage 1
+                  screening for Singapore (IOAI) and Russia (APOAI).
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-3 shrink-0">
