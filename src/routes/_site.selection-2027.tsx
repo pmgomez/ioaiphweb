@@ -73,7 +73,7 @@ const calendarData = [
     stage: "Stage 4: Semi-Finals",
     date: "Jan 30, 2027 (Saturday)",
     format: "Hybrid Sprint (5 hours) • Luzon: Onsite at Ateneo • VisMin / Overseas: Synchronous",
-    progression: "Top 40 + Returning APOAI HMs → Top 24",
+    progression: "Top 40 + Seeds → Top 24",
     notes:
       "Returning 2026 APOAI Honorable Mentions enter the active pipeline. Non-Luzon and overseas candidates test synchronously under multi-stream surveillance.",
     status: "upcoming",
@@ -82,7 +82,7 @@ const calendarData = [
     stage: "Stage 5: National Finals",
     date: "Feb 20–21, 2027 (Sat–Sun)",
     format: "Onsite (Ateneo CTC Build Lab, 2 Days)",
-    progression: "Top 31 (24 Semi-Finalists + up to 7 seeded medalists) → Official Delegations",
+    progression: "Top 31 → Delegations",
     notes:
       "Two independent 6-hour contest days replicating official IOAI individual competition rules. Non-Metro Manila finalists arrive Friday, February 19, 2027.",
     status: "upcoming",
@@ -390,16 +390,16 @@ function SelectionRoadmap2027() {
               academic alignment across all domestic stages and international competitions.
             </p>
 
-            {/* Desktop Table View */}
+            {/* Master Competition Calendar Table */}
             <div className="mt-8 max-w-full overflow-x-auto rounded-sm border border-border bg-surface/40">
-              <table className="w-full text-left text-sm">
+              <table className="w-full text-left text-sm table-auto">
                 <thead className="border-b border-border bg-surface text-xs font-mono uppercase tracking-wider text-muted-foreground">
                   <tr>
-                    <th className="px-5 py-3.5 font-semibold">Stage / Milestone</th>
-                    <th className="px-5 py-3.5 font-semibold">Target Date</th>
-                    <th className="px-5 py-3.5 font-semibold">Delivery &amp; Format</th>
-                    <th className="px-5 py-3.5 font-semibold">Progression</th>
-                    <th className="px-5 py-3.5 font-semibold">Operational Context</th>
+                    <th className="px-4 py-3.5 font-semibold">Stage / Milestone</th>
+                    <th className="px-4 py-3.5 font-semibold whitespace-nowrap">Target Date</th>
+                    <th className="px-4 py-3.5 font-semibold">Delivery &amp; Format</th>
+                    <th className="px-4 py-3.5 font-semibold">Progression</th>
+                    <th className="px-4 py-3.5 font-semibold">Operational Context</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-border/60">
@@ -414,24 +414,24 @@ function SelectionRoadmap2027() {
                             : "hover:bg-surface/50 transition-colors"
                       }
                     >
-                      <td className="px-5 py-4 font-semibold text-foreground whitespace-nowrap">
+                      <td className="px-4 py-3.5 font-semibold text-foreground">
                         <div className="flex items-center gap-2">
                           {row.status === "active" && (
-                            <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
+                            <span className="h-2 w-2 shrink-0 rounded-full bg-primary animate-pulse" />
                           )}
                           <span>{row.stage}</span>
                         </div>
                       </td>
-                      <td className="px-5 py-4 font-mono text-xs text-primary whitespace-nowrap">
+                      <td className="px-4 py-3.5 font-mono text-xs text-primary whitespace-nowrap">
                         {row.date}
                       </td>
-                      <td className="px-5 py-4 text-xs text-muted-foreground min-w-[200px]">
+                      <td className="px-4 py-3.5 text-xs text-muted-foreground leading-snug">
                         {row.format}
                       </td>
-                      <td className="px-5 py-4 font-mono text-xs text-foreground whitespace-nowrap">
+                      <td className="px-4 py-3.5 font-mono text-xs text-foreground leading-snug">
                         {row.progression}
                       </td>
-                      <td className="px-5 py-4 text-xs text-muted-foreground min-w-[280px] leading-relaxed">
+                      <td className="px-4 py-3.5 text-xs text-muted-foreground leading-relaxed">
                         {row.notes}
                       </td>
                     </tr>
