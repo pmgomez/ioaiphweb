@@ -1,0 +1,50 @@
+[
+  {
+    "id": "ambassador-ncr",
+    "isPlaceholder": true,
+    "name": "Regional Ambassador Slot",
+    "school": "Secondary School (DepEd / PSHS / Private)",
+    "location": "Metro Manila",
+    "region": "NCR",
+    "cohort": "Inaugural (2026–2027)",
+    "photoUrl": "",
+    "profileUrl": "#apply",
+    "bio": "Open regional position for secondary student leaders passionate about organizing campus AI clubs and Olympiad awareness across NCR."
+  },
+  {
+    "id": "ambassador-luzon",
+    "isPlaceholder": true,
+    "name": "Regional Ambassador Slot",
+    "school": "Secondary School (DepEd / PSHS / Private)",
+    "location": "Luzon",
+    "region": "Luzon",
+    "cohort": "Inaugural (2026–2027)",
+    "photoUrl": "",
+    "profileUrl": "#apply",
+    "bio": "Open regional position for secondary student leaders passionate about organizing campus AI clubs and Olympiad awareness across Luzon."
+  },
+  {
+    "id": "ambassador-visayas",
+    "isPlaceholder": true,
+    "name": "Regional Ambassador Slot",
+    "school": "Secondary School (DepEd / PSHS / Private)",
+    "location": "Visayas",
+    "region": "Visayas",
+    "cohort": "Inaugural (2026–2027)",
+    "photoUrl": "",
+    "profileUrl": "#apply",
+    "bio": "Open regional position for secondary student leaders passionate about organizing campus AI clubs and Olympiad awareness across Visayas."
+  },
+  {
+    "id": "ambassador-mindanao",
+    "isPlaceholder": true,
+    "name": "Regional Ambassador Slot",
+    "school": "Secondary School (DepEd / PSHS / Private)",
+    "location": "Mindanao",
+    "region": "Mindanao",
+    "cohort": "Inaugural (2026–2027)",
+    "photoUrl": "",
+    "profileUrl": "#apply",
+    "bio": "Open regional position for secondary student leaders passionate about organizing campus AI clubs and Olympiad awareness across Mindanao."
+  }
+]

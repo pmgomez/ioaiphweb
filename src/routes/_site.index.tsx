@@ -80,7 +80,7 @@ const timeline = [
     desc: "Invitational delegation fielded from the 2026 medalist pool, subject to final international host accreditation and bilateral confirmation.",
     status: "upcoming",
   },
-{
+  {
     date: "MAR 1 – APR 15, 2027",
     phase: "08 / Delegation",
     title: "National Team Lock & Clearances",

@@ -44,7 +44,8 @@ const premierTiers: CorporateTier[] = [
     color: "#38BDF8",
     colorLight: "#0284C7",
     featured: true,
-    scope: "Full domestic operational underwriting, compute platform scale, and multi-year emergency travel reserves.",
+    scope:
+      "Full domestic operational underwriting, compute platform scale, and multi-year emergency travel reserves.",
     deliverables: [
       '"IOAI Philippines presented by [Sponsor]" title rights',
       "Primary chest logo on official international delegation team shirts",
@@ -59,7 +60,8 @@ const premierTiers: CorporateTier[] = [
     color: "#818CF8",
     colorLight: "#4F46E5",
     featured: true,
-    scope: "Underwriting non-GAA travel deficits across IAIO (Vietnam), APOAI (Russia), and IOAI (Singapore) delegations.",
+    scope:
+      "Underwriting non-GAA travel deficits across IAIO (Vietnam), APOAI (Russia), and IOAI (Singapore) delegations.",
     deliverables: [
       "Co-presenter status for national selection rounds",
       "Custom corporate problem integration in selection tasks",
@@ -75,7 +77,8 @@ const coreTiers: CorporateTier[] = [
     price: "PHP 250,000+",
     color: "#F59E0B",
     colorLight: "#D97706",
-    scope: "National Finals execution at Ateneo BUILD, expert lecturer stipends, and dedicated cloud GPU compute credits.",
+    scope:
+      "National Finals execution at Ateneo BUILD, expert lecturer stipends, and dedicated cloud GPU compute credits.",
     deliverables: [
       "Keynote speaking slot at National Finals",
       "Contest platform co-branding",
@@ -88,7 +91,8 @@ const coreTiers: CorporateTier[] = [
     price: "PHP 100,000+",
     color: "#9CA3AF",
     colorLight: "#4B5563",
-    scope: "Official national team apparel, travel insurance policies, and Visayas/Mindanao regional selection roadshows.",
+    scope:
+      "Official national team apparel, travel insurance policies, and Visayas/Mindanao regional selection roadshows.",
     deliverables: [
       "Logo placement on official international team shirts",
       "Logo on printed event collateral",
@@ -101,7 +105,8 @@ const coreTiers: CorporateTier[] = [
     price: "PHP 50,000+",
     color: "#D97706",
     colorLight: "#92400E",
-    scope: "Onsite meal catering for national finals at Ateneo BUILD, venue support, and proctor stipends.",
+    scope:
+      "Onsite meal catering for national finals at Ateneo BUILD, venue support, and proctor stipends.",
     deliverables: [
       "Stage backdrop logo placement",
       "Dedicated social media spotlight",
@@ -114,7 +119,8 @@ const coreTiers: CorporateTier[] = [
     price: "PHP 25,000+",
     color: "#6B7280",
     colorLight: "#374151",
-    scope: "Regional examination center logistics, local student transit, and proctoring allowances.",
+    scope:
+      "Regional examination center logistics, local student transit, and proctoring allowances.",
     deliverables: [
       "Website logo placement",
       "Partner announcement",
@@ -155,8 +161,9 @@ function Partnerships() {
             Fund the future of <span className="text-primary">Filipino AI.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            Every peso of corporate sponsorship and community giving goes directly to contestant training, high-performance
-            compute infrastructure, regional selection roadshows, and international delegation travel.
+            Every peso of corporate sponsorship and community giving goes directly to contestant
+            training, high-performance compute infrastructure, regional selection roadshows, and
+            international delegation travel.
           </p>
         </div>
       </section>
@@ -194,11 +201,18 @@ function Partnerships() {
                         <div className="h-2.5 w-2.5 rounded-full" style={{ background: ring }} />
                         <span className="font-mono text-xs text-muted-foreground">{t.code}</span>
                       </div>
-                      <span className="font-mono text-[10px] uppercase tracking-widest text-primary">Tier Floor</span>
+                      <span className="font-mono text-[10px] uppercase tracking-widest text-primary">
+                        Tier Floor
+                      </span>
                     </div>
 
-                    <div className="mt-4 font-display text-3xl font-bold tracking-tight text-foreground">{t.name}</div>
-                    <div className="mt-2 font-display text-4xl font-semibold tracking-tight" style={{ color: ring }}>
+                    <div className="mt-4 font-display text-3xl font-bold tracking-tight text-foreground">
+                      {t.name}
+                    </div>
+                    <div
+                      className="mt-2 font-display text-4xl font-semibold tracking-tight"
+                      style={{ color: ring }}
+                    >
                       {t.price}
                     </div>
 
@@ -260,8 +274,13 @@ function Partnerships() {
                       </div>
                     </div>
 
-                    <div className="mt-4 font-display text-xl font-semibold text-foreground">{t.name}</div>
-                    <div className="mt-1 font-display text-2xl font-bold tracking-tight" style={{ color: ring }}>
+                    <div className="mt-4 font-display text-xl font-semibold text-foreground">
+                      {t.name}
+                    </div>
+                    <div
+                      className="mt-1 font-display text-2xl font-bold tracking-tight"
+                      style={{ color: ring }}
+                    >
                       {t.price}
                     </div>
 
@@ -269,7 +288,9 @@ function Partnerships() {
                       <div className="font-mono text-[9px] uppercase tracking-wider text-muted-foreground">
                         Operational Scope
                       </div>
-                      <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{t.scope}</p>
+                      <p className="mt-1 text-xs text-muted-foreground leading-relaxed">
+                        {t.scope}
+                      </p>
                     </div>
 
                     <div className="mt-5 border-t border-border pt-4">
@@ -310,8 +331,8 @@ function Partnerships() {
                 In-Kind Sponsorships &amp; Compute Grants
               </div>
               <p className="mt-0.5 text-sm text-foreground/90 font-medium">
-                Equivalent value in cloud GPU compute credits, travel logistics, or venue infrastructure can qualify for
-                tier equivalency.
+                Equivalent value in cloud GPU compute credits, travel logistics, or venue
+                infrastructure can qualify for tier equivalency.
               </p>
             </div>
           </div>
@@ -336,7 +357,9 @@ function Partnerships() {
               <h3 className="mt-2 font-display text-2xl font-semibold tracking-tight text-foreground">
                 {supporterTier.name}
               </h3>
-              <div className="mt-1 font-display text-xl font-semibold text-emerald-500">{supporterTier.price}</div>
+              <div className="mt-1 font-display text-xl font-semibold text-emerald-500">
+                {supporterTier.price}
+              </div>
               <p className="mt-2 text-sm text-muted-foreground">{supporterTier.scope}</p>
             </div>
 

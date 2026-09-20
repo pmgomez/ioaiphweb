@@ -167,11 +167,5 @@ export function NeuralNetworkBg({ className }: { className?: string }) {
     };
   }, []);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      className={className}
-      aria-hidden="true"
-    />
-  );
+  return <canvas ref={canvasRef} className={className} aria-hidden="true" />;
 }

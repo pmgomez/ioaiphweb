@@ -61,8 +61,7 @@ const selection: Resource[] = [
   {
     code: "R-01",
     title: "Team Selection & Final Delegations",
-    subtitle:
-      "Official Philippine delegations for IOAI 2027 Singapore and APOAI 2027 Russia.",
+    subtitle: "Official Philippine delegations for IOAI 2027 Singapore and APOAI 2027 Russia.",
     kind: "pending",
     window: "Apr 10 – 11, 2027",
     featured: true,
@@ -70,8 +69,7 @@ const selection: Resource[] = [
   {
     code: "R-02",
     title: "Stage 5: National Finals Results",
-    subtitle:
-      "Aggregate task scores from the two-day onsite finals at the Ateneo CTC Build Lab.",
+    subtitle: "Aggregate task scores from the two-day onsite finals at the Ateneo CTC Build Lab.",
     kind: "pending",
     window: "Apr 10 – 11, 2027",
     featured: true,
@@ -87,24 +85,21 @@ const selection: Resource[] = [
   {
     code: "R-04",
     title: "Stage 3: Quarter-Finals Results",
-    subtitle:
-      "Scores from the online proctored round; top 40 advancing to the Semi-Finals.",
+    subtitle: "Scores from the online proctored round; top 40 advancing to the Semi-Finals.",
     kind: "pending",
     window: "Mar 6, 2027",
   },
   {
     code: "R-05",
     title: "Stage 2: Qualifiers Results",
-    subtitle:
-      "Results from the timed proctored sprint; top 80 advancing to the Quarter-Finals.",
+    subtitle: "Results from the timed proctored sprint; top 80 advancing to the Quarter-Finals.",
     kind: "pending",
     window: "Feb 13, 2027",
   },
   {
     code: "R-06",
     title: "Stage 1: Eliminations Results",
-    subtitle:
-      "Contestants advancing past the nationwide seven-day asynchronous round (Top 300).",
+    subtitle: "Contestants advancing past the nationwide seven-day asynchronous round (Top 300).",
     kind: "pending",
     window: "Jan 11 – 17, 2027",
   },
@@ -133,8 +128,8 @@ function Results() {
             Results &amp; records
           </h1>
           <p className="mt-5 max-w-2xl text-base text-muted-foreground md:text-lg">
-            From the international podium back to the first qualifier — every
-            round Team Philippines moves through, in one place.
+            From the international podium back to the first qualifier — every round Team Philippines
+            moves through, in one place.
           </p>
         </div>
       </section>
@@ -150,8 +145,8 @@ function Results() {
               Competition results
             </h2>
             <p className="mt-2 max-w-xl text-sm text-muted-foreground">
-              International and regional standings will be unlocked and posted
-              here as each competition concludes.
+              International and regional standings will be unlocked and posted here as each
+              competition concludes.
             </p>
           </div>
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
@@ -177,8 +172,8 @@ function Results() {
               National selection cycle
             </h2>
             <p className="mt-2 max-w-xl text-sm text-muted-foreground">
-              Official grade books and qualifying rosters will be published
-              sequentially throughout the 2027 campaign.
+              Official grade books and qualifying rosters will be published sequentially throughout
+              the 2027 campaign.
             </p>
           </div>
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
@@ -220,10 +215,7 @@ function Results() {
               </p>
               <div className="mt-5 flex flex-wrap gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
                 {["Students", "Teachers", "Coaches", "Schools"].map((t) => (
-                  <span
-                    key={t}
-                    className="rounded-sm border border-border px-2 py-1"
-                  >
+                  <span key={t} className="rounded-sm border border-border px-2 py-1">
                     {t}
                   </span>
                 ))}
@@ -242,13 +234,7 @@ function Results() {
   );
 }
 
-function CompetitionBanner({
-  c,
-  primary,
-}: {
-  c: Competition;
-  primary?: boolean;
-}) {
+function CompetitionBanner({ c, primary }: { c: Competition; primary?: boolean }) {
   const isLink = !!c.href;
   const Tag = isLink ? "a" : "div";
 
@@ -325,9 +311,7 @@ function ResourceCard({ r }: { r: Resource }) {
         )}
       </div>
       <div>
-        <h3 className="font-display text-xl font-semibold leading-tight">
-          {r.title}
-        </h3>
+        <h3 className="font-display text-xl font-semibold leading-tight">{r.title}</h3>
         <p className="mt-2 text-sm text-muted-foreground">{r.subtitle}</p>
         {r.window && (
           <div className="mt-3 inline-block rounded-sm border border-border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">

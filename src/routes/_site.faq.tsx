@@ -98,7 +98,8 @@ const groups: Group[] = [
             >
               Official IOAI Syllabus
             </a>
-            , covering supervised/unsupervised machine learning, deep learning architectures, generative models, and evaluation methodologies.
+            , covering supervised/unsupervised machine learning, deep learning architectures,
+            generative models, and evaluation methodologies.
           </>
         ),
       },
@@ -127,8 +128,13 @@ const groups: Group[] = [
         q: "How can corporate or institutional partners sponsor the 2027 season?",
         a: (
           <>
-            Organizations can sponsor compute infrastructure, training boot camps, and delegate travel for Singapore and Russia. For partnership tiers and prospectus inquiries, visit our{" "}
-            <a href="/partnerships" className="text-primary underline underline-offset-4 hover:no-underline">
+            Organizations can sponsor compute infrastructure, training boot camps, and delegate
+            travel for Singapore and Russia. For partnership tiers and prospectus inquiries, visit
+            our{" "}
+            <a
+              href="/partnerships"
+              className="text-primary underline underline-offset-4 hover:no-underline"
+            >
               Partnerships page
             </a>{" "}
             or contact{" "}
@@ -143,7 +149,8 @@ const groups: Group[] = [
         q: "Who should members of the press contact for media assets and interview requests?",
         a: (
           <>
-            Direct all press inquiries, high-resolution media requests, and interview coordination to{" "}
+            Direct all press inquiries, high-resolution media requests, and interview coordination
+            to{" "}
             <a href="mailto:press@ioaiph.org" className="font-mono text-primary">
               press@ioaiph.org
             </a>
@@ -183,7 +190,9 @@ function highlight(text: string, query: string): React.ReactNode {
   const parts = text.split(new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`, "ig"));
   return parts.map((p, i) =>
     p.toLowerCase() === query.toLowerCase() ? (
-      <mark key={i} className="bg-primary/20 text-foreground">{p}</mark>
+      <mark key={i} className="bg-primary/20 text-foreground">
+        {p}
+      </mark>
     ) : (
       <span key={i}>{p}</span>
     ),
@@ -255,10 +264,15 @@ function FAQ() {
         <div className="space-y-16">
           {filtered.length === 0 ? (
             <div className="rounded-sm border border-dashed border-border p-10 text-center">
-              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// no_results</div>
+              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+                // no_results
+              </div>
               <p className="mt-3 text-muted-foreground">
                 Nothing matches "{q}". Try a different keyword or email{" "}
-                <a href="mailto:info@ioaiph.org" className="font-mono text-primary">info@ioaiph.org</a>.
+                <a href="mailto:info@ioaiph.org" className="font-mono text-primary">
+                  info@ioaiph.org
+                </a>
+                .
               </p>
             </div>
           ) : (
@@ -267,7 +281,9 @@ function FAQ() {
               return (
                 <div key={g.cat}>
                   <div className="flex items-baseline gap-4 border-b border-border pb-4">
-                    <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">0{gi + 1}</div>
+                    <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+                      0{gi + 1}
+                    </div>
                     <h2 className="font-display text-2xl font-semibold">{g.cat}</h2>
                   </div>
                   <div className="mt-2 divide-y divide-border">
@@ -281,8 +297,12 @@ function FAQ() {
                             onClick={() => setOpen(isOpen && !q ? null : key)}
                             className="flex w-full items-center justify-between gap-6 py-5 text-left transition-colors hover:text-primary"
                           >
-                            <span className="font-display text-lg font-medium">{highlight(it.q, q)}</span>
-                            <span className="font-mono text-xs text-primary">{isOpen ? "[ − ]" : "[ + ]"}</span>
+                            <span className="font-display text-lg font-medium">
+                              {highlight(it.q, q)}
+                            </span>
+                            <span className="font-mono text-xs text-primary">
+                              {isOpen ? "[ − ]" : "[ + ]"}
+                            </span>
                           </button>
                           {isOpen && <div className="pb-6 pr-12 text-muted-foreground">{it.a}</div>}
                         </div>
@@ -296,7 +316,9 @@ function FAQ() {
         </div>
 
         <div className="mt-20 rounded-sm border border-border bg-surface p-8">
-          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// still_stuck?</div>
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+            // still_stuck?
+          </div>
           <h3 className="mt-3 font-display text-2xl font-semibold">We read every message.</h3>
           <p className="mt-2 text-muted-foreground">
             Reach the program team directly at{" "}

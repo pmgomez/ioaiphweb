@@ -31,9 +31,10 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   // Hydrate from localStorage on mount
   useEffect(() => {
-    const stored = (typeof window !== "undefined"
-      ? (window.localStorage.getItem(STORAGE_KEY) as Theme | null)
-      : null) ?? "system";
+    const stored =
+      (typeof window !== "undefined"
+        ? (window.localStorage.getItem(STORAGE_KEY) as Theme | null)
+        : null) ?? "system";
     setThemeState(stored);
     const resolved = stored === "system" ? getSystemTheme() : stored;
     setResolvedTheme(resolved);

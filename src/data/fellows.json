@@ -1,0 +1,54 @@
+[
+  {
+    "id": "fellow-slot-1",
+    "isPlaceholder": true,
+    "name": "Curriculum & Mentorship Fellow",
+    "university": "Higher Education Institution",
+    "degree": "BS Computer Science / Data Science",
+    "location": "Philippines",
+    "cohort": "Inaugural (2026–2027)",
+    "photoUrl": "",
+    "focusAreas": ["Curriculum Design", "Python & PyTorch"],
+    "status": "Open for Applications",
+    "bio": "Delivers regional machine learning workshops and mentors high school coding chapters."
+  },
+  {
+    "id": "fellow-slot-2",
+    "isPlaceholder": true,
+    "name": "Technical Workshop Fellow",
+    "university": "Higher Education Institution",
+    "degree": "BS Mathematics / Statistics",
+    "location": "Philippines",
+    "cohort": "Inaugural (2026–2027)",
+    "photoUrl": "",
+    "focusAreas": ["Linear Algebra", "Calculus for ML"],
+    "status": "Open for Applications",
+    "bio": "Facilitates theoretical foundations and problem-solving clinics for Olympiad candidates."
+  },
+  {
+    "id": "fellow-slot-3",
+    "isPlaceholder": true,
+    "name": "Task Benchmarking Fellow",
+    "university": "Higher Education Institution",
+    "degree": "Machine Learning / Engineering",
+    "location": "Philippines",
+    "cohort": "Inaugural (2026–2027)",
+    "photoUrl": "",
+    "focusAreas": ["Computer Vision", "NLP Pipelines"],
+    "status": "Open for Applications",
+    "bio": "Implements baselines and stress-tests candidate tasks under GPU runtime constraints."
+  },
+  {
+    "id": "fellow-slot-4",
+    "isPlaceholder": true,
+    "name": "Operations & Proctoring Fellow",
+    "university": "Higher Education Institution",
+    "degree": "BS Information Technology / CS",
+    "location": "Philippines",
+    "cohort": "Inaugural (2026–2027)",
+    "photoUrl": "",
+    "focusAreas": ["Selection Testing", "Contest Infrastructure"],
+    "status": "Open for Applications",
+    "bio": "Oversees test delivery infrastructure, verification, and live candidate proctoring."
+  }
+]

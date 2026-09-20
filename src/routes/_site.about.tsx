@@ -63,20 +63,55 @@ const leadership = [
     org: "Assoc Dean, College of Computer Studies, De La Salle University",
     photo: charibethPhoto,
   },
-  { name: "Leonard Ang", role: "Partnerships", org: "University of the Philippines - Diliman", photo: leonardPhoto },
-  { name: "James Bermudo", role: "Scientific Committee", org: "Ateneo de Manila University", photo: jamesPhoto },
-  { name: "Mikhail Borbe", role: "Scientific Committee", org: "University of Washington", photo: mikborbePhoto },
+  {
+    name: "Leonard Ang",
+    role: "Partnerships",
+    org: "University of the Philippines - Diliman",
+    photo: leonardPhoto,
+  },
+  {
+    name: "James Bermudo",
+    role: "Scientific Committee",
+    org: "Ateneo de Manila University",
+    photo: jamesPhoto,
+  },
+  {
+    name: "Mikhail Borbe",
+    role: "Scientific Committee",
+    org: "University of Washington",
+    photo: mikborbePhoto,
+  },
   {
     name: "Timothy James Dimacali",
     role: "Media and Press Relations",
     org: "Ateneo de Manila University",
     photo: tjPhoto,
   },
-  { name: "Cristy Esteban", role: "JGSOM QMIT Admin", org: "Ateneo de Manila University", photo: cristyPhoto },
-  { name: "Lorenzo Jaime Flores", role: "Scientific Committee", org: "Microsoft Research", photo: lorenzoPhoto },
+  {
+    name: "Cristy Esteban",
+    role: "JGSOM QMIT Admin",
+    org: "Ateneo de Manila University",
+    photo: cristyPhoto,
+  },
+  {
+    name: "Lorenzo Jaime Flores",
+    role: "Scientific Committee",
+    org: "Microsoft Research",
+    photo: lorenzoPhoto,
+  },
   { name: "Gram Liu", role: "Scientific Committee", org: "Decagon", photo: gramPhoto },
-  { name: "Conner Manuel", role: "Guest Scientific Lecturer", org: "Together AI", photo: connerPhoto },
-  { name: "Lester James Miranda", role: "Scientific Committee", org: "University of Cambridge", photo: lesterPhoto },
+  {
+    name: "Conner Manuel",
+    role: "Guest Scientific Lecturer",
+    org: "Together AI",
+    photo: connerPhoto,
+  },
+  {
+    name: "Lester James Miranda",
+    role: "Scientific Committee",
+    org: "University of Cambridge",
+    photo: lesterPhoto,
+  },
   {
     name: "Kyle Reynoso",
     role: "Sponsorships + Scientific Committee",
@@ -107,8 +142,18 @@ const leadership = [
     org: "Philippine Science High School -\nMain Campus",
     photo: troyPhoto,
   },
-  { name: "Hans Tan", role: "Scientific Committee", org: "Sun Yat-Sen University", photo: hansPhoto },
-  { name: "Sean Anderson Ty", role: "Guest Scientific Lecturer", org: "Two Sigma", photo: seanTyPhoto },
+  {
+    name: "Hans Tan",
+    role: "Scientific Committee",
+    org: "Sun Yat-Sen University",
+    photo: hansPhoto,
+  },
+  {
+    name: "Sean Anderson Ty",
+    role: "Guest Scientific Lecturer",
+    org: "Two Sigma",
+    photo: seanTyPhoto,
+  },
   { name: "Andrew Yu", role: "Scientific Committee", org: "ex-P&G Singapore", photo: andrewPhoto },
 ];
 
@@ -119,14 +164,20 @@ function About() {
         <NeuralNetworkBg className="pointer-events-none absolute inset-0 h-full w-full opacity-30 [mask-image:radial-gradient(ellipse_at_center,black_0%,transparent_75%)]" />
         <div className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-primary/10 blur-[130px]" />
         <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-24">
-          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// about.program</div>
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+            // about.program
+          </div>
           <h1 className="mt-3 max-w-3xl font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
             We exist to put young Filipino talent on the world stage of AI — and let them
-            <span className="text-primary"> create what's possible for the country and for humanity.</span>
+            <span className="text-primary">
+              {" "}
+              create what's possible for the country and for humanity.
+            </span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            IOAI Philippines is the Philippines' official route to the International Olympiad in Artificial Intelligence
-            — a competition where the world's top high school AI talent is identified, mentored and put on stage.
+            IOAI Philippines is the Philippines' official route to the International Olympiad in
+            Artificial Intelligence — a competition where the world's top high school AI talent is
+            identified, mentored and put on stage.
           </p>
         </div>
       </section>
@@ -134,23 +185,27 @@ function About() {
       <section className="mx-auto max-w-7xl px-6 py-24">
         <div className="grid gap-12 md:grid-cols-2">
           <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// mandate</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+              // mandate
+            </div>
             <h2 className="mt-3 font-display text-3xl font-semibold">A national mandate</h2>
             <p className="mt-4 text-muted-foreground">
-              Founded in 2025, IOAI Philippines was established as the official body to organize the country's IOAI
-              campaign. We operate under Ateneo BUILD, with academic, government, nonprofit, and private-sector
-              partnerships.
+              Founded in 2025, IOAI Philippines was established as the official body to organize the
+              country's IOAI campaign. We operate under Ateneo BUILD, with academic, government,
+              nonprofit, and private-sector partnerships.
             </p>
             <p className="mt-4 text-muted-foreground">
-              Our remit is simple: find the most capable young minds in the country, equip them with world-class
-              training, and represent the Philippines competitively on the global stage.
+              Our remit is simple: find the most capable young minds in the country, equip them with
+              world-class training, and represent the Philippines competitively on the global stage.
             </p>
           </div>
           <div className="rounded-sm border border-border bg-surface p-8">
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Vision</div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+              Vision
+            </div>
             <p className="mt-4 font-display text-2xl leading-snug">
-              "Every Filipino learner with the talent to compete in AI should have a path to do so — regardless of
-              geography, school, or income."
+              "Every Filipino learner with the talent to compete in AI should have a path to do so —
+              regardless of geography, school, or income."
             </p>
             <div className="mt-6 font-mono text-xs text-muted-foreground"></div>
           </div>
@@ -159,14 +214,16 @@ function About() {
 
       <section className="border-y border-border/60 bg-surface/30">
         <div className="mx-auto max-w-7xl px-6 py-24">
-          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// it takes a village</div>
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+            // it takes a village
+          </div>
           <h2 className="mt-3 font-display text-3xl font-semibold">People</h2>
           <p className="mt-4 max-w-3xl text-sm text-muted-foreground">
             Everyone listed below contributes their expertise, time, and effort on a{" "}
             <span className="font-semibold text-foreground">purely voluntary</span>,{" "}
-            <span className="font-semibold text-foreground">pro bono basis</span> — without compensation or anything
-            sought in return. We thank them for their <span className="font-semibold text-foreground">generosity</span>{" "}
-            and{" "}
+            <span className="font-semibold text-foreground">pro bono basis</span> — without
+            compensation or anything sought in return. We thank them for their{" "}
+            <span className="font-semibold text-foreground">generosity</span> and{" "}
             <span className="font-semibold text-foreground">
               spirit of <em>magis</em>
             </span>
@@ -176,11 +233,15 @@ function About() {
             {leadership.map((p) => (
               <div key={p.name} className="bg-surface p-6">
                 <div className="h-20 w-20 overflow-hidden rounded-full bg-primary/10">
-                  {p.photo ? <img src={p.photo} alt={p.name} className="h-full w-full object-cover" /> : null}
+                  {p.photo ? (
+                    <img src={p.photo} alt={p.name} className="h-full w-full object-cover" />
+                  ) : null}
                 </div>
                 <div className="mt-4 font-display text-lg font-semibold">{p.name}</div>
                 <div className="mt-1 text-sm text-primary">{p.role}</div>
-                <div className="mt-1 whitespace-pre-line font-mono text-[11px] text-muted-foreground">{p.org}</div>
+                <div className="mt-1 whitespace-pre-line font-mono text-[11px] text-muted-foreground">
+                  {p.org}
+                </div>
               </div>
             ))}
           </div>
@@ -188,7 +249,9 @@ function About() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-24">
-        <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// values</div>
+        <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+          // values
+        </div>
         <h2 className="mt-3 font-display text-3xl font-semibold">What we hold ourselves to</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {[

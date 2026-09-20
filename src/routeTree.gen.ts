@@ -11,15 +11,27 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SiteRouteImport } from './routes/_site'
 import { Route as SiteIndexRouteImport } from './routes/_site.index'
+import { Route as SiteVolunteerRouteImport } from './routes/_site.volunteer'
 import { Route as SiteTeamRouteImport } from './routes/_site.team'
 import { Route as SiteSelection2027RouteImport } from './routes/_site.selection-2027'
+import { Route as SiteSelectionRouteImport } from './routes/_site.selection'
 import { Route as SiteResultsRouteImport } from './routes/_site.results'
 import { Route as SiteResourcesRouteImport } from './routes/_site.resources'
 import { Route as SitePressRouteImport } from './routes/_site.press'
 import { Route as SitePartnershipsRouteImport } from './routes/_site.partnerships'
+import { Route as SiteFellowsRouteImport } from './routes/_site.fellows'
 import { Route as SiteFaqRouteImport } from './routes/_site.faq'
+import { Route as SiteCoachesRouteImport } from './routes/_site.coaches'
+import { Route as SiteArchiveRouteImport } from './routes/_site.archive'
+import { Route as SiteApplyRouteImport } from './routes/_site.apply'
+import { Route as SiteAmbassadorsRouteImport } from './routes/_site.ambassadors'
 import { Route as SiteAboutRouteImport } from './routes/_site.about'
+import { Route as SiteVolunteerIndexRouteImport } from './routes/_site.volunteer.index'
 import { Route as Site2026IndexRouteImport } from './routes/_site.2026.index'
+import { Route as SiteVolunteerFellowRouteImport } from './routes/_site.volunteer.fellow'
+import { Route as SiteVolunteerCoachRouteImport } from './routes/_site.volunteer.coach'
+import { Route as SiteVolunteerAmbassadorRouteImport } from './routes/_site.volunteer.ambassador'
+import { Route as SiteResourcesProblemsRouteImport } from './routes/_site.resources.problems'
 import { Route as Site2026TeamRouteImport } from './routes/_site.2026.team'
 import { Route as Site2026ResultsRouteImport } from './routes/_site.2026.results'
 import { Route as Site2026FaqRouteImport } from './routes/_site.2026.faq'
@@ -33,6 +45,11 @@ const SiteIndexRoute = SiteIndexRouteImport.update({
   path: '/',
   getParentRoute: () => SiteRoute,
 } as any)
+const SiteVolunteerRoute = SiteVolunteerRouteImport.update({
+  id: '/volunteer',
+  path: '/volunteer',
+  getParentRoute: () => SiteRoute,
+} as any)
 const SiteTeamRoute = SiteTeamRouteImport.update({
   id: '/team',
   path: '/team',
@@ -41,6 +58,11 @@ const SiteTeamRoute = SiteTeamRouteImport.update({
 const SiteSelection2027Route = SiteSelection2027RouteImport.update({
   id: '/selection-2027',
   path: '/selection-2027',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteSelectionRoute = SiteSelectionRouteImport.update({
+  id: '/selection',
+  path: '/selection',
   getParentRoute: () => SiteRoute,
 } as any)
 const SiteResultsRoute = SiteResultsRouteImport.update({
@@ -63,9 +85,34 @@ const SitePartnershipsRoute = SitePartnershipsRouteImport.update({
   path: '/partnerships',
   getParentRoute: () => SiteRoute,
 } as any)
+const SiteFellowsRoute = SiteFellowsRouteImport.update({
+  id: '/fellows',
+  path: '/fellows',
+  getParentRoute: () => SiteRoute,
+} as any)
 const SiteFaqRoute = SiteFaqRouteImport.update({
   id: '/faq',
   path: '/faq',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteCoachesRoute = SiteCoachesRouteImport.update({
+  id: '/coaches',
+  path: '/coaches',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteArchiveRoute = SiteArchiveRouteImport.update({
+  id: '/archive',
+  path: '/archive',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteApplyRoute = SiteApplyRouteImport.update({
+  id: '/apply',
+  path: '/apply',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteAmbassadorsRoute = SiteAmbassadorsRouteImport.update({
+  id: '/ambassadors',
+  path: '/ambassadors',
   getParentRoute: () => SiteRoute,
 } as any)
 const SiteAboutRoute = SiteAboutRouteImport.update({
@@ -73,10 +120,35 @@ const SiteAboutRoute = SiteAboutRouteImport.update({
   path: '/about',
   getParentRoute: () => SiteRoute,
 } as any)
+const SiteVolunteerIndexRoute = SiteVolunteerIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => SiteVolunteerRoute,
+} as any)
 const Site2026IndexRoute = Site2026IndexRouteImport.update({
   id: '/2026/',
   path: '/2026/',
   getParentRoute: () => SiteRoute,
+} as any)
+const SiteVolunteerFellowRoute = SiteVolunteerFellowRouteImport.update({
+  id: '/fellow',
+  path: '/fellow',
+  getParentRoute: () => SiteVolunteerRoute,
+} as any)
+const SiteVolunteerCoachRoute = SiteVolunteerCoachRouteImport.update({
+  id: '/coach',
+  path: '/coach',
+  getParentRoute: () => SiteVolunteerRoute,
+} as any)
+const SiteVolunteerAmbassadorRoute = SiteVolunteerAmbassadorRouteImport.update({
+  id: '/ambassador',
+  path: '/ambassador',
+  getParentRoute: () => SiteVolunteerRoute,
+} as any)
+const SiteResourcesProblemsRoute = SiteResourcesProblemsRouteImport.update({
+  id: '/problems',
+  path: '/problems',
+  getParentRoute: () => SiteResourcesRoute,
 } as any)
 const Site2026TeamRoute = Site2026TeamRouteImport.update({
   id: '/2026/team',
@@ -97,97 +169,167 @@ const Site2026FaqRoute = Site2026FaqRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof SiteIndexRoute
   '/about': typeof SiteAboutRoute
+  '/ambassadors': typeof SiteAmbassadorsRoute
+  '/apply': typeof SiteApplyRoute
+  '/archive': typeof SiteArchiveRoute
+  '/coaches': typeof SiteCoachesRoute
   '/faq': typeof SiteFaqRoute
+  '/fellows': typeof SiteFellowsRoute
   '/partnerships': typeof SitePartnershipsRoute
   '/press': typeof SitePressRoute
-  '/resources': typeof SiteResourcesRoute
+  '/resources': typeof SiteResourcesRouteWithChildren
   '/results': typeof SiteResultsRoute
+  '/selection': typeof SiteSelectionRoute
   '/selection-2027': typeof SiteSelection2027Route
   '/team': typeof SiteTeamRoute
+  '/volunteer': typeof SiteVolunteerRouteWithChildren
   '/2026/faq': typeof Site2026FaqRoute
   '/2026/results': typeof Site2026ResultsRoute
   '/2026/team': typeof Site2026TeamRoute
+  '/resources/problems': typeof SiteResourcesProblemsRoute
+  '/volunteer/ambassador': typeof SiteVolunteerAmbassadorRoute
+  '/volunteer/coach': typeof SiteVolunteerCoachRoute
+  '/volunteer/fellow': typeof SiteVolunteerFellowRoute
   '/2026/': typeof Site2026IndexRoute
+  '/volunteer/': typeof SiteVolunteerIndexRoute
 }
 export interface FileRoutesByTo {
   '/about': typeof SiteAboutRoute
+  '/ambassadors': typeof SiteAmbassadorsRoute
+  '/apply': typeof SiteApplyRoute
+  '/archive': typeof SiteArchiveRoute
+  '/coaches': typeof SiteCoachesRoute
   '/faq': typeof SiteFaqRoute
+  '/fellows': typeof SiteFellowsRoute
   '/partnerships': typeof SitePartnershipsRoute
   '/press': typeof SitePressRoute
-  '/resources': typeof SiteResourcesRoute
+  '/resources': typeof SiteResourcesRouteWithChildren
   '/results': typeof SiteResultsRoute
+  '/selection': typeof SiteSelectionRoute
   '/selection-2027': typeof SiteSelection2027Route
   '/team': typeof SiteTeamRoute
   '/': typeof SiteIndexRoute
   '/2026/faq': typeof Site2026FaqRoute
   '/2026/results': typeof Site2026ResultsRoute
   '/2026/team': typeof Site2026TeamRoute
+  '/resources/problems': typeof SiteResourcesProblemsRoute
+  '/volunteer/ambassador': typeof SiteVolunteerAmbassadorRoute
+  '/volunteer/coach': typeof SiteVolunteerCoachRoute
+  '/volunteer/fellow': typeof SiteVolunteerFellowRoute
   '/2026': typeof Site2026IndexRoute
+  '/volunteer': typeof SiteVolunteerIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_site': typeof SiteRouteWithChildren
   '/_site/about': typeof SiteAboutRoute
+  '/_site/ambassadors': typeof SiteAmbassadorsRoute
+  '/_site/apply': typeof SiteApplyRoute
+  '/_site/archive': typeof SiteArchiveRoute
+  '/_site/coaches': typeof SiteCoachesRoute
   '/_site/faq': typeof SiteFaqRoute
+  '/_site/fellows': typeof SiteFellowsRoute
   '/_site/partnerships': typeof SitePartnershipsRoute
   '/_site/press': typeof SitePressRoute
-  '/_site/resources': typeof SiteResourcesRoute
+  '/_site/resources': typeof SiteResourcesRouteWithChildren
   '/_site/results': typeof SiteResultsRoute
+  '/_site/selection': typeof SiteSelectionRoute
   '/_site/selection-2027': typeof SiteSelection2027Route
   '/_site/team': typeof SiteTeamRoute
+  '/_site/volunteer': typeof SiteVolunteerRouteWithChildren
   '/_site/': typeof SiteIndexRoute
   '/_site/2026/faq': typeof Site2026FaqRoute
   '/_site/2026/results': typeof Site2026ResultsRoute
   '/_site/2026/team': typeof Site2026TeamRoute
+  '/_site/resources/problems': typeof SiteResourcesProblemsRoute
+  '/_site/volunteer/ambassador': typeof SiteVolunteerAmbassadorRoute
+  '/_site/volunteer/coach': typeof SiteVolunteerCoachRoute
+  '/_site/volunteer/fellow': typeof SiteVolunteerFellowRoute
   '/_site/2026/': typeof Site2026IndexRoute
+  '/_site/volunteer/': typeof SiteVolunteerIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/about'
+    | '/ambassadors'
+    | '/apply'
+    | '/archive'
+    | '/coaches'
     | '/faq'
+    | '/fellows'
     | '/partnerships'
     | '/press'
     | '/resources'
     | '/results'
+    | '/selection'
     | '/selection-2027'
     | '/team'
+    | '/volunteer'
     | '/2026/faq'
     | '/2026/results'
     | '/2026/team'
+    | '/resources/problems'
+    | '/volunteer/ambassador'
+    | '/volunteer/coach'
+    | '/volunteer/fellow'
     | '/2026/'
+    | '/volunteer/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/about'
+    | '/ambassadors'
+    | '/apply'
+    | '/archive'
+    | '/coaches'
     | '/faq'
+    | '/fellows'
     | '/partnerships'
     | '/press'
     | '/resources'
     | '/results'
+    | '/selection'
     | '/selection-2027'
     | '/team'
     | '/'
     | '/2026/faq'
     | '/2026/results'
     | '/2026/team'
+    | '/resources/problems'
+    | '/volunteer/ambassador'
+    | '/volunteer/coach'
+    | '/volunteer/fellow'
     | '/2026'
+    | '/volunteer'
   id:
     | '__root__'
     | '/_site'
     | '/_site/about'
+    | '/_site/ambassadors'
+    | '/_site/apply'
+    | '/_site/archive'
+    | '/_site/coaches'
     | '/_site/faq'
+    | '/_site/fellows'
     | '/_site/partnerships'
     | '/_site/press'
     | '/_site/resources'
     | '/_site/results'
+    | '/_site/selection'
     | '/_site/selection-2027'
     | '/_site/team'
+    | '/_site/volunteer'
     | '/_site/'
     | '/_site/2026/faq'
     | '/_site/2026/results'
     | '/_site/2026/team'
+    | '/_site/resources/problems'
+    | '/_site/volunteer/ambassador'
+    | '/_site/volunteer/coach'
+    | '/_site/volunteer/fellow'
     | '/_site/2026/'
+    | '/_site/volunteer/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -210,6 +352,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SiteIndexRouteImport
       parentRoute: typeof SiteRoute
     }
+    '/_site/volunteer': {
+      id: '/_site/volunteer'
+      path: '/volunteer'
+      fullPath: '/volunteer'
+      preLoaderRoute: typeof SiteVolunteerRouteImport
+      parentRoute: typeof SiteRoute
+    }
     '/_site/team': {
       id: '/_site/team'
       path: '/team'
@@ -222,6 +371,13 @@ declare module '@tanstack/react-router' {
       path: '/selection-2027'
       fullPath: '/selection-2027'
       preLoaderRoute: typeof SiteSelection2027RouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/selection': {
+      id: '/_site/selection'
+      path: '/selection'
+      fullPath: '/selection'
+      preLoaderRoute: typeof SiteSelectionRouteImport
       parentRoute: typeof SiteRoute
     }
     '/_site/results': {
@@ -252,11 +408,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitePartnershipsRouteImport
       parentRoute: typeof SiteRoute
     }
+    '/_site/fellows': {
+      id: '/_site/fellows'
+      path: '/fellows'
+      fullPath: '/fellows'
+      preLoaderRoute: typeof SiteFellowsRouteImport
+      parentRoute: typeof SiteRoute
+    }
     '/_site/faq': {
       id: '/_site/faq'
       path: '/faq'
       fullPath: '/faq'
       preLoaderRoute: typeof SiteFaqRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/coaches': {
+      id: '/_site/coaches'
+      path: '/coaches'
+      fullPath: '/coaches'
+      preLoaderRoute: typeof SiteCoachesRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/archive': {
+      id: '/_site/archive'
+      path: '/archive'
+      fullPath: '/archive'
+      preLoaderRoute: typeof SiteArchiveRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/apply': {
+      id: '/_site/apply'
+      path: '/apply'
+      fullPath: '/apply'
+      preLoaderRoute: typeof SiteApplyRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/ambassadors': {
+      id: '/_site/ambassadors'
+      path: '/ambassadors'
+      fullPath: '/ambassadors'
+      preLoaderRoute: typeof SiteAmbassadorsRouteImport
       parentRoute: typeof SiteRoute
     }
     '/_site/about': {
@@ -266,12 +457,47 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SiteAboutRouteImport
       parentRoute: typeof SiteRoute
     }
+    '/_site/volunteer/': {
+      id: '/_site/volunteer/'
+      path: '/'
+      fullPath: '/volunteer/'
+      preLoaderRoute: typeof SiteVolunteerIndexRouteImport
+      parentRoute: typeof SiteVolunteerRoute
+    }
     '/_site/2026/': {
       id: '/_site/2026/'
       path: '/2026'
       fullPath: '/2026/'
       preLoaderRoute: typeof Site2026IndexRouteImport
       parentRoute: typeof SiteRoute
+    }
+    '/_site/volunteer/fellow': {
+      id: '/_site/volunteer/fellow'
+      path: '/fellow'
+      fullPath: '/volunteer/fellow'
+      preLoaderRoute: typeof SiteVolunteerFellowRouteImport
+      parentRoute: typeof SiteVolunteerRoute
+    }
+    '/_site/volunteer/coach': {
+      id: '/_site/volunteer/coach'
+      path: '/coach'
+      fullPath: '/volunteer/coach'
+      preLoaderRoute: typeof SiteVolunteerCoachRouteImport
+      parentRoute: typeof SiteVolunteerRoute
+    }
+    '/_site/volunteer/ambassador': {
+      id: '/_site/volunteer/ambassador'
+      path: '/ambassador'
+      fullPath: '/volunteer/ambassador'
+      preLoaderRoute: typeof SiteVolunteerAmbassadorRouteImport
+      parentRoute: typeof SiteVolunteerRoute
+    }
+    '/_site/resources/problems': {
+      id: '/_site/resources/problems'
+      path: '/problems'
+      fullPath: '/resources/problems'
+      preLoaderRoute: typeof SiteResourcesProblemsRouteImport
+      parentRoute: typeof SiteResourcesRoute
     }
     '/_site/2026/team': {
       id: '/_site/2026/team'
@@ -297,15 +523,52 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface SiteResourcesRouteChildren {
+  SiteResourcesProblemsRoute: typeof SiteResourcesProblemsRoute
+}
+
+const SiteResourcesRouteChildren: SiteResourcesRouteChildren = {
+  SiteResourcesProblemsRoute: SiteResourcesProblemsRoute,
+}
+
+const SiteResourcesRouteWithChildren = SiteResourcesRoute._addFileChildren(
+  SiteResourcesRouteChildren,
+)
+
+interface SiteVolunteerRouteChildren {
+  SiteVolunteerAmbassadorRoute: typeof SiteVolunteerAmbassadorRoute
+  SiteVolunteerCoachRoute: typeof SiteVolunteerCoachRoute
+  SiteVolunteerFellowRoute: typeof SiteVolunteerFellowRoute
+  SiteVolunteerIndexRoute: typeof SiteVolunteerIndexRoute
+}
+
+const SiteVolunteerRouteChildren: SiteVolunteerRouteChildren = {
+  SiteVolunteerAmbassadorRoute: SiteVolunteerAmbassadorRoute,
+  SiteVolunteerCoachRoute: SiteVolunteerCoachRoute,
+  SiteVolunteerFellowRoute: SiteVolunteerFellowRoute,
+  SiteVolunteerIndexRoute: SiteVolunteerIndexRoute,
+}
+
+const SiteVolunteerRouteWithChildren = SiteVolunteerRoute._addFileChildren(
+  SiteVolunteerRouteChildren,
+)
+
 interface SiteRouteChildren {
   SiteAboutRoute: typeof SiteAboutRoute
+  SiteAmbassadorsRoute: typeof SiteAmbassadorsRoute
+  SiteApplyRoute: typeof SiteApplyRoute
+  SiteArchiveRoute: typeof SiteArchiveRoute
+  SiteCoachesRoute: typeof SiteCoachesRoute
   SiteFaqRoute: typeof SiteFaqRoute
+  SiteFellowsRoute: typeof SiteFellowsRoute
   SitePartnershipsRoute: typeof SitePartnershipsRoute
   SitePressRoute: typeof SitePressRoute
-  SiteResourcesRoute: typeof SiteResourcesRoute
+  SiteResourcesRoute: typeof SiteResourcesRouteWithChildren
   SiteResultsRoute: typeof SiteResultsRoute
+  SiteSelectionRoute: typeof SiteSelectionRoute
   SiteSelection2027Route: typeof SiteSelection2027Route
   SiteTeamRoute: typeof SiteTeamRoute
+  SiteVolunteerRoute: typeof SiteVolunteerRouteWithChildren
   SiteIndexRoute: typeof SiteIndexRoute
   Site2026FaqRoute: typeof Site2026FaqRoute
   Site2026ResultsRoute: typeof Site2026ResultsRoute
@@ -315,13 +578,20 @@ interface SiteRouteChildren {
 
 const SiteRouteChildren: SiteRouteChildren = {
   SiteAboutRoute: SiteAboutRoute,
+  SiteAmbassadorsRoute: SiteAmbassadorsRoute,
+  SiteApplyRoute: SiteApplyRoute,
+  SiteArchiveRoute: SiteArchiveRoute,
+  SiteCoachesRoute: SiteCoachesRoute,
   SiteFaqRoute: SiteFaqRoute,
+  SiteFellowsRoute: SiteFellowsRoute,
   SitePartnershipsRoute: SitePartnershipsRoute,
   SitePressRoute: SitePressRoute,
-  SiteResourcesRoute: SiteResourcesRoute,
+  SiteResourcesRoute: SiteResourcesRouteWithChildren,
   SiteResultsRoute: SiteResultsRoute,
+  SiteSelectionRoute: SiteSelectionRoute,
   SiteSelection2027Route: SiteSelection2027Route,
   SiteTeamRoute: SiteTeamRoute,
+  SiteVolunteerRoute: SiteVolunteerRouteWithChildren,
   SiteIndexRoute: SiteIndexRoute,
   Site2026FaqRoute: Site2026FaqRoute,
   Site2026ResultsRoute: Site2026ResultsRoute,

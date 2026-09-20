@@ -90,9 +90,7 @@ function PlaceholderCard({ slot }: { slot: Slot }) {
         <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-primary">
           {slot.role}
         </div>
-        <div className="mt-2 text-xs text-muted-foreground">
-          {slot.criterion}
-        </div>
+        <div className="mt-2 text-xs text-muted-foreground">{slot.criterion}</div>
       </div>
 
       <div className="mt-6 flex items-center justify-center gap-1.5 border-t border-border/60 pt-4 font-mono text-[10px] uppercase tracking-[0.15em] text-muted-foreground">
@@ -116,15 +114,11 @@ function CompetitionSection({
 }) {
   return (
     <section className="mx-auto max-w-7xl px-6 py-20">
-      <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
-        // {tag}
-      </div>
+      <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// {tag}</div>
       <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight md:text-4xl">
         {title}
       </h2>
-      <p className="mt-2 max-w-2xl text-sm text-muted-foreground md:text-base">
-        {subtitle}
-      </p>
+      <p className="mt-2 max-w-2xl text-sm text-muted-foreground md:text-base">{subtitle}</p>
 
       <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
         {slots.map((s, i) => (
@@ -147,11 +141,12 @@ function Team() {
             // team.2027
           </div>
           <h1 className="mt-3 max-w-3xl font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
-            Team PH for the{" "}
-            <span className="text-primary">2027 international campaigns.</span>
+            Team PH for the <span className="text-primary">2027 international campaigns.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            Official delegations representing the Philippines at IOAI 2027 (Singapore) and APOAI 2027 (Russia) will be determined during the National Finals at the Ateneo CTC Build Lab in April 2027.
+            Official delegations representing the Philippines at IOAI 2027 (Singapore) and APOAI
+            2027 (Russia) will be determined during the National Finals at the Ateneo CTC Build Lab
+            in April 2027.
           </p>
         </div>
       </section>

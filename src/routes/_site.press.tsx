@@ -85,7 +85,8 @@ const articles: Article[] = [
   {
     outlet: "News Light",
     date: "Jul 3, 2026",
-    title: "Umani ng medalya ang Team Pilipinas sa kauna-unahang Asia-Pacific Olympiad in Artificial Intelligence (APOAI) 2026",
+    title:
+      "Umani ng medalya ang Team Pilipinas sa kauna-unahang Asia-Pacific Olympiad in Artificial Intelligence (APOAI) 2026",
     href: "https://www.facebook.com/watch/?v=1604345714442678",
   },
   {
@@ -121,13 +122,15 @@ const articles: Article[] = [
   {
     outlet: "BusinessWorld",
     date: "Jul 2, 2026",
-    title: "Team Philippines wins gold, places 6th overall at first Asia-Pacific AI Olympiad led by BUILD",
+    title:
+      "Team Philippines wins gold, places 6th overall at first Asia-Pacific AI Olympiad led by BUILD",
     href: "https://www.facebook.com/100064329023551/posts/1476039291217024/",
   },
   {
     outlet: "Ateneo News",
     date: "Jul 2, 2026",
-    title: "Team Philippines wins gold, places 6th overall at first Asia-Pacific AI Olympiad led by BUILD",
+    title:
+      "Team Philippines wins gold, places 6th overall at first Asia-Pacific AI Olympiad led by BUILD",
     href: "https://www.ateneo.edu/news/2026/07/team-philippines-wins-gold-places-6th-overall-first-asia-pacific-ai-olympiad-led-build",
   },
   {
@@ -218,18 +221,22 @@ const articles: Article[] = [
 function PressPage() {
   return (
     <section className="relative mx-auto max-w-7xl px-6 pb-28 pt-32">
-      <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// press.index</div>
+      <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+        // press.index
+      </div>
       <h1 className="mt-3 max-w-3xl font-display text-4xl font-semibold tracking-tight md:text-6xl">
         IOAI Philippines in the press.
       </h1>
       <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-        Featured articles, interviews, and coverage of Team PH and the national AI olympiad program from publications
-        across the Philippines and abroad.
+        Featured articles, interviews, and coverage of Team PH and the national AI olympiad program
+        from publications across the Philippines and abroad.
       </p>
 
       <div className="mt-20">
         <div className="flex items-baseline justify-between border-b border-border pb-4">
-          <h2 className="font-display text-2xl font-semibold tracking-tight md:text-3xl">Press &amp; Media Coverage</h2>
+          <h2 className="font-display text-2xl font-semibold tracking-tight md:text-3xl">
+            Press &amp; Media Coverage
+          </h2>
           <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
             {articles.length} features
           </span>
@@ -241,7 +248,9 @@ function PressPage() {
               key={`${a.outlet}-${a.href}-${i}`}
               className="group flex h-full flex-col rounded-sm border border-border bg-surface p-5 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg"
             >
-              <div className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">{a.outlet}</div>
+              <div className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+                {a.outlet}
+              </div>
               {a.date ? (
                 <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
                   {a.date}
@@ -266,8 +275,8 @@ function PressPage() {
 
       <div className="mt-16 rounded-sm border border-border bg-surface p-8 text-center">
         <p className="text-sm text-muted-foreground">
-          For media inquiries, please reach out to Ateneo's Office of the Assistant Vice President for Research,
-          Creative Work, and Innovation (OAVP-RCWI).
+          For media inquiries, please reach out to Ateneo's Office of the Assistant Vice President
+          for Research, Creative Work, and Innovation (OAVP-RCWI).
           <br />
           Please email{" "}
           <a href="mailto:press@ioaiph.org" className="text-primary hover:underline">

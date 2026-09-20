@@ -1,0 +1,50 @@
+[
+  {
+    "id": "coach-slot-1",
+    "isPlaceholder": true,
+    "name": "Scientific Committee Member",
+    "role": "Problem Setter",
+    "affiliation": "AI Research Lab / Tech Institute",
+    "specialization": "Computer Vision & Deep Learning Theory",
+    "status": "Review in Progress",
+    "photoUrl": "",
+    "linkedinUrl": "#apply",
+    "bio": "Designs novel competition tasks, baseline models, and evaluation datasets."
+  },
+  {
+    "id": "coach-slot-2",
+    "isPlaceholder": true,
+    "name": "Scientific Committee Member",
+    "role": "Problem Setter",
+    "affiliation": "AI Research Lab / Tech Institute",
+    "specialization": "Natural Language Processing",
+    "status": "Review in Progress",
+    "photoUrl": "",
+    "linkedinUrl": "#apply",
+    "bio": "Authors practical machine learning challenges and validates test metrics."
+  },
+  {
+    "id": "coach-slot-3",
+    "isPlaceholder": true,
+    "name": "National Team Camp Trainer",
+    "role": "Team Coach",
+    "affiliation": "Competitive Programming / Olympiad Alumni",
+    "specialization": "Competitive ML & Algorithmic Heuristics",
+    "status": "Review in Progress",
+    "photoUrl": "",
+    "linkedinUrl": "#apply",
+    "bio": "Prepares national finalists during intensive selection bootcamps."
+  },
+  {
+    "id": "coach-slot-4",
+    "isPlaceholder": true,
+    "name": "National Team Camp Trainer",
+    "role": "Team Coach",
+    "affiliation": "Competitive Programming / Olympiad Alumni",
+    "specialization": "Optimization & Deep Learning",
+    "status": "Review in Progress",
+    "photoUrl": "",
+    "linkedinUrl": "#apply",
+    "bio": "Trains Team Philippines in state-of-the-art architectures and debugging."
+  }
+]

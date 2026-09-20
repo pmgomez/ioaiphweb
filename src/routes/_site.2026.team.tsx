@@ -64,7 +64,11 @@ const ioai: Member[] = [
 ];
 
 const apoai: Member[] = [
-  { name: "Ellison Matthew S. Ang", school: "Philippine Science High School - Main Campus", photo: angPhoto },
+  {
+    name: "Ellison Matthew S. Ang",
+    school: "Philippine Science High School - Main Campus",
+    photo: angPhoto,
+  },
   {
     name: "Ryan James L. Alfaro",
     school: "Philippine Science High School - Calabarzon Region Campus",
@@ -80,20 +84,44 @@ const apoai: Member[] = [
     school: "Philippine Science High School - Central Luzon Campus",
     photo: castilloPhoto,
   },
-  { name: "Daphne Eunice U. Acena", school: "De La Salle University - Dasmariñas High School", photo: acenaPhoto },
-  { name: "Troy Dylan T. Serapio", school: "Philippine Science High School - Main Campus", photo: troyPhoto },
-  { name: "Jhareign S. Solidum", school: "University of Mindanao Ilang High School", photo: solidumPhoto },
-  { name: "Aretha Cai Faustine M. Sy", school: "St. Scholastica's Academy of Marikina", photo: syPhoto },
+  {
+    name: "Daphne Eunice U. Acena",
+    school: "De La Salle University - Dasmariñas High School",
+    photo: acenaPhoto,
+  },
+  {
+    name: "Troy Dylan T. Serapio",
+    school: "Philippine Science High School - Main Campus",
+    photo: troyPhoto,
+  },
+  {
+    name: "Jhareign S. Solidum",
+    school: "University of Mindanao Ilang High School",
+    photo: solidumPhoto,
+  },
+  {
+    name: "Aretha Cai Faustine M. Sy",
+    school: "St. Scholastica's Academy of Marikina",
+    photo: syPhoto,
+  },
 ];
 
 const neoai: Member[] = [
-  { name: "Daphne Eunice U. Acena", school: "De La Salle University - Dasmariñas High School", photo: acenaPhoto },
+  {
+    name: "Daphne Eunice U. Acena",
+    school: "De La Salle University - Dasmariñas High School",
+    photo: acenaPhoto,
+  },
   {
     name: "Ryan James L. Alfaro",
     school: "Philippine Science High School - Calabarzon Region Campus",
     photo: alfaroPhoto,
   },
-  { name: "Ellison Matthew S. Ang", school: "Philippine Science High School - Main Campus", photo: angPhoto },
+  {
+    name: "Ellison Matthew S. Ang",
+    school: "Philippine Science High School - Main Campus",
+    photo: angPhoto,
+  },
   {
     name: "Noe Nathan Y. Arreza",
     school: "Philippine Science High School - Calabarzon Region Campus",
@@ -104,16 +132,32 @@ const neoai: Member[] = [
     school: "Philippine Science High School - Calabarzon Region Campus",
     photo: bustamantePhoto,
   },
-  { name: "Juan Mateo J. Desuasido", school: "Brent International School Manila", photo: desuasidoPhoto },
+  {
+    name: "Juan Mateo J. Desuasido",
+    school: "Brent International School Manila",
+    photo: desuasidoPhoto,
+  },
   {
     name: "Tristan Japheth L. Marquez",
     school: "Philippine Science High School - Central Luzon Campus",
     photo: marquezPhoto,
   },
   { name: "Almond Rose M. Obedoza", school: "Stanford Online High School", photo: obedozaPhoto },
-  { name: "Troy Dylan T. Serapio", school: "Philippine Science High School - Main Campus", photo: troyPhoto },
-  { name: "Jhareign S. Solidum", school: "University of Mindanao Ilang High School", photo: solidumPhoto },
-  { name: "Aretha Cai Faustine M. Sy", school: "St. Scholastica's Academy of Marikina", photo: syPhoto },
+  {
+    name: "Troy Dylan T. Serapio",
+    school: "Philippine Science High School - Main Campus",
+    photo: troyPhoto,
+  },
+  {
+    name: "Jhareign S. Solidum",
+    school: "University of Mindanao Ilang High School",
+    photo: solidumPhoto,
+  },
+  {
+    name: "Aretha Cai Faustine M. Sy",
+    school: "St. Scholastica's Academy of Marikina",
+    photo: syPhoto,
+  },
   { name: "Conrad Jeffrey C. Tan", school: "Grace Christian College", photo: tanPhoto },
 ];
 
@@ -125,10 +169,14 @@ function MemberCard({ m }: { m: Member }) {
       </div>
       <div className="mt-4 text-center font-display text-base font-semibold">{m.name}</div>
       {m.role ? (
-        <div className="mt-1 text-center font-mono text-[11px] uppercase tracking-[0.16em] text-primary">{m.role}</div>
+        <div className="mt-1 text-center font-mono text-[11px] uppercase tracking-[0.16em] text-primary">
+          {m.role}
+        </div>
       ) : null}
       {m.school ? (
-        <div className="mt-1 text-center font-mono text-[11px] text-muted-foreground">{m.school}</div>
+        <div className="mt-1 text-center font-mono text-[11px] text-muted-foreground">
+          {m.school}
+        </div>
       ) : null}
     </div>
   );
@@ -148,14 +196,18 @@ function CompetitionSection({
   cols?: number;
 }) {
   const gridClass =
-    cols === 5 ? "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5" : "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4";
+    cols === 5
+      ? "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
+      : "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4";
 
   return (
     <section className="mx-auto max-w-7xl px-6 py-20">
       <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// {tag}</div>
       <h2 className="mt-3 font-display text-3xl font-semibold">{title}</h2>
       <p className="mt-2 max-w-2xl text-sm text-muted-foreground">{subtitle}</p>
-      <div className={`mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border ${gridClass}`}>
+      <div
+        className={`mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border ${gridClass}`}
+      >
         {members.map((m, i) => (
           <MemberCard key={`${tag}-${i}`} m={m} />
         ))}
@@ -171,12 +223,16 @@ function Team() {
         <NeuralNetworkBg className="pointer-events-none absolute inset-0 h-full w-full opacity-30 [mask-image:radial-gradient(ellipse_at_center,black_0%,transparent_75%)]" />
         <div className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-primary/10 blur-[130px]" />
         <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-24">
-          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">// team.2026</div>
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+            // team.2026
+          </div>
           <h1 className="mt-3 max-w-3xl font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
-            Team PH for the<span className="text-primary"> 2026 international AI competitions.</span>
+            Team PH for the
+            <span className="text-primary"> 2026 international AI competitions.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            The Filipino students selected to represent the country at IOAI, APOAI, and NEOAI in 2026.
+            The Filipino students selected to represent the country at IOAI, APOAI, and NEOAI in
+            2026.
           </p>
         </div>
       </section>

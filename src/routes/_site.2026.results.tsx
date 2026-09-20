@@ -41,8 +41,7 @@ const selection: Resource[] = [
   {
     code: "R-01",
     title: "Team Selection Grade Book",
-    subtitle:
-      "Composite grade book used to assemble the official Philippine delegation.",
+    subtitle: "Composite grade book used to assemble the official Philippine delegation.",
     href: "https://docs.google.com/spreadsheets/d/1xsZy_sfp_xIhAP_qdBCWHEZ44De5QChR4Xe_LUQSX08/edit?gid=0#gid=0",
     kind: "sheet",
     window: "Feb 22 – Apr 15, 2026",
@@ -86,8 +85,7 @@ const selection: Resource[] = [
 const certificates: Resource = {
   code: "C-00",
   title: "Certificates",
-  subtitle:
-    "Downloadable certificates for students, teachers, coaches, and schools.",
+  subtitle: "Downloadable certificates for students, teachers, coaches, and schools.",
   href: "https://drive.google.com/drive/u/0/folders/1EXT7xkEyxnlSgNESNvF0JIjeT753SSuv",
   kind: "drive",
 };
@@ -138,8 +136,8 @@ function Results() {
             Results &amp; records
           </h1>
           <p className="mt-5 max-w-2xl text-base text-muted-foreground md:text-lg">
-            From the international podium back to the first qualifier — every
-            round Team Philippines moves through, in one place.
+            From the international podium back to the first qualifier — every round Team Philippines
+            moves through, in one place.
           </p>
         </div>
       </section>
@@ -155,8 +153,8 @@ function Results() {
               Competition results
             </h2>
             <p className="mt-2 max-w-xl text-sm text-muted-foreground">
-              International, regional, and sub-regional standings will land
-              here as each competition concludes.
+              International, regional, and sub-regional standings will land here as each competition
+              concludes.
             </p>
           </div>
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
@@ -226,10 +224,7 @@ function Results() {
               </p>
               <div className="mt-5 flex flex-wrap gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
                 {["Students", "Teachers", "Coaches", "Schools"].map((t) => (
-                  <span
-                    key={t}
-                    className="rounded-sm border border-border px-2 py-1"
-                  >
+                  <span key={t} className="rounded-sm border border-border px-2 py-1">
                     {t}
                   </span>
                 ))}
@@ -248,13 +243,7 @@ function Results() {
   );
 }
 
-function CompetitionBanner({
-  c,
-  primary,
-}: {
-  c: Competition;
-  primary?: boolean;
-}) {
+function CompetitionBanner({ c, primary }: { c: Competition; primary?: boolean }) {
   const isLink = !!c.href;
   const Tag = isLink ? "a" : "div";
 
@@ -286,9 +275,11 @@ function CompetitionBanner({
           {c.scope} · {c.host}
         </div>
       </div>
-      <div className={`flex items-center gap-2 self-start rounded-sm border border-border px-3 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground md:self-center transition-colors ${
-        isLink ? "group-hover:text-primary group-hover:border-primary/40" : ""
-      }`}>
+      <div
+        className={`flex items-center gap-2 self-start rounded-sm border border-border px-3 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground md:self-center transition-colors ${
+          isLink ? "group-hover:text-primary group-hover:border-primary/40" : ""
+        }`}
+      >
         {isLink ? (
           <ArrowUpRight className="size-3 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
         ) : (
@@ -324,9 +315,7 @@ function ResourceCard({ r }: { r: Resource }) {
         <ArrowUpRight className="size-4 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
       </div>
       <div>
-        <h3 className="font-display text-xl font-semibold leading-tight">
-          {r.title}
-        </h3>
+        <h3 className="font-display text-xl font-semibold leading-tight">{r.title}</h3>
         <p className="mt-2 text-sm text-muted-foreground">{r.subtitle}</p>
         {r.window && (
           <div className="mt-3 inline-block rounded-sm border border-border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
