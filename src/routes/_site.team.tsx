@@ -12,7 +12,6 @@ export const Route = createFileRoute("/_site/team")({
         content:
           "Meet the official Philippine delegations for the 2027 IOAI (Singapore) and APOAI (Russia) international AI competitions.",
       },
-      ,
       { property: "og:title", content: "Team — IOAI Philippines" },
       {
         property: "og:description",

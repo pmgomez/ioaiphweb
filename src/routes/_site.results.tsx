@@ -12,7 +12,6 @@ export const Route = createFileRoute("/_site/results")({
         content:
           "Official results, qualifiers, and certificates from the IOAI Philippines national selection cycle, plus regional and international standings.",
       },
-      ,
       { property: "og:title", content: "Results — IOAI Philippines" },
       {
         property: "og:description",

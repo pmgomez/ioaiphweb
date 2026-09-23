@@ -33,7 +33,6 @@ export const Route = createFileRoute("/_site/about")({
         content:
           "How IOAI Philippines selects, trains and fields Team PH for the world stage of artificial intelligence.",
       },
-      ,
       { property: "og:title", content: "About — IOAI Philippines" },
       {
         property: "og:description",

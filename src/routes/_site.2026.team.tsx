@@ -29,7 +29,6 @@ export const Route = createFileRoute("/_site/2026/team")({
         name: "description",
         content: "Meet Team PH for the 2026 IOAI, APOAI, and NEOAI international AI competitions.",
       },
-      ,
       { property: "og:title", content: "2026 Team — IOAI Philippines" },
       {
         property: "og:description",

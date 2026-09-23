@@ -12,7 +12,6 @@ export const Route = createFileRoute("/_site/2026/faq")({
         content:
           "Archived answers to common questions about the 2026 IOAI Philippines season: eligibility, selection, competition mechanics, and Astana finals.",
       },
-      ,
       { property: "og:title", content: "FAQ (2026) — IOAI Philippines" },
       {
         property: "og:description",
