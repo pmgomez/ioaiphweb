@@ -207,7 +207,6 @@ function About() {
               "Every Filipino learner with the talent to compete in AI should have a path to do so —
               regardless of geography, school, or income."
             </p>
-            <div className="mt-6 font-mono text-xs text-muted-foreground"></div>
           </div>
         </div>
       </section>

@@ -41,12 +41,6 @@ const articles: Article[] = [
     href: "https://technology.inquirer.net/148875/filipino-teens-win-4-medals-in-intl-ai-olympiad",
   },
   {
-    outlet: "The Manila Times",
-    date: "Aug 28, 2026",
-    title: "Team PH wins big at AI olympiad",
-    href: "https://www.manilatimes.net/2026/07/04/business/science-technology/team-ph-wins-bigat-ai-olympiad/2378008/",
-  },
-  {
     outlet: "Philippines Graphic",
     date: "Aug 28, 2026",
     title: "Philippine teens win int’l AI Olympiad debut",

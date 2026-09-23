@@ -169,7 +169,7 @@ function ResourcesPage() {
         // training.index
       </div>
       <h1 className="mt-3 max-w-3xl font-display text-4xl font-semibold tracking-tight md:text-6xl">
-        Resources for the road to Astana.
+        Resources for the road to Singapore.
       </h1>
       <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
         A living list of curated study material — the same references our mentors point trainees to

@@ -29,7 +29,7 @@ const groups: Group[] = [
       },
       {
         q: "When and where are the Global Finals?",
-        a: "The 2026 IOAI Global Finals will take place from August 2 to August 8, 2026, in Astana, Kazakhstan. The 2027 IOAI Global Finals will take place from July 4 to July 10, 2027 in Singapore.",
+        a: "The 2026 IOAI Global Finals took place from August 2 to August 8, 2026, in Astana, Kazakhstan. The 2027 IOAI Global Finals will take place from July 4 to July 10, 2027 in Singapore.",
       },
       {
         q: "Has the Philippine team already been selected for the current cycle?",
@@ -37,7 +37,7 @@ const groups: Group[] = [
       },
       {
         q: "When will applications open for the next national selection cycle?",
-        a: "The registration portal for the 2027 selection cycle will officially open in November 2026. Sign up for updates on our main page to receive immediate notification when the portal goes live.",
+        a: "The registration portal for the 2027 selection cycle opened on September 12, 2026, and closes on November 11, 2026. See the 2027 selection page for details.",
       },
     ],
   },
@@ -50,7 +50,7 @@ const groups: Group[] = [
       },
       {
         q: "I am a Filipino citizen living and studying overseas. Am I eligible to join Team Philippines?",
-        a: "Yes. Under the updated IOAI and APOAI Rules and Regulations, students are permitted to represent their country of citizenship. Consequently, starting with the 2027 selection cycle (opening November 2026), Filipino students residing or enrolled in institutions abroad can formally enter the IOAIPH qualification track.",
+        a: "Yes. Under the updated IOAI and APOAI Rules and Regulations, students are permitted to represent their country of citizenship. Consequently, starting with the 2027 selection cycle (opened September 12, 2026), Filipino students residing or enrolled in institutions abroad can formally enter the IOAIPH qualification track.",
       },
       {
         q: "Are homeschooled students eligible to join?",

@@ -33,7 +33,7 @@ const groups: Group[] = [
       },
       {
         q: "When does the 2027 national selection cycle run?",
-        a: "The 2027 cycle opens for nationwide public registration on September 12, 2026, and closes on January 10, 2027. Selection testing runs sequentially from Stage 1 Eliminations in January 2027 through the onsite National Finals in April 2027.",
+        a: "The 2027 cycle opens for nationwide public registration on September 12, 2026, and closes on November 11, 2026. Selection testing runs sequentially from Stage 1 Eliminations (November 16–22, 2026) through the onsite National Finals (February 20–21, 2027).",
       },
       {
         q: "How does the dual-delegation selection work for Singapore and Russia?",
@@ -46,7 +46,7 @@ const groups: Group[] = [
     items: [
       {
         q: "Who is eligible to compete in the 2027 national selection cycle?",
-        a: "The 2027 cycle is open to all Filipino K-12 students worldwide who are enrolled in an accredited primary or secondary institution (Kindergarten through Grade 12, or equivalent) on or after December 1, 2026, across public, private, science high schools, or homeschool programs. Contestants must be 20 years old or younger as of July 1, 2027.",
+        a: "The 2027 cycle is open to all Filipino K-12 students worldwide who are enrolled in an accredited primary or secondary institution (Kindergarten through Grade 12, or equivalent) on or after December 1, 2026, across public, private, science high schools, or homeschool programs. Contestants must be born on or after July 1, 2007.",
       },
       {
         q: "Are overseas Filipino students eligible to join Team Philippines?",
@@ -66,7 +66,7 @@ const groups: Group[] = [
       },
       {
         q: "Are returning 2026 international medalists exempt from early rounds?",
-        a: "Yes, under our additive direct-seeding policy (+N principle). Returning 2026 IOAI and APOAI medalists advance directly to Stage 5 (National Finals) without displacing any open qualifiers. Returning 2026 APOAI Honorable Mentions advance directly to Stage 4 (Semi-Finals). All direct seeds must be enrolled K-12 students for SY 2026–2027 and complete registration by January 10, 2027.",
+        a: "Yes, under our additive direct-seeding policy (+N principle). Returning 2026 IOAI and APOAI medalists advance directly to Stage 5 (National Finals) without displacing any open qualifiers. Returning 2026 APOAI Honorable Mentions advance directly to Stage 4 (Semi-Finals). All direct seeds must be enrolled K-12 students for SY 2026–2027 and complete registration by November 11, 2026.",
       },
       {
         q: "Are there any registration or examination fees?",
@@ -74,7 +74,7 @@ const groups: Group[] = [
       },
       {
         q: "Can I participate in IOAI alongside other International Science Olympiads?",
-        a: "Yes. Students are welcome to compete in informatics (NOI/IOI), mathematics (IMO), physics (IPhO), chemistry (IChO), linguistics (IOL), among others. Our master calendar deliberately incorporates blackout windows around major examination blocks and international fixtures.",
+        a: "Yes. Students are welcome to compete in informatics (NOI/IOI), mathematics (IMO), physics (IPhO), chemistry (IChO), linguistics (IOL), among others. Our master calendar is scheduled around major examination blocks and international fixtures.",
       },
     ],
   },

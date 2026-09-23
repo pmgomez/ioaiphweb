@@ -28,25 +28,25 @@ const ioaiSlots: Slot[] = [
     seat: "Delegate 01",
     role: "Primary Delegation",
     criterion: "National Finals · Rank 1",
-    status: "Determined Apr 11, 2027",
+    status: "Determined Feb 21, 2027",
   },
   {
     seat: "Delegate 02",
     role: "Primary Delegation",
     criterion: "National Finals · Rank 2",
-    status: "Determined Apr 11, 2027",
+    status: "Determined Feb 21, 2027",
   },
   {
     seat: "Delegate 03",
     role: "Primary Delegation",
     criterion: "National Finals · Rank 3",
-    status: "Determined Apr 11, 2027",
+    status: "Determined Feb 21, 2027",
   },
   {
     seat: "Delegate 04",
     role: "Primary Delegation",
     criterion: "National Finals · Rank 4",
-    status: "Determined Apr 11, 2027",
+    status: "Determined Feb 21, 2027",
   },
 ];
 
@@ -55,25 +55,25 @@ const apoaiSlots: Slot[] = [
     seat: "Junior Delegate 01",
     role: "Junior Pipeline Delegation",
     criterion: "Top Non-Graduating Finalist (K–11)",
-    status: "Determined Apr 11, 2027",
+    status: "Determined Feb 21, 2027",
   },
   {
     seat: "Junior Delegate 02",
     role: "Junior Pipeline Delegation",
     criterion: "Top Non-Graduating Finalist (K–11)",
-    status: "Determined Apr 11, 2027",
+    status: "Determined Feb 21, 2027",
   },
   {
     seat: "Junior Delegate 03",
     role: "Junior Pipeline Delegation",
     criterion: "Top Non-Graduating Finalist (K–11)",
-    status: "Determined Apr 11, 2027",
+    status: "Determined Feb 21, 2027",
   },
   {
     seat: "Junior Delegate 04",
     role: "Junior Pipeline Delegation",
     criterion: "Top Non-Graduating Finalist (K–11)",
-    status: "Determined Apr 11, 2027",
+    status: "Determined Feb 21, 2027",
   },
 ];
 
@@ -146,7 +146,7 @@ function Team() {
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
             Official delegations representing the Philippines at IOAI 2027 (Singapore) and APOAI
             2027 (Russia) will be determined during the National Finals at the Ateneo CTC Build Lab
-            in April 2027.
+            on February 20–21, 2027.
           </p>
         </div>
       </section>

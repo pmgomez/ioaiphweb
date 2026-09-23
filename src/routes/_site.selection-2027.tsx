@@ -111,7 +111,7 @@ const calendarData = [
     format: "Hybrid & Onsite Laboratories",
     progression: "Official Delegations",
     notes:
-      "10-week intensive training block combining hybrid problem sets and full-time lab drills, running concurrent with Singapore V39A visa processing and health screening.",
+      "10-week intensive training block combining hybrid problem sets and full-time lab drills, running concurrent with travel documentation and health screening.",
     status: "upcoming",
   },
   {

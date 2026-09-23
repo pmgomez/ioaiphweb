@@ -280,11 +280,11 @@ function Home() {
               // 2027_cycle.init
             </div>
             <h2 className="mt-3 max-w-2xl font-display text-4xl font-semibold tracking-tight md:text-5xl">
-              Applications for the 2027 cycle open this November.
+              Applications for the 2027 cycle are now open.
             </h2>
             <p className="mt-4 max-w-xl text-muted-foreground">
-              Be the first to know when the qualifier opens. Follow us on Facebook and join our
-              Discord.
+              Registration closes November 11, 2026. Follow us on Facebook and join our Discord for
+              updates.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a

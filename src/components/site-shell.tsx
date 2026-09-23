@@ -49,7 +49,7 @@ const NAV_CONFIG: NavEntry[] = [
   {
     title: "Selection",
     type: "link",
-    href: "/selection",
+    href: "/selection-2027",
   },
   {
     title: "Resources",
@@ -59,11 +59,6 @@ const NAV_CONFIG: NavEntry[] = [
         title: "Syllabus & Guides",
         href: "/resources",
         description: "Curriculum topics, recommended reading, and study roadmaps.",
-      },
-      {
-        title: "Problem Sets & Tasks",
-        href: "/resources/problems",
-        description: "Practice tasks, sample datasets, and benchmark problems.",
       },
       {
         title: "Applicant FAQ",
@@ -532,7 +527,7 @@ export function SiteShell({ children }: SiteShellProps) {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link to="/selection" className="hover:text-slate-950 dark:hover:text-white">
+                <Link to="/selection-2027" className="hover:text-slate-950 dark:hover:text-white">
                   Selection Process
                 </Link>
               </li>

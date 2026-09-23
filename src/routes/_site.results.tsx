@@ -63,7 +63,7 @@ const selection: Resource[] = [
     title: "Team Selection & Final Delegations",
     subtitle: "Official Philippine delegations for IOAI 2027 Singapore and APOAI 2027 Russia.",
     kind: "pending",
-    window: "Apr 10 – 11, 2027",
+    window: "Feb 20 – 21, 2027",
     featured: true,
   },
   {
@@ -71,7 +71,7 @@ const selection: Resource[] = [
     title: "Stage 5: National Finals Results",
     subtitle: "Aggregate task scores from the two-day onsite finals at the Ateneo CTC Build Lab.",
     kind: "pending",
-    window: "Apr 10 – 11, 2027",
+    window: "Feb 20 – 21, 2027",
     featured: true,
   },
   {
@@ -80,28 +80,28 @@ const selection: Resource[] = [
     subtitle:
       "Standings from the hybrid sprint; top 24 qualifiers advancing to the National Finals.",
     kind: "pending",
-    window: "Mar 20, 2027",
+    window: "Jan 30, 2027",
   },
   {
     code: "R-04",
     title: "Stage 3: Quarter-Finals Results",
     subtitle: "Scores from the online proctored round; top 40 advancing to the Semi-Finals.",
     kind: "pending",
-    window: "Mar 6, 2027",
+    window: "Jan 16, 2027",
   },
   {
     code: "R-05",
     title: "Stage 2: Qualifiers Results",
     subtitle: "Results from the timed proctored sprint; top 80 advancing to the Quarter-Finals.",
     kind: "pending",
-    window: "Feb 13, 2027",
+    window: "Dec 12, 2026",
   },
   {
     code: "R-06",
     title: "Stage 1: Eliminations Results",
     subtitle: "Contestants advancing past the nationwide seven-day asynchronous round (Top 300).",
     kind: "pending",
-    window: "Jan 11 – 17, 2027",
+    window: "Nov 16 – 22, 2026",
   },
 ];
 

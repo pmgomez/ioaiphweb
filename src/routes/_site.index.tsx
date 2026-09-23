@@ -492,7 +492,7 @@ function Home() {
                 </a>
 
                 <Link
-                  to="/resources"
+                  to="/2026"
                   className="inline-flex items-center gap-2 rounded-sm border border-border bg-background px-5 py-2.5 font-mono text-xs uppercase tracking-wider text-foreground transition-all hover:border-primary/50"
                 >
                   <span>Explore 2026 Archive</span>
