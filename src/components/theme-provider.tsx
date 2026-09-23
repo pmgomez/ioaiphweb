@@ -9,7 +9,8 @@ type ThemeContextValue = {
   setTheme: (theme: Theme) => void;
 };
 
-const STORAGE_KEY = "ioaiph-theme";
+// Both keys are read by the pre-hydration script in __root.tsx; keep them in sync.
+const STORAGE_KEYS = ["theme", "ioaiph-theme"] as const;
 
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
@@ -33,7 +34,8 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const stored =
       (typeof window !== "undefined"
-        ? (window.localStorage.getItem(STORAGE_KEY) as Theme | null)
+        ? ((window.localStorage.getItem(STORAGE_KEYS[0]) ??
+            window.localStorage.getItem(STORAGE_KEYS[1])) as Theme | null)
         : null) ?? "system";
     setThemeState(stored);
     const resolved = stored === "system" ? getSystemTheme() : stored;
@@ -56,7 +58,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   const setTheme = (next: Theme) => {
     setThemeState(next);
-    if (typeof window !== "undefined") window.localStorage.setItem(STORAGE_KEY, next);
+    if (typeof window !== "undefined") {
+      for (const key of STORAGE_KEYS) window.localStorage.setItem(key, next);
+    }
     const resolved = next === "system" ? getSystemTheme() : next;
     setResolvedTheme(resolved);
     applyTheme(resolved);

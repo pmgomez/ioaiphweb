@@ -241,6 +241,7 @@ function FAQ() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search questions and answers…"
+              aria-label="Search FAQ"
               className="w-full rounded-sm border border-border bg-surface/60 py-4 pl-10 pr-32 font-mono text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary/60 focus:outline-none"
             />
             {q && (
@@ -294,7 +295,9 @@ function FAQ() {
                       return (
                         <div key={key}>
                           <button
+                            type="button"
                             onClick={() => setOpen(isOpen && !q ? null : key)}
+                            aria-expanded={isOpen}
                             className="flex w-full items-center justify-between gap-6 py-5 text-left transition-colors hover:text-primary"
                           >
                             <span className="font-display text-lg font-medium">

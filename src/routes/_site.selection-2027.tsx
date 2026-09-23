@@ -237,7 +237,7 @@ function SelectionRoadmap2027() {
           </div>
         </div>
 
-        <main className="space-y-24">
+        <div className="space-y-24">
           {/* SECTION 1: PROGRAM OVERVIEW & ELIGIBILITY */}
           <section id="eligibility" className="scroll-mt-32">
             <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
@@ -891,7 +891,7 @@ function SelectionRoadmap2027() {
               </div>
             </div>
           </div>
-        </main>
+        </div>
       </div>
     </div>
   );

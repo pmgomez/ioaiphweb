@@ -1,8 +1,9 @@
-import { useState, useRef, useEffect, type ReactNode } from "react";
+import { useState, useRef, useEffect, type FocusEvent, type ReactNode } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X, ChevronDown, Sun, Moon } from "lucide-react";
 import ioaiphLogo from "@/assets/ioaiph-logo.png";
 import phFlag from "@/assets/ph-flag.svg";
+import { useTheme } from "@/components/theme-provider";
 
 interface NavChild {
   title: string;
@@ -138,29 +139,11 @@ export function SiteShell({ children }: SiteShellProps) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileAccordions, setMobileAccordions] = useState<Record<string, boolean>>({});
 
-  const [isDark, setIsDark] = useState<boolean>(() => {
-    if (typeof window === "undefined") return true;
-    const stored = localStorage.getItem("theme") || localStorage.getItem("ioaiph-theme");
-    if (stored) return stored === "dark";
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
-  });
+  const { resolvedTheme, setTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
+  const toggleTheme = () => setTheme(isDark ? "light" : "dark");
 
   const dropdownTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  useEffect(() => {
-    const root = document.documentElement;
-    if (isDark) {
-      root.classList.add("dark");
-      root.style.colorScheme = "dark";
-      localStorage.setItem("theme", "dark");
-      localStorage.setItem("ioaiph-theme", "dark");
-    } else {
-      root.classList.remove("dark");
-      root.style.colorScheme = "light";
-      localStorage.setItem("theme", "light");
-      localStorage.setItem("ioaiph-theme", "light");
-    }
-  }, [isDark]);
 
   useEffect(() => {
     setMobileMenuOpen(false);
@@ -200,6 +183,18 @@ export function SiteShell({ children }: SiteShellProps) {
     }, 150);
   };
 
+  const toggleDropdown = (title: string) => {
+    if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
+    setActiveDropdown((prev) => (prev === title ? null : title));
+  };
+
+  // Close the desktop dropdown once keyboard focus moves outside of it
+  const handleDropdownBlur = (e: FocusEvent<HTMLDivElement>) => {
+    if (!e.currentTarget.contains(e.relatedTarget as Node | null)) {
+      setActiveDropdown(null);
+    }
+  };
+
   const toggleMobileAccordion = (title: string) => {
     setMobileAccordions((prev) => ({
       ...prev,
@@ -233,7 +228,7 @@ export function SiteShell({ children }: SiteShellProps) {
     <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-200 selection:bg-blue-600 selection:text-white">
       {showArchiveBanner && (
         <aside
-          role="alert"
+          aria-label="Archive notice"
           className="bg-amber-500/10 border-b border-amber-500/20 text-amber-800 dark:text-amber-300 text-xs md:text-sm px-4 py-2 text-center flex items-center justify-center gap-2"
         >
           <span>You are viewing archived content from the 2026 season.</span>
@@ -300,9 +295,14 @@ export function SiteShell({ children }: SiteShellProps) {
                   className="relative"
                   onMouseEnter={() => handleMouseEnter(item.title)}
                   onMouseLeave={handleMouseLeave}
+                  onBlur={handleDropdownBlur}
                 >
                   <button
                     type="button"
+                    // Keyboard activation (detail === 0) toggles; mouse clicks keep the hover-opened menu open
+                    onClick={(e) =>
+                      e.detail === 0 ? toggleDropdown(item.title) : handleMouseEnter(item.title)
+                    }
                     aria-expanded={isOpen}
                     aria-haspopup="true"
                     className={`flex items-center gap-1 px-3 py-2 rounded-md transition-colors ${
@@ -362,7 +362,7 @@ export function SiteShell({ children }: SiteShellProps) {
           <div className="hidden lg:flex items-center gap-3 shrink-0">
             <button
               type="button"
-              onClick={() => setIsDark((prev) => !prev)}
+              onClick={toggleTheme}
               aria-label="Toggle Theme"
               className="p-2 text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white rounded-lg hover:bg-slate-100 dark:hover:bg-slate-900 border border-slate-200 dark:border-slate-800 transition-colors"
             >
@@ -379,7 +379,7 @@ export function SiteShell({ children }: SiteShellProps) {
           <div className="flex lg:hidden items-center gap-2">
             <button
               type="button"
-              onClick={() => setIsDark((prev) => !prev)}
+              onClick={toggleTheme}
               aria-label="Toggle Theme"
               className="p-2 text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white rounded-lg hover:bg-slate-100 dark:hover:bg-slate-900 border border-slate-200 dark:border-slate-800"
             >
@@ -422,6 +422,7 @@ export function SiteShell({ children }: SiteShellProps) {
                     <button
                       type="button"
                       onClick={() => toggleMobileAccordion(item.title)}
+                      aria-expanded={isExpanded}
                       className="w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-900"
                     >
                       <span>{item.title}</span>
