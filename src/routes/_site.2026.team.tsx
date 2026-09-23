@@ -1,24 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
-import troyPhoto from "@/assets/troy.png";
-import acenaPhoto from "@/assets/acena.png";
-import alfaroPhoto from "@/assets/alfaro.png";
-import angPhoto from "@/assets/ang.png";
-import arrezaPhoto from "@/assets/arreza.png";
-import bustamantePhoto from "@/assets/bustamante.png";
-import desuasidoPhoto from "@/assets/desuasido.png";
-import marquezPhoto from "@/assets/marquez.png";
-import obedozaPhoto from "@/assets/obedoza.png";
-import solidumPhoto from "@/assets/solidum.png";
-import syPhoto from "@/assets/sy.png";
-import tanPhoto from "@/assets/tan.png";
-import castilloPhoto from "@/assets/castillo.png";
+import troyPhoto from "@/assets/troy.webp";
+import acenaPhoto from "@/assets/acena.webp";
+import alfaroPhoto from "@/assets/alfaro.webp";
+import angPhoto from "@/assets/ang.webp";
+import arrezaPhoto from "@/assets/arreza.webp";
+import bustamantePhoto from "@/assets/bustamante.webp";
+import desuasidoPhoto from "@/assets/desuasido.webp";
+import marquezPhoto from "@/assets/marquez.webp";
+import obedozaPhoto from "@/assets/obedoza.webp";
+import solidumPhoto from "@/assets/solidum.webp";
+import syPhoto from "@/assets/sy.webp";
+import tanPhoto from "@/assets/tan.webp";
+import castilloPhoto from "@/assets/castillo.webp";
 
-const gomezIoaiPhoto = "/images/ioaiteam2026/pmg.jpg";
-const angIoaiPhoto = "/images/ioaiteam2026/elli.jpg";
-const bustamanteIoaiPhoto = "/images/ioaiteam2026/theo.jpg";
-const desuasidoIoaiPhoto = "/images/ioaiteam2026/mateo.jpg";
-const solidumIoaiPhoto = "/images/ioaiteam2026/jha.jpg";
+const gomezIoaiPhoto = "/images/ioaiteam2026/pmg.webp";
+const angIoaiPhoto = "/images/ioaiteam2026/elli.webp";
+const bustamanteIoaiPhoto = "/images/ioaiteam2026/theo.webp";
+const desuasidoIoaiPhoto = "/images/ioaiteam2026/mateo.webp";
+const solidumIoaiPhoto = "/images/ioaiteam2026/jha.webp";
 
 export const Route = createFileRoute("/_site/2026/team")({
   head: () => ({

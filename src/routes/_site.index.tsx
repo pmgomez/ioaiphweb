@@ -4,9 +4,9 @@ import { useTheme } from "@/components/theme-provider";
 import aapLogo from "@/assets/aaplogo.png";
 import aapLogoLight from "@/assets/aaplogo-light.png";
 import opLogo from "@/assets/oplogo.svg";
-import oesLogo from "@/assets/oeslogo.png";
+import oesLogo from "@/assets/oeslogo.webp";
 import depedLogo from "@/assets/depedlogo.svg";
-import dostSeiLogo from "@/assets/dostseilogo.png";
+import dostSeiLogo from "@/assets/dostseilogo.webp";
 import ateneoBuildLogo from "@/assets/ateneobuildlogo.jpg";
 import dashlabsLogo from "@/assets/dashlabs-logo.png";
 

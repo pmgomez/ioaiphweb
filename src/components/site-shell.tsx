@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, type FocusEvent, type ReactNode } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X, ChevronDown, Sun, Moon } from "lucide-react";
-import ioaiphLogo from "@/assets/ioaiph-logo.png";
+import ioaiphLogo from "@/assets/ioaiph-logo.webp";
 import phFlag from "@/assets/ph-flag.svg";
 import { useTheme } from "@/components/theme-provider";
 

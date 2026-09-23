@@ -1,27 +1,27 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
-import jobenPhoto from "@/assets/joben.png";
-import martinPhoto from "@/assets/martin.png";
+import jobenPhoto from "@/assets/joben.webp";
+import martinPhoto from "@/assets/martin.webp";
 import robertoPhoto from "@/assets/roberto.jpg";
-import farrellPhoto from "@/assets/farrell.png";
+import farrellPhoto from "@/assets/farrell.webp";
 import charibethPhoto from "@/assets/charibeth.jpg";
-import lesterPhoto from "@/assets/lester.png";
-import lorenzoPhoto from "@/assets/lorenzo.png";
-import adrianPhoto from "@/assets/adrian.png";
-import jamesPhoto from "@/assets/james.png";
-import tjPhoto from "@/assets/tjdimacali.png";
+import lesterPhoto from "@/assets/lester.webp";
+import lorenzoPhoto from "@/assets/lorenzo.webp";
+import adrianPhoto from "@/assets/adrian.webp";
+import jamesPhoto from "@/assets/james.webp";
+import tjPhoto from "@/assets/tjdimacali.webp";
 import leonardPhoto from "@/assets/leonardang.jpg";
-import paoloPhoto from "@/assets/paolorollan.png";
-import hanslyPhoto from "@/assets/hanslysaw.png";
-import andrewPhoto from "@/assets/andrewyu.png";
-import hansPhoto from "@/assets/hanstan.png";
-import seanTyPhoto from "@/assets/seanty.png";
-import kylePhoto from "@/assets/kylereynoso.png";
-import mikborbePhoto from "@/assets/mikborbe.png";
-import troyPhoto from "@/assets/troy.png";
-import cristyPhoto from "@/assets/cristy.png";
-import connerPhoto from "@/assets/conner.jpg";
-import gramPhoto from "@/assets/gramliu.png";
+import paoloPhoto from "@/assets/paolorollan.webp";
+import hanslyPhoto from "@/assets/hanslysaw.webp";
+import andrewPhoto from "@/assets/andrewyu.webp";
+import hansPhoto from "@/assets/hanstan.webp";
+import seanTyPhoto from "@/assets/seanty.webp";
+import kylePhoto from "@/assets/kylereynoso.webp";
+import mikborbePhoto from "@/assets/mikborbe.webp";
+import troyPhoto from "@/assets/troy.webp";
+import cristyPhoto from "@/assets/cristy.webp";
+import connerPhoto from "@/assets/conner.webp";
+import gramPhoto from "@/assets/gramliu.webp";
 
 export const Route = createFileRoute("/_site/about")({
   head: () => ({
