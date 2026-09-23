@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
 import { VolunteerPathwaySwitcher } from "@/components/volunteer-pathway-switcher";
 import fellowsData from "@/data/fellows.json";
@@ -15,24 +15,11 @@ import {
   Cpu,
 } from "lucide-react";
 
+// Legacy URL; the page is served at /volunteer/fellow
 export const Route = createFileRoute("/_site/fellows")({
-  head: () => ({
-    meta: [
-      { title: "Collegiate Fellows — IOAI Philippines" },
-      {
-        name: "description",
-        content:
-          "A technical fellowship for university students to deliver regional machine learning workshops, mentor high school clubs, test Olympiad problem sets, and support national selection logistics.",
-      },
-      { property: "og:title", content: "Collegiate Fellows — IOAI Philippines" },
-      {
-        property: "og:description",
-        content:
-          "A technical fellowship for university students to deliver regional machine learning workshops, mentor high school clubs, test Olympiad problem sets, and support national selection logistics.",
-      },
-    ],
-  }),
-  component: FellowsPage,
+  beforeLoad: () => {
+    throw redirect({ to: "/volunteer/fellow", statusCode: 301 });
+  },
 });
 
 type Fellow = {

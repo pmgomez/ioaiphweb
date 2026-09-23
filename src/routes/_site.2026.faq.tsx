@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/_site/2026/faq")({
   head: () => ({
@@ -11,7 +12,15 @@ export const Route = createFileRoute("/_site/2026/faq")({
         content:
           "Archived answers to common questions about the 2026 IOAI Philippines season: eligibility, selection, competition mechanics, and Astana finals.",
       },
+      ,
+      { property: "og:title", content: "FAQ (2026) — IOAI Philippines" },
+      {
+        property: "og:description",
+        content:
+          "Archived answers to common questions about the 2026 IOAI Philippines season: eligibility, selection, competition mechanics, and Astana finals.",
+      },
     ],
+    links: [canonical("/2026/faq")],
   }),
   component: FAQ2026,
 });

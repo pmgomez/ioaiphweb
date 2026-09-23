@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
 import { Lock, User } from "lucide-react";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/_site/team")({
   head: () => ({
@@ -11,7 +12,15 @@ export const Route = createFileRoute("/_site/team")({
         content:
           "Meet the official Philippine delegations for the 2027 IOAI (Singapore) and APOAI (Russia) international AI competitions.",
       },
+      ,
+      { property: "og:title", content: "Team — IOAI Philippines" },
+      {
+        property: "og:description",
+        content:
+          "Meet the official Philippine delegations for the 2027 IOAI (Singapore) and APOAI (Russia) international AI competitions.",
+      },
     ],
+    links: [canonical("/team")],
   }),
   component: Team,
 });

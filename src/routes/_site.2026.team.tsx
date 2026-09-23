@@ -13,6 +13,7 @@ import solidumPhoto from "@/assets/solidum.webp";
 import syPhoto from "@/assets/sy.webp";
 import tanPhoto from "@/assets/tan.webp";
 import castilloPhoto from "@/assets/castillo.webp";
+import { canonical } from "@/lib/seo";
 
 const gomezIoaiPhoto = "/images/ioaiteam2026/pmg.webp";
 const angIoaiPhoto = "/images/ioaiteam2026/elli.webp";
@@ -23,12 +24,19 @@ const solidumIoaiPhoto = "/images/ioaiteam2026/jha.webp";
 export const Route = createFileRoute("/_site/2026/team")({
   head: () => ({
     meta: [
-      { title: "Team — IOAI Philippines" },
+      { title: "2026 Team — IOAI Philippines" },
       {
         name: "description",
         content: "Meet Team PH for the 2026 IOAI, APOAI, and NEOAI international AI competitions.",
       },
+      ,
+      { property: "og:title", content: "2026 Team — IOAI Philippines" },
+      {
+        property: "og:description",
+        content: "Meet Team PH for the 2026 IOAI, APOAI, and NEOAI international AI competitions.",
+      },
     ],
+    links: [canonical("/2026/team")],
   }),
   component: Team,
 });

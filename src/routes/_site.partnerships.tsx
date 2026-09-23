@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
 import { useTheme } from "@/components/theme-provider";
 import { Sparkles, Cpu, Check, ArrowRight, HeartHandshake } from "lucide-react";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/_site/partnerships")({
   head: () => ({
@@ -19,6 +20,7 @@ export const Route = createFileRoute("/_site/partnerships")({
           "Partner with IOAI Philippines to fund Team PH at the International Olympiad in AI. Official 2027 Sponsorship Tier Matrix.",
       },
     ],
+    links: [canonical("/partnerships")],
   }),
   component: Partnerships,
 });

@@ -9,6 +9,7 @@ import depedLogo from "@/assets/depedlogo.svg";
 import dostSeiLogo from "@/assets/dostseilogo.webp";
 import ateneoBuildLogo from "@/assets/ateneobuildlogo.jpg";
 import dashlabsLogo from "@/assets/dashlabs-logo.png";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/_site/")({
   head: () => ({
@@ -26,6 +27,7 @@ export const Route = createFileRoute("/_site/")({
           "Road to Singapore 2027. Filipino K-12 students worldwide competing on the world stage of AI.",
       },
     ],
+    links: [canonical("/")],
   }),
   component: Home,
 });

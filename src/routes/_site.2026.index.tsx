@@ -19,22 +19,25 @@ import tomorrowLogo from "@/assets/partners/tomorrow.png";
 import tomorrowLogoLight from "@/assets/partners/tomorrow-light.png";
 import dashlabsLogo from "@/assets/dashlabs-logo.png";
 import ioaiAccreditation from "@/assets/ioai-accreditation.png";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/_site/2026/")({
   head: () => ({
     meta: [
-      { title: "IOAI Philippines — Team PH at the International Olympiad in AI" },
+      { title: "2026 Season Archive — IOAI Philippines" },
       {
         name: "description",
         content:
-          "The official national program selecting and training the Philippine team for the International Olympiad in Artificial Intelligence.",
+          "Archive of Team Philippines' 2026 season: the road to IOAI 2026 in Astana, the national selection, partners, and delegations.",
       },
-      { property: "og:title", content: "IOAI Philippines" },
+      { property: "og:title", content: "2026 Season Archive — IOAI Philippines" },
       {
         property: "og:description",
-        content: "Road to Astana 2026. Filipino students competing at the world stage of AI.",
+        content:
+          "Archive of Team Philippines' 2026 season: the road to IOAI 2026 in Astana, the national selection, partners, and delegations.",
       },
     ],
+    links: [canonical("/2026")],
   }),
   component: Home,
 });

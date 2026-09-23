@@ -22,6 +22,7 @@ import troyPhoto from "@/assets/troy.webp";
 import cristyPhoto from "@/assets/cristy.webp";
 import connerPhoto from "@/assets/conner.webp";
 import gramPhoto from "@/assets/gramliu.webp";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/_site/about")({
   head: () => ({
@@ -32,7 +33,15 @@ export const Route = createFileRoute("/_site/about")({
         content:
           "How IOAI Philippines selects, trains and fields Team PH for the world stage of artificial intelligence.",
       },
+      ,
+      { property: "og:title", content: "About — IOAI Philippines" },
+      {
+        property: "og:description",
+        content:
+          "How IOAI Philippines selects, trains and fields Team PH for the world stage of artificial intelligence.",
+      },
     ],
+    links: [canonical("/about")],
   }),
   component: About,
 });

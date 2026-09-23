@@ -1,17 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
 import { ArrowUpRight, Lock } from "lucide-react";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/_site/2026/results")({
   head: () => ({
     meta: [
-      { title: "Results — IOAI Philippines" },
+      { title: "2026 Results — IOAI Philippines" },
       {
         name: "description",
         content:
-          "Official results, qualifiers, and certificates from the IOAI Philippines national selection cycle, plus regional and international standings.",
+          "Archived results, qualifiers, and certificates from the 2026 IOAI Philippines selection cycle, plus regional and international standings.",
+      },
+      ,
+      { property: "og:title", content: "2026 Results — IOAI Philippines" },
+      {
+        property: "og:description",
+        content:
+          "Archived results, qualifiers, and certificates from the 2026 IOAI Philippines selection cycle, plus regional and international standings.",
       },
     ],
+    links: [canonical("/2026/results")],
   }),
   component: Results,
 });

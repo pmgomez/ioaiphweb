@@ -10,6 +10,7 @@ import {
 
 import appCss from "../styles.css?url";
 import { ThemeProvider } from "@/components/theme-provider";
+import { SITE_URL } from "@/lib/seo";
 
 // Inline script executed prior to DOM paint to prevent light/dark flicker
 const themeInitScript = `(function(){try{var t=localStorage.getItem('theme')||localStorage.getItem('ioaiph-theme')||'system';var d=t==='dark'||(t==='system'&&window.matchMedia('(prefers-color-scheme: dark)').matches);var r=document.documentElement;if(d)r.classList.add('dark');else r.classList.remove('dark');r.style.colorScheme=d?'dark':'light';}catch(e){document.documentElement.classList.add('dark');}})();`;
@@ -84,16 +85,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       {
         property: "og:image",
-        content:
-          "https://storage.googleapis.com/gpt-engineer-file-uploads/xo4zqaDl45RCF3HcAL7CiifNHCf1/social-images/social-1780214472156-Screenshot_2026-05-31_at_4.00.13_PM.webp",
+        content: `${SITE_URL}/og-image.jpg`,
       },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "IOAI Philippines" },
       { name: "twitter:description", content: "Team Philippines to the IOAI" },
       {
         name: "twitter:image",
-        content:
-          "https://storage.googleapis.com/gpt-engineer-file-uploads/xo4zqaDl45RCF3HcAL7CiifNHCf1/social-images/social-1780214472156-Screenshot_2026-05-31_at_4.00.13_PM.webp",
+        content: `${SITE_URL}/og-image.jpg`,
       },
     ],
     links: [

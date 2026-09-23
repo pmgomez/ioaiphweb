@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/_site/press")({
   head: () => ({
@@ -16,6 +17,7 @@ export const Route = createFileRoute("/_site/press")({
           "Press coverage and featured articles about IOAI Philippines and Team PH at international AI olympiads.",
       },
     ],
+    links: [canonical("/press")],
   }),
   component: PressPage,
 });

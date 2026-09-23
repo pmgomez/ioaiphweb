@@ -11,6 +11,7 @@ import {
   Check,
   AlertCircle,
 } from "lucide-react";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/_site/selection-2027")({
   head: () => ({
@@ -28,6 +29,7 @@ export const Route = createFileRoute("/_site/selection-2027")({
           "Official selection pipeline, competition stages, direct seeding policies, and operational calendar for the 2027 International Olympiad in Artificial Intelligence (IOAI) Singapore and APOAI Russia.",
       },
     ],
+    links: [canonical("/selection-2027")],
   }),
   component: SelectionRoadmap2027,
 });

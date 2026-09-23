@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { FellowsPage } from "./_site.fellows";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/_site/volunteer/fellow")({
   head: () => ({
@@ -17,6 +18,7 @@ export const Route = createFileRoute("/_site/volunteer/fellow")({
           "A technical fellowship for university students to deliver regional machine learning workshops, mentor high school clubs, test Olympiad problem sets, and support national selection logistics.",
       },
     ],
+    links: [canonical("/volunteer/fellow")],
   }),
   component: FellowsPage,
 });

@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AmbassadorsPage } from "./_site.ambassadors";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/_site/volunteer/ambassador")({
   head: () => ({
@@ -17,6 +18,7 @@ export const Route = createFileRoute("/_site/volunteer/ambassador")({
           "Empowering Filipino secondary school students to champion AI education, launch campus AI clubs, and mobilize peers for the IOAI Philippines National Selection.",
       },
     ],
+    links: [canonical("/volunteer/ambassador")],
   }),
   component: AmbassadorsPage,
 });

@@ -203,23 +203,7 @@ export function SiteShell({ children }: SiteShellProps) {
   };
 
   const isChildActive = (childHref: string) => {
-    if (pathname === childHref || pathname.startsWith(`${childHref}/`)) return true;
-    if (
-      childHref === "/volunteer/ambassador" &&
-      (pathname === "/ambassadors" || pathname.startsWith("/ambassadors/"))
-    )
-      return true;
-    if (
-      childHref === "/volunteer/fellow" &&
-      (pathname === "/fellows" || pathname.startsWith("/fellows/"))
-    )
-      return true;
-    if (
-      childHref === "/volunteer/coach" &&
-      (pathname === "/coaches" || pathname.startsWith("/coaches/"))
-    )
-      return true;
-    return false;
+    return pathname === childHref || pathname.startsWith(`${childHref}/`);
   };
 
   const showArchiveBanner = pathname.startsWith("/2026");

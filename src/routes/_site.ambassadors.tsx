@@ -1,28 +1,15 @@
 import { useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 import { NeuralNetworkBg } from "@/components/neural-network-bg";
 import { VolunteerPathwaySwitcher } from "@/components/volunteer-pathway-switcher";
 import ambassadorsData from "@/data/ambassadors.json";
 import { Users, Building2, BookOpen, ArrowRight, UserCheck, Sparkles } from "lucide-react";
 
+// Legacy URL; the page is served at /volunteer/ambassador
 export const Route = createFileRoute("/_site/ambassadors")({
-  head: () => ({
-    meta: [
-      { title: "High School Ambassadors — IOAI Philippines" },
-      {
-        name: "description",
-        content:
-          "Empowering Filipino secondary school students to champion AI education, launch campus AI clubs, and mobilize peers for the IOAI Philippines National Selection.",
-      },
-      { property: "og:title", content: "High School Ambassadors — IOAI Philippines" },
-      {
-        property: "og:description",
-        content:
-          "Empowering Filipino secondary school students to champion AI education, launch campus AI clubs, and mobilize peers for the IOAI Philippines National Selection.",
-      },
-    ],
-  }),
-  component: AmbassadorsPage,
+  beforeLoad: () => {
+    throw redirect({ to: "/volunteer/ambassador", statusCode: 301 });
+  },
 });
 
 type Ambassador = {

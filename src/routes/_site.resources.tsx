@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/_site/resources")({
   head: () => ({
@@ -16,6 +17,7 @@ export const Route = createFileRoute("/_site/resources")({
           "Curated study materials, syllabus references, and training resources for aspiring IOAI Philippines contestants.",
       },
     ],
+    links: [canonical("/resources")],
   }),
   component: ResourcesPage,
 });

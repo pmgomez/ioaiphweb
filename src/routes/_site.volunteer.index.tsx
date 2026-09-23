@@ -17,4 +17,3 @@ export const Route = createFileRoute("/_site/volunteer/")({
     throw redirect({ to: "/volunteer/ambassador" });
   },
 });
-
