@@ -44,16 +44,16 @@ const ioaiPhSections = [
     desc: "National reports, DepEd advisories, and accreditation announcements for the Philippine delegation.",
     links: [
       {
+        label: "DepEd Advisory No. 183, s. 2026 (for IOAIPH 2027)",
+        href: "https://www.deped.gov.ph/2026/09/18/september-18-2026-advisory-no-183-s-2026-2027-international-olympiad-in-artificial-intelligence-philippines-national-selection-and-training-program/",
+      },
+      {
         label: "2027 National Selection & Campaign Roadmap",
         href: "/selection-2027",
       },
       {
         label: "2026 Performance Report & FY 2027 Policy Roadmap (PDF)",
         href: "https://drive.google.com/file/d/17A4lrbMgY4y4jXcQ0atATUSjwEQ6rH0W/view?usp=drive_link",
-      },
-      {
-        label: "DepEd Advisory No. 183, s. 2026 (for IOAIPH 2027)",
-        href: "https://www.deped.gov.ph/2026/09/18/september-18-2026-advisory-no-183-s-2026-2027-international-olympiad-in-artificial-intelligence-philippines-national-selection-and-training-program/",
       },
       {
         label: "DepEd Advisory No. 024, s. 2026 (for IOAIPH 2026)",
