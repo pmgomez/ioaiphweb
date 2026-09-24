@@ -97,10 +97,10 @@ const timeline = [
     status: "upcoming",
   },
   {
-    date: "APR – JUN 2027 (TBD)",
+    date: "APR 26 – 30, 2027",
     phase: "10 / Regional",
     title: "APOAI 2027 · Russia",
-    desc: "4 non-graduating students in junior pipeline representing Team PH.",
+    desc: "4 non-graduating students in junior pipeline representing Team PH, hosted by Central University / AI Alliance.",
     status: "upcoming",
   },
   {

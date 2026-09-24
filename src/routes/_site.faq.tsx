@@ -37,7 +37,7 @@ const groups: Group[] = [
       },
       {
         q: "When and where are the 2027 international competitions?",
-        a: "Team Philippines will field delegations across two major tournaments in 2027: the flagship IOAI 2027 Global Finals in Singapore (July 4–10, 2027) and the Asia-Pacific Olympiad in Artificial Intelligence (APOAI 2027) in Russia (April–June 2027 window).",
+        a: "Team Philippines will field delegations across two major tournaments in 2027: the flagship IOAI 2027 Global Finals in Singapore (July 4–10, 2027) and the Asia-Pacific Olympiad in Artificial Intelligence (APOAI 2027) in Russia (April 26–30, 2027), hosted by Central University / AI Alliance.",
       },
       {
         q: "When does the 2027 national selection cycle run?",

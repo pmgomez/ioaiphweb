@@ -59,8 +59,8 @@ const competitions: Competition[] = [
     name: "APOAI",
     full: "Asia-Pacific Olympiad in Artificial Intelligence",
     scope: "Asia-Pacific regional",
-    host: "Hosted by Russia",
-    window: "Apr – Jun 2027 (TBD)",
+    host: "Hosted by Russia (Central University / AI Alliance)",
+    window: "Apr 26 – 30, 2027",
   },
 ];
 

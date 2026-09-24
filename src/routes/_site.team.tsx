@@ -173,7 +173,7 @@ function Team() {
       <CompetitionSection
         tag="apoai.2027"
         title="APOAI — Asia-Pacific Olympiad in Artificial Intelligence"
-        subtitle="4-student junior development delegation competing in Russia (April–June 2027 window). Reserved for the top non-graduating finalists (Kindergarten through Grade 11)."
+        subtitle="4-student junior development delegation competing in Russia (April 26–30, 2027), hosted by Central University / AI Alliance. Reserved for the top non-graduating finalists (Kindergarten through Grade 11)."
         slots={apoaiSlots}
       />
     </>

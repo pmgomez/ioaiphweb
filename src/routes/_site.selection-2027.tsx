@@ -118,8 +118,8 @@ const calendarData = [
   },
   {
     stage: "APOAI 2027 (Russia)",
-    date: "Target: April, May, or Late June 2027 (TBD)",
-    format: "Onsite (Russian Federation) / Remote Contingency",
+    date: "Apr 26–30, 2027",
+    format: "Onsite (Central University / AI Alliance, Russia) / Remote Contingency",
     progression: "APOAI Development Delegation",
     notes:
       "Regional talent development olympiad fielding the top 4 non-graduating students. The committee will make best efforts to field an onsite delegation in Russia, maintaining a Manila-based proctored site as contingency.",
@@ -680,7 +680,7 @@ function SelectionRoadmap2027() {
                     Team B // Regional Stage
                   </span>
                   <span className="rounded-sm border border-border bg-background px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-muted-foreground">
-                    Date TBD (Target: Q2)
+                    Apr 26–30, 2027
                   </span>
                 </div>
                 <h3 className="mt-3 font-display text-2xl font-bold text-foreground">
