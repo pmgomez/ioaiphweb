@@ -52,7 +52,11 @@ const ioaiPhSections = [
         href: "https://drive.google.com/file/d/17A4lrbMgY4y4jXcQ0atATUSjwEQ6rH0W/view?usp=drive_link",
       },
       {
-        label: "DepEd Advisory No. 024, s. 2026",
+        label: "DepEd Advisory No. 183, s. 2026 (for IOAIPH 2027)",
+        href: "https://www.deped.gov.ph/2026/09/18/september-18-2026-advisory-no-183-s-2026-2027-international-olympiad-in-artificial-intelligence-philippines-national-selection-and-training-program/",
+      },
+      {
+        label: "DepEd Advisory No. 024, s. 2026 (for IOAIPH 2026)",
         href: "https://www.deped.gov.ph/2026/01/22/january-22-2026-advisory-no-024-s-2026-international-olympiad-in-artificial-intelligence-philippines-national-c",
       },
       { label: "Global IOAI Website", href: "https://ioai-official.org/" },
