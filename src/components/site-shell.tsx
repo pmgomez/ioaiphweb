@@ -570,8 +570,39 @@ export function SiteShell({ children }: SiteShellProps) {
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-6 border-t border-slate-200 dark:border-slate-900 text-xs text-slate-500 dark:text-slate-600 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p>&copy; {new Date().getFullYear()} IOAI Philippines. All rights reserved.</p>
-          <p>Representing Team Philippines at IOAI 2027 in Singapore.</p>
+          <p>
+            &copy; {new Date().getFullYear()} IOAI Philippines. Run by{" "}
+            <a
+              href="https://aiosph.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-slate-950 dark:hover:text-white"
+            >
+              AIOS PH
+            </a>
+            . Hosted by{" "}
+            <a
+              href="https://www.ateneo.edu/jgsom/build"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-slate-950 dark:hover:text-white"
+            >
+              Ateneo BUILD
+            </a>
+            .
+          </p>
+          <p>
+            Accredited by the{" "}
+            <a
+              href="https://ioai-official.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-slate-950 dark:hover:text-white"
+            >
+              IOAI
+            </a>
+            . #ParaSaBayan 🇵🇭.
+          </p>
         </div>
       </footer>
     </div>
