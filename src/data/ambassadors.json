@@ -1,27 +1,69 @@
 [
   {
-    "id": "ambassador-ncr",
-    "isPlaceholder": true,
-    "name": "Regional Ambassador Slot",
-    "school": "Secondary School (DepEd / PSHS / Private)",
-    "location": "Metro Manila",
+    "id": "ambassador-florendo",
+    "name": "Mckenzie Hael Florendo",
+    "school": "School of the Holy Spirit of Quezon City",
+    "grade": "Grade 9",
+    "location": "Quezon City",
     "region": "NCR",
     "cohort": "Inaugural (2026–2027)",
-    "photoUrl": "",
-    "profileUrl": "#apply",
-    "bio": "Open regional position for secondary student leaders passionate about organizing campus AI clubs and Olympiad awareness across NCR."
+    "photoUrl": "/images/ambassadors/florendo.webp",
+    "profileUrl": ""
   },
   {
-    "id": "ambassador-luzon",
-    "isPlaceholder": true,
-    "name": "Regional Ambassador Slot",
-    "school": "Secondary School (DepEd / PSHS / Private)",
-    "location": "Luzon",
+    "id": "ambassador-lumanlan",
+    "name": "Liam Raphael Lumanlan",
+    "school": "Ateneo de Davao University Junior High School",
+    "grade": "Grade 8",
+    "location": "Davao City",
+    "region": "Mindanao",
+    "cohort": "Inaugural (2026–2027)",
+    "photoUrl": "/images/ambassadors/lumanlan.webp",
+    "profileUrl": ""
+  },
+  {
+    "id": "ambassador-mangorsi",
+    "name": "Mohammad Sol-Aiman Ali Mangorsi",
+    "school": "MSU–Iligan Institute of Technology Integrated Developmental School",
+    "grade": "Grade 11",
+    "location": "Iligan City",
+    "region": "Mindanao",
+    "cohort": "Inaugural (2026–2027)",
+    "photoUrl": "/images/ambassadors/mangorsi.webp",
+    "profileUrl": ""
+  },
+  {
+    "id": "ambassador-santos",
+    "name": "Erwin Santos",
+    "school": "Siniloan Integrated National High School",
+    "grade": "Grade 11",
+    "location": "Siniloan, Laguna",
     "region": "Luzon",
     "cohort": "Inaugural (2026–2027)",
-    "photoUrl": "",
-    "profileUrl": "#apply",
-    "bio": "Open regional position for secondary student leaders passionate about organizing campus AI clubs and Olympiad awareness across Luzon."
+    "photoUrl": "/images/ambassadors/santos.webp",
+    "profileUrl": ""
+  },
+  {
+    "id": "ambassador-serapio",
+    "name": "Troy Dylan Serapio",
+    "school": "Philippine Science High School – Main Campus",
+    "grade": "Grade 12",
+    "location": "Quezon City",
+    "region": "NCR",
+    "cohort": "Inaugural (2026–2027)",
+    "photoUrl": "/images/ambassadors/serapio.webp",
+    "profileUrl": ""
+  },
+  {
+    "id": "ambassador-tabudlo",
+    "name": "Louise Anne Tabudlo",
+    "school": "Lagro High School",
+    "grade": "Grade 11",
+    "location": "Quezon City",
+    "region": "NCR",
+    "cohort": "Inaugural (2026–2027)",
+    "photoUrl": "/images/ambassadors/tabudlo.webp",
+    "profileUrl": ""
   },
   {
     "id": "ambassador-visayas",
@@ -33,18 +75,6 @@
     "cohort": "Inaugural (2026–2027)",
     "photoUrl": "",
     "profileUrl": "#apply",
-    "bio": "Open regional position for secondary student leaders passionate about organizing campus AI clubs and Olympiad awareness across Visayas."
-  },
-  {
-    "id": "ambassador-mindanao",
-    "isPlaceholder": true,
-    "name": "Regional Ambassador Slot",
-    "school": "Secondary School (DepEd / PSHS / Private)",
-    "location": "Mindanao",
-    "region": "Mindanao",
-    "cohort": "Inaugural (2026–2027)",
-    "photoUrl": "",
-    "profileUrl": "#apply",
-    "bio": "Open regional position for secondary student leaders passionate about organizing campus AI clubs and Olympiad awareness across Mindanao."
+    "bio": "Open regional position for secondary student leaders passionate about organizing campus AI clubs and Olympiad awareness across the Visayas."
   }
 ]

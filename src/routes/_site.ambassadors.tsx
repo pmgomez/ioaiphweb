@@ -20,10 +20,18 @@ type Ambassador = {
   location: string;
   region: string;
   cohort: string;
+  grade?: string;
   photoUrl?: string;
   profileUrl?: string;
   bio?: string;
 };
+
+function getInitials(name: string) {
+  const parts = name.trim().split(/\s+/);
+  return (
+    (parts[0]?.[0] ?? "") + (parts.length > 1 ? parts[parts.length - 1][0] : "")
+  ).toUpperCase();
+}
 
 const REGIONS = ["All", "NCR", "Luzon", "Visayas", "Mindanao"] as const;
 
@@ -193,7 +201,7 @@ export function AmbassadorsPage() {
                 Ambassador Directory
               </h2>
               <p className="mt-2 text-sm text-muted-foreground">
-                Inaugural Cohort slots open for secondary school leaders across the country.
+                Meet the Inaugural Cohort of secondary school leaders championing AI education.
               </p>
             </div>
 
@@ -218,8 +226,8 @@ export function AmbassadorsPage() {
           {/* Status Banner */}
           <div className="mt-8 rounded-sm border border-dashed border-primary/40 bg-primary/5 p-4 text-center">
             <p className="font-mono text-xs font-medium text-primary sm:text-sm">
-              Applications for the 2026–2027 Inaugural Cohort are currently open. Available regional
-              slots are listed below.
+              Applications for the 2026–2027 Inaugural Cohort remain open, especially for students
+              in the Visayas.
             </p>
           </div>
 
@@ -228,7 +236,9 @@ export function AmbassadorsPage() {
             {filteredAmbassadors.map((slot) => (
               <div
                 key={slot.id}
-                className="flex flex-col justify-between rounded-sm border border-dashed border-border/80 bg-surface/60 p-6 text-center transition-all duration-200 hover:border-primary/50 hover:bg-surface"
+                className={`flex flex-col justify-between rounded-sm border bg-surface/60 p-6 text-center transition-all duration-200 hover:border-primary/50 hover:bg-surface ${
+                  slot.isPlaceholder ? "border-dashed border-border/80" : "border-border"
+                }`}
               >
                 <div>
                   <div className="flex items-center justify-between font-mono text-[10px]">
@@ -239,25 +249,64 @@ export function AmbassadorsPage() {
                   </div>
 
                   <div className="mt-6 flex justify-center">
-                    <div className="flex h-20 w-20 items-center justify-center rounded-full border border-dashed border-border bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300">
-                      <Sparkles className="h-9 w-9 stroke-[1.5]" />
-                    </div>
+                    {slot.isPlaceholder ? (
+                      <div className="flex h-20 w-20 items-center justify-center rounded-full border border-dashed border-border bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300">
+                        <Sparkles className="h-9 w-9 stroke-[1.5]" />
+                      </div>
+                    ) : slot.photoUrl ? (
+                      <img
+                        src={slot.photoUrl}
+                        alt={slot.name}
+                        loading="lazy"
+                        className="h-20 w-20 rounded-full border border-border object-cover"
+                      />
+                    ) : (
+                      <div className="flex h-20 w-20 items-center justify-center rounded-full border border-border bg-primary/10 font-display text-xl font-bold text-primary">
+                        {getInitials(slot.name)}
+                      </div>
+                    )}
                   </div>
 
                   <h3 className="mt-5 font-display text-sm font-bold text-foreground">
                     {slot.name}
                   </h3>
                   <p className="mt-1 font-mono text-xs font-medium text-primary">{slot.school}</p>
-                  <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{slot.bio}</p>
+                  {slot.isPlaceholder ? (
+                    <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{slot.bio}</p>
+                  ) : (
+                    <>
+                      {slot.grade && (
+                        <p className="mt-2 text-xs text-muted-foreground">{slot.grade}</p>
+                      )}
+                      {slot.bio && (
+                        <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                          {slot.bio}
+                        </p>
+                      )}
+                    </>
+                  )}
                 </div>
 
                 <div className="mt-6 border-t border-border/60 pt-3">
-                  <a
-                    href="#apply"
-                    className="font-mono text-xs font-semibold text-primary transition-opacity hover:opacity-80"
-                  >
-                    Apply for this slot →
-                  </a>
+                  {slot.isPlaceholder ? (
+                    <a
+                      href="#apply"
+                      className="font-mono text-xs font-semibold text-primary transition-opacity hover:opacity-80"
+                    >
+                      Apply for this slot →
+                    </a>
+                  ) : slot.profileUrl ? (
+                    <a
+                      href={slot.profileUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-mono text-xs font-semibold text-primary transition-opacity hover:opacity-80"
+                    >
+                      View profile →
+                    </a>
+                  ) : (
+                    <span className="font-mono text-xs text-muted-foreground">{slot.location}</span>
+                  )}
                 </div>
               </div>
             ))}
