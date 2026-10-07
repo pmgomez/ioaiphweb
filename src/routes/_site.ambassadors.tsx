@@ -328,7 +328,7 @@ export function AmbassadorsPage() {
                 </h2>
                 <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
                   Applications are evaluated on a rolling basis. High school students of all
-                  programming experience levels are encouraged to apply.
+                  experience levels are encouraged to apply.
                 </p>
               </div>
 
