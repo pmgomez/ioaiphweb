@@ -42,7 +42,7 @@ const premierTiers: CorporateTier[] = [
     name: "Title Sponsor",
     badge: "Bespoke Title Rights",
     code: "T-01",
-    price: "PHP 1,000,000+",
+    price: "PHP 500,000+",
     color: "#38BDF8",
     colorLight: "#0284C7",
     featured: true,
@@ -58,12 +58,12 @@ const premierTiers: CorporateTier[] = [
     name: "Platinum Partner",
     badge: "Delegations Anchor",
     code: "T-02",
-    price: "PHP 500,000+",
+    price: "PHP 250,000+",
     color: "#818CF8",
     colorLight: "#4F46E5",
     featured: true,
     scope:
-      "Underwriting non-GAA travel deficits across IAIO (Vietnam), APOAI (Russia), and IOAI (Singapore) delegations.",
+      "Underwriting non-GAA travel deficits for the IAIO (Vietnam) and IOAI (Singapore) delegations, and funding the proctored APOAI Philippine site at Ateneo BUILD.",
     deliverables: [
       "Co-presenter status for national selection rounds",
       "Custom corporate problem integration in selection tasks",
@@ -76,7 +76,7 @@ const coreTiers: CorporateTier[] = [
   {
     name: "Gold Partner",
     code: "T-03",
-    price: "PHP 250,000+",
+    price: "PHP 150,000+",
     color: "#F59E0B",
     colorLight: "#D97706",
     scope:
@@ -394,7 +394,7 @@ function Partnerships() {
         <div className="mt-20 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-3">
           {[
             { k: "100%", l: "Of funds go directly to students & training" },
-            { k: "501(c)-equivalent", l: "Tax-deductible partnership options" },
+            { k: "Tax-deductible", l: "Tax-deductible partnership options" },
             { k: "Audited", l: "Public reporting & cycle milestone accountability" },
           ].map((s) => (
             <div key={s.l} className="bg-surface p-8">
