@@ -10,13 +10,13 @@ export const Route = createFileRoute("/_site/team")({
       {
         name: "description",
         content:
-          "Meet the official Philippine delegations for the 2027 IOAI (Singapore) and APOAI (Russia) international AI competitions.",
+          "Meet the official Philippine delegations for the 2027 IOAI (Singapore) and APOAI international AI competitions.",
       },
       { property: "og:title", content: "Team — IOAI Philippines" },
       {
         property: "og:description",
         content:
-          "Meet the official Philippine delegations for the 2027 IOAI (Singapore) and APOAI (Russia) international AI competitions.",
+          "Meet the official Philippine delegations for the 2027 IOAI (Singapore) and APOAI international AI competitions.",
       },
     ],
     links: [canonical("/team")],
@@ -153,8 +153,8 @@ function Team() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
             Official delegations representing the Philippines at IOAI 2027 (Singapore) and APOAI
-            2027 (Russia) will be determined during the National Finals at the Ateneo CTC Build Lab
-            on February 20–21, 2027.
+            2027 (Ateneo BUILD site) will be determined during the National Finals at the Ateneo CTC
+            Build Lab on February 20–21, 2027.
           </p>
         </div>
       </section>
@@ -169,11 +169,11 @@ function Team() {
 
       <div className="border-t border-border/60" />
 
-      {/* APOAI RUSSIA */}
+      {/* APOAI */}
       <CompetitionSection
         tag="apoai.2027"
         title="APOAI — Asia-Pacific Olympiad in Artificial Intelligence"
-        subtitle="4-student junior development delegation competing in Russia (April 26–30, 2027), hosted by Central University / AI Alliance. Reserved for the top non-graduating finalists (Kindergarten through Grade 11)."
+        subtitle="4-student junior development delegation competing from the proctored Ateneo BUILD site (April 26–30, 2027). APOAI 2027 is hosted in Moscow by Central University and the AI Alliance Russia. Reserved for the top non-graduating finalists (Kindergarten through Grade 11)."
         slots={apoaiSlots}
       />
     </>

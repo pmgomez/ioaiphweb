@@ -37,15 +37,15 @@ const groups: Group[] = [
       },
       {
         q: "When and where are the 2027 international competitions?",
-        a: "Team Philippines will field delegations across two major tournaments in 2027: the flagship IOAI 2027 Global Finals in Singapore (July 4–10, 2027) and the Asia-Pacific Olympiad in Artificial Intelligence (APOAI 2027) in Russia (April 26–30, 2027), hosted by Central University / AI Alliance.",
+        a: "Team Philippines will field delegations across two major tournaments in 2027: the flagship IOAI 2027 Global Finals in Singapore (July 4–10, 2027) and the Asia-Pacific Olympiad in Artificial Intelligence (APOAI 2027, April 26–30, 2027). APOAI 2027 is hosted in Moscow by Central University and the AI Alliance Russia, and the Philippine delegation will compete from the proctored Ateneo BUILD site.",
       },
       {
         q: "When does the 2027 national selection cycle run?",
         a: "The 2027 cycle opens for nationwide public registration on September 12, 2026, and closes on November 11, 2026. Selection testing runs sequentially from Stage 1 Eliminations (November 16–22, 2026) through the onsite National Finals (February 20–21, 2027).",
       },
       {
-        q: "How does the dual-delegation selection work for Singapore and Russia?",
-        a: "The official delegations are selected directly from the aggregate standings of the Stage 5 National Finals. Ranks 1 through 4 earn seats on the primary IOAI Singapore delegation (open to all students, including graduating Grade 12 seniors). The top 4 non-graduating students (Kindergarten through Grade 11) earn seats on the APOAI Russia junior development delegation.",
+        q: "How does the dual-delegation selection work for IOAI and APOAI?",
+        a: "The official delegations are selected directly from the aggregate standings of the Stage 5 National Finals. Ranks 1 through 4 earn seats on the primary IOAI Singapore delegation (open to all students, including graduating Grade 12 seniors). The top 4 non-graduating students (Kindergarten through Grade 11) earn seats on the APOAI junior development delegation.",
       },
     ],
   },
@@ -137,8 +137,7 @@ const groups: Group[] = [
         a: (
           <>
             Organizations can sponsor compute infrastructure, training boot camps, and delegate
-            travel for Singapore and Russia. For partnership tiers and prospectus inquiries, visit
-            our{" "}
+            travel for Singapore. For partnership tiers and prospectus inquiries, visit our{" "}
             <a
               href="/partnerships"
               className="text-primary underline underline-offset-4 hover:no-underline"

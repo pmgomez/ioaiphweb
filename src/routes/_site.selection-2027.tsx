@@ -20,13 +20,13 @@ export const Route = createFileRoute("/_site/selection-2027")({
       {
         name: "description",
         content:
-          "Official selection pipeline, competition stages, direct seeding policies, and operational calendar for the 2027 International Olympiad in Artificial Intelligence (IOAI) Singapore and APOAI Russia.",
+          "Official selection pipeline, competition stages, direct seeding policies, and operational calendar for the 2027 International Olympiad in Artificial Intelligence (IOAI) Singapore and APOAI 2027.",
       },
       { property: "og:title", content: "2027 Selection & Campaign Roadmap — IOAI Philippines" },
       {
         property: "og:description",
         content:
-          "Official selection pipeline, competition stages, direct seeding policies, and operational calendar for the 2027 International Olympiad in Artificial Intelligence (IOAI) Singapore and APOAI Russia.",
+          "Official selection pipeline, competition stages, direct seeding policies, and operational calendar for the 2027 International Olympiad in Artificial Intelligence (IOAI) Singapore and APOAI 2027.",
       },
     ],
     links: [canonical("/selection-2027")],
@@ -119,10 +119,10 @@ const calendarData = [
   {
     stage: "APOAI 2027 (Russia)",
     date: "Apr 26–30, 2027",
-    format: "Onsite (Central University / AI Alliance, Russia) / Remote Contingency",
+    format: "Proctored Site (Ateneo BUILD) / Simultaneous Remote Proctoring",
     progression: "APOAI Development Delegation",
     notes:
-      "Regional talent development olympiad fielding the top 4 non-graduating students. The committee will make best efforts to field an onsite delegation in Russia, maintaining a Manila-based proctored site as contingency.",
+      "Regional talent development olympiad fielding the top 4 non-graduating students. APOAI 2027 is hosted in Moscow by Central University and the AI Alliance Russia, and the Philippine delegation will compete from the proctored Ateneo BUILD site.",
     status: "upcoming",
   },
   {
@@ -165,13 +165,14 @@ function SelectionRoadmap2027() {
             This official roadmap establishes the selection pipeline, competition stages, direct
             seeding policies, and operational calendar for the 2027 International Olympiad in
             Artificial Intelligence (IOAI) in Singapore and the Asia-Pacific Olympiad in Artificial
-            Intelligence (APOAI) in the Russian Federation.
+            Intelligence (APOAI), hosted in Moscow, with the Philippine delegation competing from
+            the proctored Ateneo BUILD site.
           </p>
 
           {/* Quick Metrics Bar */}
           <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border shadow-sm sm:grid-cols-4">
             {[
-              { label: "Target Delegations", val: "Singapore & Russia" },
+              { label: "Target Delegations", val: "Singapore & Ateneo BUILD" },
               { label: "Selection Framework", val: "5 Domestic Stages" },
               { label: "Participation Fee", val: "100% Free / Zero Cost" },
               { label: "Finals Capacity", val: "31 Finalists / Ateneo BUILD" },
@@ -673,7 +674,7 @@ function SelectionRoadmap2027() {
                 </div>
               </div>
 
-              {/* Team B: APOAI Russia */}
+              {/* Team B: APOAI */}
               <div className="rounded-sm border border-border bg-surface/60 p-6 sm:p-8">
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
@@ -684,7 +685,7 @@ function SelectionRoadmap2027() {
                   </span>
                 </div>
                 <h3 className="mt-3 font-display text-2xl font-bold text-foreground">
-                  APOAI Development Delegation (Russia)
+                  APOAI Development Delegation (Ateneo BUILD Site)
                 </h3>
                 <p className="mt-2 text-sm text-muted-foreground">
                   Regional talent development olympiad cultivating multi-year Philippine AI athletic
@@ -731,10 +732,9 @@ function SelectionRoadmap2027() {
                   the 4-student junior roster will be selected from the top non-graduating
                   candidates from the Stage 4 (Semi-Finals) standings. Eligible non-graduating Tier
                   1 seeds who wish to be considered for early APOAI selection may sit Stage 4 as a
-                  non-eliminatory benchmarking round to be ranked on the common leaderboard. The
-                  national committee will make best efforts to field an onsite delegation in Russia,
-                  activating a Manila-based remote center only if operational constraints require
-                  it.
+                  non-eliminatory benchmarking round to be ranked on the common leaderboard. APOAI
+                  2027 is hosted in Moscow by Central University and the AI Alliance Russia, and the
+                  Philippine delegation will compete from the proctored Ateneo BUILD site.
                 </p>
               </div>
             </div>
@@ -773,8 +773,7 @@ function SelectionRoadmap2027() {
                   Passports &amp; Visas
                 </h3>
                 <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
-                  All finalists must hold a passport valid through at least February 2028. Russian
-                  consular processing begins immediately upon APOAI roster finalization. Singapore
+                  All finalists must hold a passport valid through at least February 2028. Singapore
                   travel is visa-exempt for Philippine passport holders.
                 </p>
               </div>
@@ -872,7 +871,7 @@ function SelectionRoadmap2027() {
                 </h2>
                 <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
                   Open registration closes on November 11, 2026. Apply now to enter Stage 1
-                  screening for Singapore (IOAI) and Russia (APOAI).
+                  screening for IOAI 2027 (Singapore) and APOAI 2027.
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-3 shrink-0">

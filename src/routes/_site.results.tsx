@@ -59,7 +59,7 @@ const competitions: Competition[] = [
     name: "APOAI",
     full: "Asia-Pacific Olympiad in Artificial Intelligence",
     scope: "Asia-Pacific regional",
-    host: "Hosted by Russia (Central University / AI Alliance)",
+    host: "Hosted in Moscow (Central University / AI Alliance Russia)",
     window: "Apr 26 – 30, 2027",
   },
 ];
@@ -69,7 +69,7 @@ const selection: Resource[] = [
   {
     code: "R-01",
     title: "Team Selection & Final Delegations",
-    subtitle: "Official Philippine delegations for IOAI 2027 Singapore and APOAI 2027 Russia.",
+    subtitle: "Official Philippine delegations for IOAI 2027 Singapore and APOAI 2027.",
     kind: "pending",
     window: "Feb 20 – 21, 2027",
     featured: true,

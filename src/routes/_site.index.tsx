@@ -100,7 +100,7 @@ const timeline = [
     date: "APR 26 – 30, 2027",
     phase: "10 / Regional",
     title: "APOAI 2027 · Russia",
-    desc: "4 non-graduating students in junior pipeline representing Team PH, hosted by Central University / AI Alliance.",
+    desc: "4 non-graduating students in junior pipeline competing from the proctored Ateneo BUILD site. Hosted in Moscow by Central University and the AI Alliance Russia.",
     status: "upcoming",
   },
   {
@@ -117,7 +117,7 @@ const stats = [
   { value: "80", label: "QUARTER-FINALISTS" },
   { value: "40", label: "SEMI-FINALISTS" },
   { value: "24", label: "FINALS QUALIFIERS" },
-  { value: "4", label: "APOAI RUSSIA" },
+  { value: "4", label: "APOAI 2027" },
   { value: "4", label: "IOAI SINGAPORE" },
   { value: "82", label: "PROVINCES" },
   { value: "18", label: "REGIONS" },
@@ -280,8 +280,8 @@ function Home() {
             </h2>
             <p className="mt-4 max-w-xl text-sm text-muted-foreground md:text-base">
               Open to all eligible Filipino K-12 students worldwide. Free to apply. Complete the
-              official registration form to enter Stage 1 screening for the national delegations to
-              Singapore (IOAI) and Russia (APOAI).
+              official registration form to enter Stage 1 screening for the national delegations for
+              IOAI 2027 (Singapore) and APOAI 2027.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
