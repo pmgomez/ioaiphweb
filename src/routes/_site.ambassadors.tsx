@@ -72,17 +72,11 @@ export function AmbassadorsPage() {
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
-              href="#apply"
+              href="#directory"
               className="inline-flex items-center gap-2 rounded-sm bg-primary px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-primary-foreground shadow-sm transition-all hover:opacity-90"
             >
-              <span>Apply as an Ambassador</span>
+              <span>Meet the Inaugural Cohort</span>
               <ArrowRight className="h-4 w-4" />
-            </a>
-            <a
-              href="#directory"
-              className="inline-flex items-center gap-2 rounded-sm border border-border bg-surface/60 px-5 py-3 font-mono text-xs uppercase tracking-wider text-foreground transition-all hover:border-primary/40 hover:bg-surface"
-            >
-              <span>Explore Open Slots</span>
             </a>
           </div>
 
@@ -226,10 +220,15 @@ export function AmbassadorsPage() {
           {/* Status Banner */}
           <div className="mt-8 rounded-sm border border-dashed border-primary/40 bg-primary/5 p-4 text-center">
             <p className="font-mono text-xs font-medium text-primary sm:text-sm">
-              Applications for the 2026–2027 Inaugural Cohort remain open, especially for students
-              in the Visayas.
+              Applications for the 2026–2027 Inaugural Cohort are now closed.
             </p>
           </div>
+
+          {filteredAmbassadors.length === 0 && (
+            <p className="mt-8 text-center font-mono text-xs text-muted-foreground">
+              No ambassadors from {selectedRegion} in this cohort yet.
+            </p>
+          )}
 
           {/* Grid */}
           <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -327,20 +326,15 @@ export function AmbassadorsPage() {
                   Lead the AI Movement in Your High School
                 </h2>
                 <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-                  Applications are evaluated on a rolling basis. High school students of all
-                  experience levels are encouraged to apply.
+                  Applications for the 2026–2027 Inaugural Cohort are closed. Thank you to every
+                  student who applied. Watch this page for the next call for ambassadors.
                 </p>
               </div>
 
               <div className="shrink-0">
-                <a
-                  href="https://forms.gle/CYiHnr8i2owtnRKi8"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-sm bg-primary px-6 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-primary-foreground shadow-sm transition-all hover:opacity-90"
-                >
-                  <span>Submit Application →</span>
-                </a>
+                <span className="inline-flex items-center gap-2 rounded-sm border border-border bg-surface/60 px-6 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  Applications Closed
+                </span>
               </div>
             </div>
           </div>

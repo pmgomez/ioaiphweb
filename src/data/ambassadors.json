@@ -97,17 +97,5 @@
     "cohort": "Inaugural (2026–2027)",
     "photoUrl": "/images/ambassadors/yaba.webp",
     "profileUrl": ""
-  },
-  {
-    "id": "ambassador-visayas",
-    "isPlaceholder": true,
-    "name": "Regional Ambassador Slot",
-    "school": "Secondary School (DepEd / PSHS / Private)",
-    "location": "Visayas",
-    "region": "Visayas",
-    "cohort": "Inaugural (2026–2027)",
-    "photoUrl": "",
-    "profileUrl": "#apply",
-    "bio": "Open regional position for secondary student leaders passionate about organizing campus AI clubs and Olympiad awareness across the Visayas."
   }
 ]
