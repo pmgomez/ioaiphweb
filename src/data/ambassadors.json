@@ -1,5 +1,16 @@
 [
   {
+    "id": "ambassador-capaciete",
+    "name": "Athena Mariae Capaciete",
+    "school": "Victory Christian International School",
+    "grade": "Grade 9",
+    "location": "Pasig City",
+    "region": "NCR",
+    "cohort": "Inaugural (2026–2027)",
+    "photoUrl": "/images/ambassadors/capaciete.webp",
+    "profileUrl": ""
+  },
+  {
     "id": "ambassador-florendo",
     "name": "Mckenzie Hael Florendo",
     "school": "School of the Holy Spirit of Quezon City",
@@ -55,6 +66,17 @@
     "profileUrl": ""
   },
   {
+    "id": "ambassador-solidum",
+    "name": "Jhareign Solidum",
+    "school": "University of Mindanao Ilang High School",
+    "grade": "Grade 12",
+    "location": "Davao City",
+    "region": "Mindanao",
+    "cohort": "Inaugural (2026–2027)",
+    "photoUrl": "/images/ambassadors/solidum.webp",
+    "profileUrl": ""
+  },
+  {
     "id": "ambassador-tabudlo",
     "name": "Louise Anne Tabudlo",
     "school": "Lagro High School",
@@ -63,6 +85,17 @@
     "region": "NCR",
     "cohort": "Inaugural (2026–2027)",
     "photoUrl": "/images/ambassadors/tabudlo.webp",
+    "profileUrl": ""
+  },
+  {
+    "id": "ambassador-yaba",
+    "name": "Khazzie Zoe Yaba",
+    "school": "Nuestra Señora del Pilar High School, Inc.",
+    "grade": "Grade 12",
+    "location": "Quezon, Bukidnon",
+    "region": "Mindanao",
+    "cohort": "Inaugural (2026–2027)",
+    "photoUrl": "/images/ambassadors/yaba.webp",
     "profileUrl": ""
   },
   {
