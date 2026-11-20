@@ -10,13 +10,13 @@ export const Route = createFileRoute("/_site/team")({
       {
         name: "description",
         content:
-          "Meet the official Philippine delegations for the 2027 IOAI (Singapore) and APOAI international AI competitions.",
+          "Meet the official Philippine delegations for the 2027 IOAI (Singapore), IAIO (Vietnam) and APOAI international AI competitions.",
       },
       { property: "og:title", content: "Team — IOAI Philippines" },
       {
         property: "og:description",
         content:
-          "Meet the official Philippine delegations for the 2027 IOAI (Singapore) and APOAI international AI competitions.",
+          "Meet the official Philippine delegations for the 2027 IOAI (Singapore), IAIO (Vietnam) and APOAI international AI competitions.",
       },
     ],
     links: [canonical("/team")],
@@ -85,6 +85,21 @@ const apoaiSlots: Slot[] = [
   },
 ];
 
+const iaioSlots: Slot[] = [
+  ...[1, 2, 3, 4].map((n) => ({
+    seat: `Delegate 0${n}`,
+    role: "IAIO Delegation",
+    criterion: "2026 Medalist Pool",
+    status: "To be announced",
+  })),
+  {
+    seat: "Team Leader",
+    role: "IAIO Delegation",
+    criterion: "Appointed by IOAI Philippines",
+    status: "To be announced",
+  },
+];
+
 function PlaceholderCard({ slot }: { slot: Slot }) {
   return (
     <div className="flex flex-col justify-between bg-surface p-6 text-center">
@@ -114,11 +129,13 @@ function CompetitionSection({
   title,
   subtitle,
   slots,
+  gridClass = "lg:grid-cols-4",
 }: {
   tag: string;
   title: string;
   subtitle: string;
   slots: Slot[];
+  gridClass?: string;
 }) {
   return (
     <section className="mx-auto max-w-7xl px-6 py-20">
@@ -128,7 +145,7 @@ function CompetitionSection({
       </h2>
       <p className="mt-2 max-w-2xl text-sm text-muted-foreground md:text-base">{subtitle}</p>
 
-      <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
+      <div className={`mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 ${gridClass}`}>
         {slots.map((s, i) => (
           <PlaceholderCard key={`${tag}-${i}`} slot={s} />
         ))}
@@ -152,8 +169,8 @@ function Team() {
             Team PH for the <span className="text-primary">2027 international campaigns.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            Official delegations representing the Philippines at IOAI 2027 (Singapore) and APOAI
-            2027 (Ateneo BUILD site) will be determined during the National Finals at the Ateneo CTC
+            Official delegations representing the Philippines at IOAI 2027 (Singapore), IAIO 2027
+            (Vietnam) and APOAI 2027 (Ateneo BUILD site) will be determined during the National Finals at the Ateneo CTC
             Build Lab on February 20–21, 2027.
           </p>
         </div>
@@ -165,6 +182,17 @@ function Team() {
         title="IOAI — International Olympiad in Artificial Intelligence"
         subtitle="Flagship 4-student national delegation competing onsite in Singapore (July 4–10, 2027). Open to all qualified finalists, including graduating Grade 12 seniors."
         slots={ioaiSlots}
+      />
+
+      <div className="border-t border-border/60" />
+
+      {/* IAIO VIETNAM */}
+      <CompetitionSection
+        tag="iaio.2027"
+        title="IAIO — International Artificial Intelligence Olympiad"
+        subtitle="Philippine application approved. 4 students and 1 team leader will represent Team PH onsite in Vietnam (February 25 – March 2, 2027), fielded from the 2026 medalist pool."
+        slots={iaioSlots}
+        gridClass="lg:grid-cols-5"
       />
 
       <div className="border-t border-border/60" />

@@ -77,9 +77,9 @@ const timeline = [
   },
   {
     date: "FEB 25 – MAR 2, 2027",
-    phase: "07 / Regional (Pending)",
-    title: "IAIO 2027 · Vietnam (Pending Accreditation)",
-    desc: "Invitational delegation fielded from the 2026 medalist pool, subject to final international host accreditation and bilateral confirmation.",
+    phase: "07 / Regional (Confirmed)",
+    title: "IAIO 2027 · Vietnam (Approved)",
+    desc: "Philippine application approved. Team PH will send a delegation to IAIO 2027 in Vietnam, fielded from the 2026 medalist pool.",
     status: "upcoming",
   },
   {

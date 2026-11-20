@@ -38,7 +38,7 @@ const NAV_CONFIG: NavEntry[] = [
       {
         title: "2027 Teams",
         href: "/team",
-        description: "Official 2027 delegations for IOAI and APOAI (coming soon).",
+        description: "Official 2027 delegations for IOAI, IAIO and APOAI (coming soon).",
       },
       {
         title: "Press & Media",

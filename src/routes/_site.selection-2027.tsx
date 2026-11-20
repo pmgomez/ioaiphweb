@@ -95,7 +95,7 @@ const calendarData = [
     format: "Onsite (Vietnam) / Invitational",
     progression: "2026 Medalist Pool",
     notes:
-      "Invitational delegation fielded from the 2026 medalist pool, subject to final international host accreditation and bilateral confirmation.",
+      "Philippine application approved. Team PH will send a delegation to IAIO 2027 in Vietnam, fielded from the 2026 medalist pool.",
     status: "upcoming",
   },
   {
