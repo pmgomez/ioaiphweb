@@ -100,9 +100,10 @@ const selection: Resource[] = [
   {
     code: "R-05",
     title: "Stage 2: Qualifiers Results",
-    subtitle: "Results from the timed proctored sprint; top 80 advancing to the Quarter-Finals.",
+    subtitle:
+      "Results from the window-locked asynchronous round; top 80 advancing to the Quarter-Finals.",
     kind: "pending",
-    window: "Dec 12, 2026",
+    window: "Dec 12–13, 2026",
   },
   {
     code: "R-06",

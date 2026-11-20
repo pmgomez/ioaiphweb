@@ -55,11 +55,11 @@ const calendarData = [
   },
   {
     stage: "Stage 2: Qualifiers",
-    date: "Dec 12, 2026 (Saturday)",
-    format: "Synchronous Proctored Online (3–4 hours)",
+    date: "Dec 12, 2026 (Sat), 6:00 PM PHT – Dec 13, 2026 (Sun), 10:00 PM PHT",
+    format: "Online (Window-Locked Asynchronous 28-Hour Window, Kaggle)",
     progression: "Top 300 → Top 80",
     notes:
-      "High-intensity sprint scheduled following Term 2 examinations and ahead of the nationwide secondary school holiday recess.",
+      "Designed for about 3–4 hours of focused work, completed at any point within the window (opens Dec 12, 6:00 PM PHT; closes Dec 13, 10:00 PM PHT). The window opens after the Philippine Math Olympiad Areas session on Dec 12 and closes Sunday evening, so candidates competing in both are not forced to choose and families have flexibility around weekend commitments. Candidates must confirm participation by Dec 5, 2026, 11:59 PM PHT; unconfirmed slots pass to the next-ranked Stage 1 candidate. Qualifiers are unproctored, and advancing candidates are verified at proctored Stage 3. Scheduled after Term 2 examinations and ahead of the nationwide secondary school holiday recess.",
     status: "upcoming",
   },
   {
@@ -68,7 +68,7 @@ const calendarData = [
     format: "Synchronous Proctored Online (5 hours)",
     progression: "Top 80 → Top 40",
     notes:
-      "Standardized virtual contest resuming two weeks after post-holiday school resumption, minimizing travel displacement.",
+      "Standardized virtual contest resuming two weeks after post-holiday school resumption, minimizing travel displacement. Proctoring combines dual-camera Zoom invigilation with local screen recording. Stage 3 performance is cross-checked against Stage 2 results.",
     status: "upcoming",
   },
   {
@@ -275,7 +275,8 @@ function SelectionRoadmap2027() {
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                   All advancement milestones, national training squad allocations, and international
                   delegation berths are determined strictly by individual, verified performance
-                  under standardized, timed examination conditions.
+                  under standardized examination conditions, with proctored verification from Stage
+                  3 onward.
                 </p>
                 <div className="mt-5 rounded-sm border border-primary/20 bg-primary/5 p-4 text-xs font-mono text-primary">
                   Zero arbitrary selections • Pure meritocratic ranking • Independent Scientific
@@ -369,10 +370,10 @@ function SelectionRoadmap2027() {
                     <span>Overseas Filipino Students Provision</span>
                   </div>
                   <p className="mt-2 text-xs leading-relaxed text-muted-foreground sm:text-sm">
-                    Eligible overseas Filipino candidates may contest preliminary rounds remotely
-                    through the Semi-Finals stage under standardized, synchronous online proctoring
-                    pegged to Philippine Standard Time (PST). Qualifiers advancing to the National
-                    Finals must compete on-site in Metro Manila.
+                    Eligible overseas Filipino candidates may contest Stages 1 and 2 remotely within
+                    their open windows, and Stages 3 and 4 under standardized, synchronous online
+                    proctoring pegged to Philippine Time (PHT, UTC+8). Qualifiers advancing to the
+                    National Finals must compete on-site in Metro Manila.
                   </p>
                 </div>
               </div>
@@ -441,6 +442,32 @@ function SelectionRoadmap2027() {
                   ))}
                 </tbody>
               </table>
+            </div>
+
+            {/* Stage 2 Participation Requirements */}
+            <div className="mt-8 rounded-sm border border-border bg-surface/60 p-6 sm:p-8">
+              <div className="flex items-center gap-3">
+                <div className="grid h-8 w-8 place-items-center rounded-sm bg-primary/10 text-primary">
+                  <ShieldCheck className="h-4 w-4" />
+                </div>
+                <h3 className="font-display text-lg font-semibold text-foreground">
+                  Stage 2 Participation Requirements
+                </h3>
+              </div>
+              <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
+                {[
+                  "Confirm your participation by Dec 5, 2026, 11:59 PM PHT (UTC+8), or your slot passes to the next-ranked candidate.",
+                  "Submit a school ID and parent or guardian consent at confirmation.",
+                  "Sign an honor pledge: no outside help, no AI tools, no sharing of tasks or answers.",
+                  "One attempt only. A no-show forfeits the slot.",
+                  "Stage 2 results are used to shortlist candidates. Stage 3 performance is cross-checked against Stage 2 results, and candidates whose results diverge sharply may be referred to the Scientific Committee for review.",
+                ].map((req) => (
+                  <li key={req} className="flex items-start gap-2.5">
+                    <Check className="mt-1 h-3.5 w-3.5 text-primary shrink-0" />
+                    <span>{req}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </section>
 

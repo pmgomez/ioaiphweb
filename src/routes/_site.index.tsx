@@ -48,17 +48,17 @@ const timeline = [
     status: "upcoming",
   },
   {
-    date: "DEC 12, 2026",
+    date: "DEC 12–13, 2026",
     phase: "03 / National",
     title: "Stage 2: Qualifiers",
-    desc: "Timed proctored sprint, Top 300 → Top 80.",
+    desc: "Window-locked asynchronous round on Kaggle, Top 300 → Top 80.",
     status: "upcoming",
   },
   {
     date: "JAN 16, 2027",
     phase: "04 / National",
     title: "Stage 3: Quarter-Finals",
-    desc: "Online proctored, Top 80 → Top 40.",
+    desc: "Online proctored with Stage 2 cross-check, Top 80 → Top 40.",
     status: "upcoming",
   },
   {

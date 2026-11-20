@@ -58,7 +58,7 @@ const groups: Group[] = [
       },
       {
         q: "Are overseas Filipino students eligible to join Team Philippines?",
-        a: "Yes. Filipino citizens enrolled in primary or secondary schools abroad are fully eligible to compete. Overseas qualifiers participate remotely through Stage 4 (Semi-Finals) under synchronized online proctoring. Contestants who advance to Stage 5 (National Finals) must compete in person in Metro Manila.",
+        a: "Yes. Filipino citizens enrolled in primary or secondary schools abroad are fully eligible to compete. Overseas qualifiers participate remotely through Stage 4 (Semi-Finals): Stages 1 and 2 within their open windows, and Stages 3 and 4 under synchronized online proctoring (PHT, UTC+8). Contestants who advance to Stage 5 (National Finals) must compete in person in Metro Manila.",
       },
       {
         q: "Are homeschooled students eligible to join?",
@@ -70,7 +70,7 @@ const groups: Group[] = [
       },
       {
         q: "How does the 2027 multi-stage selection funnel work?",
-        a: "The pipeline consists of five progressive stages: Stage 1 Eliminations (7-day asynchronous online screening, Open Pool to Top 300); Stage 2 Qualifiers (timed online proctored sprint, 300 to 80); Stage 3 Quarter-Finals (5-hour online proctored contest, 80 to 40); Stage 4 Semi-Finals (hybrid sprint, 40 to 24); and Stage 5 National Finals (two 6-hour onsite contest days at the Ateneo CTC Build Lab, crowning the national delegations).",
+        a: "The pipeline consists of five progressive stages: Stage 1 Eliminations (7-day asynchronous online screening, Open Pool to Top 300); Stage 2 Qualifiers (28-hour window-locked asynchronous online round on Kaggle, 300 to 80); Stage 3 Quarter-Finals (5-hour online proctored contest, 80 to 40); Stage 4 Semi-Finals (hybrid sprint, 40 to 24); and Stage 5 National Finals (two 6-hour onsite contest days at the Ateneo CTC Build Lab, crowning the national delegations).",
       },
       {
         q: "Are returning 2026 international medalists exempt from early rounds?",
@@ -113,7 +113,7 @@ const groups: Group[] = [
       },
       {
         q: "What hardware and connectivity do I need for the online stages?",
-        a: "Participants need a computer with reliable internet access and Python development tooling. Stages 2, 3, and 4 require a functional webcam, screen-sharing, and screen-recording setup for proctored validation.",
+        a: "Participants need a computer with reliable internet access and Python development tooling. Stages 3 and 4 require a functional webcam, screen-sharing, and screen-recording setup for proctored validation. Stage 2 requires only a reliable computer and internet connection.",
       },
       {
         q: "What is the hardware and BYOD policy for the onsite National Finals?",
